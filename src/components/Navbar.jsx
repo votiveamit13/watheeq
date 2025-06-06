@@ -15,7 +15,7 @@ export default function Navbar() {
     >
       {/* logo */}
       <div className="">
-        <img src="/assets/img/logo.png" className="w-full h-full" alt="logo" />
+        <img src="watheeq/assets/img/logo.png" className="w-full h-full" alt="logo" />
       </div>
 
       {/* Hamburger menu for mobile */}

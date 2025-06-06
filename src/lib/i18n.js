@@ -11,7 +11,7 @@ i18n
   .init({
     fallbackLng: 'ar',
     backend: {
-      loadPath: '/locales/{{lng}}/translation.json',
+      loadPath: 'watheeq/locales/{{lng}}/translation.json',
     },
     detection: {
       order: ['localStorage', 'navigator'],

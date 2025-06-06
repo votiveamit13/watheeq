@@ -20,7 +20,7 @@ function HowToStart() {
               <img
                 height={56.79}
                 width={52}
-                src="/assets/img/howtostarticon1.png"
+                src="watheeq/assets/img/howtostarticon1.png"
                 alt="step-1"
               />
             </div>
@@ -36,7 +36,7 @@ function HowToStart() {
               <img
                 height={56.79}
                 width={52}
-                src="/assets/img/howtostarticon2.png"
+                src="watheeq/assets/img/howtostarticon2.png"
                 alt="step-1"
               />
             </div>
@@ -53,7 +53,7 @@ function HowToStart() {
               <img
                 height={56.79}
                 width={52}
-                src="/assets/img/howtostarticon3.png"
+                src="watheeq/assets/img/howtostarticon3.png"
                 alt="step-1"
               />
             </div>
@@ -69,7 +69,7 @@ function HowToStart() {
               <img
                 height={56.79}
                 width={52}
-                src="/assets/img/howtostarticon4.png"
+                src="watheeq/assets/img/howtostarticon4.png"
                 alt="step-1"
               />
             </div>
@@ -86,7 +86,7 @@ function HowToStart() {
       </div>
 
       <div className="w-full lg:w-1/2 py-10 lg:py-15 flex flex-col">
-        <img src="/assets/img/video.png" alt="watheeq" className="w-full mb-5" />
+        <img src="watheeq/assets/img/video.png" alt="watheeq" className="w-full mb-5" />
         <div className="flex flex-col lg:flex-row bg-primary text-white h-auto lg:h-36 md:rounded-r-3xl md:rounded-l-3xl  mt-6 lg:mt-0">
           <div className="text-xl lg:text-3xl w-full lg:w-1/2 text-center flex items-center justify-center mt-5 mb-5" style={{color: 'white', backgroundColor: '#13498B', }}>
             الخطوة الرابعة
