@@ -15,12 +15,12 @@ function DownloadApp() {
           </div>
 
           <div className="flex gap-5 mt-6">
-            <img src="watheeq/assets/img/appstore.png" alt="app store" />
-            <img src="watheeq/assets/img/googleplay.png" alt="google play" />
+            <img src="/watheeq/assets/img/appstore.png" alt="app store" />
+            <img src="/watheeq/assets/img/googleplay.png" alt="google play" />
           </div>
         </div>
         <div className="w-1/2 py-30">
-          <img src="watheeq/assets/img/app.png" alt="watheeq" />
+          <img src="/watheeq/assets/img/app.png" alt="watheeq" />
         </div>
       </div>
     </section>

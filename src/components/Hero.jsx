@@ -10,7 +10,7 @@ function Hero() {
   return (
     <section
       className="font-omnes bg-cover bg-center"
-      style={{ backgroundImage: 'url(watheeq/assets/img/first-section-img.png)', padding:'80px 0px', paddingTop:'5px', backgroundSize:'cover', paddingBottom:'16%' }}
+      style={{ backgroundImage: 'url(/watheeq/assets/img/first-section-img.png)', padding:'80px 0px', paddingTop:'5px', backgroundSize:'cover', paddingBottom:'16%' }}
     >
         <nav className="container mx-auto px-10">
         <Navbar />
@@ -39,7 +39,7 @@ function Hero() {
         {/* Image Section */}
         <div className="pt-20 md:py-30 flex-1 flex justify-center items-center">
           <img
-            src="watheeq/assets/img/hero_bg_2.png"
+            src="/watheeq/assets/img/hero_bg_2.png"
             alt="watheeq"
             className="max-w-full h-auto"
           />

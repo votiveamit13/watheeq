@@ -25,12 +25,12 @@ function WhyChooseUs() {
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 md:gap-x-16 lg:gap-x-24 gap-y-10">
-        <Reason content={t("why-watheeq-reason-1")} icon="watheeq/assets/img/whychooseus6.png" />
-        <Reason content={t("why-watheeq-reason-2")} icon="watheeq/assets/img/whychooseus5.png" />
-        <Reason content={t("why-watheeq-reason-3")} icon="watheeq/assets/img/whychooseus4.png" />
-        <Reason content={t("why-watheeq-reason-4")} icon="watheeq/assets/img/whychooseus3.png" />
-        <Reason content={t("why-watheeq-reason-5")} icon="watheeq/assets/img/whychooseus2.png" />
-        <Reason content={t("why-watheeq-reason-6")} icon="watheeq/assets/img/whychooseus1.png" />
+        <Reason content={t("why-watheeq-reason-1")} icon="/watheeq/assets/img/whychooseus6.png" />
+        <Reason content={t("why-watheeq-reason-2")} icon="/watheeq/assets/img/whychooseus5.png" />
+        <Reason content={t("why-watheeq-reason-3")} icon="/watheeq/assets/img/whychooseus4.png" />
+        <Reason content={t("why-watheeq-reason-4")} icon="/watheeq/assets/img/whychooseus3.png" />
+        <Reason content={t("why-watheeq-reason-5")} icon="/watheeq/assets/img/whychooseus2.png" />
+        <Reason content={t("why-watheeq-reason-6")} icon="/watheeq/assets/img/whychooseus1.png" />
       </div>
 
       <div className="mt-10 flex justify-center md:justify-end">

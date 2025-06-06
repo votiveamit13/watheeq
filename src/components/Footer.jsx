@@ -9,7 +9,7 @@ function Footer() {
   return (
     <section
       className="font-omnes"
-      style={{ backgroundImage: 'url(watheeq/assets/img/third-section-img.png)', color: "white", paddingTop:'10px', backgroundSize:'cover' }}
+      style={{ backgroundImage: 'url(/watheeq/assets/img/third-section-img.png)', color: "white", paddingTop:'10px', backgroundSize:'cover' }}
     >
       {/* First Row: 4 Columns */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-10 mb-10" style={{paddingTop: '100px', paddingRight:'150px'}}>
@@ -17,7 +17,7 @@ function Footer() {
             <div className=" gap-5 mt-16">
 
             <img
-              src="watheeq/assets/img/footerlogo.png"
+              src="/watheeq/assets/img/footerlogo.png"
               alt="google play"
               width={250}
               height={20}
@@ -48,13 +48,13 @@ function Footer() {
           <div className=" gap-5 mt-16">
           <h4 className="text-2xl font-bold text-800 mb-4">حمل الان :</h4>
             <img
-              src="watheeq/assets/img/appstore.png"
+              src="/watheeq/assets/img/appstore.png"
               alt="app store"
               width={150}
               height={20} className="mb-4 mt-2"
             />
             <img
-              src="watheeq/assets/img/googleplay.png"
+              src="/watheeq/assets/img/googleplay.png"
               alt="google play"
               width={150}
               height={20}

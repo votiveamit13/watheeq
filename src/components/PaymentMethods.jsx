@@ -24,11 +24,11 @@ function PaymentMethods() {
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-        <PaymentMethod method="watheeq/assets/img/visa" />
-        <PaymentMethod method="watheeq/assets/img/tabby" />
+        <PaymentMethod method="/watheeq/assets/img/visa" />
+        <PaymentMethod method="/watheeq/assets/img/tabby" />
         {/* <PaymentMethod method="tmara" /> */}
-        <PaymentMethod method="watheeq/assets/img/mada" />
-        <PaymentMethod method="watheeq/assets/img/mastercard" />
+        <PaymentMethod method="/watheeq/assets/img/mada" />
+        <PaymentMethod method="/watheeq/assets/img/mastercard" />
       </div>
     </section>
   );

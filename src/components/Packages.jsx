@@ -109,19 +109,19 @@ function PricingCard({ type = "basic" }) {
 
       <ul className="flex flex-col gap-8 px-5 mt-20 text-2xl">
         <li className="flex items-center gap-2">
-          <img src="watheeq/assets/img/check-icon.svg" alt="item" />
+          <img src="/watheeq/assets/img/check-icon.svg" alt="item" />
           <p>{t("prices-basic-tier-1")}</p>
         </li>
         <li className="flex items-center gap-2">
-          <img src="watheeq/assets/img/check-icon.svg" alt="item" />
+          <img src="/watheeq/assets/img/check-icon.svg" alt="item" />
           <p>{t("prices-basic-tier-2")}</p>
         </li>
         <li className="flex items-center gap-2">
-          <img src="watheeq/assets/img/check-icon.svg" alt="item" />
+          <img src="/watheeq/assets/img/check-icon.svg" alt="item" />
           <p>{t("prices-basic-tier-3")}</p>
         </li>
         <li className="flex items-center gap-2">
-          <img src="watheeq/assets/img/check-icon.svg" alt="item" />
+          <img src="/watheeq/assets/img/check-icon.svg" alt="item" />
           <p>{t("prices-basic-tier-4")}</p>
         </li>
       </ul>
