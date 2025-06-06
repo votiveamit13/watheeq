@@ -10,7 +10,7 @@ function Hero() {
   return (
     <section
       className="font-omnes bg-cover bg-center"
-      style={{ backgroundImage: 'url(/assets/img/hero_bg.png)', backgroundColor: ' #F2FAFA'}}
+      style={{ backgroundImage: 'url(/assets/img/first-section-img.png)', padding:'80px 0px', paddingTop:'5px', backgroundSize:'cover', paddingBottom:'16%' }}
     >
         <nav className="container mx-auto px-10">
         <Navbar />

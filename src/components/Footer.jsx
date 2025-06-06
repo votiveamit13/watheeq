@@ -8,11 +8,11 @@ function Footer() {
 
   return (
     <section
-      className="font-omnes px-4 md:px-8 lg:px-16 py-10"
-      style={{ backgroundColor: "#13498B", color: "white" }}
+      className="font-omnes"
+      style={{ backgroundImage: 'url(/assets/img/third-section-img.png)', color: "white", paddingTop:'10px', backgroundSize:'cover' }}
     >
       {/* First Row: 4 Columns */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-10 mb-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-10 mb-10" style={{paddingTop: '100px', paddingRight:'150px'}}>
         <div>
             <div className=" gap-5 mt-16">
 
@@ -27,7 +27,8 @@ function Footer() {
         </div>
         <div>
             <div className=" gap-5 mt-16">
-            <h5>الصفحات الفرعية</h5>
+            <h3 className="text-2xl font-bold text-800 mb-4">الصفحات الفرعية</h3>
+
             <p>من نحن</p>
             <p>الأسئلة الشائعة</p>
             <p>الشروط و الأحكام</p>
@@ -37,7 +38,7 @@ function Footer() {
         </div>
         <div>
           <div className=" gap-5 mt-16">
-            <h5>تواصل معنا</h5>
+          <h3 className="text-2xl font-bold text-800 mb-4">تواصل معنا</h3>
             <p>المملكة العربية السعودية- الرياض</p>
             <p>+966-5986-639</p>
             <p>Info@Watheeq.com</p>
@@ -45,12 +46,12 @@ function Footer() {
         </div>
         <div>
           <div className=" gap-5 mt-16">
-            <h5>حمل الان :</h5>
+          <h4 className="text-2xl font-bold text-800 mb-4">حمل الان :</h4>
             <img
               src="/assets/img/appstore.png"
               alt="app store"
               width={150}
-              height={20}
+              height={20} className="mb-4 mt-2"
             />
             <img
               src="/assets/img/googleplay.png"
@@ -64,10 +65,10 @@ function Footer() {
 
       {/* Second Row: Example with 2 Columns */}
       <div
-        className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10"
+        className="grid"
         style={{ backgroundColor: "#093D7D" }}
       >
-        <div> منصة وثيق - جميع الحقوق محفوظة 2025</div>
+        <div className="text-center text[25px] pt-8 pb-8"> منصة وثيق - جميع الحقوق محفوظة 2025</div>
       </div>
     </section>
   );

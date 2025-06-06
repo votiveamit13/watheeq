@@ -142,7 +142,7 @@ function Packages() {
   const { t } = useTranslation();
 
   return (
-    <section className="font-omnes">
+    <section className="font-omnes" style={{margin:'0px 100px'}}>
       <div className="header flex flex-col gap-5">
         <h2 className="text-6xl font-bold">{t("prices-header")}</h2>
         <div className="flex justify-between items-center">

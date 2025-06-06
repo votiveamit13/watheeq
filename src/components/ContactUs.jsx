@@ -4,7 +4,7 @@ import { Button } from './ui/Button';
 
 export default function ContactUs() {
   return (
-    <div className="bg-primary flex items-center justify-between font-omnes text-white px-10 py-20 rounded-md" style={{backgroundColor: '#13498B'}}>
+    <div className="bg-primary flex items-center justify-between font-omnes text-white px-10 py-20 rounded-md" style={{backgroundColor: '#13498B', margin:'35px'}}>
       <h2 className="text-[40px]">تواصل معنا لأي استفسارات</h2>
       <div className="flex items-center gap-5">
         <div className="flex gap-5 items-center">

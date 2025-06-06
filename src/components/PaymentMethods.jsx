@@ -18,8 +18,8 @@ function PaymentMethods() {
   const { t } = useTranslation();
 
   return (
-    <section className="px-4">
-      <h2 className="text-6xl font-bold mb-8 sm:text-4xl">
+    <section className="px-4" style={{padding:'0px 50px'}}>
+      <h2 className="text-6xl font-bold mb-8 sm:text-4xl" style={{paddingRight:'30px'}}>
         {t('payment-methods-header')}
       </h2>
 

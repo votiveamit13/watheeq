@@ -6,8 +6,8 @@ function HowToStart() {
   const { t } = useTranslation();
 
   return (
-    <section className="flex flex-col lg:flex-row font-omnes justify-between">
-      <div className="w-full lg:w-5/12 py-10 px-5 lg:py-30 lg:px-10">
+    <section className="flex flex-col lg:flex-row font-omnes justify-between" style={{margin: '0px 50px'}}>
+      <div className="w-full lg:w-5/12 py-10 px-1 lg:py-15 lg:px-10">
         <h2 className="text-4xl lg:text-6xl font-bold">
           كيف تبدأ ؟
         </h2>
@@ -85,13 +85,13 @@ function HowToStart() {
         </div>
       </div>
 
-      <div className="w-full lg:w-1/2 py-10 lg:py-30 flex flex-col">
-        <img src="/assets/img/video.png" alt="watheeq" className="w-full" />
-        <div className="flex flex-col lg:flex-row bg-primary text-white h-auto lg:h-36 md:rounded-r-3xl  mt-5 lg:mt-0">
-          <div className="text-xl lg:text-3xl w-full lg:w-1/2 text-center flex items-center justify-center" style={{color: 'white', backgroundColor: '#13498B'}}>
+      <div className="w-full lg:w-1/2 py-10 lg:py-15 flex flex-col">
+        <img src="/assets/img/video.png" alt="watheeq" className="w-full mb-5" />
+        <div className="flex flex-col lg:flex-row bg-primary text-white h-auto lg:h-36 md:rounded-r-3xl md:rounded-l-3xl  mt-6 lg:mt-0">
+          <div className="text-xl lg:text-3xl w-full lg:w-1/2 text-center flex items-center justify-center mt-5 mb-5" style={{color: 'white', backgroundColor: '#13498B', }}>
             الخطوة الرابعة
           </div>
-          <div className="text-primary bg-background h-auto lg:h-36 text-sm lg:text-xl w-full lg:w-1/2 px-5 flex items-center justify-center md:rounded-r-3xl" style={{color: '#0B2B51', backgroundColor: 'white'}}>
+          <div className="text-primary bg-background h-auto lg:h-36 text-sm lg:text-xl w-full lg:w-1/2 px-5 flex items-center justify-center md:rounded-r-3xl" style={{color: '#0B2B51', backgroundColor: 'white', borderRadius: '22px 22px 22px 22px' }}>
             انشر صفحتك عبر رابط وباركود خاص وابدأ مسيرتك الرقمية بثقة
           </div>
         </div>

@@ -1,116 +1,32 @@
-import React from 'react';
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import React from "react";
 
-export default function TermsAndConditions() {
+const TermsAndConditions = () => {
   return (
-    <>
-      {/* Sticky Header */}
-      <header className="sticky top-0 bg-white shadow-sm z-30">
-        <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="text-2xl font-extrabold text-gray-900 select-none">
-            MyCompany
-          </div>
-          <ul className="flex space-x-8 text-gray-700">
-            <li>
-              <a
-                href="#"
-                className="hover:text-gray-900 transition-colors duration-300 font-medium"
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="hover:text-gray-900 transition-colors duration-300 font-medium"
-              >
-                Features
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="hover:text-gray-900 transition-colors duration-300 font-medium"
-              >
-                Pricing
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="hover:text-gray-900 transition-colors duration-300 font-medium"
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-
-      {/* Main Content Container */}
-      <main className="bg-white min-h-screen py-16 px-6">
-        <div className="max-w-7xl mx-auto">
-          {/* Hero Section */}
-          <section className="text-center max-w-3xl mx-auto mb-16">
-            <h1 className="text-5xl font-extrabold text-gray-900 leading-tight mb-4">
-              Terms and Conditions
-            </h1>
-            <p className="text-lg text-gray-500 leading-relaxed">
-              Please read these terms and conditions carefully before using our service.
-            </p>
-            <button
-              type="button"
-              className="mt-10 inline-block bg-black text-white font-semibold rounded-md px-8 py-3 text-lg hover:bg-gray-800 transition-colors duration-300"
-            >
-              Accept Terms
-            </button>
-          </section>
-
-          {/* Terms Content Card */}
-          <section className="bg-white rounded-xl shadow-md p-10 text-gray-600 space-y-6 max-w-4xl mx-auto">
-            <article>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-3">
-                1. Introduction
-              </h2>
-              <p className="text-base leading-relaxed">
-                Welcome to MyCompany. By accessing our website, you agree to these terms and conditions.
-              </p>
-            </article>
-            <article>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-3">
-                2. Intellectual Property Rights
-              </h2>
-              <p className="text-base leading-relaxed">
-                All content included on this site, such as text, graphics, logos, and images, is the property of MyCompany or its content suppliers.
-              </p>
-            </article>
-            <article>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-3">
-                3. User Obligations
-              </h2>
-              <p className="text-base leading-relaxed">
-                You agree to use the website only for lawful purposes and not to engage in any behavior that is harmful or unlawful.
-              </p>
-            </article>
-            <article>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-3">
-                4. Limitation of Liability
-              </h2>
-              <p className="text-base leading-relaxed">
-                MyCompany shall not be liable for any damages arising from the use or inability to use this website.
-              </p>
-            </article>
-            <article>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-3">
-                5. Changes to these Terms
-              </h2>
-              <p className="text-base leading-relaxed">
-                We reserve the right to update or change our terms at any time, and it is your responsibility to review them periodically.
-              </p>
-            </article>
-          </section>
-        </div>
+    <div className="bg-white">
+      <nav className="container mx-auto px-10">
+        <Navbar/>
+      </nav>
+      <main className="p-6 px-20">
+        <h2 className="text-4xl font-bold mb-4 mt-10">الشروط والاحكام</h2>
+        <ul className="list-disc list-inside space-y-2 mt-5">
+          <li className="mb-10 text-2xl">التسجيل بمنصة وثيق يُعتبر الفرد المستفيد من الخدمة هو الطرف المتعاقد (مالك الحساب)، الذي يخضع لشروط الاستخدام</li>
+          <li className="mb-10 text-2xl">تلتزم بتقديم معلومات صحيحة ومحدثة وكاملة وقانونية عن نفسك، وذلك وفقًا للمتطلبات المطلوبة أثناء عملية التسجيل.</li>
+          <li className="mb-10 text-2xl">يوافق على الشروط والأحكام وسياسة الخصوصية الخاصة بمنصة “وثيق</li>
+          <li className="mb-10 text-2xl">يختار خطة الاشتراك الشهري المناسبة له (بعد انتهاء فترة الاشتراك المجاني للتجربة ٢١ يوم) </li>
+          <li className="mb-10 text-2xl">الرخصة المهنية والشهادة الأكاديمية لا تظهر للعملاء إنما هي فقط للتؤكد من إدارة المنصة. الرخصة المهنية يظهر رقم الرخصة فقط للەملاء في بنر مخصص لكل مهنة</li>
+          <li className="mb-10 text-2xl">في حال كان المهني يمثل شركة او مؤسسة او وكالة تجارية او كيان تجاري يجب ان يكون على علم تام بالقوانين والأنظمة الخاصة للتجارة الالكترونية او التقنية بالمملكة العربية السعودية وان يكون ممثلها يمتلك المستندات الكافية لتمثيلها يحق لمنصة تجار ان تطلب اكثر من مستند نظامي لاثبات أهلية التاجر.</li>
+          <li className="mb-10 text-2xl">المستخدم هو المسؤول الوحيد عن إدارة خدمات التحويل البنكي باعتباره مالكا للحساب، ويتوجب عليه الالتزام بالحفاظ على معلومات حسابه البنكي بشكل صحيح لمتجره.</li>
+          <li className="mb-10 text-2xl">يقوم المهني بتحديد سعر الخدمة  في متجره ،و لا تتدخل منصة وثيق بأي شكل من الأشكال في تقدير تكلفة  الخدمات المعروضة  على المنصة، حيث أن تقدير التكلفة بالطريقة التجارية المعتمدة يعد التزاما يتحمله المهني.</li>
+          <li className="mb-10 text-2xl">لا يجوز استخدام خدمات وثيق في أي أنشطة غير مصرح بها او أنشطة غير نظامية، وفي حالة قيام المهني بغير نشاطه أو إضافة نشاط جديـد لا تتحمل وثيق اي اضرار تجاه ذلك دون ادنى مسؤولية.</li>
+        </ul>
       </main>
-    </>
+      <footer className="text-white">
+        <Footer/>
+      </footer>
+    </div>
   );
-}
+};
 
+export default TermsAndConditions;

@@ -50,7 +50,7 @@ export default function Navbar() {
         <Link href="/register">
           <Button
             variant={'secondary'}
-            className="rounded-3xl font-semibold text-xl h-12 cursor-pointer"
+            className="rounded-3xl font-semibold text-xl h-12 cursor-pointer md:rounded-r-3xl md:rounded-l-3xl"
           >
             {t('register')}
           </Button>

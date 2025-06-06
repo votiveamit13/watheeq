@@ -12,22 +12,22 @@ export default function Home() {
     <>
       <main>
         <Hero />
-        <div className="container mx-auto px-10">
+        <div className="container-fluid mx-auto">
           <HowToStart/>
           <WhyChooseUs/>
           <div className="py-20">
             <PaymentMethods />
           </div>
-          <div className="py-20">
+          <div className="py-5">
             <DownloadApp/>
           </div>
-          <div className="py-20">
+          <div className="py-10">
             <Packages/>
           </div>
-          <div className="py-20">
+          <div className="py-2">
             <ContactUs/>
           </div>
-          <div className="py-20">
+          <div className="">
             <Footer/>
           </div>
         </div>

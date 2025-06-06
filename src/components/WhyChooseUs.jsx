@@ -20,9 +20,9 @@ function WhyChooseUs() {
 
   return (
     <section className="font-omnes justify-between px-4 md:px-8 lg:px-16">
-      <h1 className="text-4xl md:text-6xl lg:text-[93px] font-bold text-center md:text-start">
+      <h2 className="text-4xl md:text-6xl font-bold text-center md:text-start">
         {t("why-watheeq-header")}
-      </h1>
+      </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 md:gap-x-16 lg:gap-x-24 gap-y-10">
         <Reason content={t("why-watheeq-reason-1")} icon="./assets/img/whychooseus6.png" />
@@ -36,7 +36,7 @@ function WhyChooseUs() {
       <div className="mt-10 flex justify-center md:justify-end">
         <Button
           variant="default"
-          className="rounded-3xl font-semibold text-lg md:text-xl h-10 md:h-12 w-32 md:w-40"
+          className="rounded-3xl font-semibold text-lg md:text-xl h-10 md:h-12 w-32 md:w-40 md:rounded-r-3xl md:rounded-l-3xl"
         >
           {t("why-watheeq-btn-text")}
         </Button>

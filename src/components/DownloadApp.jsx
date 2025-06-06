@@ -5,7 +5,7 @@ function DownloadApp() {
   const { t } = useTranslation();
 
   return (
-    <section>
+    <section style={{margin:'0px 35px'}}>
       <div className="flex justify-between bg-primary font-omnes text-white rounded-2xl" style={{backgroundColor: '#13498B'}}>
         <div className="w-1/2 flex flex-col justify-center px-14 gap-10">
           <h2 className="text-6xl font-bold">{t("app-download-header")}</h2>
@@ -14,7 +14,7 @@ function DownloadApp() {
             <p>{t("app-download-download-now")}</p>
           </div>
 
-          <div className="flex gap-5 mt-16">
+          <div className="flex gap-5 mt-6">
             <img src="/assets/img/appstore.png" alt="app store" />
             <img src="/assets/img/googleplay.png" alt="google play" />
           </div>
