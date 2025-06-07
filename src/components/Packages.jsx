@@ -247,7 +247,7 @@ function Packages() {
           </div>
         </div>
 
-        <div className="flex gap-5 justify-center gap-50 mt-10">
+        <div className="flex justify-center gap-50 mt-10" style={{gap:'100px'}}>
           <div className="w-[537px]">
             <PricingCard type="full" plan={plan} />
           </div>
