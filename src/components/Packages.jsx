@@ -1,9 +1,9 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Switch } from "./ui/Switch";
 import { Button } from "./ui/Button";
 
-function WaveHeader({ type = "basic" }) {
+function WaveHeader({ type = "basic", plan = "monthly" }) {
   return (
     <div
       className="relative overflow-hidden"
@@ -29,7 +29,7 @@ function WaveHeader({ type = "basic" }) {
           }}
         >
           <span className="text-4xl font-bold">
-            {type === "basic" ? 89 : 59}
+            {type === "basic" ? plan === "monthly" ? 89 : 890 : plan === "monthly" ? 59 : 590}
           </span>{" "}
           <span className="icon-saudi_riyal w-2">
             <img
@@ -42,7 +42,7 @@ function WaveHeader({ type = "basic" }) {
             />
           </span>
         </div>
-        <div className="text-sm">{type === "basic" ? "شهريًا" : "شهريًا"}</div>
+        <div className="text-sm">{type === "basic" ? plan === "monthly" ? "/ شهريًا" : "/ شهريًا" : plan === "monthly" ? "/ شهريًا" : "/ شهريًا"}</div>
       </div>
 
       {type === "basic" ? <BasicHeader /> : <FullHeader />}
@@ -111,11 +111,10 @@ function BasicHeader() {
   );
 }
 
-function PricingCard({ type = "basic" }) {
-
+function PricingCard({ type = "basic", plan = "monthly" }) {
   return (
     <div className="shadow-custom-blue rounded-2xl py-8">
-      <WaveHeader type={type} />
+      <WaveHeader type={type} plan={plan} />
       <p className="text-2xl mt-10">
         {type === "basic"
           ? `باقات متكاملة لبناء موقع احترافي بمميزات غير محدودة`
@@ -174,9 +173,8 @@ function PricingCard({ type = "basic" }) {
           <img src="/watheeq/assets/img/check-icon.svg" alt="item" />
           <p>{type === `basic` ? `شهادة الأمنية` : `شهادة الأمنية`}</p>
         </li>
-        {type === "basic" &&
-          (
-            <>
+        {type === "basic" && (
+          <>
             <li className="flex items-center gap-2">
               <img src="/watheeq/assets/img/check-icon.svg" alt="item" />
               <p>
@@ -185,13 +183,12 @@ function PricingCard({ type = "basic" }) {
               </p>
             </li>
 
-
             <li className="flex items-center gap-2">
               <img src="/watheeq/assets/img/check-icon.svg" alt="item" />
               <p>حجز دومين )رابط( خاص بصفحتك.</p>
             </li>
-            </>
-          )}
+          </>
+        )}
       </ul>
 
       <div className="flex justify-center">
@@ -207,25 +204,29 @@ function PricingCard({ type = "basic" }) {
 }
 
 function Packages() {
+  const [plan, setPlan] = useState("monthly");
 
+  console.log("pppp", plan);
   return (
     <section className="font-omnes" style={{ margin: "0px 100px" }}>
       <div className="header flex flex-col gap-5">
         <h2 className="text-6xl font-bold">الأسعار</h2>
         <div className="flex justify-between items-center">
-          <p className="text-3xl">اختر الباقة التي تناسبك لتبدأ رحلتك في  المنصة</p>
+          <p className="text-3xl">
+            اختر الباقة التي تناسبك لتبدأ رحلتك في المنصة
+          </p>
 
           <div className="period-switch">
-            <Switch />
+            <Switch onToggle={(value) => setPlan(value)} />
           </div>
         </div>
 
         <div className="flex gap-5 justify-between mt-10">
           <div className="w-[537px]">
-            <PricingCard type="full" />
+            <PricingCard type="full" plan={plan} />
           </div>
           <div className="w-[537px]">
-            <PricingCard type="basic" />
+            <PricingCard type="basic" plan={plan} />
           </div>
         </div>
       </div>

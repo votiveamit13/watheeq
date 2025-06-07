@@ -12,7 +12,7 @@ export default function Navbar() {
       style={{ boxShadow: '0px 10px 15px rgba(9, 61, 125, 0.1)' }}
     >
       <div className="">
-        <img src="/watheeq/assets/img/logo.png" className="w-full h-full" alt="logo" />
+        <Link href="/"><img src="/watheeq/assets/img/logo.png" className="w-full h-full" alt="logo" /></Link>
       </div>
 
       <button
