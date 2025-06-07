@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { useTranslation } from "react-i18next";
 import { Switch } from "./ui/Switch";
 import { Button } from "./ui/Button";
 
@@ -12,7 +11,9 @@ function WaveHeader({ type = "basic" }) {
     >
       {/* Title text */}
       <div className="absolute top-16 w-full text-center z-10">
-        <h2 className="text-white text-4xl font-bold">الباقة المتكاملة</h2>
+        <h2 className="text-white text-4xl font-bold">
+          {type === "basic" ? "الباقة المتكاملة" : "الباقة الأساسية"}
+        </h2>
       </div>
 
       {/* Price text */}
@@ -27,10 +28,21 @@ function WaveHeader({ type = "basic" }) {
             backgroundClip: "text",
           }}
         >
-          <span className="text-4xl font-bold">45</span>{" "}
-          <span className="icon-saudi_riyal w-2"></span>
+          <span className="text-4xl font-bold">
+            {type === "basic" ? 89 : 59}
+          </span>{" "}
+          <span className="icon-saudi_riyal w-2">
+            <img
+              src={
+                type === "basic"
+                  ? "/watheeq/assets/img/currencyRed.png"
+                  : "/watheeq/assets/img/currencyBlue.png"
+              }
+              alt="watheeq"
+            />
+          </span>
         </div>
-        <div className="text-sm">/ شهرياً</div>
+        <div className="text-sm">{type === "basic" ? "شهريًا" : "شهريًا"}</div>
       </div>
 
       {type === "basic" ? <BasicHeader /> : <FullHeader />}
@@ -100,30 +112,86 @@ function BasicHeader() {
 }
 
 function PricingCard({ type = "basic" }) {
-  const { t } = useTranslation();
 
   return (
     <div className="shadow-custom-blue rounded-2xl py-8">
       <WaveHeader type={type} />
-      <p className="text-2xl mt-10">{t("prices-basic-tier-subtitle")}</p>
+      <p className="text-2xl mt-10">
+        {type === "basic"
+          ? `باقات متكاملة لبناء موقع احترافي بمميزات غير محدودة`
+          : `باقات متكاملة لانطلاقة كل مهني أدوات مرنة وحلول متكاملة
+`}
+      </p>
 
       <ul className="flex flex-col gap-8 px-5 mt-20 text-2xl">
         <li className="flex items-center gap-2">
           <img src="/watheeq/assets/img/check-icon.svg" alt="item" />
-          <p>{t("prices-basic-tier-1")}</p>
+          <p>
+            {type === `basic`
+              ? `صفحة إلكترونية موثوقة مخصصة لك`
+              : `صفحة إلكترونية موثوقة مخصصة لك`}
+          </p>
         </li>
         <li className="flex items-center gap-2">
           <img src="/watheeq/assets/img/check-icon.svg" alt="item" />
-          <p>{t("prices-basic-tier-2")}</p>
+          <p>
+            {type === `basic`
+              ? `رابط مباشر + باركود خاص`
+              : `رابط مباشر + باركود خاص`}
+          </p>
         </li>
         <li className="flex items-center gap-2">
           <img src="/watheeq/assets/img/check-icon.svg" alt="item" />
-          <p>{t("prices-basic-tier-3")}</p>
+          <p>{type === `basic` ? `مدونة خاصة` : `مدونة خاصة`}</p>
         </li>
         <li className="flex items-center gap-2">
           <img src="/watheeq/assets/img/check-icon.svg" alt="item" />
-          <p>{t("prices-basic-tier-4")}</p>
+          <p>
+            {type === `basic`
+              ? `استقبال طلبات العملاء  لخدماتك بسهولة`
+              : `استقبال طلبات العملاء  لخدماتك بسهولة`}
+          </p>
         </li>
+        <li className="flex items-center gap-2">
+          <img src="/watheeq/assets/img/check-icon.svg" alt="item" />
+          <p>
+            {type === `basic`
+              ? `تفعيل الدفع الإلكتروني
+
+`
+              : `تفعيل الدفع الإلكتروني
+
+`}
+          </p>
+        </li>
+        <li className="flex items-center gap-2">
+          <img src="/watheeq/assets/img/check-icon.svg" alt="item" />
+          <p>
+            {type === `basic` ? `فوترة تلقائية معتمدة` : `فوترة تلقائية معتمدة`}
+          </p>
+        </li>
+        <li className="flex items-center gap-2">
+          <img src="/watheeq/assets/img/check-icon.svg" alt="item" />
+          <p>{type === `basic` ? `شهادة الأمنية` : `شهادة الأمنية`}</p>
+        </li>
+        {type === "basic" &&
+          (
+            <>
+            <li className="flex items-center gap-2">
+              <img src="/watheeq/assets/img/check-icon.svg" alt="item" />
+              <p>
+                التواصل والاجتماع عن طريق وسائل المنصة (محادثة نصية، صوتية،
+                مرئية )
+              </p>
+            </li>
+
+
+            <li className="flex items-center gap-2">
+              <img src="/watheeq/assets/img/check-icon.svg" alt="item" />
+              <p>حجز دومين )رابط( خاص بصفحتك.</p>
+            </li>
+            </>
+          )}
       </ul>
 
       <div className="flex justify-center">
@@ -131,7 +199,7 @@ function PricingCard({ type = "basic" }) {
           variant={"outline"}
           className="mt-10 rounded-xl text-2xl w-44 h-12 border-secondary text-secondary"
         >
-          {t("prices-btn-text")}
+          {type === `basic` ? `اشترك` : `اشترك`}
         </Button>
       </div>
     </div>
@@ -139,14 +207,13 @@ function PricingCard({ type = "basic" }) {
 }
 
 function Packages() {
-  const { t } = useTranslation();
 
   return (
-    <section className="font-omnes" style={{margin:'0px 100px'}}>
+    <section className="font-omnes" style={{ margin: "0px 100px" }}>
       <div className="header flex flex-col gap-5">
-        <h2 className="text-6xl font-bold">{t("prices-header")}</h2>
+        <h2 className="text-6xl font-bold">الأسعار</h2>
         <div className="flex justify-between items-center">
-          <p className="text-3xl">{t("prices-subheader")}</p>
+          <p className="text-3xl">اختر الباقة التي تناسبك لتبدأ رحلتك في  المنصة</p>
 
           <div className="period-switch">
             <Switch />

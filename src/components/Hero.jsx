@@ -1,11 +1,9 @@
 "use client";
 import React from "react";
 import { Button } from "./ui/Button";
-import { useTranslation } from "react-i18next";
 import Navbar from "./Navbar";
 
 function Hero() {
-  const { t } = useTranslation();
 
   return (
     <section
@@ -19,20 +17,20 @@ function Hero() {
         {/* Text Section */}
         <div className="py-10 md:py-30 flex-1 text-center md:text-start">
           <h1 className="text-3xl md:text-6xl font-semibold md:w-5/6">
-            {t("hero-header")}
+            كن جزءًا من منصة وثيق وقدّم خدماتك القانونية بثقة {/*Hero Header */}
           </h1>
           <p className="text-lg md:text-[32px] mt-4 md:mt-9">
-            {t("hero-subheader")}
+            أنشئ صفحتك القانونية الموثوقة عبر منصة وثيق وابدأ باستقبال العملاء وطلبات الاستشارات خلال دقائق .  {/* hero-subheader */}
           </p>
+            <p className="text-sm md:text-base">احصل على تجربة مجانية لمدة 21 يوم بإمكانك الإلغاء في أي وقت. {/* Free Trial */}</p>
 
           <div className="btns flex flex-col md:flex-row items-center gap-3 mt-5">
             <Button
               variant="default"
               className="cursor-pointer rounded-3xl font-semibold text-lg md:text-xl h-12 w-40"
             >
-              {t("order-now")}
+              ابدأ الآن {/* Order Now */}
             </Button>
-            <p className="text-sm md:text-base">{t("cancel-anytime")}</p>
           </div>
         </div>
 

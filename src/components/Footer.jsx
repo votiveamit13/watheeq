@@ -1,10 +1,9 @@
 "use client";
 import React from "react";
-import { useTranslation } from "react-i18next";
-import { Button } from "./ui/Button";
+import { FiPhone, FiMapPin } from "react-icons/fi";
+import { HiOutlineMail } from "react-icons/hi";
 
 function Footer() {
-  const { t } = useTranslation();
 
   return (
     <section
@@ -39,8 +38,11 @@ function Footer() {
         <div>
           <div className=" gap-5 mt-16">
           <h3 className="text-2xl font-bold text-800 mb-4">تواصل معنا</h3>
+            <FiMapPin />
             <p>المملكة العربية السعودية- الرياض</p>
+            <FiPhone />
             <p>+966-5986-639</p>
+            <HiOutlineMail />
             <p>Info@Watheeq.com</p>
             </div>
         </div>
@@ -68,7 +70,7 @@ function Footer() {
         className="grid"
         style={{ backgroundColor: "#093D7D" }}
       >
-        <div className="text-center text[25px] pt-8 pb-8"> منصة وثيق - جميع الحقوق محفوظة 2025</div>
+        <div className="text-center text[25px] pt-8 pb-8"> منصة وثيق  - جميع الحقوق محفوظة 2025</div>
       </div>
     </section>
   );

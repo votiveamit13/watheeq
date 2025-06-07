@@ -1,4 +1,3 @@
-import I18nProvider from '@/lib/i18n-provider';
 import "./globals.css";
 
 export const metadata = {
@@ -10,7 +9,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ar" dir="rtl">
       <body>
-        <I18nProvider>{children}</I18nProvider>
+       {children}
       </body>
     </html>
   );

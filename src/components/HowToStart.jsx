@@ -1,9 +1,6 @@
 "use client";
-import { useTranslation } from "react-i18next";
-
 
 function HowToStart() {
-  const { t } = useTranslation();
 
   return (
     <section className="flex flex-col lg:flex-row font-omnes justify-between" style={{margin: '0px 50px'}}>
@@ -43,8 +40,7 @@ function HowToStart() {
             <div className="flex flex-col gap-2">
               <p className="text-2xl font-bold">(2) أعرض خدماتك القانونية</p>
               <p className="text-xl">
-                سواء كانت استشارات، إعداد عقود، مرافعات، أو مذكرات قانونية .
-                وغيرها من الخدمات.
+                سواء كانت استشارات، إعداد عقود، مرافعات، أو مذكرات قانونية . وغيرها من الخدمات.
               </p>
             </div>
           </div>
