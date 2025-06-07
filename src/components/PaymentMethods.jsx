@@ -17,10 +17,11 @@ function PaymentMethods() {
 
   return (
     <section className="px-4" style={{padding:'0px 50px'}}>
-      <h2 className="text-6xl font-bold mb-8 sm:text-4xl" style={{paddingRight:'30px'}}>
-        طرق الدفع المتكاملة 
-      </h2>
-      <p>سهّل على عملائك سداد أتعابهم بطرق دفع متنوعة وآمنة</p>
+<h2 className="text-6xl font-bold mb-8 sm:text-4xl" style={{ paddingLeft: '30px', fontSize: '60px' }}>
+  طرق الدفع المتكاملة
+</h2>
+
+      <p className="text-xl pr-8">سهّل على عملائك سداد أتعابهم بطرق دفع متنوعة وآمنة</p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         <PaymentMethodCard method="watheeq/assets/img/visa" />

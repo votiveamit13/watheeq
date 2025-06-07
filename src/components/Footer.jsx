@@ -11,7 +11,7 @@ function Footer() {
       style={{ backgroundImage: 'url(/watheeq/assets/img/third-section-img.png)', color: "white", paddingTop:'10px', backgroundSize:'cover' }}
     >
       {/* First Row: 4 Columns */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-10 mb-10" style={{paddingTop: '100px', paddingRight:'150px'}}>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-10 mb-10" style={{paddingTop: '150px', paddingRight:'150px', paddingBottom:'30px'}}>
         <div>
             <div className=" gap-5 mt-16">
 
@@ -38,12 +38,12 @@ function Footer() {
         <div>
           <div className=" gap-5 mt-16">
           <h3 className="text-2xl font-bold text-800 mb-4">تواصل معنا</h3>
-            <FiMapPin />
-            <p>المملكة العربية السعودية- الرياض</p>
-            <FiPhone />
-            <p>+966-5986-639</p>
-            <HiOutlineMail />
-            <p>Info@Watheeq.com</p>
+          
+            <p className="pb-2" style={{display:'flex', alignItems:'center', gap:'10px'}}> <FiMapPin />المملكة العربية السعودية- الرياض</p>
+          
+            <p className="pb-2" style={{display:'flex', alignItems:'center', gap:'10px'}}><FiPhone /> +966-5986-639   </p>
+           
+            <p className="pb-2" style={{display:'flex', alignItems:'center', gap:'10px'}}> <HiOutlineMail className="fw-600"/> Info@Watheeq.com </p>
             </div>
         </div>
         <div>
@@ -70,7 +70,7 @@ function Footer() {
         className="grid"
         style={{ backgroundColor: "#093D7D" }}
       >
-        <div className="text-center text[25px] pt-8 pb-8"> منصة وثيق  - جميع الحقوق محفوظة 2025</div>
+        <div className="text-center text-2xl text-700 pt-8 pb-8"> منصة وثيق  - جميع الحقوق محفوظة 2025</div>
       </div>
     </section>
   );

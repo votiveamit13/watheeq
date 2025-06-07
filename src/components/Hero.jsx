@@ -16,7 +16,7 @@ function Hero() {
       <div className="flex flex-col-reverse md:flex-row relative container mx-auto px-5 md:px-10">
         {/* Text Section */}
         <div className="py-10 md:py-30 flex-1 text-center md:text-start">
-          <h1 className="text-3xl md:text-6xl font-semibold md:w-5/6">
+          <h1 className="text-3xl md:text-6xl font-semibold md:w-5/6" style={{fontSize:'50px', width:'100%', lineHeight:'1.3' }}>
             كن جزءًا من منصة وثيق وقدّم خدماتك القانونية بثقة {/*Hero Header */}
           </h1>
           <p className="text-lg md:text-[32px] mt-4 md:mt-9">

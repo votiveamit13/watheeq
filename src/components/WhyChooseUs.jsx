@@ -16,12 +16,12 @@ function ReasonCards({ content, icon }) {
 function WhyChooseUs() {
 
   return (
-    <section className="font-omnes justify-between px-4 md:px-8 lg:px-16">
+    <section className="font-omnes justify-between px-4 md:px-8 lg:px-16 mt-25">
       <h2 className="text-4xl md:text-6xl font-bold text-center md:text-start">
         لماذا تختار وثيق ؟
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 md:gap-x-16 lg:gap-x-24 gap-y-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 md:gap-x-16 lg:gap-x-24 gap-y-10 mt-10">
         <ReasonCards content="واجهة إلكترونية مخصصة للمحامي برابط دومين خاص وصفحة تعريفية مميزة" icon="watheeq/assets/img/whychooseus3.png" />
         <ReasonCards content="إدارة كاملة لجميع خدماتك القانونية" icon="watheeq/assets/img/whychooseus2.png" />
         <ReasonCards content="نظام دفع إلكتروني لاستقبال مستحقاتك بأمان" icon="watheeq/assets/img/whychooseus1.png" />

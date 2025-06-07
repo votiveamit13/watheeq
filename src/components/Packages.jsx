@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import { Switch } from "./ui/Switch";
-import { Button } from "./ui/Button";
 
 function WaveHeader({ type = "basic", plan = "monthly" }) {
   return (
@@ -17,33 +16,60 @@ function WaveHeader({ type = "basic", plan = "monthly" }) {
       </div>
 
       {/* Price text */}
-      <div className="absolute flex items-center bottom-0 right-4 z-10 text-lg font-semibold text-end">
-        <div
-          className="text-2xl font-semibold capitalize text-right"
-          style={{
-            fontFamily: "Omnes Arabic",
-            background: "linear-gradient(0deg, #76BAFF 0.01%, #0A84FF 100%)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            backgroundClip: "text",
-          }}
-        >
-          <span className="text-4xl font-bold">
-            {type === "basic" ? plan === "monthly" ? 89 : 890 : plan === "monthly" ? 59 : 590}
-          </span>{" "}
-          <span className="icon-saudi_riyal w-2">
-            <img
-              src={
-                type === "basic"
-                  ? "/watheeq/assets/img/currencyRed.png"
-                  : "/watheeq/assets/img/currencyBlue.png"
-              }
-              alt="watheeq"
-            />
-          </span>
-        </div>
-        <div className="text-sm">{type === "basic" ? plan === "monthly" ? "/ شهريًا" : "/ شهريًا" : plan === "monthly" ? "/ شهريًا" : "/ شهريًا"}</div>
-      </div>
+
+      <div className="absolute bottom-0 right-4 z-10 pr-8">
+  <div className="flex items-center gap-2 text-end text-lg font-semibold">
+    <div
+      className="flex items-center gap-1 text-2xl font-semibold capitalize"
+      style={{
+        fontFamily: "Omnes Arabic",
+        WebkitBackgroundClip: "text",
+//        WebkitTextFillColor: "transparent",
+        backgroundClip: "text",
+      }}
+    >
+<span
+  className="text-5xl font-bold pl-5"
+  style={{
+    background: type === "basic"
+      ? "linear-gradient(to right, #ac136f, #f72585)"
+      : "linear-gradient(to right, #76BAFF, #0A84FF)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent"
+  }}
+>
+  {type === "basic"
+    ? plan === "monthly"
+      ? 89
+      : 890
+    : plan === "monthly"
+    ? 59
+    : 590}
+</span>
+
+
+      <img
+        src={
+          type === "basic"
+            ? "/watheeq/assets/img/currencyRed.png"
+            : "/watheeq/assets/img/currencyBlue.png"
+        }
+        alt="watheeq"
+        className="w-5 h-5"
+      />
+<p style={{color:'#0B2B51',fontWeight:'400' }}>
+{type === "basic"
+          ? plan === "monthly"
+            ? "/ شهريًا"
+            : "/ شهريًا"
+          : plan === "monthly"
+          ? "/ شهريًا"
+          : "/ شهريًا"}
+      </p>
+    </div>
+  </div>
+</div>
+
 
       {type === "basic" ? <BasicHeader /> : <FullHeader />}
     </div>
@@ -113,16 +139,16 @@ function BasicHeader() {
 
 function PricingCard({ type = "basic", plan = "monthly" }) {
   return (
-    <div className="shadow-custom-blue rounded-2xl py-8">
+    <div className="shadow-custom-blue rounded-2xl py-10" style={{height:'100%'}}>
       <WaveHeader type={type} plan={plan} />
-      <p className="text-2xl mt-10">
+      <p className="text-2xl mt-10 pr-8">
         {type === "basic"
           ? `باقات متكاملة لبناء موقع احترافي بمميزات غير محدودة`
           : `باقات متكاملة لانطلاقة كل مهني أدوات مرنة وحلول متكاملة
 `}
       </p>
 
-      <ul className="flex flex-col gap-8 px-5 mt-20 text-2xl">
+      <ul className="flex flex-col gap-8 px-5 mt-10 text-2xl pr-10" style={{height:'55%'}}>
         <li className="flex items-center gap-2">
           <img src="/watheeq/assets/img/check-icon.svg" alt="item" />
           <p>
@@ -192,16 +218,17 @@ function PricingCard({ type = "basic", plan = "monthly" }) {
       </ul>
 
       <div className="flex justify-center">
-        <Button
-          variant={"outline"}
-          className="mt-10 rounded-xl text-2xl w-44 h-12 border-secondary text-secondary"
-        >
-          {type === `basic` ? `اشترك` : `اشترك`}
-        </Button>
+      <button
+  className={`mt-10 rounded-[15px] text-2xl w-44 h-14 border-2 cursor-pointer
+    ${type === "basic" ? "text-[#D53B98] border-[#D53B98]" : "text-[#1E88E580] border-[#1E88E580]"}`}
+>
+  اشترك
+</button>
       </div>
     </div>
   );
 }
+
 
 function Packages() {
   const [plan, setPlan] = useState("monthly");
@@ -221,7 +248,7 @@ function Packages() {
           </div>
         </div>
 
-        <div className="flex gap-5 justify-between mt-10">
+        <div className="flex gap-5 justify-center gap-50 mt-10">
           <div className="w-[537px]">
             <PricingCard type="full" plan={plan} />
           </div>

@@ -45,7 +45,7 @@ export default function Navbar() {
         <Link href="/register">
           <Button
             variant={'secondary'}
-            className="rounded-3xl font-semibold text-xl h-12 cursor-pointer md:rounded-r-3xl md:rounded-l-3xl"
+            className="rounded-3xl font-semibold text-xl h-12 cursor-pointer md:rounded-r-3xl md:rounded-l-3xl pl-8 pr-8 bg-[#1E88E5]"
           >
             حساب جديد {/*Register*/}
           </Button>

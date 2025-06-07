@@ -3,8 +3,10 @@
 function HowToStart() {
 
   return (
-    <section className="flex flex-col lg:flex-row font-omnes justify-between" style={{margin: '0px 50px'}}>
-      <div className="w-full lg:w-5/12 py-10 px-1 lg:py-15 lg:px-10">
+<section
+  className="flex flex-col lg:flex-row font-omnes justify-between"
+  style={{ margin: '0px 50px', alignItems: 'center' }}>      
+  <div className="w-full lg:w-5/12">
         <h2 className="text-4xl lg:text-6xl font-bold">
           كيف تبدأ ؟
         </h2>
@@ -13,10 +15,10 @@ function HowToStart() {
         </p>
         <div className="steps flex flex-col gap-8 pt-10">
           <div className="flex gap-3 items-start">
-            <div className="border-8 border-primary rounded-full p-5">
+            <div className="border-4 border-primary rounded-full p-5">
               <img
                 height={56.79}
-                width={52}
+                width={40}
                 src="/watheeq/assets/img/howtostarticon1.png"
                 alt="step-1"
               />
@@ -29,10 +31,10 @@ function HowToStart() {
             </div>
           </div>
           <div className="flex gap-3 items-start">
-            <div className="border-8 border-primary rounded-full p-5">
+            <div className="border-4 border-primary rounded-full p-5">
               <img
                 height={56.79}
-                width={52}
+                width={40}
                 src="/watheeq/assets/img/howtostarticon2.png"
                 alt="step-1"
               />
@@ -45,10 +47,10 @@ function HowToStart() {
             </div>
           </div>
           <div className="flex gap-3 items-start">
-            <div className="border-8 border-primary rounded-full p-5">
+            <div className="border-4 border-primary rounded-full p-5">
               <img
                 height={56.79}
-                width={52}
+                width={40}
                 src="/watheeq/assets/img/howtostarticon3.png"
                 alt="step-1"
               />
@@ -61,10 +63,10 @@ function HowToStart() {
             </div>
           </div>
           <div className="flex gap-3 items-start">
-            <div className="border-8 border-primary rounded-full p-5">
+            <div className="border-4 border-primary rounded-full p-5">
               <img
                 height={56.79}
-                width={52}
+                width={40}
                 src="/watheeq/assets/img/howtostarticon4.png"
                 alt="step-1"
               />
@@ -81,8 +83,8 @@ function HowToStart() {
         </div>
       </div>
 
-      <div className="w-full lg:w-1/2 py-10 lg:py-15 flex flex-col">
-        <img src="/watheeq/assets/img/video.png" alt="watheeq" className="w-full mb-5" />
+      <div className="w-full lg:w-1/2 flex flex-col">
+        <img src="/watheeq/assets/img/video.png" alt="watheeq" className="w-full mb-5" style={{marginTop:'-18%'}} />
         <div className="flex flex-col lg:flex-row bg-primary text-white h-auto lg:h-36 md:rounded-r-3xl md:rounded-l-3xl  mt-6 lg:mt-0">
           <div className="text-xl lg:text-3xl w-full lg:w-1/2 text-center flex items-center justify-center mt-5 mb-5" style={{color: 'white', backgroundColor: '#13498B', }}>
             الخطوة الرابعة

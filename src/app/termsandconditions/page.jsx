@@ -4,7 +4,7 @@ import React from "react";
 
 const TermsAndConditions = () => {
   return (
-    <div className="bg-white">
+    <div className="" style={{backgroundColor:'#f8fafc'}}>
       <nav className="container mx-auto px-10">
         <Navbar/>
       </nav>
