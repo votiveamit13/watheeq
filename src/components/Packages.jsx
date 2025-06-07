@@ -233,7 +233,6 @@ function PricingCard({ type = "basic", plan = "monthly" }) {
 function Packages() {
   const [plan, setPlan] = useState("monthly");
 
-  console.log("pppp", plan);
   return (
     <section className="font-omnes" style={{ margin: "0px 100px" }}>
       <div className="header flex flex-col gap-5">
