@@ -28,8 +28,8 @@ style={{marginRight:'-15px'}} >
         }`} style={{fontSize:'19px'}}
       >
         <li className="hover:text-secondary transition-all duration-300"><Link href="/">الرئيسية {/* Home */}</Link></li>
-        <li className="hover:text-secondary transition-all duration-300"><Link href="/">من نحن {/* Whoe We Are */}</Link></li>
-        <li className="hover:text-secondary transition-all duration-300"><Link href="/">الأسعار {/* Prices */}</Link></li>
+        <li className="hover:text-secondary transition-all duration-300"><Link href="/whoweare">من نحن {/* Whoe We Are */}</Link></li>
+        <li className="hover:text-secondary transition-all duration-300"><Link href="/prices">الأسعار {/* Prices */}</Link></li>
         <li className="hover:text-secondary transition-all duration-300"><Link href="/">تواصل معنا {/* Contact Us*/}</Link></li>
       </ul>
 
