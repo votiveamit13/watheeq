@@ -22,7 +22,7 @@ export default function Home() {
             <DownloadApp/>
           </div>
           <div className="py-5 sm:py-10">
-            <Packages/>
+            <Packages heading={"الأسعار"} subheading={"اختر الباقة التي تناسبك لتبدأ رحلتك في  المنصة"}/>
           </div>
           <div className="py-2">
             <ContactUs/>
