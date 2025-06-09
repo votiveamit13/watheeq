@@ -12,8 +12,8 @@ export function Switch({ onToggle }) {
   };
 
   return (
-    <div className="flex items-center justify-center shadow-custom-blue"  style={{backgroundColor:'#F8FAFC'}}>
-      <div className="bg-[#F6F9FC] rounded-full p-1 flex" style={{padding:'20px',borderRadius:'15px' }}>
+    <div className="flex items-center justify-center "  >
+      <div className="bg-[#F6F9FC] rounded-full shadow-custom-blue p-1 flex" style={{padding:'20px'}}>
         <button
           onClick={() => handleToggle("monthly")}
           className={`px-6 py-2 rounded-full w-40 cursor-pointer transition-colors text-2xl duration-300 ${

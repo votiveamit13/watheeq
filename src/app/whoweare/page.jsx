@@ -6,8 +6,8 @@ import { HiMail } from "react-icons/hi";
 export default function WhoWeAre() {
   return (
     <section className="bg-[#f8fafc]">
-      <nav className="p-1 px-20 text-center bg-[#F2FAFA] bg-[url('/watheeq/assets/img/hero_bg.png')] bg-cover">
-        <Navbar className="container mx-auto px-[15px] sm:px-10" />
+      <nav className="container mx-auto px-[15px] sm:px-10 p-1 px-20 text-center bg-[#F2FAFA] bg-[url('/watheeq/assets/img/hero_bg.png')] bg-cover">
+        <Navbar className="" />
         <p className="text-3xl mt-15 mb-5">من نحن</p>
         <h2 className="text-5xl font-bold mb-5">
           رحلتنا بدأت لخدمة المحامين ... تعرف عليها

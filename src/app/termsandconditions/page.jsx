@@ -8,7 +8,7 @@ const TermsAndConditions = () => {
       <nav className="container mx-auto px-[15px] sm:px-10">
         <Navbar/>
       </nav>
-      <main className="p-6 sm:p-[35px] px-4 sm:px-[85px]">
+      <main className="p-[30px] sm:p-[35px] sm:px-[85px]">
       <h2 className="text-3xl sm:text-4xl font-bold mb-4 mt-10">الشروط والاحكام</h2>
       <ul className="list-disc list-inside space-y-2 mt-5">
           <li className="mb-10 text-2xl">التسجيل بمنصة وثيق يُعتبر الفرد المستفيد من الخدمة هو الطرف المتعاقد (مالك الحساب)، الذي يخضع لشروط الاستخدام</li>

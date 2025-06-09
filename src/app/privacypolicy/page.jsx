@@ -7,8 +7,8 @@ export default function PrivacyPolicy() {
         <nav className="container mx-auto px-[15px] sm:px-10">
         <Navbar />
       </nav>
-      <main className="p-6 px-20">
-        <div>
+      <main className="p-[30px] sm:p-[35px] sm:px-[85px]">
+      <div>
           <h2 className="text-4xl font-bold mb-4 mt-10">سياسة الخصوصية</h2>
           <p className="mb-10 text-2xl">
             منصة وثيق ترحب بكم. نشركم على ثقتكم واختياركم لمنصتنا لتكون بوابتكم

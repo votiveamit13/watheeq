@@ -14,6 +14,7 @@ function Hero() {
     paddingBottom: '16%',
     paddingLeft: '0',
     paddingRight: '0',
+    backgroundSize: 'cover',
   }}
 >
 
