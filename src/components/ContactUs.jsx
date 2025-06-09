@@ -3,13 +3,15 @@ import { FaWhatsapp, FaTiktok, FaInstagram } from "react-icons/fa";
 
 export default function ContactUs() {
   return (
-    <div
-      className="bg-primary flex items-center justify-between font-omnes text-white px-10 py-20 rounded-md"
-      style={{ backgroundColor: "#13498B", margin: "35px" }}
-    >
-      <h2 className="text-[40px]">تواصل معنا لأي استفسارات</h2>
-      <div className="flex items-center gap-5">
-        <div className="flex gap-5 items-center">
+<div
+  className="block sm:flex items-center justify-between font-omnes text-white p-[30px] sm:px-10 sm:py-20 rounded-md m-[15px] sm:m-[35px]"
+  style={{ backgroundColor: "#13498B" }}
+>
+
+  
+<h2 className="text-[30px] sm:text-[40px]">تواصل معنا لأي استفسارات</h2>
+      <div className="block sm:flex items-center gap-5">
+        <div className="flex gap-5 items-center mb-8 mt-5">
           <FaWhatsapp  className="w-6 h-6"/>
           <FaTiktok className="w-6 h-6"/>
           <img src="/watheeq/assets/img/x.png" alt="X" className="w-6 h-6"/>

@@ -4,10 +4,11 @@ import { Switch } from "./ui/Switch";
 
 function WaveHeader({ type = "basic", plan = "monthly" }) {
   return (
-    <div
-      className="relative overflow-hidden"
-      style={{ height: "261px", width: "537px" }}
-    >
+<div
+  className="relative overflow-hidden w-full sm:w-[537px]"
+  style={{ height: "261px" }}
+>
+
       {/* Title text */}
       <div className="absolute top-16 w-full text-center z-10">
         <h2 className="text-white text-4xl font-bold">
@@ -115,6 +116,8 @@ function BasicHeader() {
       viewBox="0 0 537 261"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="absolute top-0 left-0 w-full h-full pl-[0px] sm:pl-0"
+
     >
       <path
         d="M0 33.0758V175.978C17.5115 179.903 36.2441 190.769 57.1681 214.827C73.6019 233.685 92.8735 254.923 125.059 259.279C220.078 272.21 231.331 151.812 415.767 155.333C458.998 156.15 501.609 165.84 537 182.273V33.0758C537.001 28.8165 536.163 24.5988 534.534 20.6635C532.905 16.7282 530.517 13.1523 527.505 10.1402C524.494 7.12805 520.919 4.73863 516.984 3.10842C513.049 1.47822 508.832 0.63916 504.572 0.63916H32.3917C23.7967 0.651058 15.5579 4.07372 9.4845 10.1555C3.41119 16.2372 0 24.4808 0 33.0758Z"
@@ -139,8 +142,13 @@ function BasicHeader() {
 
 function PricingCard({ type = "basic", plan = "monthly" }) {
   return (
-    <div className="shadow-custom-blue rounded-2xl py-10" style={{height:'100%'}}>
-      <WaveHeader type={type} plan={plan} />
+<div
+  className="shadow-custom-blue rounded-2xl w-full p-[15px] sm:py-10 sm:px-0"
+  style={{ height: '100%'}}
+>
+
+
+<WaveHeader type={type} plan={plan} />
       <p className="text-2xl mt-10 pr-8">
         {type === "basic"
           ? `باقات متكاملة لبناء موقع احترافي بمميزات غير محدودة`
@@ -234,11 +242,11 @@ function Packages() {
   const [plan, setPlan] = useState("monthly");
 
   return (
-    <section className="font-omnes" style={{ margin: "0px 100px" }}>
-      <div className="header flex flex-col gap-5">
-        <h2 className="text-6xl font-bold">الأسعار</h2>
-        <div className="flex justify-between items-center">
-          <p className="text-3xl">
+<section className="font-omnes mx-0 sm:mx-[100px]" >
+<div className="header flex flex-col gap-5">
+<h2 className="text-center sm:text-right text-[40px] sm:text-6xl font-bold">الأسعار</h2>
+        <div className="block md:flex text-center sm:text-righ justify-between items-center">
+          <p className="text-[20px] sm:text-3xl">
             اختر الباقة التي تناسبك لتبدأ رحلتك في المنصة
           </p>
 
@@ -247,14 +255,18 @@ function Packages() {
           </div>
         </div>
 
-        <div className="flex justify-center gap-50 mt-10" style={{gap:'100px'}}>
-          <div className="w-[537px]">
-            <PricingCard type="full" plan={plan} />
+        <div
+  className="flex flex-col lg:flex-row justify-center mt-0 sm:mt-10 w-full lg:w-[80%] gap-0 sm:gap-[50px] lg:gap-[60px] mx-auto"
+>
+       <div className="w-full sm:w-[500px] lg:w-full mb-6 lg:mb-0 sm:p-[15px]">
+        <PricingCard type="full" plan={plan} />
           </div>
-          <div className="w-[537px]">
-            <PricingCard type="basic" plan={plan} />
+          <div className="w-full sm:w-[500px] lg:w-full mb-6 lg:mb-0 sm:p-[15px]">
+          <PricingCard type="basic" plan={plan} />
           </div>
         </div>
+
+
       </div>
     </section>
   );

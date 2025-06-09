@@ -15,13 +15,13 @@ export default function Home() {
         <div className="container-fluid mx-auto">
           <HowToStart/>
           <WhyChooseUs/>
-          <div className="py-20">
+          <div className="py-10 sm:py-10">
             <PaymentMethods />
           </div>
           <div className="py-5">
             <DownloadApp/>
           </div>
-          <div className="py-10">
+          <div className="py-5 sm:py-10">
             <Packages/>
           </div>
           <div className="py-2">

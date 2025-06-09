@@ -16,7 +16,7 @@ function ReasonCards({ content, icon }) {
 function WhyChooseUs() {
 
   return (
-    <section className="font-omnes justify-between px-4 md:px-8 lg:px-16 mt-25">
+<section className="font-omnes justify-between mt-[50px] sm:mt-25 px-4 md:px-8 lg:px-16">
       <h2 className="text-4xl md:text-6xl font-bold text-center md:text-start">
         لماذا تختار وثيق ؟
       </h2>
@@ -32,7 +32,7 @@ function WhyChooseUs() {
       <div className="mt-10 flex justify-center md:justify-end">
         <Button
           variant="default"
-          className="rounded-3xl font-semibold text-lg md:text-xl h-10 md:h-12 w-32 md:w-40 md:rounded-r-3xl md:rounded-l-3xl"
+          className="rounded-3xl font-semibold cursor-pointer text-lg md:text-xl h-10 md:h-12 w-32 md:w-40 md:rounded-r-3xl md:rounded-l-3xl"
         >
           سجل الان
         </Button>
