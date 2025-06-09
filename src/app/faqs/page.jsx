@@ -42,7 +42,7 @@ export default function Faqs() {
   const renderCard = (faq, index) => (
     <div
       key={index}
-      className="flex-1 min-w-[280px] shadow-md rounded-2xl p-6 bg-white transition-all duration-300"
+      className="flex-1 min-w-[280px] shadow-custom-blue rounded-2xl p-6 bg-white transition-all duration-300"
     >
       <button
         onClick={() => toggle(index)}
