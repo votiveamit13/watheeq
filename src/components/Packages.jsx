@@ -244,10 +244,10 @@ function Packages({heading, subheading}) {
   return (
     <section className="font-omnes mx-0 sm:mx-[100px]" >
       <div className="header flex flex-col gap-5">
-      <h2 className="text-center sm:text-right text-[40px] sm:text-6xl font-bold">{heading}</h2>
-        <div className="block md:flex text-center sm:text-righ justify-between items-center">
-          <p className="text-[20px] sm:text-3xl">
-            {subheading}
+      <h2 className="pr-[20px] sm:pr-0 text-right sm:text-right text-[30px] sm:text-6xl font-bold">{heading}</h2>
+      <div className="block md:flex text-center sm:text-righ justify-between items-center">
+      <p className="pr-[20px] text-right sm:pr-0 text-[20px] sm:text-3xl">
+      {subheading}
           </p>
 
           <div className="period-switch">

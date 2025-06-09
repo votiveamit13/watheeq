@@ -17,7 +17,7 @@ function WhyChooseUs() {
 
   return (
 <section className="font-omnes justify-between mt-[50px] sm:mt-25 px-4 md:px-8 lg:px-16">
-      <h2 className="text-4xl md:text-6xl font-bold text-center md:text-start">
+<h2 className="text-[30px] sm:text-4xl md:text-6xl font-bold text-right md:text-start pr-[15px] md:pr-0">
         لماذا تختار وثيق ؟
       </h2>
 
@@ -30,12 +30,15 @@ function WhyChooseUs() {
         <ReasonCards content="منصة معتمدة لزيادة موثوقيتك وظهورك الرقمي القانوني" icon="watheeq/assets/img/whychooseus4.png" />
       </div>
       <div className="mt-10 flex justify-center md:justify-end">
-        <Button
-          variant="default"
-          className="rounded-3xl font-semibold cursor-pointer text-lg md:text-xl h-10 md:h-12 w-32 md:w-40 md:rounded-r-3xl md:rounded-l-3xl"
-        >
-          سجل الان
-        </Button>
+      <button
+  variant="default"
+  className="rounded-3xl font-semibold cursor-pointer text-lg md:text-xl h-10 md:h-12 w-32 md:w-40 md:rounded-r-3xl md:rounded-l-3xl"
+  style={{ backgroundColor: '#13498b', color: '#fff' }}
+>
+  سجل الان
+</button>
+
+
       </div>
     </section>
   );

@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 export default function PrivacyPolicy() {
   return (
     <section>
-      <nav className="container mx-auto px-10">
+        <nav className="container mx-auto px-[15px] sm:px-10">
         <Navbar />
       </nav>
       <main className="p-6 px-20">

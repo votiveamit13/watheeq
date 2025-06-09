@@ -20,29 +20,31 @@ function Footer() {
               width={250}
               height={20}
             />
-             <p>منصة الكترونية مبتكرة تهدف الي تمكين المهنيين المرخصين لأنشاء صفحات الكترونية لعرض خدماتهم أمام عملائهم</p>
+<p className="text-[18px] sm:text-[18px]">
+  منصة الكترونية مبتكرة تهدف الي تمكين المهنيين المرخصين لأنشاء صفحات الكترونية لعرض خدماتهم أمام عملائهم
+</p>
           </div>
         </div>
         <div>
         <div className="mt-1 sm:mt-16 gap-5">
         <h3 className="text-2xl font-bold text-800 mb-4">الصفحات الفرعية</h3>
 
-            <p>من نحن</p>
-            <p>الأسئلة الشائعة</p>
-            <p>الشروط و الأحكام</p>
-            <p>سياسة الخصوصية</p>
-            <p>تواصل معنا</p>
+        <p className="text-[18px] sm:text-[18px]">من نحن</p>
+        <p className="text-[18px] sm:text-[18px]">الأسئلة الشائعة</p>
+            <p className="text-[18px] sm:text-[18px]">الشروط و الأحكام</p>
+            <p className="text-[18px] sm:text-[18px]">سياسة الخصوصية</p>
+            <p className="text-[18px] sm:text-[18px]">تواصل معنا</p>
             </div>
         </div>
         <div>
           <div className="mt-1 sm:mt-16 gap-5">
           <h3 className="text-2xl font-bold text-800 mb-4">تواصل معنا</h3>
           
-            <p className="pb-2" style={{display:'flex', alignItems:'center', gap:'10px'}}> <FiMapPin />المملكة العربية السعودية- الرياض</p>
+            <p className="pb-2 text-[18px] sm:text-[18px]"  style={{display:'flex', alignItems:'center', gap:'10px'}}> <FiMapPin />المملكة العربية السعودية- الرياض</p>
           
-            <p className="pb-2" style={{display:'flex', alignItems:'center', gap:'10px'}}><FiPhone /> +966-5986-639   </p>
+            <p className="pb-2 text-[18px] sm:text-[18px]" style={{display:'flex', alignItems:'center', gap:'10px'}}><FiPhone /> +966-5986-639   </p>
            
-            <p className="pb-2" style={{display:'flex', alignItems:'center', gap:'10px'}}> <HiOutlineMail className="fw-600"/> Info@Watheeq.com </p>
+            <p className="pb-2 text-[18px] sm:text-[18px]" style={{display:'flex', alignItems:'center', gap:'10px'}}> <HiOutlineMail className="fw-600"/> Info@Watheeq.com </p>
             </div>
         </div>
         <div>
@@ -69,7 +71,7 @@ function Footer() {
         className="grid"
         style={{ backgroundColor: "#093D7D" }}
       >
-<div className="text-center text-[12px] sm:text-2xl text-700 pt-8 pb-8">
+<div className="text-center text-[12px] sm:text-[18px] text-700 pt-8 pb-8">
   منصة وثيق - جميع الحقوق محفوظة 2025
 </div>
       </div>

@@ -32,7 +32,9 @@ function Hero() {
           <p className="text-lg md:text-[32px] mt-4 md:mt-9">
             أنشئ صفحتك القانونية الموثوقة عبر منصة وثيق وابدأ باستقبال العملاء وطلبات الاستشارات خلال دقائق .  {/* hero-subheader */}
           </p>
-            <p className="text-sm md:text-base">احصل على تجربة مجانية لمدة 21 يوم بإمكانك الإلغاء في أي وقت. {/* Free Trial */}</p>
+          <p className="pt-5 text-sm md:text-base">
+              احصل على تجربة مجانية لمدة 21 يوم بإمكانك الإلغاء في أي وقت. {/* Free Trial */}
+            </p>
 
           <div className="btns flex flex-col md:flex-row items-center gap-3 mt-5">
           <Button

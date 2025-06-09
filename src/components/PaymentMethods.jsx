@@ -3,12 +3,12 @@ import React from 'react';
 
 function PaymentMethodCard({ method = 'visa' }) {
   return (
-    <div className="shadow-custom-blue mx-auto flex items-center justify-center rounded-2xl w-[335px] h-[230px] sm:w-[180px] sm:h-[180px]" style={{textShadow:'#0 20px 20px var(--tw-shadow-color, #13498b0d);'}}>
+    <div className="shadow-custom-blue mx-auto flex items-center justify-center rounded-2xl w-[335px] h-[230px] sm:w-[180px] sm:h-[180px]" style={{textShadow:'#0 20px 20px var(--tw-shadow-color, #13498b0d)'}}>
       <img
         src={`/${method}.png`}
         alt={method}
         className="w-[60%] sm:w-auto max-w-full max-h-full"
-      />
+      />  
     </div>
   );
 }
@@ -18,15 +18,15 @@ function PaymentMethods() {
   return (
 <section className="px-[10px] sm:px-[50px]">
 <h2
-  className="text-[30px] sm:text-[60px] font-bold mb-2 sm:mb-8"
-  style={{ paddingLeft: '30px' }}
+className="text-[30px] sm:text-[60px] font-bold mb-2 sm:mb-8 pr-[18px] sm:pr-0"
+style={{ paddingLeft: '30px' }}
 >
 
   طرق الدفع المتكاملة
 </h2>
 
 
-<p className="text-xl pr-0 sm:pr-8">
+<p className="text-xl pr-[18px] sm:pr-8">
   سهّل على عملائك سداد أتعابهم بطرق دفع متنوعة وآمنة
 </p>
 
