@@ -11,7 +11,7 @@ export default function Prices() {
       </nav>
       <main className="px-5 md:px-[50px]">
         <div className="text-center justify-center">
-          <p className="text-3xl mt-5 mb-5 text-[#0A84FF]">الأسعار</p>
+          <p className="text-3xl mt-15 mb-5 text-[#0A84FF]">الأسعار</p>
           <h2 className="text-[30px] md:text-5xl font-bold mb-5">
             باقات متكاملة لانطلاقة كل مهني
           </h2>
