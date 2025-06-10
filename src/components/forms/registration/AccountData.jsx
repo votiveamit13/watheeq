@@ -5,10 +5,11 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 
-export default function RegisterForm({onNext}) {
+export default function RegisterForm({ onNext }) {
   const [phone, setPhone] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [countryCode, setCountryCode] = useState("+966");
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -75,22 +76,27 @@ export default function RegisterForm({onNext}) {
             <FaEnvelope className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
           </div>
           <div className="flex gap-2 rtl:flex-row-reverse">
-            <div className="w-[100px] ">
+            <div className="w-[100px]">
               <PhoneInput
-                country={"sa"}
+                country="sa"
                 enableSearch
-
-                value={phone}
-                onChange={(value) => setPhone(value)}
-                inputClass="!w-full !text-center !rounded-lg !py-3 !p-3 !border !border-blue-200  !text-sm !text-gray-700"
+                value={countryCode}
+                onChange={(value, country) =>
+                  setCountryCode("+" + country.dialCode)
+                }
+                disableCountryCode
+                disableDropdown={false}
+                inputClass="!w-full !text-center !rounded-lg !py-3 !border !border-blue-200 !text-sm !text-gray-700"
                 buttonClass="!border-blue-200"
                 containerClass="!w-full"
+                placeholder=""
               />
             </div>
 
+            {/* Phone Number Input */}
             <div className="relative w-full">
               <input
-                type="number"
+                type="tel"
                 placeholder="رقم الجوال"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
@@ -154,7 +160,7 @@ export default function RegisterForm({onNext}) {
           </button>
         </form>
         <div className="w-full text-center mt-5">
-            <p> لديك حساب بالفعل ؟ تسجيل الدخول</p>
+          <p> لديك حساب بالفعل ؟ تسجيل الدخول</p>
         </div>
       </div>
     </section>
