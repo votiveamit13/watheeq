@@ -5,14 +5,16 @@ import { HiMail } from "react-icons/hi";
 
 export default function WhoWeAre() {
   return (
-    <section className="bg-[#f8fafc]">
-      <nav className="container mx-auto px-[15px] sm:px-10 p-1 px-20 text-center bg-[#F2FAFA] bg-[url('/watheeq/assets/img/hero_bg.png')] bg-cover">
+    <section>
+
+<div className="bg-[#f8fafc] bg-[url('/watheeq/assets/img/hero_bg.png')] bg-cover">
+      <nav className="container mx-auto px-[15px] sm:px-10 p-1 px-20 text-center">
         <Navbar className="" />
         <p className="text-3xl mt-15 mb-5">من نحن</p>
         <h2 className="text-[35px] sm:text-5xl font-bold mb-5">
         رحلتنا بدأت لخدمة المحامين ... تعرف عليها
         </h2>
-        <p className="text-2xl mb-15">
+        <p className="text-2xl mb-15 text-[#0B2B51]">
           وُلدت وثيق من إيماننا بحاجة المحامي العصري إلى حضور رقمي موثوق وقوي .
           منصة وثيق تمكّن المحامين من بناء صفحاتهم القانونية، إدارة طلباتهم،
           واستقبال مستحقاتهم بسهولة، مع تعزيز ثقته في السوق الرقمي
@@ -28,11 +30,12 @@ export default function WhoWeAre() {
           </div>
         </div>
       </nav>
+      </div>
       <main className="p-[20px] sm:p-6 sm:px-10">
       <div className="bg-white p-[20px] sm:p-20 block sm:flex gap-4 items-center m-0 sm:m-5 shadow-xl rounded-3xl mb-[30px]">
         <div className="justify-between flex-1">
-            <h3 class="text-[35px] sm:text-5xl font-bold mb-5">حكايتنا</h3>
-            <p className="text-3xl sm:text-1xl mb-5">
+            <h3 className="text-[35px] sm:text-5xl font-bold mb-5">حكايتنا</h3>
+            <p className="text-3xl sm:text-1xl mb-5 text-[#0B2B51]">
               منصة " وثيق " منصة إلكترونية مبتكرة مخصصة للمحامين المرخّصين .
               توفر المنصة أدوات رقمية لإدارة الطلبات القانونية، الفواتير ،
               التواصل مع العملاء، وتنظيم الخدمات . كل هذا في بيئة قانونية موثوقة

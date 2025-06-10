@@ -242,7 +242,7 @@ function Packages({heading, subheading}) {
   const [plan, setPlan] = useState("monthly");
 
   return (
-    <section className="font-omnes mx-0 sm:mx-[100px]" >
+    <section className="font-omnes mx-0 sm:mx-[100px]">
       <div className="header flex flex-col gap-5">
       <h2 className="pr-[20px] sm:pr-0 text-right sm:text-right text-[30px] sm:text-6xl font-bold">{heading}</h2>
       <div className="block md:flex text-center sm:text-righ justify-between items-center">
@@ -256,7 +256,7 @@ function Packages({heading, subheading}) {
         </div>
 
         <div
-          className="flex flex-col lg:flex-row justify-center mt-0 sm:mt-10 w-full lg:w-[80%] gap-0 sm:gap-[50px] lg:gap-[60px] mx-auto"
+          className="flex flex-col lg:flex-row justify-center mt-0 sm:mt-10 w-full lg:w-[80%] gap-0 sm:gap-[50px] lg:gap-[60px] mx-auto second-price"
         >
           <div className="w-full sm:w-[500px] lg:w-full mb-6 lg:mb-0 sm:p-[15px]">
             <PricingCard type="full" plan={plan} />
