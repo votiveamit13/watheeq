@@ -42,19 +42,18 @@ export default function Faqs() {
   const renderCard = (faq, index) => (
     <div
       key={index}
-      className="flex-1 min-w-[280px] shadow-custom-blue rounded-2xl p-6 bg-white transition-all duration-300"
-    >
+      className="flex-1 min-w-[280px] shadow-custom-blue rounded-2xl p-6 bg-white transition-all duration-300 w-[93%] mx-auto mt-[15px] md:w-auto md:mt-0">
+
       <button
         onClick={() => toggle(index)}
         className="flex justify-between items-center w-full text-right"
       >
-        <h3 className="text-3xl font-semibold-800 text-[#13498B]">
-          {faq.question}
+<h3 className="w-[80%] md:w-auto text-[22px] md:text-[28px] font-normal text-[#13498B]">
+{faq.question}
         </h3>
         <AiOutlineDown
-          className={`text-xl transform transition-transform duration-700 ease-in-out border rounded-2xl ${
-            openIndex === index ? "rotate-280" : ""
-          }`}
+          className={`w-[20px] h-[20px] p-[0px] md:w-[20px] md:h-[20px] md:p-[2px] text-xl transform transition-transform duration-700 ease-in-out border-2 rounded-2xl border-[#13498B] cursor-pointer   ${openIndex === index ? "rotate-280" : ""
+            }`}
         />
       </button>
       {openIndex === index && (
@@ -67,22 +66,27 @@ export default function Faqs() {
 
   return (
     <section>
-      <nav className="p-6 px-20 text-center bg-[#F2FAFA] bg-[url('/watheeq/assets/img/hero_bg.png')] bg-cover">
-        <Navbar className="container mx-auto px-10" />
-        <h2 className="text-5xl font-bold mt-25 mb-5">الأسئلة الشائعة</h2>
-        <p className="text-2xl mb-15">
-          إجابات على الأسئلة المتكررة التي يطرحها الجميع
-        </p>
-      </nav>
-      <main className="p-6 px-20 md:px-20 space-y-6 bg-white border rounded-2xl shadow-custom-blue">
-        <div className="flex flex-col md:flex-row gap-6">
+      <div className="bg-[#f8fafc] bg-[url('/watheeq/assets/img/hero_bg.png')] bg-cover">
+        <nav className="container mx-auto px-[15px] sm:px-10 sm:px-10 sm:px-10 p-6 px-20 text-center ">
+          <Navbar />
+          <h2 className="text-[30px] md:text-5xl font-bold mt-25 mb-4">الأسئلة الشائعة</h2>
+          <p className="text-2xl mb-35 md:mb-50">
+            إجابات على الأسئلة المتكررة التي يطرحها الجميع
+          </p>
+        </nav>
+      </div>
+      <main className="p-0 md:p-6 md:px-20 pb-15 mb-10 space-y-6 bg-white rounded-2xl shadow-custom-blue w-[90%] mx-auto -mt-30">
+        <div className="flex flex-col md:flex-row gap-6 items-start">
           {renderCard(faqData[0], 0)}
           {renderCard(faqData[1], 1)}
         </div>
 
-        <div>{renderCard(faqData[2], 2)}</div>
+        <div className="flex flex-col md:flex-row gap-6 items-start">
+          {renderCard(faqData[2], 2)}
+        </div>
 
-        <div className="flex flex-col md:flex-row gap-6">
+
+        <div className="flex flex-col md:flex-row gap-6 items-start">
           {renderCard(faqData[3], 3)}
           {renderCard(faqData[4], 4)}
         </div>
