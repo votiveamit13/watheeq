@@ -1,9 +1,31 @@
 import { FaUpload } from "react-icons/fa";
+import axios from "axios";
+import {BackendUrl} from '../../../config/url';
 
-export default function OccupationInfo({onNext}) {
-      const handleSubmit = (e) => {
+export default function OccupationInfo({ onNext, formData, setFormData }) {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    onNext();
+
+    const form = new FormData();
+    form.append("name", formData.name);
+    form.append("email", formData.email);
+    form.append("number", formData.number);
+    form.append("password", formData.password);
+    form.append("specialty", formData.specialty);
+    form.append("experience", formData.experience);
+    if (formData.certificates)
+      form.append("certificates", formData.certificates);
+    if (formData.license) form.append("license", formData.license);
+
+    try {
+      const res = await axios.post(`${BackendUrl}/api/register`, form, {
+        headers: { "Content-Type": "multipart/form-data" },
+      });
+      onNext();
+    } catch (err) {
+      alert("فشل التسجيل. حاول مرة أخرى.");
+      console.error(err.response?.data || err.message);
+    }
   };
   return (
     <section className="max-w-md mx-auto p-6">
@@ -13,7 +35,7 @@ export default function OccupationInfo({onNext}) {
       </div>
       <div className="w-full  space-y-6">
         <div className="flex justify-center gap-8">
-          <form className="space-y-5 rounded-lg">
+          <form className="space-y-5 rounded-lg onSubmit={handleSubmit}">
             <div className="w-full">
               <label className="w-full block mb-1 text-sm font-semibold text-[#0B2B51]">
                 التخصص
@@ -21,6 +43,12 @@ export default function OccupationInfo({onNext}) {
               <input
                 type="text"
                 placeholder="ادخل تخصصك"
+                onChange={(e) =>
+                  setFormData((prev) => ({
+                    ...prev,
+                    specialty: e.target.value,
+                  }))
+                }
                 className="w-full text-right border border-blue-200 rounded-lg p-3 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
@@ -32,6 +60,12 @@ export default function OccupationInfo({onNext}) {
               <input
                 type="number"
                 placeholder="2"
+                onChange={(e) =>
+                  setFormData((prev) => ({
+                    ...prev,
+                    experience: e.target.value,
+                  }))
+                }
                 className="w-full text-right border border-blue-200 rounded-lg p-3 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
@@ -44,6 +78,12 @@ export default function OccupationInfo({onNext}) {
                 type="file"
                 className="w-full text-right border border-blue-200 rounded-lg p-3 file:hidden placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="رفع الملفات"
+                onChange={(e) =>
+                  setFormData((prev) => ({
+                    ...prev,
+                    certificates: e.target.files[0],
+                  }))
+                }
               />
               <div className="flex items-center mt-1 text-sm text-gray-400">
                 <FaUpload className="ml-2" />
@@ -59,6 +99,12 @@ export default function OccupationInfo({onNext}) {
                 type="file"
                 className="w-full text-right border border-blue-200 rounded-lg p-3 file:hidden placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="رفع الملفات"
+                onChange={(e) =>
+                  setFormData((prev) => ({
+                    ...prev,
+                    license: e.target.files[0],
+                  }))
+                }
               />
               <div className="flex items-center mt-1 text-sm text-gray-400">
                 <FaUpload className="ml-2" />
