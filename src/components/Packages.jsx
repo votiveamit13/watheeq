@@ -227,7 +227,7 @@ function PricingCard({ type = "basic", plan = "monthly" }) {
 
       <div className="flex justify-center">
         <button
-          className={`mt-10 rounded-[15px] text-2xl w-44 h-14 border-2 cursor-pointer
+          className={`mt-10 rounded-[15px] hover:bg-[#e2ffff] text-2xl w-44 h-14 border-2 cursor-pointer
     ${type === "basic" ? "text-[#D53B98] border-[#D53B98]" : "text-[#1E88E580] border-[#1E88E580]"}`}
         >
           اشترك

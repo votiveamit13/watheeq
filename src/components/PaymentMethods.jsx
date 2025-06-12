@@ -3,7 +3,7 @@ import React from 'react';
 
 function PaymentMethodCard({ method = 'visa' }) {
   return (
-    <div className="shadow-custom-blue mx-auto flex items-center justify-center rounded-2xl w-[335px] h-[230px] sm:w-[180px] sm:h-[180px]" style={{textShadow:'#0 20px 20px var(--tw-shadow-color, #13498b0d)'}}>
+    <div className="shadow-custom-blue hover:bg-[#e2ffff] cursor-pointer mx-auto flex items-center justify-center rounded-2xl w-[335px] h-[230px] sm:w-[180px] sm:h-[180px]" style={{textShadow:'#0 20px 20px var(--tw-shadow-color, #13498b0d)'}}>
       <img
         src={`/${method}.png`}
         alt={method}
