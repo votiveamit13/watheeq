@@ -20,7 +20,7 @@ export default function WhoWeAre() {
           واستقبال مستحقاتهم بسهولة، مع تعزيز ثقته في السوق الرقمي
         </p>
         <div className="flex items-center justify-center mb-8">
-          <div className="bg-white p-3 rounded-lg shadow-md w-100 max-w-md">
+          <div className="bg-white p-3 pt-5 pb-6 pl-5 pr-5 rounded-lg shadow-md w-100 max-w-md">
             <div className="flex items-center justify-between gap-4">
             <div className="flex items-center gap-2 flex-1 border border-blue-300 rounded-lg px-3 py-2">
         <HiMail className="text-[#0A84FF] w-6 h-6" />

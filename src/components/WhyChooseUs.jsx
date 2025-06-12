@@ -4,11 +4,11 @@ import { Button } from "./ui/Button";
 
 function ReasonCards({ content, icon }) {
   return (
-    <div className="flex flex-col gap-4 shadow-custom-blue p-8 rounded-2xl">
+    <div className="flex hover:bg-[#e2ffff] cursor-pointer flex-col gap-4 shadow-custom-blue p-8 rounded-2xl">
       <div className="bg-primary h-[73px] w-[73px] rounded-full flex justify-center items-center">
         <img height={47} width={47} src={`/${icon}`} alt="watheeq" />
       </div>
-      <p className="text-2xl font-semibold">{content}</p>
+      <p className="text-[20px] font-semibold">{content}</p>
     </div>
   );
 }

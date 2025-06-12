@@ -214,11 +214,16 @@ function HowToStart() {
         <div className="text-xl lg:text-3xl w-full lg:w-1/2 text-center flex items-center justify-center mt-5 mb-5" style={{ color: 'white', backgroundColor: '#13498B', }}>
             الخطوة الرابعة
           </div>
-          <div className="text-primary bg-background h-auto lg:h-36 text-sm lg:text-xl w-full lg:w-1/2 px-5 flex items-center justify-center md:rounded-r-3xl" style={{ color: '#0B2B51', backgroundColor: 'white', borderRadius: '22px 22px 22px 22px' }}>
+          <div
+  className="text-primary bg-white hover:bg-[#e2ffff] h-auto lg:h-36 text-sm lg:text-xl w-full lg:w-1/2 px-5 flex items-center justify-center md:rounded-r-3xl"
+  style={{ color: '#0B2B51', borderRadius: '22px' }}
+>
             انشر صفحتك عبر رابط وباركود خاص وابدأ مسيرتك الرقمية بثقة
           </div>
         </div>
       </div>
+
+      
     </section>
   );
 }

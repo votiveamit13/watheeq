@@ -11,30 +11,30 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 export default function Home() {
   return (
     <>
-    <AOSInit />
+      <AOSInit />
       <main>
 
         <Hero />
-        <div className="container-fluid mx-auto">
-                  <div data-aos="fade-up">
-          <HowToStart/></div>
-           <div data-aos="fade-right" data-aos-delay="100">
-          <WhyChooseUs/></div>
-          <div className="py-10 sm:py-10">
+        <div className="container mx-auto">
+          <div data-aos="fade-up">
+            <HowToStart /></div>
+          <div data-aos="fade-up" data-aos-delay="100">
+            <WhyChooseUs /></div>
+          <div className="py-10 sm:py-10" data-aos="fade-up" data-aos-delay="100">
             <PaymentMethods />
           </div>
-          <div className="py-5">
-            <DownloadApp/>
+          <div className="py-5" data-aos="fade-up" data-aos-delay="100">
+            <DownloadApp />
           </div>
-          <div className="py-5 sm:py-10">
-            <Packages heading={"الأسعار"} subheading={"اختر الباقة التي تناسبك لتبدأ رحلتك في  المنصة"}/>
+          <div className="py-5 sm:py-10" data-aos="fade-up" data-aos-delay="100">
+            <Packages heading={"الأسعار"} subheading={"اختر الباقة التي تناسبك لتبدأ رحلتك في  المنصة"} />
           </div>
-          <div className="py-2">
-            <ContactUs/>
+          <div className="py-2" data-aos="fade-up" data-aos-delay="100">
+            <ContactUs />
           </div>
-          <div className="">
-            <Footer/>
-          </div>
+        </div>
+        <div className="container-fluid" data-aos="fade-up" data-aos-delay="100">
+          <Footer />
         </div>
       </main>
     </>
