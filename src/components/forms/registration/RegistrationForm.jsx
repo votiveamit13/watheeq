@@ -9,17 +9,6 @@ import StepDots from "./StepDots";
 
 export default function RegistrationForm() {
   const [currentStep, setCurrentStep] = useState(1);
-  const [otpFromServer, setOtpFromServer] = useState(null);
-    const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    number: "",
-    password: "",
-    specialty: "",
-    experience: "",
-    certificates: null,
-    license: null,
-  });
 
   const handleNext = () => {
     setCurrentStep((prev) => Math.min(prev + 1, 4));
@@ -28,24 +17,11 @@ export default function RegistrationForm() {
   const renderStepComponent = () => {
     switch (currentStep) {
       case 1:
-        return (
-          <AccountData
-            onNext={handleNext}
-            formData={formData}
-            setFormData={setFormData}
-            setOtpFromServer={setOtpFromServer}
-          />
-        );
+        return <AccountData onNext={handleNext} />;
       case 2:
-        return <AccountConfirmation onNext={handleNext} otpFromServer={otpFromServer} />;
+        return <AccountConfirmation onNext={handleNext} />;
       case 3:
-        return (
-          <OccupationInfo
-            onNext={handleNext}
-            formData={formData}
-            setFormData={setFormData}
-          />
-        );
+        return <OccupationInfo onNext={handleNext} />;
       case 4:
         return <Successfull />;
       default:

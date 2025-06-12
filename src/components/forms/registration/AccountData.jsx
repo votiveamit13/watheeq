@@ -4,57 +4,43 @@ import { FaUser, FaEnvelope, FaPhone, FaLock } from "react-icons/fa";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-import {BackendUrl} from '@/config/url';
-import axios from "axios";
 
-export default function RegisterForm({ onNext, formData, setFormData, setOtpFromServer }) {
+export default function RegisterForm({ onNext }) {
+  const [phone, setPhone] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [countryCode, setCountryCode] = useState("+966");
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-    const handlePhoneChange = (value) => {
-    const fullNumber = countryCode + value.replace(/^0+/, "");
-    setFormData((prev) => ({ ...prev, number: fullNumber }));
-  };
-
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    const { name, email, number, password, confirmPassword } = formData;
-    if (!name || !email || !number || !password || !confirmPassword) {
-      alert("يرجى ملء جميع الحقول");
-      return;
-    }
+    // if (
+    //   !form.name ||
+    //   !form.email ||
+    //   !phone ||
+    //   !form.password ||
+    //   !form.confirmPassword
+    // ) {
+    //   alert("الرجاء ملء جميع الحقول");
+    //   return;
+    // }
 
-     if (password !== confirmPassword) {
+    if (form.password !== form.confirmPassword) {
       alert("كلمتا المرور غير متطابقتين");
       return;
     }
-
-
-    try {
-    const res = await axios.post(`${BackendUrl}/api/send-otp`, {
-      email,
-    });
-    setOtpFromServer(res.data.otp);
     onNext();
-  } catch (err) {
-  if (err.response) {
-    console.error("Backend error:", err.response.data);
-    alert(`خطأ من الخادم: ${JSON.stringify(err.response.data)}`);
-  } else if (err.request) {
-    console.error("No response received:", err.request);
-    alert("لم يتم تلقي استجابة من الخادم. تحقق من الاتصال.");
-  } else {
-    console.error("Request setup error:", err.message);
-    alert("حدث خطأ أثناء إعداد الطلب: " + err.message);
-  }
-}
+    console.log("Form submitted:", { ...form, phone });
   };
 
   return (
@@ -71,7 +57,7 @@ export default function RegisterForm({ onNext, formData, setFormData, setOtpFrom
               type="text"
               name="name"
               placeholder="اسمك بالكامل"
-              value={formData.name}
+              value={form.name}
               onChange={handleChange}
               className="w-full pr-10 border border-blue-200 rounded-lg p-3 text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
@@ -83,7 +69,7 @@ export default function RegisterForm({ onNext, formData, setFormData, setOtpFrom
               type="email"
               name="email"
               placeholder="بريدك الالكتروني"
-              value={formData.email}
+              value={form.email}
               onChange={handleChange}
               className="w-full pr-10 border border-blue-200 rounded-lg p-3 text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
@@ -107,14 +93,16 @@ export default function RegisterForm({ onNext, formData, setFormData, setOtpFrom
               />
             </div>
 
+            {/* Phone Number Input */}
             <div className="relative w-full">
               <input
                 type="tel"
                 placeholder="رقم الجوال"
-                onChange={(e) => handlePhoneChange(e.target.value)}
-                className="w-full pr-10 border border-blue-200 rounded-lg p-3 text-right"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                className="w-full pr-10 border border-blue-200 rounded-lg p-3 text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
-              <FaPhone className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400" />
+              <FaPhone className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
             </div>
           </div>
 
@@ -123,7 +111,7 @@ export default function RegisterForm({ onNext, formData, setFormData, setOtpFrom
               type={showPassword ? "text" : "password"}
               name="password"
               placeholder="كلمة المرور"
-              value={formData.password}
+              value={form.password}
               onChange={handleChange}
               className="w-full pr-10 border border-blue-200 rounded-lg p-3 text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
@@ -146,7 +134,7 @@ export default function RegisterForm({ onNext, formData, setFormData, setOtpFrom
               type={showConfirmPassword ? "text" : "password"}
               name="confirmPassword"
               placeholder="تأكيد كلمة مرور"
-              value={formData.confirmPassword}
+              value={form.confirmPassword}
               onChange={handleChange}
               className="w-full pr-10 border border-blue-200 rounded-lg p-3 text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-export default function AccountConfirmation({onNext, otpFromServer}) {
+export default function AccountConfirmation({onNext}) {
   const [otp, setOtp] = useState(["", "", "", "", ""]);
 
   const handleChange = (e, index) => {
@@ -18,21 +18,11 @@ export default function AccountConfirmation({onNext, otpFromServer}) {
     }
   };
 
-const handleSubmit = (e) => {
-  e.preventDefault();
-  const enteredOtp = otp.join("").trim();
-  const serverOtp = String(otpFromServer).trim(); // <- force to string
+    const handleSubmit = (e) => {
+    e.preventDefault();
 
- console.log("typeof enteredOtp:", typeof enteredOtp);
-console.log("typeof otpFromServer:", typeof otpFromServer);
-
-  if (enteredOtp === serverOtp) {
-    console.log("✅ OTP matched. onNext is:", onNext);
-    onNext(); // go to OccupationInfo
-  } else {
-    alert("❌ رمز التحقق غير صحيح");
-  }
-};
+    onNext();
+  };
 
   return (
     <section className="max-w-md mx-auto p-6">

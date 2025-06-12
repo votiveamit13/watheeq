@@ -19,7 +19,7 @@ function Hero() {
 >
 
 
-  
+
         <nav className="container mx-auto px-[15px] sm:px-10">
         <Navbar />
       </nav>

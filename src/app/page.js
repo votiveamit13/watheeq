@@ -1,3 +1,4 @@
+import AOSInit from "@/components/animation/AOSInit";
 import ContactUs from "@/components/ContactUs";
 import DownloadApp from "@/components/DownloadApp";
 import Footer from "@/components/Footer";
@@ -10,11 +11,15 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 export default function Home() {
   return (
     <>
+    <AOSInit />
       <main>
+
         <Hero />
         <div className="container-fluid mx-auto">
-          <HowToStart/>
-          <WhyChooseUs/>
+                  <div data-aos="fade-up">
+          <HowToStart/></div>
+           <div data-aos="fade-right" data-aos-delay="100">
+          <WhyChooseUs/></div>
           <div className="py-10 sm:py-10">
             <PaymentMethods />
           </div>
