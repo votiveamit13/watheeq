@@ -47,7 +47,7 @@ export default function Navbar() {
 
           <div className="flex items-center gap-4">
             <Link href="/login" className="text-secondary">دخول</Link>
-            <Link href="/register">
+            <Link href="/registration">
               <Button
                 variant="secondary"
                 className="rounded-3xl font-semibold text-xl h-12 cursor-pointer md:rounded-r-3xl md:rounded-l-3xl pl-8 pr-8 bg-[#1E88E5]"
