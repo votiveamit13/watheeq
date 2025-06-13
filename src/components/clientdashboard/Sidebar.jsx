@@ -45,7 +45,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
     <div className="relative flex">
       {/* Sidebar */}
       <div
-        className={`bg-white shadow-lg h-screen flex flex-col p-4 transition-all duration-300 ${
+        className={`bg-white shadow-lg h-200 flex flex-col p-4 transition-all duration-300 ${
           collapsed ? "w-20" : "w-64"
         }`}
       >

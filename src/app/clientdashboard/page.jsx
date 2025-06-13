@@ -6,6 +6,7 @@ import LineChart from "@/components/charts/LineChart";
 import BarChart from "@/components/charts/BarChart";
 import PieChart from "@/components/charts/PieChart";
 import StatsTable from "@/components/charts/StatsTable";
+import StatusBar from "@/components/clientdashboard/statusbar/Status";
 
 export default function ClientDashboard() {
    const [collapsed, setCollapsed] = useState(false);
@@ -26,6 +27,9 @@ export default function ClientDashboard() {
       </div>
       <div className="flex-1 flex flex-col p-5">
         <Navbar />
+        <div className="mt-5 flex gap-3">
+          <StatusBar/>
+        </div>
         <div className="mt-5 flex gap-3">
           <div className="w-100 bg-white p-4 rounded-lg">
             <BarChart title="زيارات  موقعك" data={chartData} />
