@@ -11,6 +11,7 @@ import StatusBar from "@/components/clientdashboard/statusbar/Status";
 export default function ClientDashboard() {
    const [collapsed, setCollapsed] = useState(false);
 
+
   const chartData = [
     { label: "الاثنين", value: 446 },
     { label: "الثلاثاء", value: 285 },
@@ -37,7 +38,7 @@ export default function ClientDashboard() {
           <div className="flex-1 bg-white p-4 rounded-lg">
             <LineChart
               title="الطلبات"
-              data={[200000, 75000, 102000, 148000, 190000, 210000, 75000]}
+              data={[240000, 200000, 205000, 200000, 187000, 180200, 190500, 196000, 180000, 175800, 210000, 75000, 102000, 18000, 190000, 250000, 75000]}
               labels={[
                 "جمادي ثاني",
                 "جمادي اول",

@@ -21,7 +21,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
 
     const rect = itemRefs.current[menu]?.getBoundingClientRect();
     if (rect) {
-      setSubmenuTop(rect.top - 5);
+      setSubmenuTop(rect.top - 0);
     }
   };
 
@@ -43,13 +43,11 @@ export default function Sidebar({ collapsed, setCollapsed }) {
 
   return (
     <div className="relative flex">
-      {/* Sidebar */}
       <div
         className={`bg-white shadow-lg h-200 flex flex-col p-4 transition-all duration-300 ${
           collapsed ? "w-20" : "w-64"
         }`}
       >
-        {/* Logo & Toggle */}
         <div className="flex justify-between items-center mb-10 mt-5">
           <img
             src={`/watheeq/assets/img/${
@@ -68,7 +66,6 @@ export default function Sidebar({ collapsed, setCollapsed }) {
           )}
         </div>
 
-        {/* Navigation */}
         <nav
           className={`space-y-4 text-[#005bac] text-xl ${
             collapsed ? "text-center" : "text-right"
@@ -119,14 +116,13 @@ export default function Sidebar({ collapsed, setCollapsed }) {
                 )}
               </div>
 
-              {/* Floating Submenu */}
               {collapsed &&
                 activeMenu === item.key &&
                 item.hasSub &&
                 submenus[item.key]?.length > 0 && (
                   <div
-                    className="absolute left-30 space-y-3 z-50"
-                    style={{ top: `${submenuTop}px` }}
+                    className="absolute space-y-3 z-50"
+                    style={{ top: `${submenuTop}px`, left: "-60%" }}
                   >
                     {submenus[item.key].map((sub, index) => (
                       <div
@@ -145,7 +141,6 @@ export default function Sidebar({ collapsed, setCollapsed }) {
                   </div>
                 )}
 
-              {/* Expanded Submenu */}
               {!collapsed &&
                 activeMenu === item.key &&
                 item.hasSub &&
@@ -154,7 +149,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
                     {submenus[item.key].map((sub, index) => (
                       <div
                         key={index}
-                        className="flex items-center hover:text-[#003f7f] cursor-pointer"
+                        className="flex items-center hover:text-[#003f7f] cursor-pointer mr-5"
                         onClick={handleSubMenuClick}
                       >
                         <img
@@ -169,7 +164,6 @@ export default function Sidebar({ collapsed, setCollapsed }) {
             </div>
           ))}
 
-          {/* Logout */}
           <div
             className="flex items-center hover:text-[#003f7f] cursor-pointer"
             onClick={() => setActiveMenu(null)}
