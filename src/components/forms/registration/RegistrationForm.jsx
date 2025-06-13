@@ -7,6 +7,7 @@ import OccupationInfo from "./OccupationInfo";
 import Successfull from "./Successfull";
 import StepDots from "./StepDots";
 
+
 export default function RegistrationForm() {
   const [currentStep, setCurrentStep] = useState(1);
 
@@ -30,12 +31,14 @@ export default function RegistrationForm() {
   };
   return (
 <section className="flex items-center">
-   <div className="bg-white w-1/2 justify-center pl-45 pr-45">
-        {currentStep != 3 && (
+<div
+  className="w-1/2 justify-center px-[45px]"
+  style={{ backgroundColor: "#fff", marginTop:'-80px', height:'120vh' }}
+>        {currentStep != 3 && (
           <img
           src="/watheeq/assets/img/logo.png"
           alt="watheeq"
-          className="w-[200] mx-auto my-5 pt-20 pb-10"
+          className="w-[200] mx-auto my-5 pt-20 pb-10 mt-20"
         />
  
         )}
@@ -44,7 +47,7 @@ export default function RegistrationForm() {
           <img
             src="/watheeq/assets/img/registration1.png"
             alt="registration1"
-            className="mb-10 w-[450] mx-auto"
+            className="mb-10 w-[350] mx-auto"
           />
         )}
 
@@ -52,7 +55,7 @@ export default function RegistrationForm() {
           <img
             src="/watheeq/assets/img/registration2.png"
             alt="registration2"
-            className="mb-10"
+            className="mb-10 w-[350] mx-auto"
           />
         )}
 
@@ -60,7 +63,7 @@ export default function RegistrationForm() {
           <img
             src="/watheeq/assets/img/registration3.png"
             alt="registration2"
-            className="mb-10 mt-30"
+            className="mb-10 mt-30 w-[450] mx-auto"
           />
         )}
 
@@ -68,7 +71,7 @@ export default function RegistrationForm() {
           <img
             src="/watheeq/assets/img/registration4.png"
             alt="registration2"
-            className="mb-10"
+            className="mb-10 w-[350] mx-auto"
           />
         )}
 
@@ -80,11 +83,13 @@ export default function RegistrationForm() {
         {currentStep === 3 && <StepDots activeIndex={2} />}
         {currentStep === 4 && <StepDots activeIndex={3} />}
       </div>
-
+    
       <div className="bg-[#F5F8FB] w-1/2 justify-center">
         <ProgressBar currentStep={currentStep} />
         <div className="mt-4">{renderStepComponent()}</div>
       </div>
+
+
     </section>
   );
 }

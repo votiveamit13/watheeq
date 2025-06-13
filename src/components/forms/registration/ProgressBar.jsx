@@ -43,6 +43,7 @@ export default function ProgressBar({ currentStep = 1 }) {
               {step.label}
             </div>
           </div>
+          
         ))}
       </div>
     </section>

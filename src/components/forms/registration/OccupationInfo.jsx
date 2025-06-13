@@ -1,7 +1,7 @@
 import { FaUpload } from "react-icons/fa";
 
-export default function OccupationInfo({onNext}) {
-      const handleSubmit = (e) => {
+export default function OccupationInfo({ onNext }) {
+  const handleSubmit = (e) => {
     e.preventDefault();
     onNext();
   };
@@ -22,7 +22,7 @@ export default function OccupationInfo({onNext}) {
                 type="text"
                 placeholder="ادخل تخصصك"
                 className="w-full text-right bg-white rounded-lg p-3 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                style={{ border: '1px solid #13498b40' }}              />
+                style={{ border: '1px solid #13498b40' }} />
             </div>
 
             <div>
@@ -33,7 +33,7 @@ export default function OccupationInfo({onNext}) {
                 type="number"
                 placeholder="2"
                 className="w-full text-right bg-white border border-blue-200 rounded-lg p-3 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                style={{ border: '1px solid #13498b40' }}   />
+                style={{ border: '1px solid #13498b40' }} />
             </div>
 
             <div>
@@ -44,7 +44,7 @@ export default function OccupationInfo({onNext}) {
                 type="file"
                 className="w-full text-right bg-white border border-blue-200 rounded-lg p-3 file:hidden placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 text-[#9794AA]"
                 placeholder="رفع الملفات"
-                style={{ border: '1px solid #13498b40' }}   />
+                style={{ border: '1px solid #13498b40' }} />
               <div className="flex items-center bg-white mt-1 text-sm text-gray-400">
                 <FaUpload className="ml-2" />
                 <span>رفع الملفات</span>
@@ -59,7 +59,7 @@ export default function OccupationInfo({onNext}) {
                 type="file"
                 className="w-full text-right bg-white border border-blue-200 rounded-lg p-3 file:hidden placeholder:text-gray-400 focus:outline-none text-[#9794AA] focus:ring-2 focus:ring-blue-500"
                 placeholder="رفع الملفات"
-                style={{ border: '1px solid #13498b40' }}   />
+                style={{ border: '1px solid #13498b40' }} />
               <div className="flex items-center mt-1 text-sm text-gray-400">
                 <FaUpload className="ml-2" />
                 <span>رفع الملفات</span>

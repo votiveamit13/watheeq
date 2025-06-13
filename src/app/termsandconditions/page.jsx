@@ -7,6 +7,9 @@ const TermsAndConditions = () => {
   return (
     <div className="bg-[#f8fafc]">
       <AOSInit />
+
+      <div className="container mx-auto">
+
       <nav className="container mx-auto px-[15px] sm:px-10">
         <Navbar/>
       </nav>
@@ -25,6 +28,7 @@ const TermsAndConditions = () => {
           <li className="mb-10 text-2xl">لا يجوز استخدام خدمات وثيق في أي أنشطة غير مصرح بها او أنشطة غير نظامية، وفي حالة قيام المهني بغير نشاطه أو إضافة نشاط جديـد لا تتحمل وثيق اي اضرار تجاه ذلك دون ادنى مسؤولية.</li>
         </ul>
       </main>
+      </div>
       <footer className="text-white" data-aos="fade-up"
             data-aos-delay="100">
         <Footer/>
