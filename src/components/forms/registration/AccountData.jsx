@@ -3,20 +3,29 @@ import { useState } from "react";
 import { FaUser, FaEnvelope, FaPhone, FaLock } from "react-icons/fa";
 import { HiOutlineUser, HiOutlineEnvelope, HiOutlinePhone, HiOutlineLock } from "react-icons/hi2";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
-import PhoneInput from "react-phone-input-2";
+
 import "react-phone-input-2/lib/style.css";
+import { ChevronDown } from "lucide-react";
 
 export default function RegisterForm({ onNext }) {
   const [phone, setPhone] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [countryCode, setCountryCode] = useState("+966");
+  const [countryCode, setCountryCode] = useState('+966');
   const [form, setForm] = useState({
     name: "",
     email: "",
     password: "",
     confirmPassword: "",
   });
+
+  const countryOptions = [
+    { code: "+966", label: "🇸🇦", name: "KSA" },
+    { code: "+971", label: "🇦🇪", name: "UAE" },
+    { code: "+965", label: "🇰🇼", name: "Kuwait" },
+    { code: "+20", label: "🇪🇬", name: "Egypt" },
+    { code: "+91", label: "🇮🇳", name: "India" },
+  ];
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -47,9 +56,9 @@ export default function RegisterForm({ onNext }) {
   return (
     <section className="max-w-md mx-auto p-6">
       <div className="mb-5">
-      <h2 className="text-2xl font-bold hover:text-blue-600 cursor-pointer">
-  بيانات الحساب
-</h2>
+        <h2 className="text-2xl font-bold hover:text-blue-600 cursor-pointer">
+          بيانات الحساب
+        </h2>
         <p>قم بإدخال معلوماتك لإنشاء حساب في وثيق</p>
       </div>
 
@@ -64,7 +73,7 @@ export default function RegisterForm({ onNext }) {
               onChange={handleChange}
               className="w-full pr-10 rounded-lg p-3 text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
               style={{ border: '1px solid #13498b40' }}
-              />
+            />
             <img src="/watheeq/assets/img/accountdata1.png" className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5" />
           </div>
 
@@ -76,25 +85,28 @@ export default function RegisterForm({ onNext }) {
               value={form.email}
               onChange={handleChange}
               className="w-full pr-10 rounded-lg p-3 text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
-              style={{ border: '1px solid #13498b40' }}            />
+              style={{ border: '1px solid #13498b40' }} />
             <img src="/watheeq/assets/img/accountdata2.png" className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5" />
           </div>
           <div className="flex gap-2 rtl:flex-row-reverse">
-            <div className="w-[100px]">
-              <PhoneInput
-                country="sa"
-                enableSearch
-                value={countryCode}
-                onChange={(value, country) =>
-                  setCountryCode("+" + country.dialCode)
-                }
-                disableCountryCode
-                disableDropdown={false}
-                inputClass="!w-full !h-[50px] !text-center !rounded-lg !py-3 !border !border-blue-200 !text-sm !text-gray-700"
-                class="border border-blue-200 !rounded-[10px_10px_10px_10px] p-2"                containerClass="!w-full"
-                placeholder=""
-              />
-            </div>
+          <div className="relative w-[88px] h-[52px]">
+      <select
+        value={countryCode}
+        onChange={(e) => setCountryCode(e.target.value)}
+        className="appearance-none w-full h-full pl-2 pr-6 bg-white border border-[#13498b40] rounded-lg text-[#4C3A74] text-sm font-medium flex items-center justify-between"
+      >
+        {countryOptions.map((opt) => (
+          <option key={opt.code} value={opt.code}>
+            {opt.label} {opt.code}
+          </option>
+        ))}
+      </select>
+
+      {/* Custom arrow icon */}
+      <div className="pointer-events-none absolute top-1/2 right-2 transform -translate-y-1/2 text-[#13498B]">
+        <ChevronDown size={16} />
+      </div>
+    </div>
 
             {/* Phone Number Input */}
             <div className="relative w-full">
@@ -104,7 +116,7 @@ export default function RegisterForm({ onNext }) {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 className="w-full pr-10 rounded-lg p-3 text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
-                style={{ border: '1px solid #13498b40' }}              />
+                style={{ border: '1px solid #13498b40' }} />
               <img src="/watheeq/assets/img/accountdata3.png" className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5" />
             </div>
           </div>
@@ -117,7 +129,7 @@ export default function RegisterForm({ onNext }) {
               value={form.password}
               onChange={handleChange}
               className="w-full pr-10 rounded-lg p-3 text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
-              style={{ border: '1px solid #13498b40' }}            />
+              style={{ border: '1px solid #13498b40' }} />
             <img src="/watheeq/assets/img/accountdata4.png" className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5" />
             {showPassword ? (
               <AiOutlineEyeInvisible
@@ -140,7 +152,7 @@ export default function RegisterForm({ onNext }) {
               value={form.confirmPassword}
               onChange={handleChange}
               className="w-full pr-10 rounded-lg p-3 text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
-              style={{ border: '1px solid #13498b40' }}            />
+              style={{ border: '1px solid #13498b40' }} />
             <img src="/watheeq/assets/img/accountdata4.png" className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5" />
             {showConfirmPassword ? (
               <AiOutlineEyeInvisible
