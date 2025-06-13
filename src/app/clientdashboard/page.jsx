@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import Navbar from "@/components/clientdashboard/Navbar";
 import Sidebar from "@/components/clientdashboard/Sidebar";
 import LineChart from "@/components/charts/LineChart";
@@ -7,6 +8,8 @@ import PieChart from "@/components/charts/PieChart";
 import StatsTable from "@/components/charts/StatsTable";
 
 export default function ClientDashboard() {
+   const [collapsed, setCollapsed] = useState(false);
+
   const chartData = [
     { label: "الاثنين", value: 446 },
     { label: "الثلاثاء", value: 285 },
@@ -18,13 +21,12 @@ export default function ClientDashboard() {
   ];
   return (
     <section className="flex h-screen bg-gray-50">
-      <div className="w-64">
-        <Sidebar />
+      <div className={`${collapsed ? "w-20" : "w-64"} transition-all duration-300`}>
+        <Sidebar collapsed={collapsed} setCollapsed={setCollapsed} />
       </div>
-
       <div className="flex-1 flex flex-col p-5">
         <Navbar />
-        <div className="p-6 flex gap-3">
+        <div className="mt-5 flex gap-3">
           <div className="w-100 bg-white p-4 rounded-lg">
             <BarChart title="زيارات  موقعك" data={chartData} />
           </div>
@@ -43,7 +45,7 @@ export default function ClientDashboard() {
             />
           </div>
         </div>
-        <div className="p-6 flex gap-3">
+        <div className="mt-6 flex gap-3">
           <div className="flex-1 bg-white p-4 rounded-lg">
             <StatsTable
               title="عنوان"

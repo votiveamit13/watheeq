@@ -1,13 +1,16 @@
+import AOSInit from "@/components/animation/AOSInit";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
 export default function PrivacyPolicy() {
   return (
     <section>
+      <AOSInit/>
         <nav className="container mx-auto px-[15px] sm:px-10">
         <Navbar />
       </nav>
-      <main className="p-[30px] sm:p-[35px] sm:px-[85px]">
+      <main className="p-[30px] sm:p-[35px] sm:px-[85px]" data-aos="fade-up"
+            data-aos-delay="50">
       <div>
           <h2 className="text-4xl font-bold mb-4 mt-10">سياسة الخصوصية</h2>
           <p className="mb-10 text-2xl">
@@ -69,7 +72,10 @@ export default function PrivacyPolicy() {
           </ul>
         </div>
       </main>
-      <Footer />
+      <footer className="text-white" data-aos="fade-up"
+            data-aos-delay="100">
+        <Footer/>
+      </footer>
     </section>
   );
 }

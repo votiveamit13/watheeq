@@ -1,12 +1,14 @@
 "use client";
 
+import AOSInit from "./animation/AOSInit";
+
 function HowToStart() {
 
   return (
     <section
     className="flex flex-col lg:flex-row font-omnes justify-between mx-[18px] sm:mx-[50px] items-center"
   >
-  
+    <AOSInit />
   <div className="w-full lg:w-5/12 pr-[15px] sm:pr-[15px] md:pr-0">
   <h2 className="text-4xl lg:text-6xl font-bold">
           كيف تبدأ ؟
@@ -15,9 +17,8 @@ function HowToStart() {
           كيف تبدأ في وثيق كمحام محترف
         </p>
         <div className="steps flex flex-col gap-8 pt-10">
-          <div className="flex gap-3 items-start">
+          <div className="flex gap-3 items-start" data-aos="fade-up" data-aos-delay="50">
             <div className="relative w-22 h-28">
-              {/* Custom Circular Border */}
               <svg viewBox="0 0 100 100" className="w-full h-full">
 
                 <circle
@@ -25,7 +26,7 @@ function HowToStart() {
                   cy="50"
                   r="45"
                   fill="none"
-                  stroke="#0B4F94"          // primary color
+                  stroke="#0B4F94"
                   strokeWidth="8"
                   strokeDasharray="100 157"
                   strokeDashoffset="0"
@@ -45,7 +46,7 @@ function HowToStart() {
                 />
               </svg>
 
-              {/* Icon inside the circle */}
+
               <div className="absolute inset-0 flex items-center justify-center p-3">
                 <img
                   src="/watheeq/assets/img/howtostarticon1.png"
@@ -62,9 +63,9 @@ function HowToStart() {
               </p>
             </div>
           </div>
-          <div className="flex gap-3 items-start">
+          <div className="flex gap-3 items-start" data-aos="fade-up" data-aos-delay="70">
             <div className="relative w-28 h-28">
-              {/* Custom Circular Border */}
+
               <svg viewBox="0 0 100 100" className="w-full h-full">
 
                 <circle
@@ -72,7 +73,7 @@ function HowToStart() {
                   cy="50"
                   r="45"
                   fill="none"
-                  stroke="#0B4F94"          // primary color
+                  stroke="#0B4F94"
                   strokeWidth="8"
                   strokeDasharray="100 157"
                   strokeDashoffset="0"
@@ -92,7 +93,7 @@ function HowToStart() {
                 />
               </svg>
 
-              {/* Icon inside the circle */}
+
               <div className="absolute inset-0 flex items-center justify-center p-3">
                 <img
                   src="/watheeq/assets/img/howtostarticon2.png"
@@ -109,9 +110,9 @@ function HowToStart() {
               </p>
             </div>
           </div>
-          <div className="flex gap-3 items-start">
+          <div className="flex gap-3 items-start" data-aos="fade-up" data-aos-delay="90">
             <div className="relative w-22 h-28">
-              {/* Custom Circular Border */}
+
               <svg viewBox="0 0 100 100" className="w-full h-full">
 
                 <circle
@@ -119,7 +120,7 @@ function HowToStart() {
                   cy="50"
                   r="45"
                   fill="none"
-                  stroke="#0B4F94"          // primary color
+                  stroke="#0B4F94"
                   strokeWidth="8"
                   strokeDasharray="100 157"
                   strokeDashoffset="0"
@@ -139,7 +140,7 @@ function HowToStart() {
                 />
               </svg>
 
-              {/* Icon inside the circle */}
+
               <div className="absolute inset-0 flex items-center justify-center p-3">
                 <img
                   src="/watheeq/assets/img/howtostarticon3.png"
@@ -156,9 +157,9 @@ function HowToStart() {
               </p>
             </div>
           </div>
-          <div className="flex gap-3 items-start">
+          <div className="flex gap-3 items-start" data-aos="fade-up" data-aos-delay="110">
             <div className="relative w-22 h-28">
-              {/* Custom Circular Border */}
+
               <svg viewBox="0 0 100 100" className="w-full h-full">
 
                 <circle
@@ -166,7 +167,7 @@ function HowToStart() {
                   cy="50"
                   r="45"
                   fill="none"
-                  stroke="#0B4F94"          // primary color
+                  stroke="#0B4F94"
                   strokeWidth="8"
                   strokeDasharray="100 157"
                   strokeDashoffset="0"
@@ -186,7 +187,7 @@ function HowToStart() {
                 />
               </svg>
 
-              {/* Icon inside the circle */}
+
               <div className="absolute inset-0 flex items-center justify-center p-3">
                 <img
                   src="/watheeq/assets/img/howtostarticon4.png"
@@ -223,7 +224,7 @@ function HowToStart() {
         </div>
       </div>
 
-      
+
     </section>
   );
 }

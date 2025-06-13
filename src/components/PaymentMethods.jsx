@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import AOSInit from './animation/AOSInit';
 
 function PaymentMethodCard({ method = 'visa' }) {
   return (
@@ -8,7 +9,7 @@ function PaymentMethodCard({ method = 'visa' }) {
         src={`/${method}.png`}
         alt={method}
         className="w-[60%] sm:w-auto max-w-full max-h-full"
-      />  
+      />
     </div>
   );
 }
@@ -17,6 +18,7 @@ function PaymentMethods() {
 
   return (
 <section className="px-[10px] sm:px-[50px]">
+    <AOSInit />
 <h2
 className="text-[30px] sm:text-[60px] font-bold mb-2 sm:mb-8 pr-[18px] sm:pr-0"
 style={{ paddingLeft: '30px' }}
@@ -30,7 +32,7 @@ style={{ paddingLeft: '30px' }}
   سهّل على عملائك سداد أتعابهم بطرق دفع متنوعة وآمنة
 </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div  data-aos="fade-up" data-aos-delay="100" className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         <PaymentMethodCard method="watheeq/assets/img/visa" />
         <PaymentMethodCard method="watheeq/assets/img/tabby" />
         <PaymentMethodCard method="watheeq/assets/img/mada" />

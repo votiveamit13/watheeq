@@ -1,14 +1,17 @@
+import AOSInit from "@/components/animation/AOSInit";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import React from "react";
 
 const TermsAndConditions = () => {
   return (
-    <div className="" style={{backgroundColor:'#f8fafc'}}>
+    <div className="bg-[#f8fafc]">
+      <AOSInit />
       <nav className="container mx-auto px-[15px] sm:px-10">
         <Navbar/>
       </nav>
-      <main className="p-[30px] sm:p-[35px] sm:px-[85px]">
+      <main className="p-[30px] sm:p-[35px] sm:px-[85px]" data-aos="fade-up"
+            data-aos-delay="50">
       <h2 className="text-3xl sm:text-4xl font-bold mb-4 mt-10">الشروط والاحكام</h2>
       <ul className="list-disc list-inside space-y-2 mt-5">
           <li className="mb-10 text-2xl">التسجيل بمنصة وثيق يُعتبر الفرد المستفيد من الخدمة هو الطرف المتعاقد (مالك الحساب)، الذي يخضع لشروط الاستخدام</li>
@@ -22,7 +25,8 @@ const TermsAndConditions = () => {
           <li className="mb-10 text-2xl">لا يجوز استخدام خدمات وثيق في أي أنشطة غير مصرح بها او أنشطة غير نظامية، وفي حالة قيام المهني بغير نشاطه أو إضافة نشاط جديـد لا تتحمل وثيق اي اضرار تجاه ذلك دون ادنى مسؤولية.</li>
         </ul>
       </main>
-      <footer className="text-white">
+      <footer className="text-white" data-aos="fade-up"
+            data-aos-delay="100">
         <Footer/>
       </footer>
     </div>
