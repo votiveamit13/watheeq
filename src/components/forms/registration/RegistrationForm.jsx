@@ -29,22 +29,22 @@ export default function RegistrationForm() {
     }
   };
   return (
-    <section className="flex">
-      <div className="bg-white w-1/2 justify-center pl-45 pr-45">
+<section className="flex items-center">
+   <div className="bg-white w-1/2 justify-center pl-45 pr-45">
         {currentStep != 3 && (
           <img
-            src="/watheeq/assets/img/logo.png"
-            alt="watheeq"
-            width={200}
-            className="mt-20 mb-10"
-          />
+          src="/watheeq/assets/img/logo.png"
+          alt="watheeq"
+          className="w-[200] mx-auto my-5 pt-20 pb-10"
+        />
+ 
         )}
 
         {currentStep === 1 && (
           <img
             src="/watheeq/assets/img/registration1.png"
             alt="registration1"
-            className="mb-10"
+            className="mb-10 w-[450] mx-auto"
           />
         )}
 

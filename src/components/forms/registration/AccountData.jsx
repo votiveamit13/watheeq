@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { FaUser, FaEnvelope, FaPhone, FaLock } from "react-icons/fa";
+import { HiOutlineUser, HiOutlineEnvelope, HiOutlinePhone, HiOutlineLock } from "react-icons/hi2";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
@@ -46,7 +47,9 @@ export default function RegisterForm({ onNext }) {
   return (
     <section className="max-w-md mx-auto p-6">
       <div className="mb-5">
-        <h2 className="text-2xl font-bold">حساب جديد</h2>
+      <h2 className="text-2xl font-bold hover:text-blue-600 cursor-pointer">
+  بيانات الحساب
+</h2>
         <p>قم بإدخال معلوماتك لإنشاء حساب في وثيق</p>
       </div>
 
@@ -59,9 +62,10 @@ export default function RegisterForm({ onNext }) {
               placeholder="اسمك بالكامل"
               value={form.name}
               onChange={handleChange}
-              className="w-full pr-10 border border-blue-200 rounded-lg p-3 text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <FaUser className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+              className="w-full pr-10 rounded-lg p-3 text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+              style={{ border: '1px solid #13498b40' }}
+              />
+            <img src="/watheeq/assets/img/accountdata1.png" className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5" />
           </div>
 
           <div className="relative">
@@ -71,9 +75,9 @@ export default function RegisterForm({ onNext }) {
               placeholder="بريدك الالكتروني"
               value={form.email}
               onChange={handleChange}
-              className="w-full pr-10 border border-blue-200 rounded-lg p-3 text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <FaEnvelope className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+              className="w-full pr-10 rounded-lg p-3 text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+              style={{ border: '1px solid #13498b40' }}            />
+            <img src="/watheeq/assets/img/accountdata2.png" className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5" />
           </div>
           <div className="flex gap-2 rtl:flex-row-reverse">
             <div className="w-[100px]">
@@ -86,9 +90,8 @@ export default function RegisterForm({ onNext }) {
                 }
                 disableCountryCode
                 disableDropdown={false}
-                inputClass="!w-full !text-center !rounded-lg !py-3 !border !border-blue-200 !text-sm !text-gray-700"
-                buttonClass="!border-blue-200"
-                containerClass="!w-full"
+                inputClass="!w-full !h-[50px] !text-center !rounded-lg !py-3 !border !border-blue-200 !text-sm !text-gray-700"
+                class="border border-blue-200 !rounded-[10px_10px_10px_10px] p-2"                containerClass="!w-full"
                 placeholder=""
               />
             </div>
@@ -100,9 +103,9 @@ export default function RegisterForm({ onNext }) {
                 placeholder="رقم الجوال"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                className="w-full pr-10 border border-blue-200 rounded-lg p-3 text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-              <FaPhone className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                className="w-full pr-10 rounded-lg p-3 text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                style={{ border: '1px solid #13498b40' }}              />
+              <img src="/watheeq/assets/img/accountdata3.png" className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5" />
             </div>
           </div>
 
@@ -113,9 +116,9 @@ export default function RegisterForm({ onNext }) {
               placeholder="كلمة المرور"
               value={form.password}
               onChange={handleChange}
-              className="w-full pr-10 border border-blue-200 rounded-lg p-3 text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <FaLock className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+              className="w-full pr-10 rounded-lg p-3 text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+              style={{ border: '1px solid #13498b40' }}            />
+            <img src="/watheeq/assets/img/accountdata4.png" className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5" />
             {showPassword ? (
               <AiOutlineEyeInvisible
                 onClick={() => setShowPassword(false)}
@@ -136,9 +139,9 @@ export default function RegisterForm({ onNext }) {
               placeholder="تأكيد كلمة مرور"
               value={form.confirmPassword}
               onChange={handleChange}
-              className="w-full pr-10 border border-blue-200 rounded-lg p-3 text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <FaLock className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+              className="w-full pr-10 rounded-lg p-3 text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+              style={{ border: '1px solid #13498b40' }}            />
+            <img src="/watheeq/assets/img/accountdata4.png" className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5" />
             {showConfirmPassword ? (
               <AiOutlineEyeInvisible
                 onClick={() => setShowConfirmPassword(false)}
@@ -154,7 +157,7 @@ export default function RegisterForm({ onNext }) {
 
           <button
             type="submit"
-            className="w-full bg-[#13498B] text-white py-3 rounded-lg font-bold text-lg hover:bg-blue-800 transition"
+            className="w-full bg-[#13498B] cursor-pointer text-white py-3 rounded-lg font-bold text-lg hover:bg-blue-800 transition"
           >
             تسجيل
           </button>

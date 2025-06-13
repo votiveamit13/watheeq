@@ -39,7 +39,7 @@ export default function AccountConfirmation({onNext}) {
               type="text"
               inputMode="numeric"
               maxLength="1"
-              className="w-full h-12 text-center border border-blue-200 rounded-md text-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full h-12 text-center bg-white border border-blue-200 rounded-md text-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={digit}
               onChange={(e) => handleChange(e, index)}
             />

@@ -15,6 +15,7 @@ export default function ProgressBar({ currentStep = 1 }) {
     },
   ];
 
+
   return (
     <section>
       <div className="flex justify-center items-center space-x-reverse space-x-0 rtl:space-x-0 rtl:flex-row-reverse text-sm sm:text-base">
@@ -35,7 +36,7 @@ export default function ProgressBar({ currentStep = 1 }) {
             <div
               className={`mt-10 text-center ${
                 currentStep === step.id
-                  ? "text-blue-600 font-bold"
+                  ? "font-bold"
                   : "text-gray-500"
               }`}
             >
