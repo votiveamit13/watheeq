@@ -8,6 +8,7 @@ export default function Prices() {
   return (
     <section className="bg-[#f8fafc]">
       <AOSInit />
+      <div className="container mx-auto">
       <nav className="container mx-auto px-[15px] sm:px-10">
         <Navbar />
       </nav>
@@ -21,7 +22,7 @@ export default function Prices() {
             الأسعار
           </p>
           <h2
-            className="text-[30px] md:text-5xl font-bold mb-5"
+            className="text-[25px] md:text-5xl font-bold mb-5"
             data-aos="fade-up"
             data-aos-delay="80"
           >
@@ -36,7 +37,7 @@ export default function Prices() {
           </p>
         </div>
         <div
-          className="relative shadow-xl rounded-3xl p-0 px-0 sm:p-5 sm:px-10 mt-10 md:mt-0"
+          className="relative shadow-xl mb-10 rounded-3xl p-0 px-0 sm:p-5 sm:px-10 mt-10 md:mt-0"
           style={{
             boxShadow:
               "0 20px 25px 5px rgba(0, 0, 0, 0.15), 0 8px 10px 5px rgba(0, 0, 0, 0.1)",
@@ -68,7 +69,8 @@ export default function Prices() {
           `}</style>
         </div>
       </main>
-      <footer className="text-white" data-aos="fade-up" data-aos-delay="100">
+      </div>
+      <footer className="container-fluid text-white" data-aos="fade-up" data-aos-delay="100">
         <Footer />
       </footer>
     </section>

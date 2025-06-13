@@ -9,6 +9,8 @@ export default function PrivacyPolicy() {
         <nav className="container mx-auto px-[15px] sm:px-10">
         <Navbar />
       </nav>
+      <div className="container mx-auto">
+
       <main className="p-[30px] sm:p-[35px] sm:px-[85px]" data-aos="fade-up"
             data-aos-delay="50">
       <div>
@@ -72,6 +74,7 @@ export default function PrivacyPolicy() {
           </ul>
         </div>
       </main>
+      </div>
       <footer className="text-white" data-aos="fade-up"
             data-aos-delay="100">
         <Footer/>

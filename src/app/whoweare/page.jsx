@@ -8,6 +8,8 @@ export default function WhoWeAre() {
   return (
     <section>
       <AOSInit />
+      <div className="container mx-auto">
+
       <div className="bg-[#f8fafc] bg-[url('/watheeq/assets/img/hero_bg.png')] bg-cover">
         <nav className="container mx-auto px-[15px] sm:px-10 p-1 px-20 text-center">
           <Navbar className="" />
@@ -19,7 +21,7 @@ export default function WhoWeAre() {
             من نحن
           </p>
           <h2
-            className="text-[35px] sm:text-5xl font-bold mb-5"
+            className="text-[25px] sm:text-5xl font-bold mb-5"
             data-aos="fade-up"
             data-aos-delay="80"
           >
@@ -80,6 +82,7 @@ export default function WhoWeAre() {
           </div>
         </div>
       </main>
+      </div>
            <footer className="text-white" data-aos="fade-up"
             data-aos-delay="100">
         <Footer/>
