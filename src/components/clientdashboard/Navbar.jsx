@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 import { HiChevronDown, HiOutlineUser } from "react-icons/hi2";
 
@@ -70,10 +71,12 @@ export default function Navbar() {
 
         {isOpen && (
           <div className="absolute right-5 mt-2 w-44 bg-[#E7EDF3] rounded-lg shadow-lg text-right z-50">
+              <Link href="/clientdashboard/profile">
             <div className="block px-4 py-4 text-[#003f7f] hover:bg-[#f0f8ff] font-medium flex items-center justify-end gap-2">
               <HiOutlineUser />
               <span>الملف الشخصي</span>
             </div>
+              </Link>
           </div>
         )}
       </div>

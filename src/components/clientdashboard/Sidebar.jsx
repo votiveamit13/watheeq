@@ -90,6 +90,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
             { key: "settings", label: "الإعدادت", icon: "settings.png" },
           ].map((item) => (
             <div key={item.key} ref={(el) => (itemRefs.current[item.key] = el)}>
+
               <div
                 className={`flex items-center cursor-pointer rounded-xl transition-all duration-200 ${
                   activeMenu === item.key
