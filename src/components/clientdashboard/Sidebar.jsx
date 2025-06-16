@@ -2,7 +2,6 @@
 import { useState, useRef } from "react";
 import { HiChevronLeft, HiChevronDown } from "react-icons/hi2";
 
-
 export default function Sidebar({ collapsed, setCollapsed }) {
   const [activeMenu, setActiveMenu] = useState("home");
 
@@ -94,14 +93,19 @@ export default function Sidebar({ collapsed, setCollapsed }) {
               <div
                 className={`flex items-center cursor-pointer rounded-xl transition-all duration-200 ${
                   activeMenu === item.key
-                    ? "bg-[#005bac] text-white p-2"
+                    ? "bg-[#005bac] text-white p-2 "
                     : "hover:text-[#003f7f]"
                 }`}
                 onClick={() => handleMenuClick(item.key)}
               >
                 <img
                   src={`/watheeq/assets/img/sidebaricons/${item.icon}`}
-                  className={`ml-5 ${collapsed ? "mx-auto" : "mr-4"}`}
+                  className={`
+                    ml-5
+                    ${collapsed ? "mx-auto" : "mr-4"}
+                    transition-all duration-300
+                    ${activeMenu === item.key ? "invert brightness-0" : "filter"}
+                  `}
                 />
                 {!collapsed && (
                   <>
