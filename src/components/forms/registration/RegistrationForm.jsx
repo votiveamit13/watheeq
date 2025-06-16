@@ -30,9 +30,9 @@ export default function RegistrationForm() {
     }
   };
   return (
-<section className="flex items-center">
+<section className="flex items-center  flex-wrap">
 <div
-  className="w-1/2 justify-center px-[45px]"
+  className="w-full md:w-1/2 justify-center px-[45px]"
   style={{ backgroundColor: "#fff", marginTop:'-80px', height:'120vh' }}
 >        {currentStep != 3 && (
           <img
@@ -40,7 +40,7 @@ export default function RegistrationForm() {
           alt="watheeq"
           className="w-[200] mx-auto my-5 pt-20 pb-10 mt-20"
         />
- 
+
         )}
 
         {currentStep === 1 && (
@@ -83,8 +83,8 @@ export default function RegistrationForm() {
         {currentStep === 3 && <StepDots activeIndex={2} />}
         {currentStep === 4 && <StepDots activeIndex={3} />}
       </div>
-    
-      <div className="bg-[#F5F8FB] w-1/2 justify-center">
+
+      <div className="bg-[#F5F8FB] w-full md:w-1/2 justify-center">
         <ProgressBar currentStep={currentStep} />
         <div className="mt-4">{renderStepComponent()}</div>
       </div>

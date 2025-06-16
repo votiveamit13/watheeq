@@ -2,8 +2,8 @@ import { FaEnvelope, FaLock } from "react-icons/fa";
 
 export default function Login() {
   return (
-    <div className="min-h-screen flex font-sans text-right">
-      <div className="w-1/2 bg-white flex flex-col justify-center items-center px-10 text-center">
+    <div className="min-h-screen flex flex-wrap font-sans text-right">
+      <div className="w-full md:w-1/2 bg-white flex flex-col justify-center items-center px-10 text-center">
         <img
           src="/watheeq/assets/img/logo.png"
           alt="logo"
@@ -28,7 +28,7 @@ export default function Login() {
           ))}
         </div>
       </div>
-      <div className="w-1/2 bg-[#F5F8FB] flex flex-col justify-center px-20">
+      <div className="w-full md:w-1/2 bg-[#F5F8FB] flex flex-col justify-center px-20">
         <div className="max-w-md w-full mx-auto space-y-6">
           <div>
             <h2 className="text-3xl font-bold text-[#0B2B51] mb-2">

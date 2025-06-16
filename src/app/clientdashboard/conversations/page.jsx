@@ -6,7 +6,7 @@ import { BiSliderAlt } from "react-icons/bi";
 import { IoMdSend } from "react-icons/io";
 import { FaPlus } from "react-icons/fa6";
 import { RiEdit2Line, RiMoneyDollarCircleLine } from "react-icons/ri";
-import { FaRegFileAlt } from "react-icons/fa";
+import { FaRegFileAlt, FaPlay } from "react-icons/fa";
 import {
   MdPhotoLibrary,
   MdOutlineCameraAlt,
@@ -110,7 +110,7 @@ export default function Conversations() {
       date: "29-شوال 1446هـ",
       showTime: false,
     },
-        {
+    {
       id: 5,
       type: "image",
       direction: "out",
@@ -119,10 +119,11 @@ export default function Conversations() {
       date: "29-شوال 1446هـ",
       showTime: false,
     },
-            {
+    {
       id: 6,
       type: "pricing",
       direction: "in",
+      content: "هنا نص رسالة هنا نص رسالة هنا نص رسالة ",
       time: "12:35 PM",
       date: "29-شوال 1446هـ",
       showTime: false,
@@ -289,11 +290,11 @@ export default function Conversations() {
                   >
                     {/* Message bubble */}
                     <div
-                      className={`px-4 py-2 rounded-lg shadow text-sm w-fit max-w-xs break-words
+                      className={`px-4 py-2 shadow mb-5 text-sm w-fit max-w-xs break-words
             ${
               msg.direction === "in"
-                ? "bg-[#13498B] text-white text-right"
-                : "bg-[#E7EDF3] text-[#0B2B51]"
+                ? "bg-[#13498B] text-white text-right rounded-br-lg rounded-tr-lg rounded-bl-lg"
+                : "bg-[#E7EDF3] text-[#0B2B51] rounded-tl-lg rounded-br-lg rounded-bl-lg"
             }`}
                     >
                       {msg.type === "text" && msg.content}
@@ -304,11 +305,12 @@ export default function Conversations() {
                       )}
                       {msg.type === "audio" && (
                         <div className="flex items-center gap-2">
-                          🎵 <span>{msg.duration}</span>
                           <img
                             src={`/watheeq/assets/img/${msg.avatar}`}
                             className="w-6 h-6 rounded-full"
                           />
+                          <span>{msg.duration}</span>
+                          <FaPlay />
                         </div>
                       )}
                     </div>
