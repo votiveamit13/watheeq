@@ -80,7 +80,6 @@ const orders = [
 export default function Business() {
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 6;
-  const [showDialog, setShowDialog] = useState(false);
   const [selectedOrder, setSelectedOrder] = useState(null);
 
   const paginatedData = orders.slice(

@@ -31,13 +31,13 @@ export default function Sidebar({ collapsed, setCollapsed }) {
 
   const submenus = {
     yourpage: [
-      { label: "القالب", icon: "rectangleanalytics.png" },
-      { label: "الخدمات", icon: "document.png" },
-      { label: "المنشورات", icon: "rectanglepencil.png" },
+      { label: "القالب", icon: "rectangleanalytics.png", link: "/clientdashboard/#" },
+      { label: "الخدمات", icon: "document.png", link: "/clientdashboard/#" },
+      { label: "المنشورات", icon: "rectanglepencil.png", link: "/clientdashboard/#" },
     ],
     finance: [
-      { label: "الباقة", icon: "bills.png" },
-      { label: "المحفظة", icon: "wallet.png" },
+      { label: "الباقة", icon: "bills.png", link: "/clientdashboard/#" },
+      { label: "المحفظة", icon: "wallet.png", link: "/clientdashboard/wallet" },
     ],
   };
 
@@ -89,7 +89,6 @@ export default function Sidebar({ collapsed, setCollapsed }) {
               label: "صفحتك",
               icon: "globe.png",
               hasSub: true,
-              link: "/clientdashboard/#"
             },
             {
               key: "business",
@@ -102,7 +101,6 @@ export default function Sidebar({ collapsed, setCollapsed }) {
               label: "المالية",
               icon: "analytics.png",
               hasSub: true,
-              link: "/clientdashboard/#"
             },
             {
               key: "support",
@@ -118,7 +116,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
             },
           ].map((item) => (
             <div key={item.key} ref={(el) => (itemRefs.current[item.key] = el)}>
-              <Link href={`${item.link}`}>
+              {item.hasSub ? (
                 <div
                   className={`flex items-center cursor-pointer rounded-xl transition-all duration-200 ${
                     activeMenu === item.key
@@ -126,31 +124,56 @@ export default function Sidebar({ collapsed, setCollapsed }) {
                       : "hover:text-[#003f7f]"
                   }`}
                   onClick={() => handleMenuClick(item.key)}
+                  ref={(el) => (itemRefs.current[item.key] = el)}
                 >
                   <img
                     src={`/watheeq/assets/img/sidebaricons/${item.icon}`}
                     className={`
-                    ml-5
-                    ${collapsed ? "mx-auto" : "mr-4"}
-                    transition-all duration-300
-                    ${
-                      activeMenu === item.key ? "invert brightness-0" : "filter"
-                    }
-                  `}
+        ml-5
+        ${collapsed ? "mx-auto" : "mr-4"}
+        transition-all duration-300
+        ${activeMenu === item.key ? "invert brightness-0" : "filter"}
+      `}
                   />
                   {!collapsed && (
                     <>
                       <span className="flex-1">{item.label}</span>
-                      {item.hasSub &&
-                        (activeMenu === item.key ? (
-                          <HiChevronDown className="text-xl" />
-                        ) : (
-                          <HiChevronLeft className="text-xl" />
-                        ))}
+                      {activeMenu === item.key ? (
+                        <HiChevronDown className="text-xl" />
+                      ) : (
+                        <HiChevronLeft className="text-xl" />
+                      )}
                     </>
                   )}
                 </div>
-              </Link>
+              ) : (
+                <Link href={`${item.link}`}>
+                  <div
+                    className={`flex items-center cursor-pointer rounded-xl transition-all duration-200 ${
+                      activeMenu === item.key
+                        ? "bg-[#005bac] text-white p-2 "
+                        : "hover:text-[#003f7f]"
+                    }`}
+                    ref={(el) => (itemRefs.current[item.key] = el)}
+                    onClick={() => handleMenuClick(item.key)}
+                  >
+                    <img
+                      src={`/watheeq/assets/img/sidebaricons/${item.icon}`}
+                      className={`
+          ml-5
+          ${collapsed ? "mx-auto" : "mr-4"}
+          transition-all duration-300
+          ${activeMenu === item.key ? "invert brightness-0" : "filter"}
+        `}
+                    />
+                    {!collapsed && (
+                      <>
+                        <span className="flex-1">{item.label}</span>
+                      </>
+                    )}
+                  </div>
+                </Link>
+              )}
 
               {collapsed &&
                 activeMenu === item.key &&
@@ -161,6 +184,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
                     style={{ top: `${submenuTop}px`, left: "-60%" }}
                   >
                     {submenus[item.key].map((sub, index) => (
+                      <Link href={`${sub.link}`} key={index}>
                       <div
                         key={index}
                         className="w-10 h-10 bg-white shadow-md rounded-lg flex items-center justify-center cursor-pointer hover:bg-[#e6f0ff]"
@@ -173,6 +197,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
                           className="w-5 h-5"
                         />
                       </div>
+                      </Link>
                     ))}
                   </div>
                 )}
@@ -183,6 +208,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
                 submenus[item.key]?.length > 0 && (
                   <div className="mr-5 mt-2 space-y-2 text-base text-[#005bac]">
                     {submenus[item.key].map((sub, index) => (
+                      <Link href={`${sub.link}`} key={index}>
                       <div
                         key={index}
                         className="flex items-center hover:text-[#003f7f] cursor-pointer mr-5"
@@ -194,6 +220,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
                         />
                         <span>{sub.label}</span>
                       </div>
+                      </Link>
                     ))}
                   </div>
                 )}
