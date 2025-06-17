@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState, useRef } from "react";
 import { HiChevronLeft, HiChevronDown } from "react-icons/hi2";
 
@@ -71,55 +72,85 @@ export default function Sidebar({ collapsed, setCollapsed }) {
           }`}
         >
           {[
-            { key: "home", label: "لوحة التحكم", icon: "home.png" },
-            { key: "meetings", label: "الاجتماعات", icon: "telephone.png" },
+            {
+              key: "home",
+              label: "لوحة التحكم",
+              icon: "home.png",
+              link: "/clientdashboard",
+            },
+            {
+              key: "meetings",
+              label: "الاجتماعات",
+              icon: "telephone.png",
+              link: "/clientdashboard/conversations",
+            },
             {
               key: "yourpage",
               label: "صفحتك",
               icon: "globe.png",
               hasSub: true,
+              link: "/clientdashboard/#"
             },
-            { key: "business", label: "الأعمال", icon: "briefcase.png" },
+            {
+              key: "business",
+              label: "الأعمال",
+              icon: "briefcase.png",
+              link: "/clientdashboard/business",
+            },
             {
               key: "finance",
               label: "المالية",
               icon: "analytics.png",
               hasSub: true,
+              link: "/clientdashboard/#"
             },
-            { key: "support", label: "الدعم الفني", icon: "chatsetting.png" },
-            { key: "settings", label: "الإعدادت", icon: "settings.png" },
+            {
+              key: "support",
+              label: "الدعم الفني",
+              icon: "chatsetting.png",
+              link: "/clientdashboard/#",
+            },
+            {
+              key: "settings",
+              label: "الإعدادت",
+              icon: "settings.png",
+              link: "/clientdashboard/#",
+            },
           ].map((item) => (
             <div key={item.key} ref={(el) => (itemRefs.current[item.key] = el)}>
-
-              <div
-                className={`flex items-center cursor-pointer rounded-xl transition-all duration-200 ${
-                  activeMenu === item.key
-                    ? "bg-[#005bac] text-white p-2 "
-                    : "hover:text-[#003f7f]"
-                }`}
-                onClick={() => handleMenuClick(item.key)}
-              >
-                <img
-                  src={`/watheeq/assets/img/sidebaricons/${item.icon}`}
-                  className={`
+              <Link href={`${item.link}`}>
+                <div
+                  className={`flex items-center cursor-pointer rounded-xl transition-all duration-200 ${
+                    activeMenu === item.key
+                      ? "bg-[#005bac] text-white p-2 "
+                      : "hover:text-[#003f7f]"
+                  }`}
+                  onClick={() => handleMenuClick(item.key)}
+                >
+                  <img
+                    src={`/watheeq/assets/img/sidebaricons/${item.icon}`}
+                    className={`
                     ml-5
                     ${collapsed ? "mx-auto" : "mr-4"}
                     transition-all duration-300
-                    ${activeMenu === item.key ? "invert brightness-0" : "filter"}
+                    ${
+                      activeMenu === item.key ? "invert brightness-0" : "filter"
+                    }
                   `}
-                />
-                {!collapsed && (
-                  <>
-                    <span className="flex-1">{item.label}</span>
-                    {item.hasSub &&
-                      (activeMenu === item.key ? (
-                        <HiChevronDown className="text-xl" />
-                      ) : (
-                        <HiChevronLeft className="text-xl" />
-                      ))}
-                  </>
-                )}
-              </div>
+                  />
+                  {!collapsed && (
+                    <>
+                      <span className="flex-1">{item.label}</span>
+                      {item.hasSub &&
+                        (activeMenu === item.key ? (
+                          <HiChevronDown className="text-xl" />
+                        ) : (
+                          <HiChevronLeft className="text-xl" />
+                        ))}
+                    </>
+                  )}
+                </div>
+              </Link>
 
               {collapsed &&
                 activeMenu === item.key &&
