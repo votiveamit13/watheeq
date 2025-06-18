@@ -32,11 +32,11 @@ export default function Sidebar({ collapsed, setCollapsed }) {
   const submenus = {
     yourpage: [
       { label: "القالب", icon: "rectangleanalytics.png", link: "/clientdashboard/#" },
-      { label: "الخدمات", icon: "document.png", link: "/clientdashboard/#" },
+      { label: "الخدمات", icon: "document.png", link: "/clientdashboard/services" },
       { label: "المنشورات", icon: "rectanglepencil.png", link: "/clientdashboard/#" },
     ],
     finance: [
-      { label: "الباقة", icon: "bills.png", link: "/clientdashboard/#" },
+      { label: "الباقة", icon: "bills.png", link: "/clientdashboard/package" },
       { label: "المحفظة", icon: "wallet.png", link: "/clientdashboard/wallet" },
     ],
   };
