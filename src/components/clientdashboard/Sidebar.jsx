@@ -31,7 +31,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
 
   const submenus = {
     yourpage: [
-      { label: "القالب", icon: "rectangleanalytics.png", link: "/clientdashboard/#" },
+      { label: "القالب", icon: "rectangleanalytics.png", link: "/clientdashboard/template" },
       { label: "الخدمات", icon: "document.png", link: "/clientdashboard/services" },
       { label: "المنشورات", icon: "rectanglepencil.png", link: "/clientdashboard/#" },
     ],
