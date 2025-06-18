@@ -37,7 +37,7 @@ export default function Prices() {
           </p>
         </div>
         <div
-          className="relative shadow-xl mb-10 rounded-3xl p-0 px-0 sm:p-5 sm:px-10 mt-10 md:mt-0"
+          className="relative w-full shadow-xl mb-10 rounded-3xl p-0 px-0 lg:p-0 lg:px-0 sm:p-5 sm:px-10 mt-10 md:mt-0"
           style={{
             boxShadow:
               "0 20px 25px 5px rgba(0, 0, 0, 0.15), 0 8px 10px 5px rgba(0, 0, 0, 0.1)",
