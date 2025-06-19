@@ -1,5 +1,5 @@
 const PieChart = ({ title = "العنوان", segments = [
-  { value: 65, color: "#59A7FF" }, // blue
+  { value: 65, color: "#59A7FF"}, // blue
   { value: 35, color: "#2CDDC7" }, // cyan
 ] }) => {
   const total = segments.reduce((sum, s) => sum + s.value, 0);
@@ -38,7 +38,7 @@ const PieChart = ({ title = "العنوان", segments = [
     <div className="bg-white w-full text-right">
       <h3 className="text-[#0B2B51] font-semibold mb-2">{title}</h3>
       <div className="relative w-full h-40">
-        <svg viewBox="0 -3 32 35" className="w-full h-full">
+        <svg viewBox="0 -3 35 35" className="w-full h-full">
           {segments.map((s, i) => {
             const percent = s.value / total;
             const startAngle = 360 * cumulativePercent;
@@ -55,7 +55,6 @@ const PieChart = ({ title = "العنوان", segments = [
                 key={i}
                 d={path}
                 fill={s.color}
-                transform={`translate(${offsetX}, ${offsetY})`}
               />
             );
           })}
@@ -69,6 +68,8 @@ const PieChart = ({ title = "العنوان", segments = [
           const x = 16 + labelRadius * Math.cos((midAngle - 90) * Math.PI / 180);
           const y = 16 + labelRadius * Math.sin((midAngle - 90) * Math.PI / 180);
 
+          const customStyle = s.style || {};
+
           return (
             <div
               key={i}
@@ -81,7 +82,11 @@ const PieChart = ({ title = "العنوان", segments = [
               }}
             >
               {s.value}%
+              
             </div>
+
+
+
           );
         })}
       </div>

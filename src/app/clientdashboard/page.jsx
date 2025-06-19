@@ -39,12 +39,12 @@ export default function ClientDashboard() {
             />
           </div>
         </div>
-        <div className="mt-6 flex gap-3">
+        <div className="mt-6 flex gap-3" style={{marginBottom:'50px'}}>
           <div className="flex-1 bg-white p-4 rounded-lg">
             <StatsTable
               title="عنوان"
               rows={[
-                { label: "عنوان", percent: 45, color: "#3b82f6" },
+                { label: "عنوان", percent: 45, color: "#0095FF" },
                 { label: "عنوان", percent: 29, color: "#10b981" },
                 { label: "عنوان", percent: 18, color: "#a855f7" },
                 { label: "عنوان", percent: 25, color: "#f97316" },

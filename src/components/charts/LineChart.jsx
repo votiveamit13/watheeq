@@ -147,7 +147,7 @@ const LineChart = ({ data, labels, title }) => {
       </svg>
 
       {/* Bottom axis labels */}
-      <div className="flex justify-between text-xs text-gray-500 mt-2 mr-10 px-1">
+      <div className="flex text-xs text-gray-500 mt-2 mr-10 px-1" style={{justifyContent:'space-evenly', marginRight:'-0px'}}>
         {labels.map((l, i) => (
           <span key={i}>{l}</span>
         ))}

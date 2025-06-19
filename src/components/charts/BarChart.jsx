@@ -1,3 +1,4 @@
+import { Pointer } from 'lucide-react';
 import React from 'react';
 
 const BarChart = ({ title, data }) => {
@@ -24,14 +25,15 @@ const BarChart = ({ title, data }) => {
             <g key={i} transform={`translate(${x}, 0)`} className="group">
               {/* Value on top */}
               <text
-                x={barWidth / 2}
-                y={y - 5}
-                textAnchor="middle"
-                fontSize="18"
-                fill="#555555"
-              >
+              x={barWidth / 2}
+              y={y + -8}
+              textAnchor="middle"
+              fontSize="16"
+              fill="#555555"
+              
+               >
                 {item.value}
-              </text>
+               </text>
 
               {/* Bar with hover color change */}
               <rect
