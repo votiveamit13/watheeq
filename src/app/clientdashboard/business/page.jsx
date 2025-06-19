@@ -209,13 +209,13 @@ export default function Business() {
                         </div>
                         <div className="flex justify-center gap-5 mt-5">
                           <button
-                            className="bg-[#F8FAFC] text-[#13498B] border py-2 px-9 rounded-lg font-bold"
+                            className="bg-[#F8FAFC] text-[#13498B] border py-2 px-9 rounded-lg font-bold cursor-pointer"
                             onClick={() => setSelectedOrder(null)}
                           >
                             رفض
                           </button>
                           <button
-                            className="bg-[#13498B] text-white py-2 px-9 rounded-lg font-bold"
+                            className="bg-[#13498B] text-white py-2 px-9 rounded-lg font-bold cursor-pointer"
                             onClick={() => setSelectedOrder(null)}
                           >
                             قبول

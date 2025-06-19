@@ -33,7 +33,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
     yourpage: [
       { label: "القالب", icon: "rectangleanalytics.png", link: "/clientdashboard/template" },
       { label: "الخدمات", icon: "document.png", link: "/clientdashboard/services" },
-      { label: "المنشورات", icon: "rectanglepencil.png", link: "/clientdashboard/#" },
+      { label: "المنشورات", icon: "rectanglepencil.png", link: "/clientdashboard/publications" },
     ],
     finance: [
       { label: "الباقة", icon: "bills.png", link: "/clientdashboard/package" },
