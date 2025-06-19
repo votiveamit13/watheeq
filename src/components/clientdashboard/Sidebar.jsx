@@ -7,15 +7,18 @@ export default function Sidebar({ collapsed, setCollapsed }) {
   const [activeMenu, setActiveMenu] = useState("home");
   const itemRefs = useRef({});
   const [submenuTop, setSubmenuTop] = useState(0);
+  const [showSubmenu, setShowSubmenu] = useState(null);
+
 
   const toggleSidebar = () => setCollapsed(!collapsed);
 
   const handleMenuClick = (menu) => {
-    if (activeMenu === menu) {
-      setActiveMenu(null);
+    if (activeMenu === menu && showSubmenu === menu) {
+      setShowSubmenu(null);
       return;
     }
     setActiveMenu(menu);
+    setShowSubmenu(menu);
     const rect = itemRefs.current[menu]?.getBoundingClientRect();
     if (rect) {
       setSubmenuTop(rect.top);
@@ -23,14 +26,14 @@ export default function Sidebar({ collapsed, setCollapsed }) {
   };
 
   const handleSubMenuClick = () => {
-    setActiveMenu(null);
+    setShowSubmenu(null);
   };
 
   const submenus = {
     yourpage: [
       { label: "القالب", icon: "rectangleanalytics.png", link: "/clientdashboard/template" },
       { label: "الخدمات", icon: "document.png", link: "/clientdashboard/services" },
-      { label: "المنشورات", icon: "rectanglepencil.png", link: "/clientdashboard/#" },
+      { label: "المنشورات", icon: "rectanglepencil.png", link: "/clientdashboard/publications" },
     ],
     finance: [
       { label: "الباقة", icon: "bills.png", link: "/clientdashboard/package" },
@@ -128,7 +131,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
 
               {/* Collapsed Submenu */}
               {collapsed &&
-                activeMenu === item.key &&
+                showSubmenu === item.key &&
                 item.hasSub &&
                 submenus[item.key]?.length > 0 && (
                   <div
@@ -155,7 +158,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
 
               {/* Expanded Submenu */}
               {!collapsed &&
-                activeMenu === item.key &&
+                showSubmenu === item.key &&
                 item.hasSub &&
                 submenus[item.key]?.length > 0 && (
                   <div className="mr-5 mt-2 space-y-2 text-base text-[#005bac]">
