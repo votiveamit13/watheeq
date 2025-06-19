@@ -40,6 +40,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
 
   return (
     <div className="relative flex" style={{height:'150vh'}}>
+      <div></div>
       <div
         className={`bg-white shadow-lg flex flex-col gap-3 p-4 transition-all duration-300 ${
           collapsed ? "w-20" : "w-64"
