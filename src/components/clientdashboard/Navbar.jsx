@@ -44,7 +44,7 @@ export default function Navbar() {
       <div className="relative" ref={dropdownRef}>
         <div
           className="flex items-center bg-white px-3 py-2 rounded-xl shadow-md gap-2 cursor-pointer"
-          onClick={toggleDropdown}
+
         >
           <div className="relative bg-[#FFFAF1] rounded-full">
             <img
@@ -61,20 +61,23 @@ export default function Navbar() {
             className="w-10 h-10 rounded-full"
           />
 
-          <div className="text-right">
-            <p className="text-[#003f7f] font-semibold text-sm">أحمد ماضي</p>
+          <div className="flex text-right items-center gap-2" onClick={toggleDropdown}>
+            <div><p className="text-[#003f7f] font-semibold text-sm">أحمد ماضي</p>
             <p className="text-gray-400 text-xs">محامي</p>
           </div>
-
+          <div>
           <HiChevronDown className="text-[#003f7f]" />
+          </div>
+          </div>
+
         </div>
 
         {isOpen && (
-          <div className="absolute right-5 mt-2 w-44 bg-[#E7EDF3] rounded-lg shadow-lg text-right z-50">
+          <div className="absolute right-13 w-35 bg-[#E7EDF3] rounded-br-lg rounded-bl-lg shadow-lg text-right z-50">
               <Link href="/clientdashboard/profile">
             <div className="block px-4 py-4 text-[#003f7f] hover:bg-[#f0f8ff] font-medium flex items-center justify-end gap-2">
               <HiOutlineUser />
-              <span>الملف الشخصي</span>
+              <span className="text-[13px]">الملف الشخصي</span>
             </div>
               </Link>
           </div>
