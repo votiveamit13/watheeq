@@ -5,7 +5,6 @@ import { HiChevronLeft, HiChevronDown } from "react-icons/hi2";
 
 export default function Sidebar({ collapsed, setCollapsed }) {
   const [activeMenu, setActiveMenu] = useState("home");
-
   const itemRefs = useRef({});
   const [submenuTop, setSubmenuTop] = useState(0);
 
@@ -16,12 +15,10 @@ export default function Sidebar({ collapsed, setCollapsed }) {
       setActiveMenu(null);
       return;
     }
-
     setActiveMenu(menu);
-
     const rect = itemRefs.current[menu]?.getBoundingClientRect();
     if (rect) {
-      setSubmenuTop(rect.top - 0);
+      setSubmenuTop(rect.top);
     }
   };
 
@@ -42,98 +39,58 @@ export default function Sidebar({ collapsed, setCollapsed }) {
   };
 
   return (
-    <div className="relative flex">
+    <div className="relative flex" style={{height:'130vh'}}>
       <div
-        className={`bg-white shadow-lg h-200 flex flex-col p-4 transition-all duration-300 ${
+        className={`bg-white shadow-lg flex flex-col gap-3 p-4 transition-all duration-300 ${
           collapsed ? "w-20" : "w-64"
         }`}
       >
-        <div className="flex justify-between items-center mb-10 mt-5">
+        <div className="flex justify-between items-center">
           <img
-            src={`/watheeq/assets/img/${
-              collapsed ? "favicon" : "sidebaricons/toggle"
-            }.png`}
+            src={`/watheeq/assets/img/${collapsed ? "favicon" : "sidebaricons/toggle"}.png`}
             alt="Toggle"
             className="w-10 h-10 cursor-pointer"
             onClick={toggleSidebar}
-          />
+          style={{width:"39px",height:'40px', marginTop:'4px' }}/>
           {!collapsed && (
             <img
               src="/watheeq/assets/img/logo.png"
               alt="Logo"
-              className="w-40"
+              className="w-43 pl-4"
             />
           )}
         </div>
 
         <nav
-          className={`space-y-4 text-[#005bac] text-xl ${
+          className={`space-y-4 text-[#005bac] text-xl pt-10 pl-2 ${
             collapsed ? "text-center" : "text-right"
           }`}
         >
           {[
-            {
-              key: "home",
-              label: "لوحة التحكم",
-              icon: "home.png",
-              link: "/clientdashboard",
-            },
-            {
-              key: "meetings",
-              label: "الاجتماعات",
-              icon: "telephone.png",
-              link: "/clientdashboard/conversations",
-            },
-            {
-              key: "yourpage",
-              label: "صفحتك",
-              icon: "globe.png",
-              hasSub: true,
-            },
-            {
-              key: "business",
-              label: "الأعمال",
-              icon: "briefcase.png",
-              link: "/clientdashboard/business",
-            },
-            {
-              key: "finance",
-              label: "المالية",
-              icon: "analytics.png",
-              hasSub: true,
-            },
-            {
-              key: "support",
-              label: "الدعم الفني",
-              icon: "chatsetting.png",
-              link: "/clientdashboard/#",
-            },
-            {
-              key: "settings",
-              label: "الإعدادت",
-              icon: "settings.png",
-              link: "/clientdashboard/#",
-            },
+            { key: "home", label: "لوحة التحكم", icon: "home.png", link: "/clientdashboard" },
+            { key: "meetings", label: "الاجتماعات", icon: "telephone.png", link: "/clientdashboard/conversations" },
+            { key: "yourpage", label: "صفحتك", icon: "globe.png", hasSub: true },
+            { key: "business", label: "الأعمال", icon: "briefcase.png", link: "/clientdashboard/business" },
+            { key: "finance", label: "المالية", icon: "analytics.png", hasSub: true },
+            { key: "support", label: "الدعم الفني", icon: "chatsetting.png", link: "/clientdashboard/#" },
+            { key: "settings", label: "الإعدادت", icon: "settings.png", link: "/clientdashboard/#" },
           ].map((item) => (
             <div key={item.key} ref={(el) => (itemRefs.current[item.key] = el)}>
               {item.hasSub ? (
                 <div
-                  className={`flex items-center cursor-pointer rounded-xl transition-all duration-200 ${
-                    activeMenu === item.key
-                      ? "bg-[#005bac] text-white p-2 "
-                      : "hover:text-[#003f7f]"
+                  className={`flex items-center rounded-md px-2 py-2 cursor-pointer transition-all duration-200 ${
+                    activeMenu === item.key ? "bg-[#005bac] text-white" : "hover:text-[#003f7f]"
                   }`}
                   onClick={() => handleMenuClick(item.key)}
-                  ref={(el) => (itemRefs.current[item.key] = el)}
                 >
                   <img
                     src={`/watheeq/assets/img/sidebaricons/${item.icon}`}
-                    className={`
-        ml-5
-        ${collapsed ? "mx-auto" : "mr-4"}
-        transition-all duration-300
+                    className={`w-5 h-5 ${
+                      collapsed ? "mx-auto" : "ml-4 mr-4"
+                    }       transition-all duration-300
         ${activeMenu === item.key ? "invert brightness-0" : "filter"}
       `}
+                    alt={item.label}
                   />
                   {!collapsed && (
                     <>
@@ -147,34 +104,28 @@ export default function Sidebar({ collapsed, setCollapsed }) {
                   )}
                 </div>
               ) : (
-                <Link href={`${item.link}`}>
+                <Link href={item.link}>
                   <div
-                    className={`flex items-center cursor-pointer rounded-xl transition-all duration-200 ${
-                      activeMenu === item.key
-                        ? "bg-[#005bac] text-white p-2 "
-                        : "hover:text-[#003f7f]"
+                    className={`flex items-center rounded-md px-2 py-2 cursor-pointer transition-all duration-200 ${
+                      activeMenu === item.key ? "bg-[#005bac] text-white" : "hover:text-[#003f7f]"
                     }`}
-                    ref={(el) => (itemRefs.current[item.key] = el)}
                     onClick={() => handleMenuClick(item.key)}
                   >
                     <img
                       src={`/watheeq/assets/img/sidebaricons/${item.icon}`}
-                      className={`
-          ml-5
-          ${collapsed ? "mx-auto" : "mr-4"}
-          transition-all duration-300
-          ${activeMenu === item.key ? "invert brightness-0" : "filter"}
-        `}
+                      className={`w-5 h-5 ${
+                        collapsed ? "mx-auto" : "ml-4 mr-4"
+                      }       transition-all duration-300
+        ${activeMenu === item.key ? "invert brightness-0" : "filter"}
+      }`}
+                      alt={item.label}
                     />
-                    {!collapsed && (
-                      <>
-                        <span className="flex-1">{item.label}</span>
-                      </>
-                    )}
+                    {!collapsed && <span className="flex-1">{item.label}</span>}
                   </div>
                 </Link>
               )}
 
+              {/* Collapsed Submenu */}
               {collapsed &&
                 activeMenu === item.key &&
                 item.hasSub &&
@@ -184,42 +135,42 @@ export default function Sidebar({ collapsed, setCollapsed }) {
                     style={{ top: `${submenuTop}px`, left: "-60%" }}
                   >
                     {submenus[item.key].map((sub, index) => (
-                      <Link href={`${sub.link}`} key={index}>
-                      <div
-                        key={index}
-                        className="w-10 h-10 bg-white shadow-md rounded-lg flex items-center justify-center cursor-pointer hover:bg-[#e6f0ff]"
-                        onClick={handleSubMenuClick}
-                        title={sub.label}
-                      >
-                        <img
-                          src={`/watheeq/assets/img/sidebaricons/${sub.icon}`}
-                          alt={sub.label}
-                          className="w-5 h-5"
-                        />
-                      </div>
+                      <Link href={sub.link} key={index}>
+                        <div
+                          className="w-10 h-10 bg-white shadow-md rounded-md flex items-center justify-center mb-2 cursor-pointer hover:bg-[#e6f0ff] transition"
+                          onClick={handleSubMenuClick}
+                          title={sub.label}
+                        >
+                          <img
+                            src={`/watheeq/assets/img/sidebaricons/${sub.icon}`}
+                            alt={sub.label}
+                            className="w-5 h-5"
+                          />
+                        </div>
                       </Link>
                     ))}
                   </div>
                 )}
 
+              {/* Expanded Submenu */}
               {!collapsed &&
                 activeMenu === item.key &&
                 item.hasSub &&
                 submenus[item.key]?.length > 0 && (
                   <div className="mr-5 mt-2 space-y-2 text-base text-[#005bac]">
                     {submenus[item.key].map((sub, index) => (
-                      <Link href={`${sub.link}`} key={index}>
-                      <div
-                        key={index}
-                        className="flex items-center hover:text-[#003f7f] cursor-pointer mr-5"
-                        onClick={handleSubMenuClick}
-                      >
-                        <img
-                          src={`/watheeq/assets/img/sidebaricons/${sub.icon}`}
-                          className="ml-5"
-                        />
-                        <span>{sub.label}</span>
-                      </div>
+                      <Link href={sub.link} key={index}>
+                        <div
+                          className="flex items-center gap-2 hover:text-[#003f7f] cursor-pointer px-2"
+                          onClick={handleSubMenuClick}
+                         style={{marginBottom:'10px',marginRight:'10px'}}>
+                          <img
+                            src={`/watheeq/assets/img/sidebaricons/${sub.icon}`}
+                            className="w-4 h-4"
+                            alt={sub.label}
+                          />
+                          <span>{sub.label}</span>
+                        </div>
                       </Link>
                     ))}
                   </div>
@@ -227,13 +178,15 @@ export default function Sidebar({ collapsed, setCollapsed }) {
             </div>
           ))}
 
+          {/* Logout */}
           <div
-            className="flex items-center hover:text-[#003f7f] cursor-pointer"
+            className="flex items-center gap-2 hover:text-[#003f7f] cursor-pointer px-2 py-2 rounded-md"
             onClick={() => setActiveMenu(null)}
           >
             <img
               src="/watheeq/assets/img/sidebaricons/logout.png"
-              className={`ml-5 ${collapsed ? "mx-auto" : "mr-4"}`}
+              className={`w-5 h-5 ${collapsed ? "mx-auto" : "ml-2"}`}
+              alt="Logout"
             />
             {!collapsed && <span>تسجيل خروج</span>}
           </div>
