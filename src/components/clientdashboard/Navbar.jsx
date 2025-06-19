@@ -54,6 +54,7 @@ export default function Navbar() {
             />
             <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full" />
           </div>
+          <div className="flex text-right items-center gap-2" onClick={toggleDropdown}>
 
           <img
             src="/watheeq/assets/img/avatar.png"
@@ -61,7 +62,6 @@ export default function Navbar() {
             className="w-10 h-10 rounded-full"
           />
 
-          <div className="flex text-right items-center gap-2" onClick={toggleDropdown}>
             <div><p className="text-[#003f7f] font-semibold text-sm">أحمد ماضي</p>
             <p className="text-gray-400 text-xs">محامي</p>
           </div>
