@@ -11,7 +11,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
         <button
           key={page}
           onClick={() => onPageChange(page)}
-          className={`px-3 py-1 rounded ${
+          className={`px-3 py-1 rounded  cursor-pointer ${
             page === currentPage
               ? "bg-[#0045ab] text-white"
               : "bg-white text-[#0045ab] border border-gray-300"
@@ -22,7 +22,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
       ))}
 
       {currentPage < totalPages && (
-        <button onClick={() => onPageChange(currentPage + 1)}>التالي &gt;</button>
+        <button className="cursor-pointer" onClick={() => onPageChange(currentPage + 1)}>التالي &gt;</button>
       )}
     </div>
   );

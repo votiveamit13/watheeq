@@ -84,7 +84,7 @@ export default function OccupationInfo({ onNext }) {
             <button
               type="submit"
               onClick={handleSubmit}
-              className="w-full bg-[#003D79] text-white py-3 rounded-lg font-bold text-lg hover:bg-blue-800 transition"
+              className="w-full bg-[#003D79] text-white py-3 rounded-lg font-bold text-lg hover:bg-blue-800 transition cursor-pointer"
             >
               تسجيل
             </button>

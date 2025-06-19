@@ -87,7 +87,7 @@ export default function Profile() {
           </div>
         </div>
         <div>
-          <button className="bg-primary text-white font-bold py-3 px-10 rounded-md">
+          <button className="bg-primary text-white font-bold py-3 px-10 rounded-md cursor-pointer">
             تعديل
           </button>
         </div>
@@ -199,7 +199,7 @@ export default function Profile() {
             <p className="text-[#0B2B51]">ahmedmadi@gmail.com</p>
             <span className="text-[#0B2B51]">قبل شهر</span>
             <div className="mt-3">
-              <button className="font-bold border py-2 px-3 rounded-md">
+              <button className="font-bold border py-2 px-3 rounded-md cursor-pointer">
                 + إضافة بريد الكتروني
               </button>
             </div>
@@ -292,7 +292,7 @@ export default function Profile() {
             </div>
             <div className="flex justify-end gap-2">
               <button
-                className="bg-[#13498B] text-white px-4 py-2 rounded"
+                className="bg-[#13498B] text-white px-4 py-2 rounded cursor-pointer"
                 onClick={(e) => {
                   e.preventDefault();
                   if (ibanInput) {

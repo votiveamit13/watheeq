@@ -22,7 +22,7 @@ export default function Navbar() {
 
         {/* Hamburger Icon (Mobile Only) */}
         <button
-          className="md:hidden text-secondary text-3xl absolute top-6 right-8"
+          className="md:hidden text-secondary text-3xl absolute top-6 right-8 cursor-pointer"
           onClick={() => setIsMenuOpen(true)}
         >
           ☰
@@ -63,7 +63,7 @@ export default function Navbar() {
       {isMenuOpen && (
         <div className="fixed inset-0 bg-white z-50 flex flex-col items-center justify-center p-10 transition-all duration-300">
           <button
-            className="absolute top-6 right-6 text-4xl text-gray-600"
+            className="absolute top-6 right-6 text-4xl text-gray-600 cursor-pointer"
             onClick={() => setIsMenuOpen(false)}
           >
             &times;
@@ -89,7 +89,7 @@ export default function Navbar() {
               <Link href="/register">
                 <Button
                   variant="secondary"
-                  className="rounded-3xl font-semibold text-xl h-12 pl-8 pr-8 bg-[#1E88E5]"
+                  className="rounded-3xl  cursor-pointer font-semibold text-xl h-12 pl-8 pr-8 bg-[#1E88E5]"
                 >
                   حساب جديد
                 </Button>

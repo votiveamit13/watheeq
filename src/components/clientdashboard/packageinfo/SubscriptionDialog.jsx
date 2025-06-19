@@ -54,7 +54,7 @@ export default function SubscriptionDialog({ open, onClose, data }) {
         </div>
         <div className="flex items-center justify-center">
           <button
-            className="mt-4 w-1/2 bg-[#13498B] text-white rounded-lg  font-bold py-2 hover:bg-[#093860]"
+            className="mt-4 w-1/2 bg-[#13498B] text-white rounded-lg  font-bold py-2 hover:bg-[#093860] cursor-pointer"
             onClick={onClose}
           >
             اشترك الأن

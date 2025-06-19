@@ -12,7 +12,7 @@ export default function AddService({onBack}) {
         >
           <button
             onClick={onBack}
-            className="text-[#0B2B51] font-semibold text-2xl hover:underline"
+            className="text-[#0B2B51] font-semibold text-2xl hover:underline cursor-pointer"
           >
             الخدمات
           </button>
@@ -21,7 +21,7 @@ export default function AddService({onBack}) {
             &nbsp;&gt; إضافة خدمة
           </span>
         </div>
-        <button className="bg-[#13498B] text-white px-10 font-bold py-2 rounded-lg">
+        <button className="bg-[#13498B] text-white px-10 font-bold py-2 rounded-lg cursor-pointer">
           حفظ
         </button>
       </div>

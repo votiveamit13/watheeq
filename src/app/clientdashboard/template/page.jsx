@@ -33,7 +33,7 @@ export default function Template() {
           <h2 className="text-2xl font-bold">إعدادات القالب</h2>
         </div>
         <div>
-          <button className="bg-[#13498B] text-white py-2 px-10 rounded-lg">
+          <button className="bg-[#13498B] text-white py-2 px-10 rounded-lg cursor-pointer">
             حفظ
           </button>
         </div>
@@ -210,7 +210,7 @@ export default function Template() {
                       e.stopPropagation();
                       removeSkill(skill);
                     }}
-                    className="text-red-500 font-bold"
+                    className="text-red-500 font-bold cursor-pointer"
                   >
                     ×
                   </button>

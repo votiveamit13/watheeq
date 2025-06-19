@@ -161,7 +161,7 @@ export default function Conversations() {
                 className="bg-transparent flex-1 text-sm text-right placeholder-gray-500 focus:outline-none"
               />
             </div>
-            <button className="text-[#005088] text-2xl mr-3">
+            <button className="text-[#005088] text-2xl mr-3 cursor-pointer">
               <BiSliderAlt />
             </button>
           </div>
@@ -331,7 +331,7 @@ export default function Conversations() {
           <div className="bg-white p-4 flex items-center border-t mt-auto relative">
             <div className="relative ml-2">
               <button
-                className="text-[#13498B] flex items-center justify-center"
+                className="text-[#13498B] flex items-center justify-center cursor-pointer"
                 onClick={() => setShowMenu(!showMenu)}
               >
                 <FaPlus className="size-8" />
@@ -364,7 +364,7 @@ export default function Conversations() {
               />
             </div>
 
-            <button className="mr-2 text-[#13498B] bg-[#13498B] text-white p-3 rounded-xl text-xl items-center">
+            <button className="mr-2 text-[#13498B] bg-[#13498B] text-white p-3 rounded-xl text-xl items-center cursor-pointer">
               <IoMdSend className="-scale-x-100 size-6" />
             </button>
           </div>

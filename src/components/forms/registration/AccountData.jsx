@@ -95,7 +95,7 @@ export default function RegisterForm({ onNext }) {
               <button
                 type="button"
                 onClick={() => setDropdownOpen(!dropdownOpen)}
-                className="w-full h-full pl-2 pr-2 bg-white border border-[#13498b40] rounded-lg text-sm flex items-center justify-between"
+                className="w-full h-full pl-2 pr-2 bg-white border border-[#13498b40] rounded-lg text-sm flex items-center justify-between cursor-pointer"
               >
                 <div className="flex items-center gap-1">
                   <ChevronDown size={16} className="text-[#13498B]" />
@@ -206,7 +206,7 @@ export default function RegisterForm({ onNext }) {
 
           <button
             type="submit"
-            className="w-full bg-[#13498B] text-white py-3 rounded-lg font-bold text-lg hover:bg-blue-800 transition"
+            className="w-full bg-[#13498B] text-white py-3 rounded-lg font-bold text-lg hover:bg-blue-800 transition cursor-pointer"
           >
             تسجيل
           </button>

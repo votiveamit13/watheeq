@@ -46,7 +46,7 @@ export default function AccountConfirmation({onNext}) {
           ))}
         </div>
 
-        <button onClick={handleSubmit} className="w-full bg-[#13498B] text-white py-3 rounded-lg font-bold text-lg hover:bg-blue-800 transition">
+        <button onClick={handleSubmit} className="w-full bg-[#13498B] text-white py-3 rounded-lg font-bold text-lg hover:bg-blue-800 transition cursor-pointer">
           تأكيد
         </button>
       </div>

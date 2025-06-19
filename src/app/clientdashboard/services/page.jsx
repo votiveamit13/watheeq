@@ -126,7 +126,7 @@ export default function Services() {
                 <td className="py-5">{s.duration}</td>
                 <td className="py-5">
                   <button
-                    className={`py-2 min-w-[100px] inline-block px-6 rounded-lg ${videoClass(
+                    className={`py-2 min-w-[100px] inline-block px-6 rounded-lg cursor-pointer ${videoClass(
                       s.video
                     )}`}
                   >

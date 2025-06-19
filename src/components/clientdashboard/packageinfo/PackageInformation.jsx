@@ -66,8 +66,8 @@ export default function PackageInfotmation({
                     </tbody>
                 </table>
                 <div className="flex justify-center gap-5 w-full pr-10 pl-10">
-                    <button className="bg-[#13498B] text-white w-full py-2 px-7 rounded-lg">تجديد</button>
-                    <button className="text-[#F24242] py-2 px-7 w-full rounded-lg border border-[#F2424280]">إلغاء الاشتراك</button>
+                    <button className="bg-[#13498B] text-white w-full py-2 px-7 rounded-lg cursor-pointer">تجديد</button>
+                    <button className="text-[#F24242] py-2 px-7 w-full rounded-lg border border-[#F2424280] cursor-pointer">إلغاء الاشتراك</button>
                 </div>
               </div>
               </div>
