@@ -38,7 +38,7 @@ export default function Template() {
           </button>
         </div>
       </div>
-      <form>
+      <form className="mb-30">
         {/* First Section */}
         <div className="bg-white mt-5 p-5 rounded-lg items-start md:items-center">
           <h3 className="text-2xl font-bold text-[#13498B] md:mb-0">

@@ -42,7 +42,7 @@ export default function Package() {
           date={"12-04-2025"}
         />
       </div>
-      <div className="mx-auto bg-white p-5 rounded-lg">
+      <div className="mx-auto bg-white p-5 rounded-lg mb-30">
         <div className="[&>section]:mx-0 [&>section]:sm:mx-0 mx-auto overflow-x-hidden">
           <Packages
             heading={null}
