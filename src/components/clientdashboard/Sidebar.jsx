@@ -7,15 +7,18 @@ export default function Sidebar({ collapsed, setCollapsed }) {
   const [activeMenu, setActiveMenu] = useState("home");
   const itemRefs = useRef({});
   const [submenuTop, setSubmenuTop] = useState(0);
+  const [showSubmenu, setShowSubmenu] = useState(null);
+
 
   const toggleSidebar = () => setCollapsed(!collapsed);
 
   const handleMenuClick = (menu) => {
-    if (activeMenu === menu) {
-      setActiveMenu(null);
+    if (activeMenu === menu && showSubmenu === menu) {
+      setShowSubmenu(null);
       return;
     }
     setActiveMenu(menu);
+    setShowSubmenu(menu);
     const rect = itemRefs.current[menu]?.getBoundingClientRect();
     if (rect) {
       setSubmenuTop(rect.top);
@@ -23,7 +26,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
   };
 
   const handleSubMenuClick = () => {
-    setActiveMenu(null);
+    setShowSubmenu(null);
   };
 
   const submenus = {
@@ -127,7 +130,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
 
               {/* Collapsed Submenu */}
               {collapsed &&
-                activeMenu === item.key &&
+                showSubmenu === item.key &&
                 item.hasSub &&
                 submenus[item.key]?.length > 0 && (
                   <div
@@ -154,7 +157,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
 
               {/* Expanded Submenu */}
               {!collapsed &&
-                activeMenu === item.key &&
+                showSubmenu === item.key &&
                 item.hasSub &&
                 submenus[item.key]?.length > 0 && (
                   <div className="mr-5 mt-2 space-y-2 text-base text-[#005bac]">
