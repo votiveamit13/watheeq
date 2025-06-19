@@ -1,21 +1,14 @@
 "use client";
 import { useState } from "react";
-import { FaUser, FaEnvelope, FaPhone, FaLock } from "react-icons/fa";
-import {
-  HiOutlineUser,
-  HiOutlineEnvelope,
-  HiOutlinePhone,
-  HiOutlineLock,
-} from "react-icons/hi2";
-import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
-
-import "react-phone-input-2/lib/style.css";
 import { ChevronDown } from "lucide-react";
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 
 export default function RegisterForm({ onNext }) {
   const [phone, setPhone] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
   const [countryCode, setCountryCode] = useState("+966");
   const [form, setForm] = useState({
     name: "",
@@ -25,12 +18,14 @@ export default function RegisterForm({ onNext }) {
   });
 
   const countryOptions = [
-    { code: "+966", label: "🇸🇦", name: "KSA" },
-    { code: "+971", label: "🇦🇪", name: "UAE" },
-    { code: "+965", label: "🇰🇼", name: "Kuwait" },
-    { code: "+20", label: "🇪🇬", name: "Egypt" },
-    { code: "+91", label: "🇮🇳", name: "India" },
+    { code: "+966", iso: "sa", name: "KSA" },
+    { code: "+971", iso: "ae", name: "UAE" },
+    { code: "+965", iso: "kw", name: "Kuwait" },
+    { code: "+20", iso: "eg", name: "Egypt" },
+    { code: "+91", iso: "in", name: "India" },
   ];
+
+  const selectedCountry = countryOptions.find((c) => c.code === countryCode);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -38,18 +33,6 @@ export default function RegisterForm({ onNext }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // if (
-    //   !form.name ||
-    //   !form.email ||
-    //   !phone ||
-    //   !form.password ||
-    //   !form.confirmPassword
-    // ) {
-    //   alert("الرجاء ملء جميع الحقول");
-    //   return;
-    // }
-
     if (form.password !== form.confirmPassword) {
       alert("كلمتا المرور غير متطابقتين");
       return;
@@ -69,6 +52,7 @@ export default function RegisterForm({ onNext }) {
 
       <div className="bg-[#F7FBFD] rounded-lg">
         <form className="space-y-4" onSubmit={handleSubmit}>
+          {/* Name */}
           <div className="relative">
             <input
               type="text"
@@ -81,10 +65,12 @@ export default function RegisterForm({ onNext }) {
             />
             <img
               src="/watheeq/assets/img/accountdata1.png"
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5"
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5"
+              alt=""
             />
           </div>
 
+          {/* Email */}
           <div className="relative">
             <input
               type="email"
@@ -97,30 +83,54 @@ export default function RegisterForm({ onNext }) {
             />
             <img
               src="/watheeq/assets/img/accountdata2.png"
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5"
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5"
+              alt=""
             />
           </div>
-          <div className="flex gap-2 rtl:flex-row-reverse">
-            <div className="relative w-[88px] h-[52px]">
-              <select
-                value={countryCode}
-                onChange={(e) => setCountryCode(e.target.value)}
-                className="appearance-none w-full h-full pl-2 pr-6 bg-white border border-[#13498b40] rounded-lg text-[#4C3A74] text-sm font-medium flex items-center justify-between"
-              >
-                {countryOptions.map((opt) => (
-                  <option key={opt.code} value={opt.code}>
-                    {opt.label} {opt.code}
-                  </option>
-                ))}
-              </select>
 
-              {/* Custom arrow icon */}
-              <div className="pointer-events-none absolute top-1/2 right-2 transform -translate-y-1/2 text-[#13498B]">
-                <ChevronDown size={16} />
-              </div>
+          {/* Country Code + Phone */}
+          <div className="flex gap-2 rtl:flex-row-reverse">
+            {/* Country Selector */}
+            <div className="relative w-[130px] h-[52px]">
+              <button
+                type="button"
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+                className="w-full h-full pl-2 pr-2 bg-white border border-[#13498b40] rounded-lg text-sm flex items-center justify-between"
+              >
+                <div className="flex items-center gap-1">
+                  <ChevronDown size={16} className="text-[#13498B]" />
+                  <span dir="ltr">{selectedCountry?.code}</span>
+                  <img
+                    src={`https://flagcdn.com/w40/${selectedCountry?.iso}.png`}
+                    alt={selectedCountry?.name}
+                    className="w-5 h-4"
+                  />
+                </div>
+              </button>
+
+              {dropdownOpen && (
+                <ul className="absolute z-10 w-full mt-1 bg-white border rounded shadow">
+                  {countryOptions.map((opt) => (
+                    <li
+                      key={opt.code}
+                      className="flex items-center gap-2 px-3 py-2 hover:bg-gray-100 cursor-pointer"
+                      onClick={() => {
+                        setCountryCode(opt.code);
+                        setDropdownOpen(false);
+                      }}
+                    >
+                      <span dir="ltr">{opt.code}</span>
+                      <img
+                        src={`https://flagcdn.com/w40/${opt.iso}.png`}
+                        alt={opt.name}
+                        className="w-5 h-4"
+                      />
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
 
-            {/* Phone Number Input */}
             <div className="relative w-full">
               <input
                 type="tel"
@@ -132,7 +142,8 @@ export default function RegisterForm({ onNext }) {
               />
               <img
                 src="/watheeq/assets/img/accountdata3.png"
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5"
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5"
+                alt=""
               />
             </div>
           </div>
@@ -149,7 +160,8 @@ export default function RegisterForm({ onNext }) {
             />
             <img
               src="/watheeq/assets/img/accountdata4.png"
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5"
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5"
+              alt=""
             />
             {showPassword ? (
               <AiOutlineEyeInvisible
@@ -176,7 +188,8 @@ export default function RegisterForm({ onNext }) {
             />
             <img
               src="/watheeq/assets/img/accountdata4.png"
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5"
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5"
+              alt=""
             />
             {showConfirmPassword ? (
               <AiOutlineEyeInvisible
@@ -193,13 +206,14 @@ export default function RegisterForm({ onNext }) {
 
           <button
             type="submit"
-            className="w-full bg-[#13498B] cursor-pointer text-white py-3 rounded-lg font-bold text-lg hover:bg-blue-800 transition"
+            className="w-full bg-[#13498B] text-white py-3 rounded-lg font-bold text-lg hover:bg-blue-800 transition"
           >
             تسجيل
           </button>
         </form>
+
         <div className="w-full text-center mt-5">
-          <p> لديك حساب بالفعل ؟ تسجيل الدخول</p>
+          <p>لديك حساب بالفعل ؟ تسجيل الدخول</p>
         </div>
       </div>
     </section>
