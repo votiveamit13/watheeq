@@ -77,7 +77,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
             { key: "business", label: "الأعمال", icon: "briefcase.png", link: "/clientdashboard/business" },
             { key: "finance", label: "المالية", icon: "analytics.png", hasSub: true },
             { key: "support", label: "الدعم الفني", icon: "chatsetting.png", link: "/clientdashboard/#" },
-            { key: "settings", label: "الإعدادت", icon: "settings.png", link: "/clientdashboard/#" },
+            { key: "settings", label: "الإعدادت", icon: "settings.png", link: "/clientdashboard/settings" },
           ].map((item) => (
             <div key={item.key} ref={(el) => (itemRefs.current[item.key] = el)}>
               {item.hasSub ? (
