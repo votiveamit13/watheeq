@@ -73,7 +73,7 @@ export default function Navbar() {
 
         {isOpen && (
           <div className="absolute right-13 w-35 bg-[#E7EDF3] rounded-br-lg rounded-bl-lg shadow-lg text-right z-50">
-            <Link href="/clientdashboard/profile">
+            <Link href="/professionaldashboard/profile">
               <div className="block px-4 py-4 text-[#003f7f] hover:bg-[#f0f8ff] font-medium flex items-center justify-end gap-2">
                 <HiOutlineUser />
                 <span className="text-[13px]">الملف الشخصي</span>
