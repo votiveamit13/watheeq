@@ -43,8 +43,6 @@ export default function Settings() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    onNext();
   };
 
   return (
@@ -56,7 +54,10 @@ export default function Settings() {
             <span>العربية</span>
           </div>
           <div className="border border-[#13498B] rounded-full p-0.5">
-            <AiOutlineLeft onClick={() => setLanguageDialog(true)} className="cursor-pointer"/>
+            <AiOutlineLeft
+              onClick={() => setLanguageDialog(true)}
+              className="cursor-pointer"
+            />
             {languageDialog && (
               <div className="fixed inset-0 bg-black bg-opacity-30 flex justify-center items-center z-50">
                 <div className="bg-white p-6 rounded-lg w-full max-w-md">
@@ -107,17 +108,24 @@ export default function Settings() {
             </span>
           </div>
           <div className="border border-[#13498B] rounded-full p-0.5">
-            <AiOutlineLeft onClick={() => setTwoFactorDialog(true)} className="cursor-pointer" />
+            <AiOutlineLeft
+              onClick={() => setTwoFactorDialog(true)}
+              className="cursor-pointer"
+            />
             {twoFactorDialog && (
               <div className="fixed inset-0 bg-black bg-opacity-30 flex justify-center items-center z-50">
                 <div className="bg-white p-6 rounded-lg w-full max-w-md">
                   <div>
                     <h2 className="text-xl font-bold text-center text-[#13498B] mb-4">
-                      المصادقة الثنائية
+                      {twoFactorStatus === "غير مفعل"
+                        ? "المصادقة الثنائية"
+                        : "إيقاف  المصادقة الثنائية"}
                     </h2>
                   </div>
                   <label className="block mb-3 text-l text-[#0B2B51]">
-                    رقم الجوال
+                    {twoFactorStatus === "غير مفعل"
+                      ? "رقم الجوال"
+                      : "هل تريد ايقاف المصادقة  برقم جوال  المسجل لدينا"}
                   </label>
                   <div className="flex gap-2 rtl:flex-row-reverse">
                     <div className="relative w-[130px] h-[52px]">
@@ -177,12 +185,30 @@ export default function Settings() {
                     </div>
                   </div>
                   <div className="mt-6 flex justify-center">
-                    <button
-                      className="bg-[#003F77] text-white text-sm px-8 py-2 rounded-md cursor-pointer"
-                      onClick={() => setOtpDialog(true)}
-                    >
-                      التالي
-                    </button>
+                    {twoFactorStatus === "غير مفعل" ? (
+                      <button
+                        className="bg-[#003F77] text-white text-sm px-10 py-2 rounded-md cursor-pointer"
+                        onClick={() => setOtpDialog(true)}
+                      >
+                        التالي
+                      </button>
+                    ) : (
+                      <div className="flex justify-center gap-4">
+                        {" "}
+                        <button
+                          className="bg-[#003F77] text-white text-sm px-10 py-2 rounded-md cursor-pointer"
+                          onClick={() => setOtpDialog(true)}
+                        >
+                          نعم
+                        </button>
+                        <button
+                          className="bg-[#F8FAFC] text-[#13498B] text-sm px-10 py-2 border border-[#13498B] rounded-md cursor-pointer"
+                          onClick={() => setTwoFactorDialog(false)}
+                        >
+                          لا
+                        </button>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -214,16 +240,29 @@ export default function Settings() {
                       ))}
                     </div>
 
-                    <button
-                      onClick={() => {
-                        setOtpDialog(false);
-                        setTwoFactorDialog(false);
-                        setTwoFactorStatus("مفعل");
-                      }}
-                      className="bg-[#003F77] text-white text-sm px-8 py-2 rounded-md cursor-pointer"
-                    >
-                      تأكيد
-                    </button>
+                    {twoFactorStatus === "غير مفعل" ? (
+                      <button
+                        onClick={() => {
+                          setOtpDialog(false);
+                          setTwoFactorDialog(false);
+                          setTwoFactorStatus("مفعل");
+                        }}
+                        className="bg-[#003F77] text-white text-sm px-8 py-2 rounded-md cursor-pointer"
+                      >
+                        تأكيد
+                      </button>
+                    ) : (
+                      <button
+                        onClick={() => {
+                          setOtpDialog(false);
+                          setTwoFactorDialog(false);
+                          setTwoFactorStatus("غير مفعل");
+                        }}
+                        className="bg-[#003F77] text-white text-sm px-8 py-2 rounded-md cursor-pointer"
+                      >
+                        تأكيد
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>
