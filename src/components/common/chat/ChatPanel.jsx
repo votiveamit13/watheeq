@@ -36,7 +36,11 @@ export default function ChatPanel({ selectedChat, messages, setMessages }) {
       <div className="flex justify-between p-5 items-center shadow">
         <div className="flex items-center">
           <img
-            src="/watheeq/assets/img/conversation1.png"
+            src={
+              selectedChat?.img
+                ? `/watheeq/assets/img/${selectedChat.img}`
+                : "/watheeq/assets/img/avatar.png"
+            }
             alt="user"
             className="w-12 h-12 ml-5"
           />
