@@ -1,13 +1,33 @@
 "use client";
 import Link from "next/link";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { HiChevronLeft, HiChevronDown } from "react-icons/hi2";
 
 export default function Sidebar({ collapsed, setCollapsed }) {
-  const [activeMenu, setActiveMenu] = useState("home");
+  const pathname = usePathname();
+const [activeMenu, setActiveMenu] = useState("");
   const itemRefs = useRef({});
   const [submenuTop, setSubmenuTop] = useState(0);
   const [showSubmenu, setShowSubmenu] = useState(null);
+
+  useEffect(() => {
+  if (pathname.includes("template") || pathname.includes("services") || pathname.includes("publications")) {
+    setActiveMenu("yourpage");
+  } else if (pathname.includes("package") || pathname.includes("wallet")) {
+    setActiveMenu("finance");
+  } else if (pathname.includes("business")) {
+    setActiveMenu("business");
+  } else if (pathname.includes("conversations")) {
+    setActiveMenu("meetings");
+  } else if (pathname.includes("support")) {
+    setActiveMenu("support");
+  } else if (pathname.includes("settings")) {
+    setActiveMenu("settings");
+  } else if (pathname === "/clientdashboard") {
+    setActiveMenu("home");
+  }
+}, [pathname]);
 
 
   const toggleSidebar = () => setCollapsed(!collapsed);
