@@ -129,7 +129,6 @@ export default function AddService({onBack}) {
           </div>
         </div>
 
-        {/* الاجتماعات (فيديو) */}
         <div className="col-span-2">
           <label className="block mb-2 text-sm text-[#0B2B51]">
             الاجتماع(فيديو)
