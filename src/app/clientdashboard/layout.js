@@ -13,7 +13,7 @@ export default function ClientLayout({ children }) {
                         <Sidebar collapsed={collapsed} setCollapsed={setCollapsed} />
                     </div>
                     <div className="flex-1 flex flex-col p-5">
-                        <Navbar wish={"أهلا بك"} location={"لوحة تحكم وثيق"} url={null} username={"محمد الشيخ"} usertype={"عميل"} profileimage={"/watheeq/assets/img/conversation1.png"} profilelink={"/clientdashboard"} />
+                        <Navbar wish={"أهلا بك"} location={"لوحة تحكم وثيق"} url={null} username={"محمد الشيخ"} usertype={"عميل"} profileimage={"/watheeq/assets/img/conversation1.png"} profilelink={"/clientdashboard/profile"} />
                         {children}
                     </div>
                 </section>

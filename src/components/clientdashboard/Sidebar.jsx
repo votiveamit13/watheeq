@@ -46,7 +46,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
       key: "meetings",
       label: "الاجتماعات",
       icon: "telephone.png",
-      link: "/clientdashboard",
+      link: "/clientdashboard/conversations",
     },
     {
       key: "yourpage",
