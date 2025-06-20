@@ -24,7 +24,7 @@ const [activeMenu, setActiveMenu] = useState("");
     setActiveMenu("support");
   } else if (pathname.includes("settings")) {
     setActiveMenu("settings");
-  } else if (pathname === "/clientdashboard") {
+  } else if (pathname === "/professionaldashboard") {
     setActiveMenu("home");
   }
 }, [pathname]);
@@ -51,13 +51,13 @@ const [activeMenu, setActiveMenu] = useState("");
 
   const submenus = {
     yourpage: [
-      { label: "القالب", icon: "rectangleanalytics.png", link: "/clientdashboard/template" },
-      { label: "الخدمات", icon: "document.png", link: "/clientdashboard/services" },
-      { label: "المنشورات", icon: "rectanglepencil.png", link: "/clientdashboard/publications" },
+      { label: "القالب", icon: "rectangleanalytics.png", link: "/professionaldashboard/template" },
+      { label: "الخدمات", icon: "document.png", link: "/professionaldashboard/services" },
+      { label: "المنشورات", icon: "rectanglepencil.png", link: "/professionaldashboard/publications" },
     ],
     finance: [
-      { label: "الباقة", icon: "bills.png", link: "/clientdashboard/package" },
-      { label: "المحفظة", icon: "wallet.png", link: "/clientdashboard/wallet" },
+      { label: "الباقة", icon: "bills.png", link: "/professionaldashboard/package" },
+      { label: "المحفظة", icon: "wallet.png", link: "/professionaldashboard/wallet" },
     ],
   };
 
@@ -91,13 +91,13 @@ const [activeMenu, setActiveMenu] = useState("");
           }`}
         >
           {[
-            { key: "home", label: "لوحة التحكم", icon: "home.png", link: "/clientdashboard" },
-            { key: "meetings", label: "الاجتماعات", icon: "telephone.png", link: "/clientdashboard/conversations" },
+            { key: "home", label: "لوحة التحكم", icon: "home.png", link: "/professionaldashboard" },
+            { key: "meetings", label: "الاجتماعات", icon: "telephone.png", link: "/professionaldashboard/conversations" },
             { key: "yourpage", label: "صفحتك", icon: "globe.png", hasSub: true },
-            { key: "business", label: "الأعمال", icon: "briefcase.png", link: "/clientdashboard/business" },
+            { key: "business", label: "الأعمال", icon: "briefcase.png", link: "/professionaldashboard/business" },
             { key: "finance", label: "المالية", icon: "analytics.png", hasSub: true },
-            { key: "support", label: "الدعم الفني", icon: "chatsetting.png", link: "/clientdashboard/support" },
-            { key: "settings", label: "الإعدادت", icon: "settings.png", link: "/clientdashboard/settings" },
+            { key: "support", label: "الدعم الفني", icon: "chatsetting.png", link: "/professionaldashboard/support" },
+            { key: "settings", label: "الإعدادت", icon: "settings.png", link: "/professionaldashboard/settings" },
           ].map((item) => (
             <div key={item.key} ref={(el) => (itemRefs.current[item.key] = el)}>
               {item.hasSub ? (

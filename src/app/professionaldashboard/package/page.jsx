@@ -1,6 +1,6 @@
 "use client";
-import PackageInfotmation from "@/components/clientdashboard/packageinfo/PackageInformation";
-import SubscriptionDialog from "@/components/clientdashboard/packageinfo/SubscriptionDialog";
+import PackageInfotmation from "@/components/professionaldashboard/packageinfo/PackageInformation";
+import SubscriptionDialog from "@/components/professionaldashboard/packageinfo/SubscriptionDialog";
 import Packages from "@/components/Packages";
 import { useState } from "react";
 

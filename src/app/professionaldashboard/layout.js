@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
-import Navbar from "@/components/clientdashboard/Navbar";
+import Navbar from "@/components/professionaldashboard/Navbar";
 import "./../globals.css";
-import Sidebar from "@/components/clientdashboard/Sidebar";
+import Sidebar from "@/components/professionaldashboard/Sidebar";
 export default function ClientLayout({ children }) {
     const [collapsed, setCollapsed] = useState(false);
     return (

@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { FaPlus } from "react-icons/fa6";
 import { ChevronLeft } from "lucide-react";
-import ChatPanel from "@/components/clientdashboard/support/ChatPanel";
+import ChatPanel from "@/components/professionaldashboard/support/ChatPanel";
 
 export default function TechnicalSupport() {
   const [createTicketDialog, setCreateTicketDialog] = useState(false);

@@ -4,7 +4,7 @@ import { LuPencil } from "react-icons/lu";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { useState } from "react";
 import Pagination from "@/components/pagination/Pagination";
-import AddService from "@/components/clientdashboard/services/AddService";
+import AddService from "@/components/professionaldashboard/services/AddService";
 
   const service = [
     {

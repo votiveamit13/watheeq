@@ -2,9 +2,9 @@ import LineChart from "@/components/charts/LineChart";
 import BarChart from "@/components/charts/BarChart";
 import PieChart from "@/components/charts/PieChart";
 import StatsTable from "@/components/charts/StatsTable";
-import StatusBar from "@/components/clientdashboard/statusbar/Status";
+import StatusBar from "@/components/professionaldashboard/statusbar/Status";
 
-export default function ClientDashboard() {
+export default function ProfessionalDashboard() {
 
   const chartData = [
     { label: "الاثنين", value: 446 },
