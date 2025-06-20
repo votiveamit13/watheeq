@@ -2,7 +2,7 @@ import LineChart from "@/components/charts/LineChart";
 import BarChart from "@/components/charts/BarChart";
 import PieChart from "@/components/charts/PieChart";
 import StatsTable from "@/components/charts/StatsTable";
-import StatusBar from "@/components/professionaldashboard/statusbar/Status";
+import StatusBar from "@/components/common/statusbar/Status";
 
 export default function ProfessionalDashboard() {
 
@@ -18,7 +18,7 @@ export default function ProfessionalDashboard() {
   return (
     <section>
         <div className="mt-5 flex gap-3">
-          <StatusBar/>
+          <StatusBar asname={"الخدمات المفعلة"} asvalue={56} nmname={"الرسائل الجديدة"} nmvalue={5} atname={"المواعيد اليوم"} atvalue={3} iname={"الفواتير"} ivalue={17}/>
         </div>
         <div className="mt-5 flex gap-3">
           <div className="w-100 bg-white p-4 rounded-lg">

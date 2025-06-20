@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Navbar from "@/components/common/Navbar";
 import "./../globals.css";
-import Sidebar from "@/components/professionaldashboard/Sidebar";
+import Sidebar from "@/components/clientdashboard/Sidebar";
 export default function ClientLayout({ children }) {
     const [collapsed, setCollapsed] = useState(false);
     return (
@@ -13,7 +13,7 @@ export default function ClientLayout({ children }) {
                         <Sidebar collapsed={collapsed} setCollapsed={setCollapsed} />
                     </div>
                     <div className="flex-1 flex flex-col p-5">
-                        <Navbar wish={"أهلا بك"} location={"موقعك"} url={"watheeq.com/u/username"} username={"أحمد ماضي"} usertype={"محامي"} profileimage={"/watheeq/assets/img/avatar.png"} profilelink={"/professionaldashboard/profile"} />
+                        <Navbar wish={"أهلا بك"} location={"لوحة تحكم وثيق"} url={null} username={"محمد الشيخ"} usertype={"عميل"} profileimage={"/watheeq/assets/img/conversation1.png"} profilelink={"/clientdashboard"} />
                         {children}
                     </div>
                 </section>

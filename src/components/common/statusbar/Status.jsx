@@ -3,20 +3,20 @@ import AppointmentsToday from "./Appointments";
 import Invoices from "./Invoices";
 import NewMessages from "./NewMessages";
 
-export default function StatusBar() {
+export default function StatusBar({asname, asvalue, nmname, nmvalue, atname, atvalue, iname, ivalue}) {
   return (
     <div className="grid grid-cols-4 justify-between gap-10 w-full">
       <div className="bg-white rounded-lg p-6">
-        <ActivateServices value={56} />
+        <ActivateServices asname={asname} asvalue={asvalue} />
       </div>
       <div className="bg-white rounded-lg p-6">
-        <NewMessages value={5} />
+        <NewMessages nmname={nmname} nmvalue={nmvalue} />
       </div>
       <div className="bg-white rounded-lg p-6">
-        <AppointmentsToday value={3} />
+        <AppointmentsToday atname={atname} atvalue={atvalue} />
       </div>
       <div className="bg-white rounded-lg p-6">
-        <Invoices value={17} />
+        <Invoices iname={iname} ivalue={ivalue} />
       </div>
     </div>
   );
