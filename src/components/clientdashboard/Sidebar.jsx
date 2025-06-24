@@ -52,7 +52,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
       key: "yourpage",
       label: "طلباتي",
       icon: "briefcase.png",
-      link: "/clientdashboard",
+      link: "/clientdashboard/request",
     },
     {
       key: "business",

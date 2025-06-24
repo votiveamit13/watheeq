@@ -50,7 +50,7 @@ export default function ChatPanel({ selectedChat, messages, setMessages }) {
           </div>
         </div>
         <div className="relative">
-          <button onClick={() => setShowStatusMenu(!showStatusMenu)}>
+          <button onClick={() => setShowStatusMenu(!showStatusMenu)} className="cursor-pointer">
             <HiOutlineDotsHorizontal />
           </button>
           {showStatusMenu && (
@@ -125,7 +125,7 @@ export default function ChatPanel({ selectedChat, messages, setMessages }) {
       <div className="bg-white p-4 flex items-center border-t mt-auto relative">
         <div className="relative ml-2">
           <button
-            className="text-[#13498B] flex items-center justify-center"
+            className="text-[#13498B] flex items-center justify-center cursor-pointer"
             onClick={() => setShowMenu(!showMenu)}
           >
             <FaPlus className="size-8" />
@@ -152,8 +152,8 @@ export default function ChatPanel({ selectedChat, messages, setMessages }) {
           )}
         </div>
         <div className="relative flex-1">
-          <RiEdit2Line className="absolute right-3 top-1/2 transform -translate-y-1/2 text-2xl text-[#13498B]" />
-          <MdOutlineMicNone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-2xl text-[#13498B]" />
+          <RiEdit2Line className="cursor-pointer absolute right-3 top-1/2 transform -translate-y-1/2 text-2xl text-[#13498B]" />
+          <MdOutlineMicNone className="cursor-pointer absolute left-3 top-1/2 transform -translate-y-1/2 text-2xl text-[#13498B]" />
           <input
             type="text"
             placeholder="اكتب الرسالة هنا"
