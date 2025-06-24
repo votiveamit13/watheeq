@@ -236,8 +236,8 @@ export default function ChatPanel({ onBack }) {
               )}
             </div>
             <div className="relative flex-1">
-              <RiEdit2Line className="absolute right-3 top-1/2 transform -translate-y-1/2 text-2xl text-[#13498B]" />
-              <MdOutlineMicNone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-2xl text-[#13498B]" />
+              <RiEdit2Line className="cursor-pointer absolute right-3 top-1/2 transform -translate-y-1/2 text-2xl text-[#13498B]" />
+              <MdOutlineMicNone className="cursor-pointer absolute left-3 top-1/2 transform -translate-y-1/2 text-2xl text-[#13498B]" />
               <input
                 type="text"
                 placeholder="اكتب الرسالة هنا"

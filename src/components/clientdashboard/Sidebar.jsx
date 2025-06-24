@@ -76,7 +76,7 @@ useEffect(() => {
       key: "support",
       label: "الدعم الفني",
       icon: "chatsetting.png",
-      link: "/clientdashboard",
+      link: "/clientdashboard/support",
     },
     {
       key: "settings",
