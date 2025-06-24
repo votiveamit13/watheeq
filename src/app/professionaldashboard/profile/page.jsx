@@ -74,7 +74,7 @@ export default function Profile() {
             <BiPencil
               fill="red"
               className="absolute top-0 left-0 bg-[#F242421A] rounded-xl p-1 w-8 h-8"
-            />
+             style={{borderRadius:'5px',marginTop:'5px', marginLeft:'-10px' }}/>
             <img
               src="/watheeq/assets/img/profile.png"
               alt="watheeq"
@@ -105,7 +105,7 @@ export default function Profile() {
                 placeholder="أحمد جمال ماضي"
                 className="w-full pr-10 rounded-lg p-3 text-right placeholder:text-gray-400 bg-white border border-[#13498b40]"
               />
-              <FaRegCircleUser className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#13498B]" />
+              <FaRegCircleUser className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#13498B]"  style={{width:'25px'}}/>
             </div>
           </div>
 
@@ -122,8 +122,8 @@ export default function Profile() {
                   <div className="flex items-center gap-2">
                     <ChevronDown size={16} className="text-[#13498B]" />
                     <span className="text-sm text-[#4C3A74] font-medium" dir="ltr">
-                      {selectedCountry?.code}
-                    </span>
+                    {selectedCountry?.code}
+                    </span> 
                     <img
                       src={`https://flagcdn.com/w40/${selectedCountry?.label}.png`}
                       alt={selectedCountry?.name}
@@ -162,7 +162,7 @@ export default function Profile() {
                   placeholder="58877777"
                   className="w-full pr-10 rounded-lg p-3 text-right placeholder:text-gray-400 bg-white border border-[#13498b40]"
                 />
-                <AiOutlinePhone className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#13498B]" />
+                <AiOutlinePhone className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#13498B]" style={{width:'25px'}}/>
               </div>
             </div>
           </div>
@@ -184,18 +184,19 @@ export default function Profile() {
                     placeholder={`رابط ملف ${label}`}
                     className="w-full pr-10 rounded-lg p-3 text-right placeholder:text-gray-400 bg-white border border-[#13498b40]"
                   />
-                  <TbFileCertificate className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#13498B]" />
+                  <TbFileCertificate className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#13498B]" style={{width:'25px'}}/>
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="flex w-1/2 justify-between p-3">
-          <div>
+        <div className="flex justify-between p-3">
+          <div className="mail-address" style={{width:'48%', display:'flex', justifyContent:'space-between'}}>
             <label className="block mb-3 text-l text-[#0B2B51]">
               البريد الإلكتروني
             </label>
+            <div>
             <p className="text-[#0B2B51]">ahmedmadi@gmail.com</p>
             <span className="text-[#0B2B51]">قبل شهر</span>
             <div className="mt-3">
@@ -203,6 +204,8 @@ export default function Profile() {
                 + إضافة بريد الكتروني
               </button>
             </div>
+            </div>
+        
           </div>
         </div>
 

@@ -1,5 +1,5 @@
 const PieChart = ({ title = "العنوان", segments = [
-  { value: 65, color: "#59A7FF"}, // blue
+  { value: 65, color: "#59A7FF" }, // blue
   { value: 35, color: "#2CDDC7" }, // cyan
 ] }) => {
   const total = segments.reduce((sum, s) => sum + s.value, 0);
@@ -35,68 +35,41 @@ const PieChart = ({ title = "العنوان", segments = [
   };
 
   return (
-    <div className="bg-white w-full text-right">
-      <h3 className="text-[#0B2B51] font-semibold mb-2">{title}</h3>
-      <div className="relative w-full h-40">
-        <svg viewBox="0 -3 35 35" className="w-full h-full">
-          {segments.map((s, i) => {
-            const percent = s.value / total;
-            const startAngle = 360 * cumulativePercent;
-            const endAngle = 360 * (cumulativePercent + percent);
-            const path = describeArc(16, 16, 16, startAngle, endAngle);
+    <div className="max-w-xs mx-auto p-4 text-right">
 
-            const isOffset = i === 1;
-            const { offsetX, offsetY } = isOffset ? getOffset(percent) : { offsetX: 0, offsetY: 0 };
+      <h2 className="text-[#13498B] font-bold mb-4">عنوان</h2>
 
-            cumulativePercent += percent;
+      <div className="w-full max-w-xs mx-auto text-right">
 
-            return (
-              <path
-                key={i}
-                d={path}
-                fill={s.color}
-              />
-            );
-          })}
-        </svg>
+        <div className="relative w-40 h-40 rounded-full mx-auto shadow-lg bg-[conic-gradient(#4ecdc4_0%_55%,_#3b82f6_35%_100%)]">
 
-        {/* Labels */}
-        {segments.map((s, i) => {
-          const percent = s.value / total;
-          const midAngle = 360 * (cumulativePercent - percent / 2);
-          const labelRadius = 10;
-          const x = 16 + labelRadius * Math.cos((midAngle - 90) * Math.PI / 180);
-          const y = 16 + labelRadius * Math.sin((midAngle - 90) * Math.PI / 180);
-
-          const customStyle = s.style || {};
-
-          return (
+          <div className="absolute top-6 left-10 bg-white px-2 py-1 rounded shadow text-sm font-bold text-gray-700">
+            65%
+            <div className="absolute bottom-[-6px] left-1/2 transform -translate-x-1/2 w-0 h-0 
+                    border-l-4 border-r-4 border-t-4 
+                    border-l-transparent border-r-transparent border-t-white"
+              style={{ marginBottom: '2px' }}></div>
+          </div>
+          <div className="absolute bottom-6 right-10 bg-white px-2 py-1 rounded shadow text-sm font-bold text-gray-700">
+            35%
             <div
-              key={i}
-              className="absolute text-xs font-semibold text-gray-800 px-2 py-1 bg-white rounded shadow"
-              style={{
-                left: `${x * 5}px`,
-                top: `${y * 5}px`,
-                transform: "translate(-50%, -50%)",
-                whiteSpace: "nowrap",
-              }}
-            >
-              {s.value}%
-              
-            </div>
+              className="absolute bottom-[-6px] left-1/2 transform -translate-x-1/2 w-0 h-0 
+               border-l-4 border-r-4 border-t-4 
+               border-l-transparent border-r-transparent border-t-white"
+              style={{ marginBottom: '2px' }}></div>
+          </div>
 
+        </div>
 
-
-          );
-        })}
       </div>
 
-      {/* Dots as indicator */}
-      <div className="flex justify-center gap-2 mt-2">
-        <span className="w-2 h-2 rounded-full bg-sky-400" />
-        <span className="w-2 h-2 rounded-full bg-sky-400 opacity-60" />
+
+      <div className="flex justify-center mt-4 space-x-2">
+        <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+        <span className="w-2 h-2 bg-blue-200 rounded-full"></span>
       </div>
     </div>
+
   );
 };
 

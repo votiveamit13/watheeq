@@ -33,7 +33,7 @@ export default function Template() {
           <h2 className="text-2xl font-bold">إعدادات القالب</h2>
         </div>
         <div>
-          <button className="bg-[#13498B] text-white py-2 px-10 rounded-lg cursor-pointer">
+          <button className="bg-[#13498B] text-white py-2 px-12 cursor-pointer rounded-[7px]">
             حفظ
           </button>
         </div>
@@ -121,7 +121,7 @@ export default function Template() {
               placeholder="watheeq.com/username"
               className="border border-gray-300 rounded px-4 py-1.5 text-sm w-[250px] text-left focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
             />
-            <button className="bg-[#13498B] text-white px-4 py-1.5 rounded text-sm cursor-pointer">
+            <button className="bg-[#13498B] text-white px-8 py-1.5 rounded text-sm cursor-pointer">
               حفظ
             </button>
             <div className="w-6 h-6 rounded-full bg-[#A0AEC0] text-white flex items-center justify-center text-xs cursor-pointer">

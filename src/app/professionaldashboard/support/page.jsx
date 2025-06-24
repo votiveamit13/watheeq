@@ -66,7 +66,7 @@ export default function TechnicalSupport() {
         </div>
         <div>
           <button
-            className="cursor-pointer flex gap-2 items-center bg-[#F8FAFC] border border-[#13498B80] py-2 px-5 rounded-lg"
+            className="cursor-pointer flex gap-5 items-center bg-[#F8FAFC] border border-[#13498B80] py-2 px-5 rounded-lg"
             onClick={() => setCreateTicketDialog(true)}
           >
             <FaPlus />
@@ -134,7 +134,7 @@ export default function TechnicalSupport() {
                 <td className="py-5">{ticket.date}</td>
                 <td className={`py-5`}>
                   <button
-                    className={`cursor-pointer w-[130px] text-center inline-block ${getStatusClasse(
+                    className={`cursor-pointer w-[140px] text-center inline-block ${getStatusClasse(
                       ticket.status
                     )}`}
                     onClick={() => setShowAddService(true)}
@@ -148,7 +148,7 @@ export default function TechnicalSupport() {
                   </span>
                 </td>
                 <td className="py-5">
-                  <button className="cursor-pointer bg-[#F24242] text-white rounded-lg py-2 px-5">
+                  <button className="cursor-pointer bg-[#F24242] text-white rounded-lg py-2 px-8">
                     {ticket.options}
                   </button>
                 </td>

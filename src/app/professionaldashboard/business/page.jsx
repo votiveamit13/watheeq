@@ -116,8 +116,8 @@ export default function Business() {
             {paginatedData.map((order, index) => (
               <tr
                 key={order.id}
-                className="border-b hover:bg-gray-50 transition duration-200"
-              >
+                className="border-b hover:bg-gray-50 transition duration-200 leading-[3.1]"
+                >
                 <td className="py-2 px-3">{order.id}</td>
                 <td className="py-2 px-3">
                   <div className="flex items-center justify-end">
@@ -141,10 +141,10 @@ export default function Business() {
                 <td className="py-2 px-3">{order.duration}</td>
                 <td className="py-2 px-3">
                   <span
-                    className={`text-xs min-w-[120px] text-center px-3 py-2 rounded-full font-medium inline-block ${statusClass(
+                    className={`text-xs min-w-[120px] text-center px-3 py-2 font-medium inline-block ${statusClass(
                       order.status
                     )}`}
-                  >
+                  style={{borderRadius:'10px'}}>
                     {order.status}
                   </span>
                 </td>
