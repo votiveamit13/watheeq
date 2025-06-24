@@ -58,13 +58,13 @@ export default function Sidebar({ collapsed, setCollapsed }) {
       key: "business",
       label: "عروض السعر",
       icon: "price.png",
-      link: "/clientdashboard",
+      link: "/clientdashboard/priceoffers",
     },
     {
       key: "finance",
       label: "الفواتير",
       icon: "clientbills.png",
-      link: "/clientdashboard",
+      link: "/clientdashboard/bills",
     },
     {
       key: "support",
