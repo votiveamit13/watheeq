@@ -105,7 +105,7 @@ export default function Publications() {
           <h2 className="text-[#13498B] text-2xl font-bold">المنشورات</h2>
         </div>
         <div>
-          <button className="flex gap-2 items-center py-2 px-7 rounded-lg border border-[#13498B80] bg-[#F8FAFC] cursor-pointer">
+          <button className="flex gap-2 items-center py-2 px-10 rounded-lg border border-[#13498B80] bg-[#F8FAFC] cursor-pointer">
             <FaPlus />
             إضافة
           </button>
@@ -155,15 +155,15 @@ export default function Publications() {
                 ))}
               </div>
 
-              <button className="cursor-pointer border border-[#13498B80] w-1/2 text-sm py-2 px-5 rounded-lg">
+              <button className="cursor-pointer border border-[#13498B80] w-1/2 text-sm py-2 px-5 mt-1 rounded-lg" style={{position:'absolute', bottom:'-40px' }}>
                 {item.button}
               </button>
             </div>
           ))}
         </div>
 
-        <div dir="ltr" className="mt-15">
-          <button className="flex gap-2 items-center py-2 px-7 rounded-lg border border-[#13498B80] bg-[#F8FAFC] cursor-pointer">
+        <div dir="ltr" className="mt-20">
+          <button className="flex gap-2 items-center py-2 px-10 rounded-lg border border-[#13498B80] bg-[#F8FAFC] cursor-pointer">
             عرض المزيد
           </button>
         </div>
@@ -220,7 +220,7 @@ export default function Publications() {
         </div>
 
         <div dir="ltr" className="mt-15">
-          <button className="flex gap-2 items-center mt-7 py-2 px-7 rounded-lg border border-[#13498B80] bg-[#13498B] text-[white] cursor-pointer">
+          <button className="flex gap-2 items-center mt-7 py-2 px-10 rounded-lg border border-[#13498B80] bg-[#13498B] text-[white] cursor-pointer" style={{marginTop:'-20px'}}>
             عرض المزيد
           </button>
         </div>
@@ -277,7 +277,7 @@ export default function Publications() {
         </div>
 
         <div dir="ltr" className="mt-15">
-          <button className="flex gap-2 items-center mt-7 py-2 px-7 rounded-lg border border-[#13498B80] bg-[#13498B] text-[white] cursor-pointer">
+          <button className="flex gap-2 items-center mt-7 py-2 px-10 rounded-lg border border-[#13498B80] bg-[#13498B] text-[white] cursor-pointer" style={{marginTop:'-35px'}}>
             عرض المزيد
           </button>
         </div>

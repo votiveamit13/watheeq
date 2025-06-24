@@ -49,7 +49,7 @@ export default function Settings() {
     <div>
       <div className="bg-white mt-5 p-5 rounded-lg">
         <h2 className="text-2xl font-bold">اللغة</h2>
-        <div className="flex justify-between items-center bg-white shadow p-5 mt-5 rounded-lg mb-8">
+        <div className="flex justify-between items-center bg-white shadow p-5 mt-5 pl-10 rounded-lg mb-8">
           <div>
             <span>العربية</span>
           </div>
@@ -97,7 +97,8 @@ export default function Settings() {
       </div>
 
       <div className="bg-white mt-5 p-5 rounded-lg">
-        <div className="flex justify-between items-center bg-white shadow p-5 mt-5 rounded-t border-b">
+        <span className="text-2xl font-bold">الأمان</span>
+        <div className="flex justify-between items-center bg-white shadow p-5 mt-5 pl-10 rounded-t border-b">
           <div className="flex flex-col">
             <span>المصادقة الثنائية</span>
             <span
@@ -269,7 +270,7 @@ export default function Settings() {
             )}
           </div>
         </div>
-        <div className="flex justify-between items-center bg-white shadow p-5 rounded-b mb-8">
+        <div className="flex justify-between items-center bg-white shadow p-5 rounded-b mb-8 pl-10">
           <div>
             <span>تسجيل الخروج من جميع الأجهزة</span>
           </div>

@@ -131,7 +131,7 @@ export default function TechnicalSupport() {
               >
                 <td className="py-5">{ticket.id}</td>
                 <td className="py-5">{ticket.address}</td>
-                <td className="py-5">{ticket.date}</td>
+                <td className="py-5 flex flex-wrap w-[120px]">{ticket.date}</td>
                 <td className={`py-5`}>
                   <button
                     className={`cursor-pointer w-[140px] text-center inline-block ${getStatusClasse(
@@ -143,7 +143,7 @@ export default function TechnicalSupport() {
                   </button>
                 </td>
                 <td className="py-5">
-                  <span className="bg-[#0BB41F] text-white rounded-lg py-2 px-4">
+                  <span className="bg-[#0BB41F] text-white rounded-lg py-2 px-6">
                     {ticket.message}
                   </span>
                 </td>

@@ -102,7 +102,7 @@ export default function Template() {
                     defaultChecked
                     className="sr-only peer"
                   />
-                  <div className="absolute inset-0 bg-gray-400 peer-checked:bg-green-500 rounded-full transition duration-300"></div>
+                  <div className="absolute inset-0 bg-gray-400 peer-checked:bg-green-500 rounded-full cursor-pointer transition duration-300"></div>
                   <div className="absolute right-1 top-1 w-5 h-5 bg-white rounded-full text-[10px] font-bold flex items-center justify-center transition-all duration-300 peer-checked:translate-x-[-28px] z-10 after:content-['OFF'] peer-checked:after:content-['ON'] after:text-gray-500 peer-checked:after:text-green-600 after:block after:text-[10px]" />
                 </label>
               </div>
@@ -141,8 +141,8 @@ export default function Template() {
             <textarea
               placeholder="اكتب نبذة عنك"
               rows={4}
-              className="border border-[#CBD5E0] rounded w-full md:w-3/4 px-4 py-2 text-sm text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
-            ></textarea>
+              className="border border-[#CBD5E0] rounded w-full px-4 py-2 text-sm text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+             style={{width:'90%'}}></textarea>
           </div>
         </div>
 
@@ -195,15 +195,15 @@ export default function Template() {
           <div
             className="border border-blue-300 rounded p-2 min-h-[48px] w-3/4 flex flex-wrap gap-2 cursor-pointer "
             onClick={() => setShowDropdown(!showDropdown)}
-          >
+           style={{width:'90%',border:'solid 1px #13498B' }}>
             {selectedSkills.length === 0 ? (
               <span className="text-gray-400">اختر المهارات</span>
             ) : (
               selectedSkills.map((skill) => (
                 <span
                   key={skill}
-                  className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full flex items-center gap-1"
-                >
+                  className="text-blue-800 px-2 py-1 pl-5 pr-5 rounded-[5px] flex items-center gap-1 bg-[#F8FAFC] border border-solid border-[#13498B80]"
+                  >
                   {skill}
                   <button
                     onClick={(e) => {
@@ -221,7 +221,7 @@ export default function Template() {
 
 
           {showDropdown && (
-            <div className="border border-blue-300 rounded mt-1 w-3/4 bg-white shadow z-10 max-h-48 overflow-y-auto">
+            <div className="border border-blue-300 rounded mt-1 bg-white shadow z-10 max-h-48 overflow-y-auto w-[90%]">
               {allSkills.map((skill) => (
                 <div
                   key={skill}
