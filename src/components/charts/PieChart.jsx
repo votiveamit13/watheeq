@@ -45,16 +45,16 @@ const PieChart = ({ title = "العنوان", segments = [
 
           <div className="absolute top-6 left-10 bg-white px-2 py-1 rounded shadow text-sm font-bold text-gray-700">
             65%
-            <div className="absolute bottom-[-6px] left-1/2 transform -translate-x-1/2 w-0 h-0 
-                    border-l-4 border-r-4 border-t-4 
+            <div className="absolute bottom-[-6px] left-1/2 transform -translate-x-1/2 w-0 h-0
+                    border-l-4 border-r-4 border-t-4
                     border-l-transparent border-r-transparent border-t-white"
               style={{ marginBottom: '2px' }}></div>
           </div>
           <div className="absolute bottom-6 right-10 bg-white px-2 py-1 rounded shadow text-sm font-bold text-gray-700">
             35%
             <div
-              className="absolute bottom-[-6px] left-1/2 transform -translate-x-1/2 w-0 h-0 
-               border-l-4 border-r-4 border-t-4 
+              className="absolute bottom-[-6px] left-1/2 transform -translate-x-1/2 w-0 h-0
+               border-l-4 border-r-4 border-t-4
                border-l-transparent border-r-transparent border-t-white"
               style={{ marginBottom: '2px' }}></div>
           </div>

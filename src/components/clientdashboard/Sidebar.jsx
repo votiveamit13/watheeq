@@ -7,27 +7,33 @@ export default function Sidebar({ collapsed, setCollapsed }) {
   const pathname = usePathname();
   const [activeMenu, setActiveMenu] = useState("");
 
-  useEffect(() => {
-    if (
-      pathname.includes("template") ||
-      pathname.includes("services") ||
-      pathname.includes("publications")
-    ) {
-      setActiveMenu("yourpage");
-    } else if (pathname.includes("package") || pathname.includes("wallet")) {
-      setActiveMenu("finance");
-    } else if (pathname.includes("business")) {
-      setActiveMenu("business");
-    } else if (pathname.includes("conversations")) {
-      setActiveMenu("meetings");
-    } else if (pathname.includes("support")) {
-      setActiveMenu("support");
-    } else if (pathname.includes("settings")) {
-      setActiveMenu("settings");
-    } else if (pathname === "/clientdashboard") {
-      setActiveMenu("home");
-    }
-  }, [pathname]);
+useEffect(() => {
+  if (
+    pathname.includes("/clientdashboard/request") ||
+    pathname.includes("/clientdashboard/template") ||
+    pathname.includes("/clientdashboard/services") ||
+    pathname.includes("/clientdashboard/publications")
+  ) {
+    setActiveMenu("yourpage");
+  } else if (
+    pathname.includes("/clientdashboard/bills") ||
+    pathname.includes("/clientdashboard/package") ||
+    pathname.includes("/clientdashboard/wallet")
+  ) {
+    setActiveMenu("finance");
+  } else if (pathname.includes("/clientdashboard/priceoffers")) {
+    setActiveMenu("business");
+  } else if (pathname.includes("/clientdashboard/conversations")) {
+    setActiveMenu("meetings");
+  } else if (pathname.includes("/clientdashboard/support")) {
+    setActiveMenu("support");
+  } else if (pathname.includes("/clientdashboard/settings")) {
+    setActiveMenu("settings");
+  } else if (pathname.includes("/clientdashboard")) {
+    setActiveMenu("home");
+  }
+}, [pathname]);
+
 
   const toggleSidebar = () => setCollapsed(!collapsed);
 
