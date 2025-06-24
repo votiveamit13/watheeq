@@ -119,9 +119,11 @@ export default function Services() {
               >
                 <td className="py-5">{s.id}</td>
                 <td className="py-5">{s.name}</td>
-                <td className="py-5 flex gap-2 items-center">
+                <td className="py-5">
+                  <div className="flex gap-2 items-center">
                   {s.price}
                   <img src="/watheeq/assets/img/business1.png" alt="watheeq" />
+                  </div>
                 </td>
                 <td className="py-5">{s.duration}</td>
                 <td className="py-5">
