@@ -76,7 +76,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
       key: "settings",
       label: "الإعدادت",
       icon: "settings.png",
-      link: "/clientdashboard",
+      link: "/clientdashboard/settings",
     },
   ];
 
