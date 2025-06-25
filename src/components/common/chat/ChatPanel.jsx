@@ -11,7 +11,7 @@ import {
   MdOutlineMicNone,
 } from "react-icons/md";
 
-export default function ChatPanel({ selectedChat, messages, setMessages }) {
+export default function ChatPanel({ selectedChat, messages, setMessages, showPricingOption = "yes", }) {
   const [showMenu, setShowMenu] = useState(false);
   const [showStatusMenu, setShowStatusMenu] = useState(false);
 
@@ -32,7 +32,7 @@ export default function ChatPanel({ selectedChat, messages, setMessages }) {
   const grouped = groupMessagesByDate(messages);
 
   return (
-    <div className="flex-1 flex flex-col">
+    <div className="flex-1 flex flex-col shadow">
       <div className="flex justify-between p-5 items-center shadow">
         <div className="flex items-center">
           <img
@@ -144,10 +144,13 @@ export default function ChatPanel({ selectedChat, messages, setMessages }) {
                 <MdOutlineCameraAlt />
                 <span>الكاميرا</span>
               </div>
-              <div className="flex items-center gap-2 cursor-pointer">
-                <RiMoneyDollarCircleLine />
-                <span>عرض سعر</span>
-              </div>
+ {showPricingOption === "yes" && (
+  <div className="flex items-center gap-2 cursor-pointer">
+    <RiMoneyDollarCircleLine />
+    <span>عرض سعر</span>
+  </div>
+)}
+
             </div>
           )}
         </div>

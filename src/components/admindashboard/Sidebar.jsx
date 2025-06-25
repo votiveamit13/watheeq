@@ -42,7 +42,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
       key: "support",
       label: "الدعم الفني",
       icon: "chatsetting.png",
-      link: "/admindashboard",
+      link: "/admindashboard/support",
     },
     {
       key: "reports",

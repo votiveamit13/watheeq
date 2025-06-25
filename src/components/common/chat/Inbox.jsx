@@ -2,10 +2,10 @@
 import { FiSearch } from "react-icons/fi";
 import { BiSliderAlt } from "react-icons/bi";
 
-export default function Inbox({ chats, selectedChatIndex, onSelectChat }) {
+export default function Inbox({ chats, selectedChatIndex, onSelectChat, chatHeading = "الإجتماعات", chatSettingIcon = "yes" }) {
   return (
     <div className="w-[310px] shadow">
-      <h2 className="p-5">الإجتماعات</h2>
+      <h2 className="p-5">{chatHeading}</h2>
       <div className="flex w-full p-5">
         <div className="flex items-center bg-gray-100 px-4 py-2 rounded w-full max-w-md">
           <FiSearch className="text-[#005088] ml-1" />
@@ -15,9 +15,11 @@ export default function Inbox({ chats, selectedChatIndex, onSelectChat }) {
             className="bg-transparent flex-1 text-sm text-right placeholder-gray-500 focus:outline-none"
           />
         </div>
+        {chatSettingIcon === "yes" && (
         <button className="text-[#005088] text-2xl mr-3 cursor-pointer">
           <BiSliderAlt />
         </button>
+        )}
       </div>
       {chats.map((chat, index) => (
         <div
