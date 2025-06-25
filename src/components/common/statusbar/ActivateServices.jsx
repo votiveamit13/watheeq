@@ -1,4 +1,4 @@
-export default function ActivateServices({ asname, asvalue }) {
+export default function ActivateServices({ asname, asvalue, asimg }) {
   return (
     <div className="relative flex justify-between">
       <div className="absolute right-[-24px] top-1/2 transform -translate-y-1/2 h-15 w-[2px] bg-[#FFB35C] rounded" />
@@ -8,7 +8,7 @@ export default function ActivateServices({ asname, asvalue }) {
       </div>
       <div>
         <img
-          src="/watheeq/assets/img/statusbar1.png"
+          src={`/watheeq/assets/img/${asimg}`}
           alt="watheeq"
         />
       </div>
