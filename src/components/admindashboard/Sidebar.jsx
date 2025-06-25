@@ -24,7 +24,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
       key: "professionals",
       label: "المهنيين",
       icon: "professionals.png",
-      link: "/admindashboard",
+      link: "/admindashboard/professionals",
     },
     {
       key: "clients",
