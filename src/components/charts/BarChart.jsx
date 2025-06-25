@@ -23,19 +23,19 @@ const BarChart = ({ title, data }) => {
 
           return (
             <g key={i} transform={`translate(${x}, 0)`} className="group">
-              {/* Value on top */}
+
               <text
               x={barWidth / 2}
               y={y + -8}
               textAnchor="middle"
               fontSize="16"
               fill="#555555"
-              
+
                >
                 {item.value}
                </text>
 
-              {/* Bar with hover color change */}
+
               <rect
                 x="0"
                 y={y}
@@ -45,7 +45,7 @@ const BarChart = ({ title, data }) => {
                   className="fill-[#59A7FF] group-hover:fill-[#2CDDC7] transition-colors duration-200"
               />
 
-              {/* Label below */}
+
               <text
                 x={barWidth / 2}
                 y={height - 0}

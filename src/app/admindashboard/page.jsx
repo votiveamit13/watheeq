@@ -1,10 +1,32 @@
-import LineChart from "@/components/charts/LineChart";
 import BarChart from "@/components/charts/BarChart";
-import PieChart from "@/components/charts/PieChart";
 import StatusBar from "@/components/common/statusbar/Status";
 import { BsThreeDotsVertical } from "react-icons/bs";
+import UserInteractionChart from "@/components/charts/UserInteractionChart";
+import DonutChart from "@/components/charts/DonutChart";
 
 export default function ClientDashboard() {
+  const months = [
+    "صفر",
+    "شوال",
+    "ربيع اول",
+    "ربيع ثاني",
+    "جمادي اول",
+    "جمادي ثاني",
+  ];
+
+  const userInterationData = [
+    {
+      name: "العملاء",
+      color: "#ff99cc",
+      data: [15, 25, 35, 42, 38, 60],
+    },
+    {
+      name: "الموردين",
+      color: "#e599f7",
+      data: [5, 10, 14, 16, 18, 24],
+    },
+  ];
+
   const chartData = [
     { label: "الاثنين", value: 446 },
     { label: "الثلاثاء", value: 285 },
@@ -22,28 +44,28 @@ export default function ClientDashboard() {
       date: `29-شوال 1446
 ـ10:00 م`,
       package: "وثيق 1",
-      condition: "نشط"
+      condition: "نشط",
     },
-        {
+    {
       id: "02",
       name: "محمد أحمد",
       date: `29-شوال 1446
 ـ10:00 م`,
       package: "وثيق 2",
-      condition: "نشط"
+      condition: "نشط",
     },
-        {
+    {
       id: "03",
       name: "سامر حسين",
       date: `29-شوال 1446
 ـ10:00 م`,
       package: "وثيق 1",
-      condition: "منتهية"
-    }
-  ]
+      condition: "منتهية",
+    },
+  ];
 
   const getConditionClass = (condition) => {
-    switch (condition){
+    switch (condition) {
       case "نشط":
         return "bg-[#F0F9FF] text-[#219F94] border border-[#219F9480] py-2 px-4 rounded-lg";
       case "منتهية":
@@ -51,7 +73,7 @@ export default function ClientDashboard() {
       default:
         return "bg-gray-200 text-gray-800";
     }
-  }
+  };
   return (
     <section>
       <div className="mt-5 flex gap-3">
@@ -75,21 +97,11 @@ export default function ClientDashboard() {
           <BarChart title="عدد الاشتراكات  خلال الشهور" data={chartData} />
         </div>
         <div className="flex-1 bg-white p-4 rounded-lg">
-          <LineChart
-            title="انجاز الطلبات"
-            data={[
-              240000, 200000, 205000, 200000, 187000, 180200, 190500, 196000,
-              180000, 175800, 210000, 75000, 102000, 18000, 190000, 250000,
-              75000,
-            ]}
-            labels={[
-              "جمادي ثاني",
-              "جمادي اول",
-              "ربيع ثاني",
-              "ربيع اول",
-              "شوال",
-              "صفر",
-            ]}
+          <UserInteractionChart
+            title="تفاعل المستخدمين خلال الشهور"
+            labels={months}
+            datasets={userInterationData}
+            yRange={[-60, 60]}
           />
         </div>
       </div>
@@ -114,19 +126,32 @@ export default function ClientDashboard() {
                   <td className="py-2 px-3">{subscription.name}</td>
                   <td className="py-2 px-3 w-[130px]">{subscription.date}</td>
                   <td className="py-2 px-3">{subscription.package}</td>
-                  <td className="py-2 px-3"><span className={`w-[130px] text-center inline-block ${getConditionClass(subscription.condition)}`}>{subscription.condition}</span></td>
-                  <td className="py-2 px-3"><button className="cursor-pointer bg-[#464E991A] border border-[#01104033] py-3 px-4 rounded-lg"><BsThreeDotsVertical fill="#13498B" size={20}/></button></td>
+                  <td className="py-2 px-3">
+                    <span
+                      className={`w-[130px] text-center inline-block ${getConditionClass(
+                        subscription.condition
+                      )}`}
+                    >
+                      {subscription.condition}
+                    </span>
+                  </td>
+                  <td className="py-2 px-3">
+                    <button className="cursor-pointer bg-[#464E991A] border border-[#01104033] py-3 px-4 rounded-lg">
+                      <BsThreeDotsVertical fill="#13498B" size={20} />
+                    </button>
+                  </td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
         <div className="w-100 items-center p-4 bg-white rounded-lg">
-          <PieChart
-            title="أنواع الخدمات المطلوبة"
-            segments={[
-              { value: 65, color: "#59A7FF" },
-              { value: 35, color: "#2CDDC7" },
+          <DonutChart
+            title="أنواع الخدمات الأكثر طلباً"
+            data={[
+              { label: "البرمجة", value: 50, color: "#818CF8" },
+              { label: "التعليم", value: 15, color: "#FB7185" },
+              { label: "المحاماة", value: 35, color: "#A855F7" },
             ]}
           />
         </div>
