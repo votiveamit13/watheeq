@@ -30,7 +30,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
       key: "clients",
       label: "العملاء",
       icon: "clients.png",
-      link: "/admindashboard",
+      link: "/admindashboard/clients",
     },
     {
       key: "subscriptions",
