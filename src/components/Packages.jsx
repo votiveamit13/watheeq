@@ -5,14 +5,11 @@ import { Switch } from "./ui/Switch";
 function WaveHeader({ type = "basic", plan = "monthly" }) {
   return (
     <div className="relative overflow-hidden w-full sm:max-w-[537px] aspect-[537/261]">
-      {/* Title text */}
       <div className="absolute top-16 w-full text-center z-10">
         <h2 className="text-white text-4xl font-bold">
           {type === "basic" ? "الباقة المتكاملة" : "الباقة الأساسية"}
         </h2>
       </div>
-
-      {/* Price text */}
 
       <div className="absolute bottom-0 right-4 z-10 pr-8">
         <div className="flex items-center gap-2 text-end text-lg font-semibold">
@@ -21,7 +18,6 @@ function WaveHeader({ type = "basic", plan = "monthly" }) {
             style={{
               fontFamily: "Omnes Arabic",
               WebkitBackgroundClip: "text",
-              //        WebkitTextFillColor: "transparent",
               backgroundClip: "text",
             }}
           >
@@ -182,12 +178,8 @@ function PricingCard({ type = "basic", plan = "monthly", onSubscribeClick }) {
           <img src="/watheeq/assets/img/check-icon.svg" alt="item" />
           <p>
             {type === `basic`
-              ? `تفعيل الدفع الإلكتروني
-
-`
-              : `تفعيل الدفع الإلكتروني
-
-`}
+              ? `تفعيل الدفع الإلكتروني`
+              : `تفعيل الدفع الإلكتروني`}
           </p>
         </li>
         <li className="flex items-center gap-2">
@@ -250,7 +242,7 @@ function Packages({ heading, subheading, onSubscribeClick }) {
           </p>
 
           <div className="period-switch">
-            <Switch onToggle={(value) => setPlan(value)} />
+            <Switch optionRight={"شهري"} optionLeft={"سنوي"} onToggle={(value) => setPlan(value)} />
           </div>
         </div>
 

@@ -36,7 +36,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
       key: "subscriptions",
       label: "الاشتراكات",
       icon: "subscriptions.png",
-      link: "/admindashboard",
+      link: "/admindashboard/subscriptions",
     },
     {
       key: "support",
