@@ -18,12 +18,12 @@ export default function ClientDashboard() {
     {
       name: "العملاء",
       color: "#ff99cc",
-      data: [15, 25, 35, 42, 38, 60],
+      data: [18, 28, 45, 45, 38, 60],
     },
     {
       name: "الموردين",
       color: "#e599f7",
-      data: [5, 10, 14, 16, 18, 24],
+      data: [0, 10, 14, 16, 18, 24],
     },
   ];
 

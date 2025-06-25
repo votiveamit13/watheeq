@@ -7,11 +7,20 @@ export default function Sidebar({ collapsed, setCollapsed }) {
   const pathname = usePathname();
   const [activeMenu, setActiveMenu] = useState("");
 
-  const toggleSidebar = () => setCollapsed(!collapsed);
+useEffect(() => {
+  const sortedItems = [...menuItems].sort(
+    (a, b) => b.link.length - a.link.length
+  );
 
-  const handleMenuClick = (key) => {
-    setActiveMenu(key);
-  };
+  const matched = sortedItems.find((item) =>
+    pathname.startsWith(item.link)
+  );
+
+  setActiveMenu(matched?.key || "");
+}, [pathname]);
+
+
+  const toggleSidebar = () => setCollapsed(!collapsed);
 
   const menuItems = [
     {
@@ -129,7 +138,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
                       ? "bg-[#005bac] text-white"
                       : "hover:text-[#003f7f]"
                   }`}
-                  onClick={() => handleMenuClick(item.key)}
+                  onClick={() => setActiveMenu(item.key)}
                 >
                   <img
                     src={`/watheeq/assets/img/sidebaricons/${item.icon}`}
