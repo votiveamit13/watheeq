@@ -2,86 +2,45 @@
 import { HiDotsVertical } from "react-icons/hi";
 import Pagination from "@/components/pagination/Pagination";
 import { useState } from "react";
+import { CgBrowser } from "react-icons/cg";
 
-const professionals = [
+const orders = [
   {
     id: "01",
-    name: "أحمد ماضي",
-    image: "/watheeq/assets/img/avatar.png",
-    email: "ahmedmadi@gmail.com",
-    number: 58877777,
-    joiningdata: "29-شواال-1446هـ 10:00 م",
-    services: "20",
-    status: "تم المراجعة",
+    date: "29-شواال-1446هـ 10:00 م",
+    name: "محمد حسن",
+    personName: "محمود سلبم",
+    comment: "هنا نص توضيحي عن سبب البلاغ",
   },
-  {
+    {
     id: "02",
-    name: "أحمد سعيد",
-    image: "/watheeq/assets/img/avatar.png",
-    email: "ahmedmadi@gmail.com",
-    number: 58877777,
-    joiningdata: "29-شواال-1446هـ 10:00 م",
-    services: "20",
-    status: "قيد الانتظار",
+    date: "29-شواال-1446هـ 10:00 م",
+    name: "محمود محمد",
+    personName: "محمود سلبم",
+    comment: "هنا نص توضيحي عن سبب البلاغ",
   },
-  {
+    {
     id: "03",
-    name: "محمود حسن",
-    image: "/watheeq/assets/img/avatar.png",
-    email: "ahmedmadi@gmail.com",
-    number: 58877777,
-    joiningdata: "29-شواال-1446هـ 10:00 م",
-    services: "20",
-    status: "تم المراجعة",
+    date: "29-شواال-1446هـ 10:00 م",
+    name: "سليم  حسين",
+    personName: "محمود على",
+    comment: "هنا نص توضيحي عن سبب البلاغ",
   },
-  {
+      {
     id: "04",
-    name: "حسين السيد",
-    image: "/watheeq/assets/img/avatar.png",
-    email: "ahmedmadi@gmail.com",
-    number: 58877777,
-    joiningdata: "29-شواال-1446هـ 10:00 م",
-    services: "20",
-    status: "تم المراجعة",
-  },
-  {
-    id: "05",
-    name: "أحمد حمدي",
-    image: "/watheeq/assets/img/avatar.png",
-    email: "ahmedmadi@gmail.com",
-    number: 58877777,
-    joiningdata: "29-شواال-1446هـ 10:00 م",
-    services: "20",
-    status: "تم المراجعة",
-  },
-  {
-    id: "06",
-    name: "أحمد حمدي",
-    image: "/watheeq/assets/img/avatar.png",
-    email: "ahmedmadi@gmail.com",
-    number: 58877777,
-    joiningdata: "29-شواال-1446هـ 10:00 م",
-    services: "20",
-    status: "تم المراجعة",
-  },
-  {
-    id: "07",
-    name: "أحمد حمدي",
-    image: "/watheeq/assets/img/avatar.png",
-    email: "ahmedmadi@gmail.com",
-    number: 58877777,
-    joiningdata: "29-شواال-1446هـ 10:00 م",
-    services: "20",
-    status: "تم المراجعة",
+    date: "29-شواال-1446هـ 10:00 م",
+    name: "سليم  حسين",
+    personName: "محمود على",
+    comment: "هنا نص توضيحي عن سبب البلاغ",
   },
 ];
 
 export default function Professionals() {
   const [currentPage, setCurrentPage] = useState(1);
-  const pageSize = 5;
-  const [selectedProfessional, setSelectedProfessional] = useState(null);
+  const pageSize = 3;
+  const [selectedOrder, setSelectedOrder] = useState(null);
 
-  const paginatedData = professionals.slice(
+  const paginatedData = orders.slice(
     (currentPage - 1) * pageSize,
     currentPage * pageSize
   );
@@ -89,7 +48,7 @@ export default function Professionals() {
 
 
   const handleReviewClick = (professional) => {
-    setSelectedProfessional(professional);
+    setSelectedOrder(professional);
   };
 
 
@@ -106,62 +65,52 @@ export default function Professionals() {
           <thead>
             <tr className="text-[#96A5B8] font-medium">
               <th className="py-2 px-3">#</th>
-              <th className="py-2 px-3">اسم المهني</th>
-              <th className="py-2 px-3">البريد الالكتروني</th>
-              <th className="py-2 px-3">رقم الجوال</th>
-              <th className="py-2 px-3">تاريخ الانضمام</th>
-              <th className="py-2 px-3">عدد الخدمات</th>
-              <th className="py-2 px-3">الحالة</th>
+              <th className="py-2 px-3">تاريخ الطلب</th>
+              <th className="py-2 px-3">اسم مقدم الطلب</th>
+              <th className="py-2 px-3">اسم المبلغ عنه</th>
+              <th className="py-2 px-3">الصفحة الشخصية</th>
+              <th className="py-2 px-3">ملاحظات</th>
               <th className="py-2 px-3">خيارات</th>
             </tr>
           </thead>
           <tbody>
-            {paginatedData.map((professional, index) => (
+            {paginatedData.map((order, index) => (
               <tr
-                key={professional.id}
-                className="border-b hover:bg-gray-50 transition joiningdata-200 leading-[3.1]"
+                key={order.id}
+                className="border-b hover:bg-gray-50 transition joiningdata-200"
               >
-                <td className="py-2 px-3">{professional.id}</td>
+                <td className="py-2 px-3">{order.id}</td>
                 <td className="py-2 px-3">
-                  <div className="flex items-center justify-end">
-                    <img
-                      src={professional.image}
-                      alt="name"
-                      className="w-8 h-8 rounded-full ml-2"
-                    />
-                    <span className="text-nowrap">{professional.name}</span>
+                  <div className="flex items-center justify-end w-[130px]">
+                    {order.date}
                   </div>
                 </td>
-                <td className="py-2 px-3">{professional.email}</td>
-                <td className="py-2 px-3">{professional.number}</td>
-                <td className="py-2 px-3">{professional.joiningdata}</td>
-                <td className="py-2 px-3 text-sm">{professional.services}</td>
-                <td className="py-2 px-3">
-                  <span
-                    className={`text-xs min-w-[120px] text-center px-3 py-2 font-medium inline-block ${statusClass(
-                      professional.status
-                    )}`}
-                    style={{ borderRadius: "10px" }}
-                  >
-                    {professional.status}
-                  </span>
+                <td className="py-2 px-3">{order.name}</td>
+                <td className="py-2 px-3">{order.personName}</td>
+                <td className="py-2 px-3 text-sm">
+                    <CgBrowser
+                    color="#0A84FF" size={30}
+                    className="rounded-none cursor-pointer"
+                    onClick={() => setSelectedProfessional(order)}
+                    />
                 </td>
+                                <td className="py-2 px-3 w-[200px]">{order.comment}</td>
                 <td className="py-2 px-3">
                   <HiDotsVertical
                     className="text-[#01104099] bg-[#464E991A] w-10 h-10 p-2 rounded-lg cursor-pointer"
-                    onClick={() => setSelectedProfessional(professional)}
+                    onClick={() => setSelectedOrder(order)}
                   />
-                  {selectedProfessional?.id === professional.id && (
-                    <div className="absolute bg-[#ECEDF5] rounded-lg left-25 z-50 shadow-md w-35 text-sm">
+                  {selectedOrder?.id === order.id && (
+                    <div className="absolute bg-[#ECEDF5] rounded-lg left-18 z-50 shadow-md w-35 text-sm">
                       <ul className="divide-y divide-gray-200 text-right">
                         <li
                           className="py-2 px-4 hover:bg-gray-100 cursor-pointer"
-                          onClick={() => handleReviewClick(professional)}
+                          onClick={() => handleReviewClick(order)}
                         >
-                          مراجعة البيانات
+                          إلغاء الطلب
                         </li>
                         <li className="py-2 px-4 hover:bg-gray-100 cursor-pointer">
-                          تعطيل الحساب
+                          حظر الحساب
                         </li>
                       </ul>
                     </div>
@@ -174,7 +123,7 @@ export default function Professionals() {
 
         <Pagination
           currentPage={currentPage}
-          totalPages={Math.ceil(professionals.length / pageSize)}
+          totalPages={Math.ceil(orders.length / pageSize)}
           onPageChange={setCurrentPage}
         />
       </div>
