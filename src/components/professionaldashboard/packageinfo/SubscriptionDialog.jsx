@@ -8,7 +8,7 @@ export default function SubscriptionDialog({ open, onClose, data }) {
   const { name, duration, remaining, price, vat, total } = data;
 
   return (
-    <div className="fixed inset-0 z-50 bg-black bg-opacity-40 flex items-center justify-center">
+    <div className="fixed inset-0 z-50 bg-[#0000007d] bg-opacity-40 flex items-center justify-center">
       <div className="bg-white p-6 rounded-lg w-[300px] sm:w-[350px] text-right">
         <h2 className="text-xl font-bold mb-4 text-[#0B2B51]">
           الاشتراك بالباقة

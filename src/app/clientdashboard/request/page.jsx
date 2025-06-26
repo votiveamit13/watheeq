@@ -166,10 +166,10 @@ export default function Request() {
                     onClick={() => setSelectedRequest(request)}
                   />
                   {selectedRequest && (
-                    <div className="fixed inset-0 bg-black bg-opacity-30 flex justify-center items-center z-50">
+                    <div className="fixed inset-0 bg-[#0000001a] bg-opacity-30 flex justify-center items-center z-50">
                       <div className="bg-white p-6 rounded-lg w-full max-w-md">
                         <div>
-                          <h2 className="text-xl font-bold text-center text-[#13498B] mb-4">
+                          <h2 className="text-xl text-center text-[#13498B] mb-4">
                              عرض سعر
                           </h2>
                         </div>
@@ -186,7 +186,7 @@ export default function Request() {
                             </div>
                           </div>
                           <div>
-                            <button className="flex gap-1 items-center py-2 px-4 border bg-[#F8FAFC] rounded-lg cursor-pointer">
+                            <button className="flex gap-4 items-center py-2 px-4 w-[115px] h-[40px] justify-center border bg-[#F8FAFC] rounded-lg cursor-pointer" style={{borderColor:'#13498B'}}>
                               <FaPlus />
                                محادثة
                             </button>
@@ -197,7 +197,7 @@ export default function Request() {
                           <table>
                             <tbody>
                               <tr>
-                                <td className="font-bold text-xl py-2">
+                                <td className="text-xl py-2">
                                   الخدمة
                                 </td>
                                 <td className="px-5">
@@ -205,7 +205,7 @@ export default function Request() {
                                 </td>
                               </tr>
                               <tr>
-                                <td className="font-bold text-xl py-2">
+                                <td className="text-xl py-2">
                                   مدة تقديم الخدمة
                                 </td>
                                 <td className="px-5">
@@ -213,7 +213,7 @@ export default function Request() {
                                 </td>
                               </tr>
                               <tr>
-                                <td className="font-bold text-xl py-2">
+                                <td className="text-xl py-2">
                                   سعر الخدمة
                                 </td>
                                 <td className="px-5">
@@ -222,7 +222,7 @@ export default function Request() {
                               </tr>
                             </tbody>
                           </table>
-                          <p className="mt-5 font-bold text-xl">
+                          <p className="mt-5 text-xl">
                             تفاصيل الخدمة
                           </p>
                           <span>

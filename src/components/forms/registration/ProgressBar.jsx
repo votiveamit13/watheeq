@@ -1,5 +1,9 @@
 export default function ProgressBar({ currentStep = 0 }) {
+export default function ProgressBar({ currentStep = 0 }) {
   const steps = [
+    { id: 1, label: "بيانات الحساب" },
+    { id: 2, label: "تأكيد الحساب" },
+    { id: 3, label: "معلومات المهنة" },
     { id: 1, label: "بيانات الحساب" },
     { id: 2, label: "تأكيد الحساب" },
     { id: 3, label: "معلومات المهنة" },
@@ -7,10 +11,12 @@ export default function ProgressBar({ currentStep = 0 }) {
 
   // Calculate progress percentage (0-100)
   const progress = ((currentStep - 1) / (steps.length - 1)) * 100;
+  // Calculate progress percentage (0-100)
+  const progress = ((currentStep - 1) / (steps.length - 1)) * 100;
 
   return (
-    <div className="px-4 pt-2 pb-4">
-      {/* Progress Line Container */}
+<div className="px-4 pt-2 pb-4 items-center justify-center" style={{width:'380px', margin:'auto', marginTop:'40px'}}>
+{/* Progress Line Container */}
       <div className="relative h-4 flex items-center">
         {/* Base line (full width gray line) */}
         <div className="absolute w-full h-[1.5px] bg-gray-300"></div>
@@ -19,7 +25,7 @@ export default function ProgressBar({ currentStep = 0 }) {
         <div
           className="absolute h-[1.5px] bg-[#13498B]"
           style={{
-            width: `${progress}%`,
+            width: `100%`,
             transition: 'width 0.3s ease'
           }}
         ></div>
@@ -33,7 +39,7 @@ export default function ProgressBar({ currentStep = 0 }) {
             return (
               <div
                 key={step.id}
-                className={`w-3 h-3 rounded-full ${isCompleted ? 'bg-[#13498B]' : isActive ? 'border-2 border-[#13498B] bg-white' : 'border-2 border-gray-300 bg-white'}`}
+                className={`w-4 h-4 rounded-full ${isCompleted ? 'bg-[#13498B]' : isActive ? 'border-2 border-[#13498B] bg-white' : 'border-2 border-gray-300 bg-white'}`}
               >
                 {isCompleted && (
                   <svg
@@ -55,11 +61,11 @@ export default function ProgressBar({ currentStep = 0 }) {
       </div>
 
       {/* Labels */}
-      <div className="flex justify-between mt-3 rtl:space-x-reverse">
+      <div className="flex justify-between mt-3 rtl:space-x-reverse" style={{width:'488px', marginRight:'-68px'}}>
         {steps.map((step) => (
           <span
             key={step.id}
-            className={`text-xs ${currentStep >= step.id ? 'text-[#13498B] font-medium' : 'text-gray-500'}`}
+            className={`text-[15px] ${currentStep >= step.id ? 'text-[#13498B] font-medium' : 'text-[#5A80AE]'}`}
             style={{ flex: 1, textAlign: 'center' }}
           >
             {step.label}
