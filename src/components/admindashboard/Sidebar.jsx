@@ -81,7 +81,7 @@ useEffect(() => {
       key: "reportrequests",
       label: "طلبات البلاغات",
       icon: "reportrequest.png",
-      link: "/admindashboard",
+      link: "/admindashboard/reportrequests",
     },
     {
       key: "managers",
