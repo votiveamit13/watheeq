@@ -23,8 +23,8 @@ export default function CreateServiceRequest() {
         <p className="absolute text-3xl text-white font-bold font-center mt-50">
           خدمة حجز موعد مع المحامي
         </p>
-        <div className="absolute flex items-center mt-65 bg-white py-3 px-6 rounded-lg gap-3">
-          <button className="text-2xl text-[#13498B] font-bold ">20</button>
+        <div className="absolute flex items-center mt-65 bg-white py-3 px-6 rounded-lg gap-3 cursor-pointer">
+          <button className="text-2xl text-[#13498B] font-bold cursor-pointer">20</button>
           <img
             src="/watheeq/assets/img/servicerequest1.png"
             alt="watheeq"

@@ -63,7 +63,7 @@ export default function Login() {
             <img src="/watheeq/assets/img/accountdata4.png" className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
           </div>
 
-          <button className="w-full bg-[#003D79] text-white py-3 rounded-lg font-bold text-lg hover:bg-blue-800 transition">
+          <button className="cursor-pointer w-full bg-[#003D79] text-white py-3 rounded-lg font-bold text-lg hover:bg-blue-800 transition">
             دخول
           </button>
 
