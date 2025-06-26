@@ -55,13 +55,13 @@ export default function Security() {
             {twoFactorStatus}
           </span>
         </div>
-        <div className="border border-[#13498B] rounded-full p-0.5">
+        <div className="border-[2px] border-[#13498B] rounded-full p-0.5">
           <AiOutlineLeft
             onClick={() => setTwoFactorDialog(true)}
             className="cursor-pointer"
-          />
+            style={{padding:'1px'}}/>
           {twoFactorDialog && (
-            <div className="fixed inset-0 bg-black bg-opacity-30 flex justify-center items-center z-50">
+            <div className="fixed inset-0 bg-[#0000007d] bg-opacity-30 flex justify-center items-center z-50">
               <div className="bg-white p-6 rounded-lg w-full max-w-md">
                 <div>
                   <h2 className="text-xl font-bold text-center text-[#13498B] mb-4">
@@ -162,7 +162,7 @@ export default function Security() {
             </div>
           )}
           {otpDialog && (
-            <div className="fixed inset-0 bg-black bg-opacity-30 flex justify-center items-center z-50">
+            <div className="fixed inset-0 bg-[#0000007d] bg-opacity-30 flex justify-center items-center z-50">
               <div className="bg-white p-6 rounded-lg w-full max-w-md">
                 <div>
                   <h2 className="text-xl font-bold text-center text-[#13498B] mb-6">
@@ -221,8 +221,8 @@ export default function Security() {
         <div>
           <span>تسجيل الخروج من جميع الأجهزة</span>
         </div>
-        <div className="border border-[#13498B] rounded-full p-0.5">
-          <AiOutlineLeft className="cursor-pointer" />
+        <div className="border-[2px] border-[#13498B] rounded-full p-0.5">
+          <AiOutlineLeft className="cursor-pointer"  style={{padding:'1px'}}/>
         </div>
       </div>
     </div>

@@ -19,11 +19,17 @@ export default function CreateServiceRequest() {
     <div className="bg-white p-5 mt-5 rounded-lg mb-30">
       <h2 className="text-2xl font-bold"> حجز موعد</h2>
       <div className="relative mt-5 flex flex-col items-center">
-        <img src="/watheeq/assets/img/appointment.png" alt="watheeq" />
+
+        <div class="relative inline-block w-full">
+  <img src="/watheeq/assets/img/appointment.png" alt="watheeq" class="w-full h-auto" />
+  
+  <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[] to-[#13498B]" style={{borderRadius:'10px'}}></div>
+</div>
+
         <p className="absolute text-3xl text-white font-bold font-center mt-50">
           خدمة حجز موعد مع المحامي
         </p>
-        <div className="absolute flex items-center mt-65 bg-white py-3 px-6 rounded-lg gap-3 cursor-pointer">
+        <div className="absolute flex items-center mt-65 bg-white py-2 px-5 rounded-lg gap-3 cursor-pointer">
           <button className="text-2xl text-[#13498B] font-bold cursor-pointer">20</button>
           <img
             src="/watheeq/assets/img/servicerequest1.png"
@@ -156,13 +162,13 @@ export default function CreateServiceRequest() {
         </form>
         <div className="mt-10 mb-5 flex justify-center">
           <button
-            className="cursor-pointer bg-[#13498B] text-white rounded py-3 px-7"
+            className="cursor-pointer bg-[#13498B] text-white rounded py-3 px-8"
             onClick={() => setSubmitDialog(true)}
-          >
+           style={{borderRadius:'6px'}}>
             حجز موعد
           </button>
           {submitDialog && (
-            <div className="fixed inset-0 bg-black bg-opacity-30 flex justify-center items-center z-50">
+            <div className="fixed inset-0 bg-[#0000007d] bg-opacity-30 flex justify-center items-center z-50">
               <div className="bg-white p-6 rounded-lg w-full max-w-md text-center">
                 {!isSuccess ? (
                   <>
@@ -177,7 +183,7 @@ export default function CreateServiceRequest() {
                       ].map(([label, value], i) => (
                         <div
                           key={i}
-                          className="flex justify-between ml-15 mr-15 gap-10 items-center"
+                          className="flex justify-center ml-15 mr-15 gap-10 items-center"
                         >
                           <div>{label}</div>
                           <div className="flex gap-2 items-center">

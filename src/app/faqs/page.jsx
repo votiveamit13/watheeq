@@ -53,7 +53,7 @@ export default function Faqs() {
           {faq.question}
         </h3>
         <AiOutlineDown
-          className={`w-[20px] h-[20px] p-[0px] md:w-[20px] md:h-[20px] md:p-[2px] text-xl transform transition-transform duration-700 ease-in-out border-2 rounded-2xl border-[#13498B] cursor-pointer   ${
+          className={`w-[20px] h-[20px] p-[0px] md:w-[24px] md:h-[24px] md:p-[3px] text-xl transform transition-transform duration-700 ease-in-out border-2 rounded-2xl border-[#13498B] cursor-pointer   ${
             openIndex === index ? "rotate-180" : ""
           }`}
         />

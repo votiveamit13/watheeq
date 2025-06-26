@@ -1,107 +1,71 @@
-export default function ProgressBar({ currentStep = 1 }) {
+export default function ProgressBar({ currentStep = 0 }) {
   const steps = [
-    {
-      id: 3,
-      label: "بيانات المهنة",
-    },
-    {
-      id: 2,
-      label: "تأكيد الحساب",
-    },
-
-    {
-      id: 1,
-      label: "بيانات الحساب",
-    },
+    { id: 1, label: "بيانات الحساب" },
+    { id: 2, label: "تأكيد الحساب" },
+    { id: 3, label: "معلومات المهنة" },
   ];
 
+  // Calculate progress percentage (0-100)
+  const progress = ((currentStep - 1) / (steps.length - 1)) * 100;
 
   return (
-    <section>
-      {/* <div className="flex justify-center items-center space-x-reverse space-x-0 rtl:space-x-0 rtl:flex-row-reverse text-sm sm:text-base">
-        {steps.map((step, index) => (
-          <div className="flex items-center" key={step.id}>
-            <div className="relative flex items-center justify-center">
+<div className="px-4 pt-2 pb-4 items-center justify-center" style={{width:'380px', margin:'auto', marginTop:'40px'}}>
+{/* Progress Line Container */}
+      <div className="relative h-4 flex items-center">
+        {/* Base line (full width gray line) */}
+        <div className="absolute w-full h-[1.5px] bg-gray-300"></div>
+
+        {/* Progress line (blue line) */}
+        <div
+          className="absolute h-[1.5px] bg-[#13498B]"
+          style={{
+            width: `100%`,
+            transition: 'width 0.3s ease'
+          }}
+        ></div>
+
+        {/* Dots */}
+        <div className="flex justify-between w-full absolute">
+          {steps.map((step) => {
+            const isCompleted = currentStep > step.id;
+            const isActive = currentStep === step.id;
+
+            return (
               <div
-                className={`w-5 h-5 rounded-full border-2 ${
-                  currentStep === step.id
-                    ? "border-blue-500"
-                    : "border-gray-300"
-                } bg-white z-10`}
-              />
-              {index !== steps.length - 1 && (
-                <div className="w-28 h-px bg-gray-300 absolute top-1/2 left-full -translate-y-1/2 z-0" />
-              )}
-            </div>
-            <div
-              className={`mt-10 text-center ${
-                currentStep === step.id
-                  ? "font-bold"
-                  : "text-gray-500"
-              }`}
-            >
-              {step.label}
-            </div>
-          </div>
-          
+                key={step.id}
+                className={`w-4 h-4 rounded-full ${isCompleted ? 'bg-[#13498B]' : isActive ? 'border-2 border-[#13498B] bg-white' : 'border-2 border-gray-300 bg-white'}`}
+              >
+                {isCompleted && (
+                  <svg
+                    className="w-full h-full text-white p-[2px]"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Labels */}
+      <div className="flex justify-between mt-3 rtl:space-x-reverse" style={{width:'488px', marginRight:'-68px'}}>
+        {steps.map((step) => (
+          <span
+            key={step.id}
+            className={`text-[15px] ${currentStep >= step.id ? 'text-[#13498B] font-medium' : 'text-[#5A80AE]'}`}
+            style={{ flex: 1, textAlign: 'center' }}
+          >
+            {step.label}
+          </span>
         ))}
-      </div> */}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <div className="flex items-center space-x-reverse justify-center space-x-4 rtl:space-x-reverse">
-    
-
-    <div className="flex flex-col items-center text-center">
-      <div className="relative flex items-center justify-center w-5 h-5 rounded-full bg-blue-500 text-white">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 p-[2px]" fill="none" viewBox="0 0 24 24"
-          stroke="currentColor" stroke-width="3">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-        </svg>
       </div>
-      <span className="mt-2 text-sm font-semibold text-blue-900">بيانات الحساب</span>
     </div>
-
-    <div className="h-0.5 w-10 bg-blue-500"></div>
-
-
-    <div className="flex flex-col items-center text-center">
-      <div className="relative flex items-center justify-center w-5 h-5 rounded-full bg-blue-500 text-white">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 p-[2px]" fill="none" viewBox="0 0 24 24"
-          stroke="currentColor" stroke-width="3">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-        </svg>
-      </div>
-      <span className="mt-2 text-sm font-semibold text-blue-900">تأكيد الحساب</span>
-    </div>
-
-    <div className="h-0.5 w-10 bg-gray-300"></div>
-
-
-    <div className="flex flex-col items-center text-center">
-      <div className="relative flex items-center justify-center w-5 h-5 rounded-full border-2 border-blue-500 bg-white">
-        <div className="w-1 h-1 rounded-full bg-blue-500"></div>
-      </div>
-      <span className="mt-2 text-sm font-semibold text-blue-900">بيانات المهنة</span>
-    </div>
-
-  </div>
-      
-    </section>
   );
 }
