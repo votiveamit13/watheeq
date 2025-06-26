@@ -69,7 +69,7 @@ useEffect(() => {
       key: "payments",
       label: "المدفوعات",
       icon: "clientbills.png",
-      link: "/admindashboard",
+      link: "/admindashboard/payments",
     },
     {
       key: "portfolio",
