@@ -47,7 +47,7 @@ export default function WalletDetails({ wallet, available, pending }) {
                 <img src="/watheeq/assets/img/wallet1.png" alt="watheeq" />
               </button>
               {walletDailog && (
-                <div className="fixed inset-0 bg-black bg-opacity-30 flex justify-center items-center z-50">
+                <div className="fixed inset-0 bg-[#0000007d] bg-opacity-30 flex justify-center items-center z-50">
                   <div className="bg-white p-6 rounded-lg w-full max-w-md">
                     <h2 className="text-xl font-bold text-center text-[#13498B] mb-4">
                       سحب مبلغ
@@ -103,7 +103,7 @@ export default function WalletDetails({ wallet, available, pending }) {
                         <label className="block mb-1 text-sm font-medium text-[#0B2B51]">
                           اسم البنك
                         </label>
-                        <select className="w-full border rounded-md px-4 py-2 text-[#9794AA] focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <select className="w-full border rounded-md cursor-pointer px-4 py-2 text-[#9794AA] focus:outline-none focus:ring-2 focus:ring-blue-500">
                           <option>اختر البنك</option>
                         </select>
                       </div>
@@ -130,14 +130,14 @@ export default function WalletDetails({ wallet, available, pending }) {
                       <div className="flex justify-center gap-8 pt-4">
                         <button
                           type="submit"
-                          className="px-8 py-1 bg-[#13498B] text-white rounded-md cursor-pointer transition"
+                          className="px-8 py-1 bg-[#13498B] w-[120px] h-[40px] text-white rounded-md cursor-pointer transition"
                         >
                           سحب
                         </button>
                         <button
                           type="button"
                           onClick={() => setWalletDailog(false)}
-                          className="px-8 py-1 border border-blue-600 text-blue-600 rounded-md cursor-pointer transition"
+                          className="px-8 py-1 border w-[120px] h-[40px] border-[#13498B99] bg-[#F8FAFC] text-blue-600 rounded-md cursor-pointer transition"
                         >
                           الغاء
                         </button>

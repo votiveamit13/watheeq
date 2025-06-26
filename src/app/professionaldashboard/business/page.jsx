@@ -156,7 +156,7 @@ export default function Business() {
                     onClick={() => setSelectedOrder(order)}
                   />
                   {selectedOrder && (
-                    <div className="fixed inset-0 bg-black bg-opacity-30 flex justify-center items-center z-50">
+                    <div className="fixed inset-0 bg-[#0000001a] bg-opacity-30 flex justify-center items-center z-50">
                       <div className="bg-white p-6 rounded-lg w-full max-w-md">
                         <div>
                           <h2 className="text-xl font-bold text-center text-[#13498B] mb-4">
@@ -176,8 +176,8 @@ export default function Business() {
                             </div>
                           </div>
                           <div>
-                            <button className="flex gap-1 items-center py-2 px-4 border bg-[#F8FAFC] rounded-lg cursor-pointer">
-                              <FaPlus />
+                          <button className="flex gap-1 items-center w-[130px] h-[40px] py-0 px-0 border justify-center bg-[#F8FAFC] rounded-lg cursor-pointer">
+                          <FaPlus />
                               انشاء محادثة
                             </button>
                           </div>
@@ -209,15 +209,15 @@ export default function Business() {
                         </div>
                         <div className="flex justify-center gap-5 mt-5">
                           <button
-                            className="bg-[#F8FAFC] text-[#13498B] border py-2 px-9 rounded-lg font-bold cursor-pointer"
+                            className="flex bg-[#F8FAFC] text-[#13498B] w-[130px] h-[40px] justify-center border rounded-lg font-bold cursor-pointer"
                             onClick={() => setSelectedOrder(null)}
-                          >
+                            style={{alignItems:'center'}}>
                             رفض
                           </button>
                           <button
-                            className="bg-[#13498B] text-white py-2 px-9 rounded-lg font-bold cursor-pointer"
+                            className="flex bg-[#13498B] text-white w-[130px] h-[40px] justify-center rounded-lg font-bold cursor-pointer"
                             onClick={() => setSelectedOrder(null)}
-                          >
+                           style={{alignItems:'center'}}>
                             قبول
                           </button>
                         </div>
