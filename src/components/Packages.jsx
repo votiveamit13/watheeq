@@ -128,7 +128,7 @@ function BasicHeader() {
   );
 }
 
-function PricingCard({ type = "basic", plan = "monthly", onSubscribeClick }) {
+function PricingCard({ type = "basic", plan = "monthly", onSubscribeClick, buttonName }) {
   return (
     <div
       className="shadow-custom-blue rounded-2xl w-full p-[15px] sm:py-10 sm:px-0"
@@ -220,14 +220,14 @@ function PricingCard({ type = "basic", plan = "monthly", onSubscribeClick }) {
         : "text-[#1E88E580] border-[#1E88E580]"
     }`}
         >
-          اشترك
+           {buttonName || "اشترك"}
         </button>
       </div>
     </div>
   );
 }
 
-function Packages({ heading, subheading, onSubscribeClick }) {
+function Packages({ heading, subheading, onSubscribeClick, buttonName }) {
   const [plan, setPlan] = useState("monthly");
 
   return (
@@ -248,10 +248,10 @@ function Packages({ heading, subheading, onSubscribeClick }) {
 
         <div className="flex flex-col lg:flex-row justify-center mt-0 sm:mt-10 w-full lg:w-[100%] gap-0 sm:gap-[50px] lg:gap-[60px] mx-auto second-price">
           <div className="w-full mx-auto lg:w-full mb-6 lg:mb-0 sm:p-[15px]">
-            <PricingCard type="full" plan={plan} onSubscribeClick={onSubscribeClick} />
+            <PricingCard type="full" plan={plan} onSubscribeClick={onSubscribeClick} buttonName={buttonName} />
           </div>
           <div className="w-full mx-auto lg:w-full mb-6 lg:mb-0 sm:p-[15px]">
-            <PricingCard type="basic" plan={plan} onSubscribeClick={onSubscribeClick} />
+            <PricingCard type="basic" plan={plan} onSubscribeClick={onSubscribeClick} buttonName={buttonName}/>
           </div>
         </div>
       </div>
