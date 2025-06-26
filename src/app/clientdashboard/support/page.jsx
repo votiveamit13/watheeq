@@ -73,13 +73,16 @@ export default function TechnicalSupport() {
             إنشاء تذكرة
           </button>
           {createTicketDialog && (
-            <div className="fixed inset-0 bg-black bg-opacity-30 flex justify-center items-center z-50">
+            <div className="fixed inset-0 bg-[#0000007d] flex justify-center items-center z-50">
               <div className="bg-white p-6 rounded-lg w-1/2">
                 <div className="flex justify-between">
                   <h2 className="text-xl font-bold text-center text-[#13498B] mb-4">
                     إنشاء تذكرة
                   </h2>
+                  <span className="cursor-pointer">
                   <ChevronLeft />
+
+                  </span>
                 </div>
                 <div className="flex flex-col items-start w-full">
                   <label className="text-sm text-[#13498B] mb-3">

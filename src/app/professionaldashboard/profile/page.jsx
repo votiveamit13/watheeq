@@ -73,7 +73,7 @@ export default function Profile() {
           <div className="ml-5 relative w-fit">
             <BiPencil
               fill="red"
-              className="absolute top-0 left-0 bg-[#F242421A] rounded-xl p-1 w-8 h-8"
+              className="cursor-pointer absolute top-0 left-0 bg-[#F242421A] rounded-xl p-1 w-8 h-8"
              style={{borderRadius:'5px',marginTop:'5px', marginLeft:'-10px' }}/>
             <img
               src="/watheeq/assets/img/profile.png"
@@ -123,7 +123,7 @@ export default function Profile() {
                     <ChevronDown size={16} className="text-[#13498B]" />
                     <span className="text-sm text-[#4C3A74] font-medium" dir="ltr">
                     {selectedCountry?.code}
-                    </span> 
+                    </span>
                     <img
                       src={`https://flagcdn.com/w40/${selectedCountry?.label}.png`}
                       alt={selectedCountry?.name}
@@ -205,7 +205,7 @@ export default function Profile() {
               </button>
             </div>
             </div>
-        
+
           </div>
         </div>
 

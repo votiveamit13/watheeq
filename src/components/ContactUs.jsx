@@ -8,14 +8,14 @@ export default function ContactUs() {
   style={{ backgroundColor: "#13498B" }}
 >
 
-  
+
 <h2 className="text-[30px] sm:text-[40px]">تواصل معنا لأي استفسارات</h2>
       <div className="block sm:flex items-center gap-5">
         <div className="flex gap-5 items-center mb-8 mt-5">
-          <FaWhatsapp  className="w-6 h-6"/>
-          <FaTiktok className="w-6 h-6"/>
-          <img src="/watheeq/assets/img/x.png" alt="X" className="w-6 h-6"/>
-          <FaInstagram  className="w-6 h-6"/>
+          <FaWhatsapp  className="w-6 h-6 cursor-pointer"/>
+          <FaTiktok className="w-6 h-6 cursor-pointer"/>
+          <img src="/watheeq/assets/img/x.png" alt="X" className="w-6 h-6 cursor-pointer"/>
+          <FaInstagram  className="w-6 h-6 cursor-pointer"/>
         </div>
         <button
           className="bg-white text-primary font-bold text-3xl w-[200px] hover:text-white hover:bg-white cursor-pointer"
