@@ -57,13 +57,13 @@ useEffect(() => {
       key: "reports",
       label: "التقارير",
       icon: "reports.png",
-      link: "/admindashboard",
+      link: "/admindashboard/reports",
     },
     {
       key: "packages",
       label: "الباقات",
       icon: "bills.png",
-      link: "/admindashboard",
+      link: "/admindashboard/packages",
     },
     {
       key: "payments",

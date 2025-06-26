@@ -47,7 +47,7 @@ export default function Faqs() {
     >
       <button
         onClick={() => toggle(index)}
-        className="flex justify-between items-center w-full text-right"
+        className="flex justify-between items-center w-full text-right cursor-pointer"
       >
         <h3 className="w-[80%] md:w-auto text-[22px] md:text-[28px] font-normal text-[#13498B]">
           {faq.question}
@@ -69,7 +69,7 @@ export default function Faqs() {
   return (
     <section>
       <AOSInit/>
-      
+
       <div className="bg-[#f8fafc] bg-[url('/watheeq/assets/img/hero_bg.png')] bg-cover">
         <nav className="container mx-auto px-[15px] sm:px-10 sm:px-10 sm:px-10 p-6 px-20 text-center ">
           <Navbar />
