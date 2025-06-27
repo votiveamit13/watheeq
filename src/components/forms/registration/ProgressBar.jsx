@@ -1,21 +1,30 @@
 export default function ProgressBar({ currentStep = 0 }) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 52ce82c214df08fb0ddd7814d25948d558f5e149
   const steps = [
     { id: 1, label: "بيانات الحساب" },
     { id: 2, label: "تأكيد الحساب" },
     { id: 3, label: "معلومات المهنة" },
+<<<<<<< HEAD
   ];
 
   // Calculate progress percentage (0-100)
+=======
+
+  ];
+
+>>>>>>> 52ce82c214df08fb0ddd7814d25948d558f5e149
   const progress = ((currentStep - 1) / (steps.length - 1)) * 100;
 
   return (
 <div className="px-4 pt-2 pb-4 items-center justify-center" style={{width:'380px', margin:'auto', marginTop:'40px'}}>
-{/* Progress Line Container */}
+
       <div className="relative h-4 flex items-center">
-        {/* Base line (full width gray line) */}
+
         <div className="absolute w-full h-[1.5px] bg-gray-300"></div>
 
-        {/* Progress line (blue line) */}
         <div
           className="absolute h-[1.5px] bg-[#13498B]"
           style={{
@@ -24,7 +33,7 @@ export default function ProgressBar({ currentStep = 0 }) {
           }}
         ></div>
 
-        {/* Dots */}
+
         <div className="flex justify-between w-full absolute">
           {steps.map((step) => {
             const isCompleted = currentStep > step.id;
@@ -54,7 +63,7 @@ export default function ProgressBar({ currentStep = 0 }) {
         </div>
       </div>
 
-      {/* Labels */}
+
       <div className="flex justify-between mt-3 rtl:space-x-reverse" style={{width:'488px', marginRight:'-68px'}}>
         {steps.map((step) => (
           <span

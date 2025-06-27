@@ -20,8 +20,8 @@ function DownloadApp() {
           </div>
 
           <div className="block md:flex gap-5 mt-6">
-            <img src="/watheeq/assets/img/appstore.png" alt="app store" style={{width:'200px'}} className="mb-[8px] sm:mb-0" data-aos="zoom-in" data-aos-delay="100"/>
-            <img src="/watheeq/assets/img/googleplay.png" alt="google play"  style={{width:'200px'}} data-aos="zoom-in" data-aos-delay="100"/>
+            <img src="/watheeq/assets/img/appstore.png" alt="app store" style={{width:'200px'}} className="mb-[8px] sm:mb-0 cursor-pointer" data-aos="zoom-in" data-aos-delay="100"/>
+            <img src="/watheeq/assets/img/googleplay.png" alt="google play"  style={{width:'200px'}} data-aos="zoom-in" data-aos-delay="100" className="cursor-pointer"/>
           </div>
         </div>
         <div className="py-10 sm:py-20 w-full sm:w-1/2">

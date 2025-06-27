@@ -3,7 +3,7 @@ import AOSInit from "@/components/animation/AOSInit";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { useState } from "react";
-import { AiOutlineDown } from "react-icons/ai";
+import { IoIosArrowDropdown } from "react-icons/io";
 
 const faqData = [
   {
@@ -52,8 +52,8 @@ export default function Faqs() {
         <h3 className="w-[80%] md:w-auto text-[22px] md:text-[28px] font-normal text-[#13498B]">
           {faq.question}
         </h3>
-        <AiOutlineDown
-          className={`w-[20px] h-[20px] p-[0px] md:w-[24px] md:h-[24px] md:p-[3px] text-xl transform transition-transform duration-700 ease-in-out border-2 rounded-2xl border-[#13498B] cursor-pointer   ${
+        <IoIosArrowDropdown size={30}
+          className={` p-[0px]  text-xl transform transition-transform duration-700 ease-in-out rounded-2xl  cursor-pointer   ${
             openIndex === index ? "rotate-180" : ""
           }`}
         />

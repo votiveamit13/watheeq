@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { AiOutlineLeft } from "react-icons/ai";
+import { IoIosArrowDropleft } from "react-icons/io";
 
 export default function ChangeLanguage(){
     const [languageDialog, setLanguageDialog] = useState(false);
@@ -11,8 +11,8 @@ export default function ChangeLanguage(){
           <div>
             <span>العربية</span>
           </div>
-          <div className="border-[2px] border-[#13498B] rounded-full p-0.5">
-            <AiOutlineLeft
+          <div>
+            <IoIosArrowDropleft size={30}
               onClick={() => setLanguageDialog(true)}
               className="cursor-pointer"
             style={{padding:'1px'}}/>

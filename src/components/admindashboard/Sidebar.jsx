@@ -75,13 +75,13 @@ useEffect(() => {
       key: "portfolio",
       label: "إدارة المحافظ",
       icon: "wallet.png",
-      link: "/admindashboard",
+      link: "/admindashboard/portfoliomanagement",
     },
     {
       key: "reportrequests",
       label: "طلبات البلاغات",
       icon: "reportrequest.png",
-      link: "/admindashboard",
+      link: "/admindashboard/reportrequests",
     },
     {
       key: "managers",

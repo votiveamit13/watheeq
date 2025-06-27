@@ -125,7 +125,7 @@ export default function Publications() {
                 className="w-full h-7 absolute rounded-t-lg"
                 style={{ backgroundColor: item.color }}
               >
-                <div dir="ltr" className="absolute top-2 left-1 flex gap-1">
+                <div dir="ltr" className="cursor-pointer absolute top-2 left-1 flex gap-1">
                   <BsThreeDotsVertical fill="white" stroke="white" />
                 </div>
               </div>
@@ -182,7 +182,7 @@ export default function Publications() {
                 className="w-full h-7 absolute rounded-t-lg"
                 style={{ backgroundColor: item.color }}
               >
-                <div dir="ltr" className="absolute top-2 left-1 flex gap-1">
+                <div dir="ltr" className="cursor-pointer absolute top-2 left-1 flex gap-1">
                   <BsThreeDotsVertical fill="white" stroke="white" />
                 </div>
               </div>
@@ -239,7 +239,7 @@ export default function Publications() {
                 className="w-full h-7 absolute rounded-t-lg"
                 style={{ backgroundColor: item.color }}
               >
-                <div dir="ltr" className="absolute top-2 left-1 flex gap-1">
+                <div dir="ltr" className="cursor-pointer absolute top-2 left-1 flex gap-1">
                   <BsThreeDotsVertical fill="white" stroke="white" />
                 </div>
               </div>

@@ -60,7 +60,7 @@ export default function Profile() {
           <div className="ml-5 relative w-fit">
             <BiPencil
               fill="red"
-              className="absolute top-0 left-0 bg-[#F242421A] rounded-[5px] p-1 w-8 h-8"
+              className="cursor-pointer absolute top-0 left-0 bg-[#F242421A] rounded-[5px] p-1 w-8 h-8"
              style={{marginLeft:'-8px',marginTop:'3px'}}/>
             <img
               src="/watheeq/assets/img/profile.png"

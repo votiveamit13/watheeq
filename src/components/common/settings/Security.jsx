@@ -1,6 +1,6 @@
 "use client";
 import { ChevronDown } from "lucide-react";
-import { AiOutlineLeft } from "react-icons/ai";
+import { IoIosArrowDropleft } from "react-icons/io";
 import { useState } from "react";
 
 export default function Security() {
@@ -55,8 +55,8 @@ export default function Security() {
             {twoFactorStatus}
           </span>
         </div>
-        <div className="border-[2px] border-[#13498B] rounded-full p-0.5">
-          <AiOutlineLeft
+        <div>
+          <IoIosArrowDropleft size={30}
             onClick={() => setTwoFactorDialog(true)}
             className="cursor-pointer"
             style={{padding:'1px'}}/>
@@ -221,8 +221,8 @@ export default function Security() {
         <div>
           <span>تسجيل الخروج من جميع الأجهزة</span>
         </div>
-        <div className="border-[2px] border-[#13498B] rounded-full p-0.5">
-          <AiOutlineLeft className="cursor-pointer"  style={{padding:'1px'}}/>
+        <div>
+          <IoIosArrowDropleft size={30} className="cursor-pointer"  style={{padding:'1px'}}/>
         </div>
       </div>
     </div>

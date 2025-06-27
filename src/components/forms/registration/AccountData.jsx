@@ -212,8 +212,8 @@ export default function RegisterForm({ onNext }) {
           </button>
         </form>
 
-        <div className="w-full text-center mt-5">
-          <p>لديك حساب بالفعل ؟ تسجيل الدخول</p>
+        <div className="w-full text-center mt-5 cur">
+          <p>لديك حساب بالفعل <span className="cursor-pointer"> ؟ تسجيل الدخول</span></p>
         </div>
       </div>
     </section>

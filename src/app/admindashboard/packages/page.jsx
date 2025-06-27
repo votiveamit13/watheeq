@@ -41,7 +41,6 @@ export default function Package() {
             heading={null}
             subheading={"باقات وثيق"}
             buttonName={"تعديل "}
-            // 👇 Use the prop that is already supported in your component
             onSubscribeClick={() => setShowDialog(true)}
           />
         </div>
@@ -101,7 +100,7 @@ export default function Package() {
                 <div className="text-center">
                   <button
                     type="submit"
-                    className="bg-[#003865] text-white px-6 py-2 rounded hover:bg-[#002C56]"
+                    className="cursor-pointer bg-[#003865] text-white px-6 py-2 rounded hover:bg-[#002C56]"
                     onClick={() => setShowDialog(false)}
                   >
                     تعديل
