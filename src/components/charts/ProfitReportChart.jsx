@@ -142,7 +142,7 @@ const ProfitReportChart = ({ allData1, allData2 }) => {
     <div className="bg-white rounded-lg w-full max-w-full rtl px-10">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-2xl font-bold">تقرير الأرباح</h2>
-        <button className="cursor-pointer bg-[#13498B] text-white text-sm px-4 py-2 rounded-lg flex items-center gap-1">
+        <button className="cursor-pointer bg-[#13498B] text-white text-sm px-5 py-2 rounded-lg flex items-center gap-1">
           <svg
             className="w-4 h-4"
             fill="none"
@@ -160,12 +160,12 @@ const ProfitReportChart = ({ allData1, allData2 }) => {
         </button>
       </div>
 
-      <div className="flex gap-4 text-sm mb-2 text-gray-600 mb-3" dir="ltr">
+      <div className="flex gap-8 text-sm mb-2 text-gray-600 mb-3" dir="ltr">
         {periods.map((period) => (
           <button
             key={period}
             onClick={() => setSelectedPeriod(period)}
-            className={`pb-1 ${
+            className={`cursor-pointer pb-1 ${
               selectedPeriod === period
                 ? "text-blue-800 font-medium border-b-2 border-blue-800"
                 : "hover:text-blue-700"
@@ -178,9 +178,9 @@ const ProfitReportChart = ({ allData1, allData2 }) => {
 
       <Chart data1={data1} data2={data2} />
 
-      <div className="flex justify-between mt-4 text-xs text-gray-500 px-2">
+      <div className="flex justify-center gap-1 mt-4 text-gray-500">
         {months.map((month, idx) => (
-          <span key={idx} className="w-10 text-center shrink-0">
+          <span key={idx} className="text-center shrink-0" style={{width:'62px'}}>
             {month}
           </span>
         ))}

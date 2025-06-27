@@ -30,8 +30,8 @@ export default function Reports() {
       </div>
       <div className="bg-white mt-5 p-5 rounded-lg">
         <div className="flex justify-between items-center mb-4">
-          <h3 className="text-2xl font-bold">أنماط الاستخدام على المنصة</h3>
-          <button className="cursor-pointer bg-[#13498B] text-white text-sm px-4 py-2 rounded-lg flex items-center gap-1">
+          <h3 className="text-2xl font-bold pr-8">أنماط الاستخدام على المنصة</h3>
+          <button className="cursor-pointer bg-[#13498B] text-white text-sm px-5 py-2 ml-10 rounded-lg flex items-center gap-1">
             <svg
               className="w-4 h-4"
               fill="none"
@@ -51,7 +51,7 @@ export default function Reports() {
         <div className="overflow-x-auto px-5 mb-30">
           <table className="w-full text-right ">
             <thead>
-              <tr className="text-[#96A5B8] font-medium">
+              <tr className="text-[#13498B] font-medium" style={{fontWeight:'300'}}>
                 <th className="py-2 px-3">اليوم</th>
                 <th>عدد الدخول</th>
                 <th>الطلبات المقدمة</th>
@@ -60,28 +60,28 @@ export default function Reports() {
             </thead>
             <tbody>
               <tr className="border-b hover:bg-gray-50 transition registrationdate-200 leading-[3.1]">
-                <td className="py-2 px-3">120</td>
-                <td className="py-2 px-3">35</td>
-                <td className="py-2 px-3">35</td>
-                <td className="py-2 px-3">29-شواال-1446هـ 10:00 م</td>
+                <td className="py-2 px-3" style={{color:'#A5A5A5'}}>120</td>
+                <td className="py-2 px-3" style={{color:'#484847'}}>35</td>
+                <td className="py-2 px-3" style={{color:'#484847'}}>35</td>
+                <td className="py-2 px-3" style={{color:'#0B2B5166'}}>29-شواال-1446هـ 10:00 م</td>
               </tr>
               <tr className="border-b hover:bg-gray-50 transition registrationdate-200 leading-[3.1]">
-                <td className="py-2 px-3">120</td>
-                <td className="py-2 px-3">35</td>
-                <td className="py-2 px-3">35</td>
-                <td className="py-2 px-3">29-شواال-1446هـ 10:00 م</td>
+                <td className="py-2 px-3" style={{color:'#A5A5A5'}}>120</td>
+                <td className="py-2 px-3" style={{color:'#484847'}}>35</td>
+                <td className="py-2 px-3" style={{color:'#484847'}}>35</td>
+                <td className="py-2 px-3" style={{color:'#0B2B5166'}}>29-شواال-1446هـ 10:00 م</td>
               </tr>
               <tr className="border-b hover:bg-gray-50 transition registrationdate-200 leading-[3.1]">
-                <td className="py-2 px-3">120</td>
-                <td className="py-2 px-3">35</td>
-                <td className="py-2 px-3">35</td>
-                <td className="py-2 px-3">29-شواال-1446هـ 10:00 م</td>
+                <td className="py-2 px-3" style={{color:'#A5A5A5'}}>120</td>
+                <td className="py-2 px-3" style={{color:'#484847'}}>35</td>
+                <td className="py-2 px-3" style={{color:'#484847'}}>35</td>
+                <td className="py-2 px-3" style={{color:'#0B2B5166'}}>29-شواال-1446هـ 10:00 م</td>
               </tr>
               <tr className="border-b hover:bg-gray-50 transition registrationdate-200 leading-[3.1]">
-                <td className="py-2 px-3">120</td>
-                <td className="py-2 px-3">35</td>
-                <td className="py-2 px-3">35</td>
-                <td className="py-2 px-3">29-شواال-1446هـ 10:00 م</td>
+                <td className="py-2 px-3" style={{color:'#A5A5A5'}}>120</td>
+                <td className="py-2 px-3" style={{color:'#484847'}}>35</td>
+                <td className="py-2 px-3" style={{color:'#484847'}} >35</td>
+                <td className="py-2 px-3" style={{color:'#0B2B5166'}}>29-شواال-1446هـ 10:00 م</td>
               </tr>
             </tbody>
           </table>
