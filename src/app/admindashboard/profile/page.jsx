@@ -51,7 +51,7 @@ export default function Profile() {
             <BiPencil
               fill="red"
               className="cursor-pointer absolute top-0 left-0 bg-[#F242421A] rounded-[5px] p-1 w-8 h-8"
-             style={{marginLeft:'-8px',marginTop:'3px'}}/>
+             style={{marginLeft:'-8px',marginTop:'3px', zIndex:'999', background:'#FFDFDF', borderRadius:'8px'}}/>
             <img
               src="/watheeq/assets/img/admin.png"
               alt="watheeq"
@@ -64,7 +64,7 @@ export default function Profile() {
           </div>
         </div>
         <div>
-          <button className="bg-primary text-white font-bold py-3 px-10 rounded-md cursor-pointer">
+          <button className="bg-primary text-white font-bold py-2 px-13 rounded-md cursor-pointer">
             تعديل
           </button>
         </div>
@@ -97,7 +97,7 @@ export default function Profile() {
                   className="flex items-center justify-between w-full h-full px-2 bg-white border border-[#13498b40] rounded-lg cursor-pointer"
                 >
                   <div className="flex items-center gap-2">
-                    <ChevronDown size={16} className="text-[#13498B]" />
+                    <ChevronDown size={20} className="text-[#13498B]" />
                     <span
                       className="text-sm text-[#4C3A74] font-medium"
                       dir="ltr"
@@ -145,7 +145,7 @@ export default function Profile() {
                   placeholder="58877777"
                   className="w-full pr-10 rounded-lg p-3 text-right placeholder:text-gray-400 bg-white border border-[#13498b40]"
                 />
-                <AiOutlinePhone className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#13498B]" />
+                <AiOutlinePhone size={20} className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#13498B]"/>
               </div>
             </div>
           </div>
@@ -160,7 +160,7 @@ export default function Profile() {
                 placeholder="mohmedmad@gmail.com"
                 className="w-full pr-10 rounded-lg p-3 text-right placeholder:text-gray-400 bg-white border border-[#13498b40]"
               />
-              <MdOutlineMail className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#13498B]" />
+              <MdOutlineMail size={20} className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#13498B]" />
             </div>
           </div>
         </div>

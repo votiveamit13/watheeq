@@ -90,8 +90,9 @@ export default function Professionals() {
 
   const statusClass = (status) => {
     return status === "تم المراجعة"
-      ? "bg-[#e8f9f1] text-[#33cc8c]"
-      : "bg-[#fef3e5] text-[#f39c12]";
+    ? "bg-[#e8f9f1] text-[#33cc8c] border border-[#28b57a]"
+    : "bg-[#fef3e5] text-[#f39c12] border border-[#e67e22]";
+      
   };
 
   const handleReviewClick = (professional) => {
@@ -112,7 +113,7 @@ export default function Professionals() {
         <h2 className="text-right text-2xl font-bold text-[#13498B]">
           المهنيين
         </h2>
-        <button className="cursor-pointer bg-[#13498B] text-white font-bold rounded py-2 px-8">
+        <button className="cursor-pointer bg-[#13498B] text-white font-bold py-2 px-8" style={{borderRadius:'7px'}}>
           تصدير PDF
         </button>
       </div>
@@ -138,7 +139,7 @@ export default function Professionals() {
               >
                 <td className="py-2 px-3">{professional.id}</td>
                 <td className="py-2 px-3">
-                  <div className="flex items-center justify-end">
+                  <div className="flex items-center justify-start">
                     <img
                       src={professional.image}
                       alt="name"
@@ -147,9 +148,9 @@ export default function Professionals() {
                     <span className="text-nowrap">{professional.name}</span>
                   </div>
                 </td>
-                <td className="py-2 px-3">{professional.email}</td>
-                <td className="py-2 px-3">{professional.number}</td>
-                <td className="py-2 px-3">{professional.joiningdata}</td>
+                <td className="py-2 px-3" style={{color:'#0B2B51', fontWeight:'400'}}>{professional.email}</td>
+                <td className="py-2 px-3" style={{color:'#0B2B51'}}>{professional.number}</td>
+                <td className="py-2 px-3" style={{color:'#0B2B5166'}}>{professional.joiningdata}</td>
                 <td className="py-2 px-3 text-sm">{professional.services}</td>
                 <td className="py-2 px-3">
                   <span

@@ -1,16 +1,10 @@
 export default function ProgressBar({ currentStep = 0 }) {
-export default function ProgressBar({ currentStep = 0 }) {
   const steps = [
-    { id: 1, label: "بيانات الحساب" },
-    { id: 2, label: "تأكيد الحساب" },
-    { id: 3, label: "معلومات المهنة" },
     { id: 1, label: "بيانات الحساب" },
     { id: 2, label: "تأكيد الحساب" },
     { id: 3, label: "معلومات المهنة" },
   ];
 
-  // Calculate progress percentage (0-100)
-  const progress = ((currentStep - 1) / (steps.length - 1)) * 100;
   // Calculate progress percentage (0-100)
   const progress = ((currentStep - 1) / (steps.length - 1)) * 100;
 
