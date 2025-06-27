@@ -41,7 +41,6 @@ export default function Package() {
             heading={null}
             subheading={"باقات وثيق"}
             buttonName={"تعديل "}
-            // 👇 Use the prop that is already supported in your component
             onSubscribeClick={() => setShowDialog(true)}
           />
         </div>

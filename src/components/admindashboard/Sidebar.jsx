@@ -75,7 +75,7 @@ useEffect(() => {
       key: "portfolio",
       label: "إدارة المحافظ",
       icon: "wallet.png",
-      link: "/admindashboard",
+      link: "/admindashboard/portfoliomanagement",
     },
     {
       key: "reportrequests",
