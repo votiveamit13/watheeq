@@ -21,11 +21,11 @@ export default function Verification({professional, onSubmit}) {
           </div>
         </div>
         <div className="flex items-center gap-3">
-          <button className="cursor-pointer flex items-center gap-2 bg-[#13498B] text-white rounded py-2 px-7" onClick={onSubmit}>
+          <button className="cursor-pointer flex items-center gap-2 bg-[#13498B] text-white py-2 px-5" onClick={onSubmit} style={{borderRadius:'7px'}}>
             <MdVerifiedUser size={25} />
             قبول المستندات
           </button>
-          <button className="cursor-pointer flex items-center gap-2 border border-[#13498BCC] rounded py-2 px-7">
+          <button className="cursor-pointer flex items-center gap-2 border border-[#13498BCC] bg-[#F8FAFC] py-2 px-5 mr-4" style={{borderRadius:'7px'}}>
             <MdOutlineDownloadForOffline size={25} />
             تنزيل المستندات
           </button>
@@ -33,7 +33,7 @@ export default function Verification({professional, onSubmit}) {
       </div>
       <div className="shadow rounded-lg">
         <div className="mt-5 py-5 px-3">
-          <div className="flex items-center justify-between w-1/2 mb-4">
+          <div className="flex items-center w-1/2 mb-4" style={{justifyContent:'space-around'}}>
             <div className="text-[#0B2B51]">
               <p>اسم المهني</p>
             </div>

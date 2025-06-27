@@ -1,12 +1,21 @@
 export default function ProgressBar({ currentStep = 0 }) {
+<<<<<<< HEAD
+=======
 
+>>>>>>> 52ce82c214df08fb0ddd7814d25948d558f5e149
   const steps = [
     { id: 1, label: "بيانات الحساب" },
     { id: 2, label: "تأكيد الحساب" },
     { id: 3, label: "معلومات المهنة" },
+<<<<<<< HEAD
+  ];
+
+  // Calculate progress percentage (0-100)
+=======
 
   ];
 
+>>>>>>> 52ce82c214df08fb0ddd7814d25948d558f5e149
   const progress = ((currentStep - 1) / (steps.length - 1)) * 100;
 
   return (

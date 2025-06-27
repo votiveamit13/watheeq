@@ -123,20 +123,20 @@ export default function ClientDashboard() {
               {subscriptions.map((subscription, index) => (
                 <tr key={subscription.id}>
                   <td className="py-2 px-3">{subscription.id}</td>
-                  <td className="py-2 px-3">{subscription.name}</td>
-                  <td className="py-2 px-3 w-[130px]">{subscription.date}</td>
+                  <td className="py-2 px-3" style={{color:'#0B2B51'}}>{subscription.name}</td>
+                  <td className="py-2 px-3 w-[130px]" style={{color:'#0B2B5166'}}>{subscription.date}</td>
                   <td className="py-2 px-3">{subscription.package}</td>
                   <td className="py-2 px-3">
                     <span
                       className={`w-[130px] text-center inline-block ${getConditionClass(
                         subscription.condition
                       )}`}
-                    >
+                    style={{fontWeight:'600'}}>
                       {subscription.condition}
                     </span>
                   </td>
                   <td className="py-2 px-3">
-                    <button className="cursor-pointer bg-[#464E991A] border border-[#01104033] py-3 px-4 rounded-lg">
+                    <button className="cursor-pointer bg-[#464E991A] border border-[#01104033] py-3 px-3" style={{borderRadius:'8px'}}>
                       <BsThreeDotsVertical fill="#13498B" size={20} />
                     </button>
                   </td>
