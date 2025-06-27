@@ -132,8 +132,8 @@ export default function Payments() {
     <div className="bg-white mt-5 p-5 rounded-lg">
       <div className="flex items-center justify-between">
         <h2 className="text-2xl font-bold">المدفوعات</h2>
-        <div className="mb-6 [&_div]:rounded-lg [&_div]:px-5 ">
-          <div className="[&_button]:w-25 [&_button]:text-[17px] font-bold [&_button]:px-2 [&_button]:rounded-lg">
+        <div className="mb-6 [&_div]:rounded-[16px] [&_div]:px-5 ">
+          <div className="[&_button]:w-40 [&_button]:text-[17px] font-bold [&_button]:px-2 [&_button]:py-3 [&_button]:rounded-[12px]">
             <Switch
               optionRight={"المهنيين"}
               optionLeft={"العملاء"}
@@ -231,7 +231,7 @@ export default function Payments() {
                       <img
                         src="/watheeq/assets/img/business1.png"
                         alt="watheeq"
-                      />
+                      style={{width:'15px',height:'15px',marginTop:'4px'}}/>
                     </td>
                     <td className="py-5 px-3 text-[#6B7280]">{t.history}</td>
                     <td className="py-5 px-3">

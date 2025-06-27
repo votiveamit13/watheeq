@@ -81,12 +81,12 @@ export default function Professionals() {
               >
                 <td className="py-2 px-3">{order.id}</td>
                 <td className="py-2 px-3">
-                  <div className="flex items-center justify-end w-[130px]">
+                  <div className="flex items-center justify-end w-[130px]" style={{color:'#0B2B5166'}}>
                     {order.date}
                   </div>
                 </td>
-                <td className="py-2 px-3">{order.name}</td>
-                <td className="py-2 px-3">{order.personName}</td>
+                <td className="py-2 px-3" style={{color:'#0B2B51'}}>{order.name}</td>
+                <td className="py-2 px-3" style={{color:'#0B2B51'}}>{order.personName}</td>
                 <td className="py-2 px-3 text-sm">
                     <CgBrowser
                     color="#0A84FF" size={30}
@@ -94,7 +94,7 @@ export default function Professionals() {
                     onClick={() => setSelectedProfessional(order)}
                     />
                 </td>
-                                <td className="py-2 px-3 w-[200px]">{order.comment}</td>
+                                <td className="py-2 px-3 w-[200px]" style={{color:'#0B2B51CC'}}>{order.comment}</td>
                 <td className="py-2 px-3">
                   <HiDotsVertical
                     className="text-[#01104099] bg-[#464E991A] w-10 h-10 p-2 rounded-lg cursor-pointer"

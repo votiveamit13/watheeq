@@ -213,11 +213,11 @@ function PricingCard({ type = "basic", plan = "monthly", onSubscribeClick, butto
       <div className="flex justify-center">
         <button
         onClick={() => onSubscribeClick?.(type, plan)}
-          className={`mt-20 rounded-[15px] hover:bg-[#e2ffff] text-2xl w-44 h-14 border-2 cursor-pointer
+          className={`mt-20 rounded-[15px] text-2xl w-44 h-14 border-2 cursor-pointer
     ${
       type === "basic"
         ? "text-[#D53B98] border-[#D53B98]"
-        : "text-[#1E88E580] border-[#1E88E580]"
+        : "text-[#0A84FF] border-[#0A84FF]"
     }`}
         >
            {buttonName || "اشترك"}

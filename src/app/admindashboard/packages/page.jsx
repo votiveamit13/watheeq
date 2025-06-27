@@ -27,8 +27,8 @@ export default function Package() {
           </div>
           <div>
             <button
-              className="cursor-pointer text-white bg-[#13498B] rounded py-3 px-8 font-semibold"
-            >
+              className="cursor-pointer text-white bg-[#13498B] rounded py-3 px-10 font-semibold"
+            style={{borderRadius:'7px'}}>
               تعديل
             </button>
           </div>
@@ -100,7 +100,7 @@ export default function Package() {
                 <div className="text-center">
                   <button
                     type="submit"
-                    className="cursor-pointer bg-[#003865] text-white px-6 py-2 rounded hover:bg-[#002C56]"
+                    className="cursor-pointer bg-[#003865] text-white px-12 py-2 rounded hover:bg-[#002C56]"
                     onClick={() => setShowDialog(false)}
                   >
                     تعديل

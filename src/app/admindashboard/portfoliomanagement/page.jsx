@@ -57,7 +57,7 @@ export default function PortfolioManagement() {
             <p className="text-2xl font-bold mb-3">أجمالي الأرباح</p>
           </div>
           <div className="flex justify-start items-center gap-2">
-            <p className="text-3xl">20,000</p>
+            <p className="font-bold" style={{fontSize:'28px'}}>20,000</p>
             <img
               src="/watheeq/assets/img/business1.png"
               alt="watheeq"
@@ -70,7 +70,7 @@ export default function PortfolioManagement() {
             <p className="text-2xl font-bold mb-3">الأرصدة المعلقة</p>
           </div>
           <div className="flex justify-start items-center gap-2">
-            <p className="text-3xl">2300</p>
+            <p className="font-bold" style={{fontSize:'28px'}}>2300</p>
             <img
               src="/watheeq/assets/img/business1.png"
               alt="watheeq"
@@ -83,7 +83,7 @@ export default function PortfolioManagement() {
             <p className="text-2xl font-bold mb-3">رسوم المنصة</p>
           </div>
           <div className="flex justify-start items-center gap-2">
-            <p className="text-3xl">21</p>
+            <p className="font-bold" style={{fontSize:'28px'}}>21</p>
             <img
               src="/watheeq/assets/img/business1.png"
               alt="watheeq"
@@ -129,7 +129,7 @@ export default function PortfolioManagement() {
                   </td>
                   <td className="py-2 px-3">
                     <div className="flex items-center justify-start">
-                      <span className="text-nowrap text-[#13498B] font-bold">
+                      <span className="text-nowrap text-[#13498B] font-bold" style={{fontSize:'22px', paddingLeft:'8px',fontWeight:'500' }}>
                         {portfolio.profit}
                       </span>
                       <img
@@ -141,7 +141,7 @@ export default function PortfolioManagement() {
                   </td>
                   <td className="py-2 px-3">
                     <div className="flex items-center justify-start">
-                      <span className="text-nowrap text-[#F24242] font-bold">
+                      <span className="text-nowrap text-[#F24242] font-bold" style={{fontSize:'22px', paddingLeft:'8px',fontWeight:'500' }}>
                         {portfolio.pendingbalance}
                       </span>
                       <img

@@ -102,7 +102,7 @@ export default function Managers() {
 
   return (
     <div className="bg-white mt-5 p-5 rounded-lg">
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center pb-8">
         <div>
           <h2 className="text-2xl font-bold">المدراء</h2>
         </div>
@@ -143,11 +143,11 @@ export default function Managers() {
                     <span className="text-nowrap">{manager.name}</span>
                   </div>
                 </td>
-                <td className="py-2 px-3 text-[#0B2B5166] ">{manager.mail}</td>
-                <td className="py-2 px-3" dir="ltr">
+                <td className="py-2 px-3 text-[#0B2B5166]" style={{textDecoration:'underline', color:'#0B2B51'}}>{manager.mail}</td>
+                <td className="py-2 px-3" dir="ltr" style={{color:'#0B2B51'}}>
                   {manager.number}
                 </td>
-                <td className="py-2 px-3">{manager.title}</td>
+                <td className="py-2 px-3" style={{color:'#0B2B5166'}}>{manager.title}</td>
 
                 <td className="py-2 px-3">
                   <HiDotsVertical
