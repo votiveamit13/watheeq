@@ -157,7 +157,7 @@ export default function PriceOffers() {
                             </div>
                           </div>
                           <div>
-                            <button className="flex gap-1 items-center py-2 px-4 border bg-[#F8FAFC] rounded-lg cursor-pointer">
+                            <button className="flex gap-1 items-center px-8 border bg-[#F8FAFC] rounded-lg cursor-pointer">
                               <FaPlus />
                                محادثة
                             </button>
@@ -180,7 +180,7 @@ export default function PriceOffers() {
                                   مدة تقديم الخدمة
                                 </td>
                                 <td className="px-5">
-                                 
+                                  2 يوم
                                 </td>
                               </tr>
                               <tr>
@@ -193,12 +193,18 @@ export default function PriceOffers() {
                               </tr>
                             </tbody>
                           </table>
+                          <div className="leading-[1.5]">
                           <p className="mt-5 font-bold text-xl">
                             تفاصيل الخدمة
                           </p>
-                          <span>
-                            نقدّم خدمات إعداد البحوث لموظفي القطاعات الحكومية
+                        <span>
+                            نقدّم خدمات صياغة ومراجعة العقود القانونية بدقة واحترافية تضمن وضوح الحقوق والالتزامات وتقلل من النزاعات المستقبلية.
                           </span>
+                          </div>
+                          <div className="flex justify-center items-center gap-5 mt-8">
+                            <button className="cursor-pointer bg-[#13498B] text-white px-10 rounded-lg">قبول</button>
+                            <button className="cursor-pointer px-10 rounded-lg border border-[#13498B99]">رفض</button>
+                          </div>
                         </div>
 
                       </div>

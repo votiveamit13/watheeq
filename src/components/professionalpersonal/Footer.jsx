@@ -13,8 +13,7 @@ export default function Footer() {
             width={280}
           />
         </div>
-        <div>
-          <div className="flex gap-5 items-center mb-8 mt-5">
+          <div className="flex gap-5 items-center">
             <div className="bg-white rounded-full cursor-pointer p-3">
               <FaYoutube fill="#0F4C81" className="w-8 h-8" />
             </div>
@@ -28,7 +27,6 @@ export default function Footer() {
               <FaXTwitter fill="#0F4C81" className="w-8 h-8 cursor-pointer" />
             </div>
           </div>
-        </div>
       </div>
       <div className="bg-white p-5 flex justify-center rounded-b-lg">
         <p>منصة وثيق - جميع الحقوق محفوظة 2025</p>
