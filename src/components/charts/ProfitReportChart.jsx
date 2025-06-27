@@ -178,9 +178,9 @@ const ProfitReportChart = ({ allData1, allData2 }) => {
 
       <Chart data1={data1} data2={data2} />
 
-      <div className="flex justify-center gap-7 mt-4 text-gray-500">
+      <div className="flex justify-center gap-1 mt-4 text-gray-500">
         {months.map((month, idx) => (
-          <span key={idx} className="w-10 text-center shrink-0">
+          <span key={idx} className="text-center shrink-0" style={{width:'62px'}}>
             {month}
           </span>
         ))}
