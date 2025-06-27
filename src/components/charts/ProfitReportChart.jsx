@@ -61,7 +61,7 @@ const maxY = Math.max(...allValues) || 1;
   return (
     <div className="w-full relative">
       <svg
-        viewBox={`40 0 ${width} ${height+20}`}
+        viewBox={`45 0 ${width} ${height+30}`}
         className="w-full h-56"
         onMouseMove={handleHover}
         onMouseLeave={hideTooltip}
@@ -82,7 +82,7 @@ const maxY = Math.max(...allValues) || 1;
           <text
             key={val}
             x="0"
-            y={height - (val / maxY) * height + 4}
+            y={height - (val / maxY) * height + 28}
             className="text-[10px] fill-gray-400"
             textAnchor="start"
             dominantBaseline="middle"
