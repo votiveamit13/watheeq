@@ -97,7 +97,7 @@ export default function Professionals() {
                 key={professional.id}
                 className="border-b hover:bg-gray-50 transition registrationdate-200 leading-[3.1]"
               >
-                <td className="py-2 px-3">{professional.id}</td>
+                <td className="py-2 px-3" >{professional.id}</td>
                 <td className="py-2 px-3">
                   <div className="flex items-center justify-start">
                     <img
@@ -108,10 +108,10 @@ export default function Professionals() {
                     <span className="text-nowrap">{professional.name}</span>
                   </div>
                 </td>
-                <td className="py-2 px-3">{professional.email}</td>
-                <td className="py-2 px-3">{professional.number}</td>
+                <td className="py-2 px-3" style={{color:'#0b2b51'}}>{professional.email}</td>
+                <td className="py-2 px-3" style={{color:'#6D8097'}}>{professional.number}</td>
                 <td className="py-2 px-3 text-sm">{professional.request}</td>
-                <td className="py-2 px-3">{professional.registrationdate}</td>
+                <td className="py-2 px-3" style={{color:'#0b2b5166'}}>{professional.registrationdate}</td>
 
                 <td className="py-2 px-3">
                   <HiDotsVertical className="text-[#01104099] bg-[#464E991A] w-10 h-10 p-2 rounded-lg cursor-pointer" />

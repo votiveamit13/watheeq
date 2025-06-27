@@ -149,7 +149,7 @@ export default function Professionals() {
                   </div>
                 </td>
                 <td className="py-2 px-3" style={{color:'#0B2B51', fontWeight:'400'}}>{professional.email}</td>
-                <td className="py-2 px-3" style={{color:'#0B2B51'}}>{professional.number}</td>
+                <td className="py-2 px-3" style={{color:'#6D8097'}}>{professional.number}</td>
                 <td className="py-2 px-3" style={{color:'#0B2B5166'}}>{professional.joiningdata}</td>
                 <td className="py-2 px-3 text-sm">{professional.services}</td>
                 <td className="py-2 px-3">

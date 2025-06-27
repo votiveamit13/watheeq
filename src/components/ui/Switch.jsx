@@ -19,7 +19,7 @@ export function Switch({ onToggle, optionRight, optionLeft }) {
           className={`px-6 py-2 rounded-full w-40 cursor-pointer transition-colors text-2xl duration-300 ${
             active === "monthly" ? "bg-primary text-white" : "text-primary"
           }`}
-        >
+          style={{borderRadius:'20px'}}>
           {optionRight}
         </button>
         <button
@@ -27,7 +27,7 @@ export function Switch({ onToggle, optionRight, optionLeft }) {
           className={`px-6 py-2 rounded-full w-40 cursor-pointer transition-colors text-2xl duration-300 ${
             active === "yearly" ? "bg-primary text-white" : "text-primary"
           }`}
-          style={{ paddingLeft: "20px", paddingRight: "20px" }}
+          style={{ paddingLeft: "20px", paddingRight: "20px",borderRadius:'20px' }}
         >
           {optionLeft}
         </button>

@@ -80,7 +80,7 @@ export default function Subscriptions() {
         <h2 className="text-right text-2xl font-bold text-[#13498B]">
           اشتراكات المهنيين
         </h2>
-        <button className="cursor-pointer bg-[#13498B] text-white font-bold rounded py-2 px-8">
+        <button className="cursor-pointer bg-[#13498B] text-white font-bold py-2 px-8" style={{borderRadius:'7px'}}>
           تصدير PDF
         </button>
       </div>
@@ -126,7 +126,7 @@ export default function Subscriptions() {
                         </span>
                       </div>
                     </td>
-                    <td className="py-2 px-3">
+                    <td className="py-2 px-3" style={{color:'#0B2B5166'}}>
                       {trialsubscription.subscriptiondate}
                     </td>
                     <td className="py-2 px-3 text-sm">
@@ -188,7 +188,7 @@ export default function Subscriptions() {
                         </span>
                       </div>
                     </td>
-                    <td className="py-2 px-3">
+                    <td className="py-2 px-3" style={{color:'#0b2b5166'}}>
                       {packagesubscription.subscriptiondate}
                     </td>
                     <td className="py-2 px-3">{packagesubscription.package}</td>
