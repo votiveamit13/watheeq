@@ -87,13 +87,13 @@ useEffect(() => {
       key: "managers",
       label: "المدراء",
       icon: "managers.png",
-      link: "/admindashboard",
+      link: "/admindashboard/managers",
     },
     {
       key: "settings",
       label: "الإعدادت",
       icon: "settings.png",
-      link: "/admindashboard",
+      link: "/admindashboard/settings",
     },
   ];
 
