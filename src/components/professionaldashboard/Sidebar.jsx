@@ -103,7 +103,7 @@ const [activeMenu, setActiveMenu] = useState("");
               {item.hasSub ? (
                 <div
                   className={`flex items-center rounded-md px-2 py-2 cursor-pointer transition-all duration-200 ${
-                    activeMenu === item.key ? "bg-[#005bac] text-white" : "hover:text-[#003f7f]"
+                    activeMenu === item.key ? "bg-[#13498B] text-white" : "hover:text-[#003f7f]"
                   }`}
                   onClick={() => handleMenuClick(item.key)}
                 >
@@ -131,7 +131,7 @@ const [activeMenu, setActiveMenu] = useState("");
                 <Link href={item.link}>
                   <div
                     className={`flex items-center rounded-md px-2 py-2 cursor-pointer transition-all duration-200 ${
-                      activeMenu === item.key ? "bg-[#005bac] text-white" : "hover:text-[#003f7f]"
+                      activeMenu === item.key ? "bg-[#13498B] text-white" : "hover:text-[#003f7f]"
                     }`}
                     onClick={() => handleMenuClick(item.key)}
                   >

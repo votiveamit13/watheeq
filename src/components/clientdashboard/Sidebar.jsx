@@ -124,7 +124,7 @@ useEffect(() => {
                 <div
                   className={`flex items-center rounded-md px-2 py-2 cursor-pointer transition-all duration-200 ${
                     activeMenu === item.key
-                      ? "bg-[#005bac] text-white"
+                      ? "bg-[#13498B] text-white"
                       : "hover:text-[#003f7f]"
                   }`}
                   onClick={() => handleMenuClick(item.key)}
