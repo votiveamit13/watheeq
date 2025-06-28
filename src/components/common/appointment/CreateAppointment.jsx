@@ -20,10 +20,10 @@ export default function CreateServiceRequest() {
       <h2 className="text-2xl font-bold"> حجز موعد</h2>
       <div className="relative mt-5 flex flex-col items-center">
 
-        <div class="relative inline-block w-full">
-  <img src="/watheeq/assets/img/appointment.png" alt="watheeq" class="w-full h-auto" />
-  
-  <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[] to-[#13498B]" style={{borderRadius:'10px'}}></div>
+        <div className="relative inline-block w-full">
+  <img src="/watheeq/assets/img/appointment.png" alt="watheeq" className="w-full h-auto" />
+
+  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[] to-[#13498B]" style={{borderRadius:'10px'}}></div>
 </div>
 
         <p className="absolute text-3xl text-white font-bold font-center mt-50">

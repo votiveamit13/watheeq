@@ -16,11 +16,18 @@ export default function CreateServiceRequest() {
     <div className="bg-white p-5 mt-5 rounded-lg mb-30">
       <h2 className="text-2xl font-bold">طلب خدمة</h2>
       <div className="relative mt-5 flex flex-col items-center">
-      <div class="relative inline-block w-full">
-  <img src="/watheeq/assets/img/servicerequest.png" alt="watheeq" class="w-full h-auto" />
-  
-  <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[] to-[#13498B]" style={{borderRadius:'10px'}}></div>
-</div>
+        <div className="relative inline-block w-full">
+          <img
+            src="/watheeq/assets/img/servicerequest.png"
+            alt="watheeq"
+            className="w-full h-auto"
+          />
+
+          <div
+            className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[] to-[#13498B]"
+            style={{ borderRadius: "10px" }}
+          ></div>
+        </div>
         <p className="absolute text-3xl text-white font-bold font-center mt-50">
           مهارات إعداد وصياغة العقود القانونية
         </p>
@@ -122,7 +129,8 @@ export default function CreateServiceRequest() {
           <button
             className="cursor-pointer bg-[#13498B] text-white py-3 px-8"
             onClick={() => setSubmitDialog(true)}
-          style={{borderRadius:'6px'}}>
+            style={{ borderRadius: "6px" }}
+          >
             تقديم الطلب
           </button>
           {submitDialog && (

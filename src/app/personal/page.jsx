@@ -3,6 +3,7 @@ import Footer from '@/components/professionalpersonal/Footer';
 import Hero from '@/components/professionalpersonal/herosection/Hero';
 import ProfileBar from '@/components/professionalpersonal/herosection/ProfileBar';
 import StatusBar from '@/components/professionalpersonal/StatusBar';
+import AccordianSection from '@/components/professionalpersonal/AccordianSection';
 
 export default function Personal() {
   return (
@@ -13,6 +14,9 @@ export default function Personal() {
         </div>
         <div className='mr-40 ml-40 mt-5'>
           <StatusBar/>
+        </div>
+        <div className='mr-40 ml-40 mt-5'>
+          <AccordianSection/>
         </div>
         <div className='mr-40 ml-40 mt-5'>
             <Footer/>
