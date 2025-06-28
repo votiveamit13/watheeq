@@ -1,7 +1,16 @@
+"use client";
 import { FaPlus } from "react-icons/fa6";
 import { BsThreeDotsVertical } from "react-icons/bs";
+import AddPost from "@/components/professionaldashboard/publications/AddPost";
+import { useState } from "react";
 
 export default function Publications() {
+  const [showAddPost, setShowAddPost] = useState(false);
+
+   if(showAddPost){
+      return <AddPost onBack={() => setShowAddPost(false)} />;
+    }
+
   const publication1 = [
     {
       image: "/watheeq/assets/img/publication1.png",
@@ -105,7 +114,7 @@ export default function Publications() {
           <h2 className="text-[#13498B] text-2xl font-bold">المنشورات</h2>
         </div>
         <div>
-          <button className="flex gap-2 items-center py-2 px-10 rounded-lg border border-[#13498B80] bg-[#F8FAFC] cursor-pointer">
+          <button className="flex gap-2 items-center py-2 px-10 rounded-lg border border-[#13498B80] bg-[#F8FAFC] cursor-pointer" onClick={() => setShowAddPost(true)}>
             <FaPlus />
             إضافة
           </button>
