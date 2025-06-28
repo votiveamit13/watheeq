@@ -49,98 +49,135 @@ const skills = [
 
 const publication1 = [
   {
-    image: "/watheeq/assets/img/publication1.png",
+    image: "/watheeq/assets/img/publication-two.png",
     title: `العقود الإلكترونية بين تسهيل التجارة
-و التحديات القانونية`,
-    description: `العقود الإلكترونية ليست مجرد تحديث
-في طرق التعاقد، بل تمثل تحولًا جذريًا
-في كيفية تصورنا للعلاقة القانونية بين الأطراف`,
+ و التحديات القانونية`,
+    description: `العقود الإلكترونية ليست مجرد تحديث في طرق التعاقد، بل تمثل تحولًا جذريًا في كيفية تصورنا للعلاقة القانونية بين الأطراف`,
     button: "أكمل القراءة",
-    color: "#AC39D480",
+    color: "#13498B80",
   },
   {
-    image: "/watheeq/assets/img/publication2.png",
+    image: "/watheeq/assets/img/publication1.png",
     title: `تطورات جديدة في مهنة المحاماة
 تأثير الذكاء الاصطناعي على أداء المحامين`,
     description: `تشهد مهنة المحاماة تطورًا ملحوظًا بفضل استخدام تقنيات الذكاء الاصطناعي، مما يساعد المحامين على تحسين كفاءاتهم وتوفير الوقت في البحث....`,
     button: "قراءة الخبر كاملا",
-    color: "#0A84FF80",
+    color: "#AC39D480",
   },
   {
-    image: "/watheeq/assets/img/publication3.png",
-    title: `مرافعة قضية أسرية شائكة`,
-    description: `العقود الإلكترونية ليست مجرد تحديث
-في طرق التعاقد، بل تمثل تحولًا جذريًا`,
+    image: "/watheeq/assets/img/publication-three.png",
+    title: `تصميم منهج تفاعلي قانوني لطلاب الجامعة`,
+    description: `مع التطور السريعة لتكنولوجيا المعلومات، التي كانت نتيجة لإندماج تكنولوجيا الحاسوب والأجهزة `,
     button: "تفاصيل المشروع",
-    skills: ["مهارة 1", "مهارة 1", "مهارة 1", "مهارة 1", "مهارة 1"],
+    skills: ["مهارة 1", "مهارة 2", "مهارة 3"],
     color: "#00BC1680",
   },
+
+
 ];
 
 const publication2 = [
   {
-    image: "/watheeq/assets/img/publication1.png",
-    title: `العقود الإلكترونية بين تسهيل التجارة
-و التحديات القانونية`,
-    description: `العقود الإلكترونية ليست مجرد تحديث
-في طرق التعاقد، بل تمثل تحولًا جذريًا
-في كيفية تصورنا للعلاقة القانونية بين الأطراف`,
-    button: "أكمل القراءة",
-    color: "#AC39D480",
+    image: "/watheeq/assets/img/publication-two.png",
+    title: `تأثير الذكاء الاصطناعي على أداء المحامين`,
+    description: `تشهد مهنة المحاماة تطورًا ملحوظًا بفضل استخدام تقنيات الذكاء الاصطناعي، مما يساعد المحامين على تحسين كفاءاتهم وتوفير الوقت في البحث....`,
+    button: "قراءة الخبر كاملا",
+    color: "#13498B80",
   },
   {
-    image: "/watheeq/assets/img/publication1.png",
-    title: `العقود الإلكترونية بين تسهيل التجارة
-و التحديات القانونية`,
-    description: `العقود الإلكترونية ليست مجرد تحديث
-في طرق التعاقد، بل تمثل تحولًا جذريًا
-في كيفية تصورنا للعلاقة القانونية بين الأطراف`,
-    button: "أكمل القراءة",
-    color: "#AC39D480",
+    image: "/watheeq/assets/img/publication-two.png",
+    title: `تأثير الذكاء الاصطناعي على أداء المحامين`,
+    description: `تشهد مهنة المحاماة تطورًا ملحوظًا بفضل استخدام تقنيات الذكاء الاصطناعي، مما يساعد المحامين على تحسين كفاءاتهم وتوفير الوقت في البحث....`,
+    button: "قراءة الخبر كاملا",
+    color: "#13498B80",
   },
   {
-    image: "/watheeq/assets/img/publication1.png",
-    title: `العقود الإلكترونية بين تسهيل التجارة
-و التحديات القانونية`,
-    description: `العقود الإلكترونية ليست مجرد تحديث
-في طرق التعاقد، بل تمثل تحولًا جذريًا
-في كيفية تصورنا للعلاقة القانونية بين الأطراف`,
-    button: "أكمل القراءة",
-    color: "#AC39D480",
+    image: "/watheeq/assets/img/publication-three.png",
+    title: `الدمج بين التعليم الإلكتروني والتعليم القانوني `,
+    description: `مع التطور السريعة لتكنولوجيا المعلومات، التي كانت نتيجة لإندماج تكنولوجيا الحاسوب والأجهزة `,
+    button: "تفاصيل المشروع",
+    skills: ["مهارة 1", "مهارة 2", "مهارة 3"],
+    color: "#00BC1680",
   },
 ];
 
 const publication3 = [
   {
-    image: "/watheeq/assets/img/publication3.png",
-    title: `مرافعة قضية أسرية شائكة`,
-    description: `العقود الإلكترونية ليست مجرد تحديث
-في طرق التعاقد، بل تمثل تحولًا جذريًا
-`,
+    image: "/watheeq/assets/img/publication1.png",
+    title: `العقود الإلكترونية بين تسهيل التجارة
+ و التحديات القانونية`,
+    description: `العقود الإلكترونية ليست مجرد تحديث في طرق التعاقد، بل تمثل تحولًا جذريًا في كيفية تصورنا للعلاقة القانونية بين الأطراف`,
     button: "تفاصيل المشروع",
-    skills: ["مهارة 1", "مهارة 1", "مهارة 1", "مهارة 1", "مهارة 1"],
-    color: "#00BC1680",
+    color: "#AC39D480",
   },
   {
     image: "/watheeq/assets/img/publication1.png",
     title: `العقود الإلكترونية بين تسهيل التجارة
-و التحديات القانونية`,
-    description: `العقود الإلكترونية ليست مجرد تحديث
-في طرق التعاقد، بل تمثل تحولًا جذريًا
-في كيفية تصورنا للعلاقة القانونية بين الأطراف`,
+ و التحديات القانونية`,
+    description: `العقود الإلكترونية ليست مجرد تحديث في طرق التعاقد، بل تمثل تحولًا جذريًا في كيفية تصورنا للعلاقة القانونية بين الأطراف`,
     button: "أكمل القراءة",
     color: "#AC39D480",
   },
   {
     image: "/watheeq/assets/img/publication1.png",
     title: `العقود الإلكترونية بين تسهيل التجارة
-و التحديات القانونية`,
-    description: `العقود الإلكترونية ليست مجرد تحديث
-في طرق التعاقد، بل تمثل تحولًا جذريًا
-في كيفية تصورنا للعلاقة القانونية بين الأطراف`,
+ و التحديات القانونية`,
+    description: `العقود الإلكترونية ليست مجرد تحديث في طرق التعاقد، بل تمثل تحولًا جذريًا في كيفية تصورنا للعلاقة القانونية بين الأطراف`,
     button: "أكمل القراءة",
-    color: "#AC39D480",
   },
+];
+
+const services = [
+
+  {
+    title: " إعداد وصياغة العقود القانونية ",
+    description: "دروس متخصصة للتمرس بالمفاهيم المتقدمة لصياغة جميع أنواع العقود القانونية",
+    price: 45,
+    image: "/watheeq/assets/img/publication1.png",
+  },
+
+  {
+    title: "إعداد البحوث القانونية",
+    description: "شرح مفصل لمحاور البحوث بطريقة منهجية مع التركيز على المصادر المعتمدة وطرق الصياغة الصحيحة",
+    price: 45,
+    image: "/watheeq/assets/img/three-tab.png",
+  },
+
+  {
+    title: "استشارات قانونية للأفراد",
+    description: "ترسيخ مفاهيم القانون وشرح التحديات والمشكلات القانونية بطريقة مبسطة مع التركيز على المسارات القضائية",
+    price: 45,
+    image: "/watheeq/assets/img/four-tab.png",
+  },
+
+  {
+    title: "كتابة مذكرة",
+    description: "يقوم بمساعدة المتدرب في إدخال القدرات مع التركيز على المهارات الأكاديمية وفهم نماذج عمل المذكرات",
+    price: 45,
+    image: "/watheeq/assets/img/servicerequest.png",
+  },
+
+
+
+
+  {
+    title: "تحضير للاختبار التحصيلي",
+    description: `برنامج شامل للتحضير للاختبار التحصيلي في
+المسار العلمي يغطي الرياضيات، الفيزياء،
+الكيمياء، والأحياء.`,
+    price: 45,
+    image: "/watheeq/assets/img/six-tab.png",
+  },
+
+  {
+    title: " حقوق جميع الأطرافصياغة الأنظمة لحفظ",
+    description: `لتشجيع التعلم التعاوني وتبادل الخبرات بين
+الطلاب بتكلفة أقل.`,
+    price: 45,
+    image: "/watheeq/assets/img/seven-tab.png",
+  },
+
+
 ];
 
 
@@ -294,189 +331,375 @@ export default function AboutSection() {
 
           )}
           {activeTab === 'services' && (
-            <p>hello services ...</p>
+            <>
+
+
+              <h2 className="text-[#0F4C81] font-bold text-[25px] pt-8 pb-5">الخدمات القانونية</h2>
+
+
+              <div className="relative w-full bg-gray-200 rounded-full" style={{ background: '#2A6CA5', height: '2px' }}>
+
+                <div className="absolute top-0 left-0 rounded-full bg-[#FBB040] w-[60%]" style={{ height: '2px' }}></div>
+
+                <div
+                  className="absolute top-1/2 left-[40%]"
+                  style={{ background: '#0F4C81' }}></div>
+              </div>
+
+
+
+              <div dir="rtl" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
+                {services.map((service, idx) => (
+                  <div key={idx} className="bg-white shadow rounded-lg overflow-hidden border border-gray-200">
+                    <img src={service.image} alt={service.title} className="w-full h-40 object-cover" />
+                    <div className="p-4">
+
+
+                      <div className="flex items-center justify-start gap-0 pb-0">
+                        <div className="w-1 h-4 bg-orange-400 rounded-sm"></div>
+                        <h3 className="text-md font-semibold text-gray-800 mb-1 pr-2" style={{ height: '30px' }}>
+                          {service.title}
+                        </h3>
+                      </div>
+
+                      <p className="text-sm text-gray-600 mb-4 pt-3" style={{ height: '65px' }}>{service.description}</p>
+                      <div className="flex items-center justify-between mt-auto pt-3" style={{ borderTop: 'solid 1px #E5E7EB' }}>
+                        <span className="font-semibold text-md flex items-center gap-1" style={{ color: '#13498B' }}>
+
+                          {service.price}
+                          <img src="/watheeq/assets/img/servicerequest1.png" style={{ width: '15px' }} />
+                        </span>
+                        <button className="bg-[#FBB040] hover:bg-yellow-500 text-white cursor-pointer text-sm font-medium px-5 py-2 rounded">
+                          طلب الخدمة
+                        </button>
+
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+
+
+
+
+            </>
           )}
           {activeTab === 'blog' && (
             <>
-                  <div className="bg-white mt-5 p-5 rounded-lg">
-      <div className="flex justify-between">
-        <div>
-          <h2 className="text-[#13498B] text-2xl font-bold">المنشورات</h2>
-        </div>
-        <div>
+              <div className="bg-white mt-5 p-5 rounded-lg">
+                <div className="flex justify-between">
+                  <div className='w-full'>
+                    <div className="flex items-center justify-start gap-2 pb-5">
+                      <div className="w-1 h-4 bg-orange-400 rounded-sm"></div>
+                      <h3 className="text-[#0F4C81] font-semibold text-lg">المنشورات</h3>
+                    </div>
 
-        </div>
-      </div>
+                    <div className="relative w-full bg-gray-200 rounded-full" style={{ background: '#2A6CA5', height: '2px' }}>
 
-      {/* Publication1 */}
-      <div className="mt-5">
-        <h3 className="text-xl mb-3">تصنيف 1</h3>
-        <div className="flex gap-5 w-full justify-center mt-4">
-          {publication1.map((item, index) => (
-            <div
-              key={index}
-              className="relative rounded-lg flex flex-col items-center text-center w-1/3"
-            >
-              <div
-                className="w-full h-7 absolute rounded-t-lg"
-                style={{ backgroundColor: item.color }}
-              >
-               
+                      <div className="absolute top-0 left-0 rounded-full bg-[#FBB040] w-[60%]" style={{ height: '2px' }}></div>
+
+                      <div
+                        className="absolute top-1/2 left-[40%]"
+                        style={{ background: '#0F4C81' }}></div>
+                    </div>
+                  </div>
+                  <div>
+
+                  </div>
+                </div>
+
+
+
+
+                {/* Publication1 */}
+                <div className="mt-4">
+                  <h3 className="text-xl mb-3">تصنيف 1</h3>
+                  <div className="flex gap-5 w-full justify-center mt-4">
+                    {publication1.map((item, index) => (
+                      <div
+                        key={index}
+                        className="relative rounded-lg flex flex-col items-center text-center w-1/3"
+                      >
+                        <div
+                          className="w-full h-7 absolute rounded-t-lg"
+                          style={{ backgroundColor: item.color }}
+                        >
+
+                        </div>
+
+                        <img
+                          src={item.image}
+                          alt="watheeq"
+                          className="mb-3 rounded-t-lg w-full h-50 object-cover"
+                        />
+
+                        <h4 className="text-[#13498B] text-base font-semibold mb-2 whitespace-pre-line">
+                          {item.title}
+                        </h4>
+
+                        <p className="text-[#3A3A38] text-sm whitespace-pre-line mb-3">
+                          {item.description}
+                        </p>
+
+                        <div className="flex flex-wrap justify-center gap-2 mb-3">
+                          {item.skills?.map((skill, i) => (
+                            <span
+                              key={i}
+                              className="border border-[#00BC1680] text-xs font-medium px-7 py-2 rounded"
+                              style={{ color: '#0BB41F', background: '#0BB41F1A' }}>
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
+
+                        <button className="cursor-pointer border border-[#13498B80] w-1/2 text-sm py-2 px-5 mt-1 rounded-lg" style={{ position: 'absolute', bottom: '-40px' }}>
+                          {item.button}
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div dir="ltr" className="mt-28">
+                    <button className="flex gap-2 items-center py-2 px-10 rounded-lg border border-[#13498B80] bg-[#13498B] text-white cursor-pointer">
+                      عرض المزيد
+                    </button>
+                  </div>
+                </div>
+
+                {/* Publication2 */}
+                <div className="mt-0">
+
+                  <div className="flex items-center justify-start pt-4 gap-2 pt-0">
+                    <div className="w-1 h-4 bg-orange-400 rounded-sm"></div>
+                    <h3 className="text-[#0F4C81] font-semibold text-lg">مقالات عني</h3>
+                  </div>
+
+                  <div className="flex gap-5 w-full justify-center mt-4">
+                    {publication2.map((item, index) => (
+                      <div
+                        key={index}
+                        className="relative rounded-lg flex flex-col items-center text-center w-1/3"
+                      >
+                        <div
+                          className="w-full h-7 absolute rounded-t-lg"
+                          style={{ backgroundColor: item.color }}
+                        >
+
+                        </div>
+
+                        <img
+                          src={item.image}
+                          alt="watheeq"
+                          className="mb-3 rounded-t-lg w-full h-50 object-cover"
+                        />
+
+                        <h4 className="text-[#13498B] text-base font-semibold mb-2 whitespace-pre-line">
+                          {item.title}
+                        </h4>
+
+                        <p className="text-[#3A3A38] text-sm whitespace-pre-line mb-3">
+                          {item.description}
+                        </p>
+
+                        <div className="flex flex-wrap justify-center gap-2 mb-3">
+                          {item.skills?.map((skill, i) => (
+                            <span
+                              key={i}
+                              className="border border-[#00BC1680] text-xs font-medium px-7 py-2 rounded"
+                              style={{ color: '#0BB41F', background: '#0BB41F1A' }}
+                            >
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
+
+                        <button className="cursor-pointer border border-[#13498B80] w-1/2 text-sm py-2 px-5 rounded-lg">
+                          {item.button}
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div dir="ltr" className="mt-25">
+                    <button className="flex gap-2 items-center mt-7 py-2 px-10 rounded-lg border border-[#13498B80] bg-[#13498B] text-[white] cursor-pointer" style={{ marginTop: '-20px' }}>
+                      عرض المزيد
+                    </button>
+                  </div>
+                </div>
+
+                {/* Publication3 */}
+                <div className="mt-0 mb-15">
+
+
+                  <div className="flex items-center justify-start pt-4 gap-2 pt-0">
+                    <div className="w-1 h-4 bg-orange-400 rounded-sm"></div>
+                    <h3 className="text-[#0F4C81] font-semibold text-lg">مقالات عملية</h3>
+                  </div>
+
+
+                  <div className="flex gap-5 w-full justify-center mt-4">
+                    {publication3.map((item, index) => (
+                      <div
+                        key={index}
+                        className="relative rounded-lg flex flex-col items-center text-center w-1/2"
+                      >
+                        <div
+                          className="w-full h-7 absolute rounded-t-lg"
+                          style={{ backgroundColor: item.color }}
+                        >
+
+                        </div>
+
+                        <img
+                          src={item.image}
+                          alt="watheeq"
+                          className="mb-3 rounded-t-lg w-full h-50 object-cover"
+                        />
+
+                        <h4 className="text-[#13498B] text-base font-semibold mb-2 whitespace-pre-line">
+                          {item.title}
+                        </h4>
+
+                        <p className="text-[#3A3A38] text-sm whitespace-pre-line mb-3">
+                          {item.description}
+                        </p>
+
+                        <div className="flex flex-wrap justify-center gap-2 mb-3">
+                          {item.skills?.map((skill, i) => (
+                            <span
+                              key={i}
+                              className="border border-[#00BC1680] text-xs font-medium px-7 py-1 rounded"
+                            >
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
+
+                        <button className="cursor-pointer border border-[#13498B80] w-1/2 text-sm py-2 px-5 rounded-lg">
+                          {item.button}
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div dir="ltr" className="mt-28">
+                    <button className="flex gap-2 items-center mt-7 py-2 px-10 rounded-lg border border-[#13498B80] bg-[#13498B] text-[white] cursor-pointer" style={{ marginTop: '-35px' }}>
+                      عرض المزيد
+                    </button>
+                  </div>
+                </div>
               </div>
-
-              <img
-                src={item.image}
-                alt="watheeq"
-                className="mb-3 rounded-t-lg w-full h-50 object-cover"
-              />
-
-              <h4 className="text-[#13498B] text-base font-semibold mb-2 whitespace-pre-line">
-                {item.title}
-              </h4>
-
-              <p className="text-[#3A3A38] text-sm whitespace-pre-line mb-3">
-                {item.description}
-              </p>
-
-              <div className="flex flex-wrap justify-center gap-2 mb-3">
-                {item.skills?.map((skill, i) => (
-                  <span
-                    key={i}
-                    className="border border-[#00BC1680] text-xs font-medium px-7 py-1 rounded"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-
-              <button className="cursor-pointer border border-[#13498B80] w-1/2 text-sm py-2 px-5 mt-1 rounded-lg" style={{position:'absolute', bottom:'-40px' }}>
-                {item.button}
-              </button>
-            </div>
-          ))}
-        </div>
-
-        <div dir="ltr" className="mt-20">
-          <button className="flex gap-2 items-center py-2 px-10 rounded-lg border border-[#13498B80] bg-[#F8FAFC] cursor-pointer">
-            عرض المزيد
-          </button>
-        </div>
-      </div>
-
-      {/* Publication2 */}
-      <div className="mt-10">
-        <h3 className="text-xl mb-3">تصنيف 2</h3>
-        <div className="flex gap-5 w-full justify-center mt-4">
-          {publication2.map((item, index) => (
-            <div
-              key={index}
-              className="relative rounded-lg flex flex-col items-center text-center w-1/3"
-            >
-              <div
-                className="w-full h-7 absolute rounded-t-lg"
-                style={{ backgroundColor: item.color }}
-              >
-
-              </div>
-
-              <img
-                src={item.image}
-                alt="watheeq"
-                className="mb-3 rounded-t-lg w-full h-50 object-cover"
-              />
-
-              <h4 className="text-[#13498B] text-base font-semibold mb-2 whitespace-pre-line">
-                {item.title}
-              </h4>
-
-              <p className="text-[#3A3A38] text-sm whitespace-pre-line mb-3">
-                {item.description}
-              </p>
-
-              <div className="flex flex-wrap justify-center gap-2 mb-3">
-                {item.skills?.map((skill, i) => (
-                  <span
-                    key={i}
-                    className="border border-[#00BC1680] text-xs font-medium px-7 py-1 rounded"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-
-              <button className="cursor-pointer border border-[#13498B80] w-1/2 text-sm py-2 px-5 rounded-lg">
-                {item.button}
-              </button>
-            </div>
-          ))}
-        </div>
-
-        <div dir="ltr" className="mt-15">
-          <button className="flex gap-2 items-center mt-7 py-2 px-10 rounded-lg border border-[#13498B80] bg-[#13498B] text-[white] cursor-pointer" style={{marginTop:'-20px'}}>
-            عرض المزيد
-          </button>
-        </div>
-      </div>
-
-      {/* Publication3 */}
-      <div className="mt-10 mb-30">
-        <h3 className="text-xl mb-3">تصنيف 3</h3>
-        <div className="flex gap-5 w-full justify-center mt-4">
-          {publication3.map((item, index) => (
-            <div
-              key={index}
-              className="relative rounded-lg flex flex-col items-center text-center w-1/2"
-            >
-              <div
-                className="w-full h-7 absolute rounded-t-lg"
-                style={{ backgroundColor: item.color }}
-              >
-
-              </div>
-
-              <img
-                src={item.image}
-                alt="watheeq"
-                className="mb-3 rounded-t-lg w-full h-50 object-cover"
-              />
-
-              <h4 className="text-[#13498B] text-base font-semibold mb-2 whitespace-pre-line">
-                {item.title}
-              </h4>
-
-              <p className="text-[#3A3A38] text-sm whitespace-pre-line mb-3">
-                {item.description}
-              </p>
-
-              <div className="flex flex-wrap justify-center gap-2 mb-3">
-                {item.skills?.map((skill, i) => (
-                  <span
-                    key={i}
-                    className="border border-[#00BC1680] text-xs font-medium px-7 py-1 rounded"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-
-              <button className="cursor-pointer border border-[#13498B80] w-1/2 text-sm py-2 px-5 rounded-lg">
-                {item.button}
-              </button>
-            </div>
-          ))}
-        </div>
-
-        <div dir="ltr" className="mt-15">
-          <button className="flex gap-2 items-center mt-7 py-2 px-10 rounded-lg border border-[#13498B80] bg-[#13498B] text-[white] cursor-pointer" style={{marginTop:'-35px'}}>
-            عرض المزيد
-          </button>
-        </div>
-      </div>
-    </div>
             </>
           )}
           {activeTab === 'reviews' && (
-            <p>hello ...</p>
+            <>
+
+              <h2 className="text-[#0F4C81] font-bold text-[25px] pt-3 pb-5">آراء الطلاب وأولياء الأمور</h2>
+
+              <div className="relative w-full bg-gray-200 rounded-full" style={{ background: '#2A6CA5', height: '2px' }}>
+                <div className="absolute top-0 left-0 rounded-full bg-[#FBB040] w-[60%]" style={{ height: '2px' }}></div>
+                <div
+                  className="absolute top-1/2 left-[40%]"
+                  style={{ background: '#0F4C81' }}></div>
+              </div>
+
+
+
+
+
+              <div className="space-y-4 bg-gray-50 p-4">
+                <div className="bg-[#F8FAFC] p-6 rounded-md shadow-sm space-y-4">
+                  <div className="flex justify-normal gap-18 items-center">
+                    <div className="flex items-center gap-2">
+                      <img src="/watheeq/assets/img/rating-one.png" alt="Avatar" className="w-10 h-10 rounded-full" />
+                      <div className="text-sm font-bold text-right">عبدالرحمن السعيد</div>
+                    </div>
+                    <div className="text-sm text-gray-500" style={{ display: 'flex', gap: '10px' }}><span>2025</span>
+                      <div className="flex justify-end gap-0 text-yellow-400 text-sm" style={{ fontSize: '15px' }}>
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <p className="text-sm text-right text-gray-700 leading-relaxed">
+                    الأستاذ محمد من أفضل من درست معهم في حياتي. أسلوبه في الشرح بسيط وممتع، ويستخدم طرقًا مبتكرة لتوصيل المعلومات. بفضله ارتفع مستواي في الرياضيات بشكل ملحوظ وحصلت على
+                    درجة كاملة في اختبار القدرات.    </p>
+                </div>
+
+                <div className="bg-[#F8FAFC] p-6 rounded-md shadow-sm space-y-4">
+                  <div className="flex justify-normal gap-18 items-center">
+                    <div className="flex items-center gap-2">
+                      <img src="/watheeq/assets/img/rating-two.png" alt="Avatar" className="w-10 h-10 rounded-full" />
+                      <div className="text-sm font-bold text-right">نورة الفهد (ولية أمر)</div>
+                    </div>
+                    <div className="text-sm text-gray-500" style={{ display: 'flex', gap: '10px' }}><span>2025</span>
+                      <div className="flex justify-end gap-0 text-yellow-400 text-sm" style={{ fontSize: '15px' }}>
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <p className="text-sm text-right text-gray-700 leading-relaxed">
+                    كان ابني يعاني من صعوبة في فهم الفيزياء، وبعد عدة جلسات مع الأستاذ محمد، أصبح يحب المادة ويتفوق فيها. أقدر صبره واهتمامه بتعزيز ثقة الطالب بنفسه وتشجيعه على التفكير النقدي.    </p>
+                </div>
+
+
+
+                <div className="bg-[#F8FAFC] p-6 rounded-md shadow-sm space-y-4" style={{ fontSize: '15px' }}>
+                  <div className="flex justify-normal gap-18 items-center">
+                    <div className="flex items-center gap-2">
+                      <img src="/watheeq/assets/img/rating-three.png" alt="Avatar" className="w-10 h-10 rounded-full" />
+                      <div className="text-sm font-bold text-right">فيصل المطيري</div>
+                    </div>
+                    <div className="text-sm text-gray-500" style={{ display: 'flex', gap: '10px' }}><span>2025</span>
+                      <div className="flex justify-end gap-0 text-yellow-400 text-sm">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <p className="text-sm text-right text-gray-700 leading-relaxed">
+                    الأستاذ محمد ساعدني كثيرًا في فهم الكيمياء العضوية التي كنت أعتبرها من أصعب المواد. يتميز بقدرته على تبسيط المفاهيم المعقدة وربطها بأمثلة عملية. ملتزم جدًا بالمواعيد ومتعاون مع
+                    الطلاب حتى خارج أوقات الدروس.    </p>
+                </div>
+
+
+
+
+                <div className="bg-[#F8FAFC] p-6 rounded-md shadow-sm space-y-4" style={{ fontSize: '15px' }}>
+                  <div className="flex justify-normal gap-18 items-center">
+                    <div className="flex items-center gap-2">
+                      <img src="/watheeq/assets/img/rating-four.png" alt="Avatar" className="w-10 h-10 rounded-full" />
+                      <div className="text-sm font-bold text-right">سارة العتيبي</div>
+                    </div>
+                    <div className="text-sm text-gray-500" style={{ display: 'flex', gap: '10px' }}><span>2025</span>
+                      <div className="flex justify-end gap-0 text-yellow-400 text-sm">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <p className="text-sm text-right text-gray-700 leading-relaxed">
+                    أخذت دورة تحضيرية للاختبار التحصيلي مع الأستاذ محمد، وكانت تجربة رائعة. المادة العلمية منظمة وشاملة، والأستاذ يعرف تمامًا نقاط الضعف الشائعة عند الطلاب ويركز عليها. أنصح به بشدة لأي
+                    طالب يريد تحسين مستواه العلمي.    </p>
+                </div>
+
+
+
+              </div>
+
+
+
+
+
+
+
+            </>
           )}
         </div>
       </div>
