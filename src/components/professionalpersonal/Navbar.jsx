@@ -12,11 +12,11 @@ export default function Navbar() {
                 <FaGraduationCap size={50}/>
                 <h2 className="font-bold text-xl">أ /محمد أحمد</h2>
             </div>
-            <span className="text-white">مستشار قانوني</span>
+            <span className="text-white pr-16">مستشار قانوني</span>
         </div>
 
         <div className="flex items-center gap-4">
-          <button className="bg-white flex rounded-lg cursor-pointer p-2 px-5 items-center gap-2">
+          <button className="bg-white flex rounded-lg cursor-pointer p-2 px-6 items-center gap-2">
             <FaSignOutAlt />
             تسجيل الدخول
           </button>
