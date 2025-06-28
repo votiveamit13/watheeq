@@ -209,25 +209,34 @@ export default function AddService({ onBack }) {
                 حفظ
               </button>
             </div>
-            <div className="col-span-2">
-              <label className="block mb-2 text-sm text-[#0B2B51]">
-                الاجتماع (فيديو)
+            <div className="col-span-2 mb-5">
+              <label className="block mb-1 text-lg text-[#0B2B51]">
+                الخدمة
               </label>
 
               <div className="mt-3">
-                <select className="w-1/2 border border-gray-300 rounded-lg p-3 focus:outline-none">
-                  <option>اختر مدة الاجتماع فيديو</option>
-                  <option value="none">لا يوجد</option>
-                  <option value="15">15 دقيقة</option>
-                  <option value="30">30 دقيقة</option>
-                  <option value="60">ساعة</option>
+                <select className="w-full text-gray-400 border border-gray-300 rounded-lg p-3 focus:outline-none">
+                  <option>اختر الخدمة</option>
                 </select>
               </div>
             </div>
+
+                        <div className="col-span-2 mb-5">
+              <label className="block mb-1 text-lg text-[#0B2B51]">
+                مدة تقديم الخدمة
+              </label>
+
+              <div className="mt-3">
+                <select className="w-full border text-gray-400 border-gray-300 rounded-lg p-3 focus:outline-none">
+                  <option>حدد الوقت</option>
+                </select>
+              </div>
+            </div>
+
             <label className="block mb-1 text-lg text-[#0B2B51]">
               سعر الخدمة
             </label>
-            <div className="flex justify-end gap-3 w-full">
+            <div className="flex justify-end gap-3 w-full mb-5">
               <div className="mt-3 relative w-full">
                 <span className="absolute inset-y-0 right-8 flex items-center pr-3 text-gray-500">
                   <img src="/watheeq/assets/img/business1.png" alt="watheeq" />
@@ -238,6 +247,16 @@ export default function AddService({ onBack }) {
                   className="w-full border rounded-lg px-4 p-3 text-[#9794AA] focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
+            </div>
+
+            <div>
+              <label className="block mb-1 text-lg text-[#0B2B51]">
+                تفاصيل الخدمة
+              </label>
+              <textarea
+                rows="4"
+                className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+              ></textarea>
             </div>
           </div>
         </div>
