@@ -2,23 +2,21 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { TbLogout } from "react-icons/tb";
 
 export default function Sidebar({ collapsed, setCollapsed }) {
   const pathname = usePathname();
   const [activeMenu, setActiveMenu] = useState("");
 
-useEffect(() => {
-  const sortedItems = [...menuItems].sort(
-    (a, b) => b.link.length - a.link.length
-  );
+  useEffect(() => {
+    const sortedItems = [...menuItems].sort(
+      (a, b) => b.link.length - a.link.length
+    );
 
-  const matched = sortedItems.find((item) =>
-    pathname.startsWith(item.link)
-  );
+    const matched = sortedItems.find((item) => pathname.startsWith(item.link));
 
-  setActiveMenu(matched?.key || "");
-}, [pathname]);
-
+    setActiveMenu(matched?.key || "");
+  }, [pathname]);
 
   const toggleSidebar = () => setCollapsed(!collapsed);
 
@@ -159,10 +157,8 @@ useEffect(() => {
             className="flex items-center gap-2 hover:text-[#003f7f] cursor-pointer px-2 py-2 rounded-md"
             onClick={() => setActiveMenu(null)}
           >
-            <img
-              src="/watheeq/assets/img/sidebaricons/logout.png"
-              className={`w-5 h-5 ${collapsed ? "mx-auto" : "ml-2"}`}
-              alt="Logout"
+            <TbLogout
+              className={`w-5 h-5 ${collapsed ? "mx-auto" : "ml-4 mr-4"}`}
             />
             {!collapsed && <span>تسجيل خروج</span>}
           </div>
