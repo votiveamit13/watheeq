@@ -8,25 +8,28 @@ export default function StatusBar() {
   return (
     <div className="bg-white p-5 shadow rounded-lg">
       <div className="flex justify-center gap-4">
-        <div className="flex flex-col items-center justify-between border rounded-lg py-8 px-18 hover:border-[#FDC06B]">
-          <ImHammer2 fill="#0F4C81" size={30}  />
-          <span className="font-bold text-4xl text-black">15</span>
-          <span>عامًا من الخبرة</span>
+        <div className="flex flex-col items-center justify-between border cursor-pointer  rounded-lg hover:border-[#FDC06B]" style={{width:'25%', padding:'15px 0px'}}>
+        <div className="rotate-[83deg]">
+          <ImHammer2 fill="#0F4C81" size={28}  />
+          </div>
+          <span className="font-bold text-2xl text-black pt-2">15</span>
+          <span className="pt-3" style={{color:'#64748B'}}>عامًا من الخبرة</span>
         </div>
-        <div className="flex flex-col items-center justify-between border rounded-lg py-8 px-18 hover:border-[#FDC06B]">
-          <FaListCheck fill="#0F4C81" size={30} />
-          <span className="font-bold text-4xl text-black">15</span>
-          <span>عامًا من الخبرة</span>
+        <div className="flex flex-col items-center justify-between border cursor-pointer rounded-lg hover:border-[#FDC06B]" style={{width:'25%', padding:'15px 0px'}}>
+          <FaListCheck fill="#0F4C81" size={28} />
+          <span className="font-bold text-2xl text-black pt-2">15</span>
+          <span className="pt-3" style={{color:'#64748B'}}>عامًا من الخبرة</span>
         </div>
-        <div className="flex flex-col items-center justify-between border rounded-lg py-8 px-18 hover:border-[#FDC06B]">
-          <FaUsers fill="#0F4C81" size={30} />
-          <span className="font-bold text-4xl text-black">15</span>
-          <span>عامًا من الخبرة</span>
+        <div className="flex flex-col items-center justify-between border cursor-pointer rounded-lg hover:border-[#FDC06B]" style={{width:'25%', padding:'15px 0px'}}>
+          <FaUsers fill="#0F4C81" size={28} />
+          <span className="font-bold text-2xl text-black pt-2">15</span>
+          <span className="pt-3" style={{color:'#64748B'}}>عامًا من الخبرة</span>
         </div>
-        <div className="flex flex-col items-center justify-between border rounded-lg py-8 px-18 hover:border-[#FDC06B]">
-          <FaBuilding fill="#0F4C81" size={30} />
-          <span className="font-bold text-4xl text-black">15</span>
-          <span>عامًا من الخبرة</span>
+        <div className="flex flex-col items-center justify-between border cursor-pointer rounded-lg hover:border-[#FDC06B]" style={{width:'25%', padding:'15px 0px'}}>
+            <FaBuilding fill="#0F4C81" size={28} />
+          <span className="font-bold text-2xl pt-2" style={{color:'#1E293B'}}>عامًا من الخبرة</span>
+          <span className="pt-3" style={{color:'#64748B'}}>المدينة</span>
+          
         </div>
       </div>
       <div className="w-full bg-[#F0F9FF] border border-[#BFDBFE] flex flex-start gap-5 items-center p-2 rounded-lg mt-5">

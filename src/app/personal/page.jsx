@@ -18,7 +18,7 @@ export default function Personal() {
         <div className='mr-40 ml-40 mt-5'>
           <AccordianSection/>
         </div>
-        <div className='mr-40 ml-40 mt-5'>
+        <div className='mr-40 ml-40 mt-5 pb-5'>
             <Footer/>
         </div>
     </div>

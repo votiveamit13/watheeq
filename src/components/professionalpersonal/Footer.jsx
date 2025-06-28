@@ -14,22 +14,22 @@ export default function Footer() {
           />
         </div>
           <div className="flex gap-5 items-center">
-            <div className="bg-white rounded-full cursor-pointer p-3">
-              <FaYoutube fill="#0F4C81" className="w-8 h-8" />
+            <div className="bg-white rounded-full cursor-pointer p-2">
+              <FaYoutube fill="#0F4C81" className="w-5 h-5" />
             </div>
-            <div className="bg-white rounded-full cursor-pointer p-3">
-              <FaInstagram fill="#0F4C81" className="w-8 h-8 cursor-pointer" />
+            <div className="bg-white rounded-full cursor-pointer p-2">
+              <FaInstagram fill="#0F4C81" className="w-5 h-5 cursor-pointer" />
             </div>
-            <div className="bg-white rounded-full cursor-pointer p-3">
-              <FaTiktok fill="#0F4C81" className="w-8 h-8 cursor-pointer" />
+            <div className="bg-white rounded-full cursor-pointer p-2">
+              <FaTiktok fill="#0F4C81" className="w-5 h-5 cursor-pointer" />
             </div>
-            <div className="bg-white rounded-full cursor-pointer p-3">
-              <FaXTwitter fill="#0F4C81" className="w-8 h-8 cursor-pointer" />
+            <div className="bg-white rounded-full cursor-pointer p-2">
+              <FaXTwitter fill="#0F4C81" className="w-5 h-5 cursor-pointer" />
             </div>
           </div>
       </div>
       <div className="bg-white p-5 flex justify-center rounded-b-lg">
-        <p>منصة وثيق - جميع الحقوق محفوظة 2025</p>
+        <p className="text-[#64748B]">منصة وثيق - جميع الحقوق محفوظة 2025</p>
       </div>
     </div>
   );
