@@ -79,7 +79,7 @@ export default function TechnicalSupport() {
                   <h2 className="text-xl font-bold text-center text-[#13498B] mb-4">
                     إنشاء تذكرة
                   </h2>
-                  <ChevronLeft />
+                  <ChevronLeft onClick={() => setCreateTicketDialog(false)} className="cursor-pointer"/>
                 </div>
                 <div className="flex flex-col items-start w-full">
                   <label className="text-sm text-[#13498B] mb-3">

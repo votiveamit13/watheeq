@@ -79,7 +79,7 @@ export default function TechnicalSupport() {
                   <h2 className="text-xl font-bold text-center text-[#13498B] mb-4">
                     إنشاء تذكرة
                   </h2>
-                  <span className="cursor-pointer">
+                  <span className="cursor-pointer" onClick={() => setCreateTicketDialog(false)}>
                   <ChevronLeft />
 
                   </span>
