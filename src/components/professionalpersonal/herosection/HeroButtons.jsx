@@ -9,13 +9,13 @@ export default function HeroButtons() {
         <FaSignOutAlt />
         تسجيل الدخول
       </button>
-      <button className="bg-white rounded-full cursor-pointer p-3">
+      <button className="bg-white rounded-full hover:shadow hover:bg-[#F8FAFC] cursor-pointer p-3">
         <FaLink />
       </button>
-      <button className="bg-white rounded-full cursor-pointer p-3">
+      <button className="bg-white rounded-full hover:shadow hover:bg-[#F8FAFC] cursor-pointer p-3">
         <FaQrcode />
       </button>
-      <button className="bg-white rounded-full cursor-pointer p-3">
+      <button className="bg-white rounded-full hover:shadow hover:bg-[#F8FAFC] cursor-pointer p-3">
         <HiDotsVertical />
       </button>
     </div>

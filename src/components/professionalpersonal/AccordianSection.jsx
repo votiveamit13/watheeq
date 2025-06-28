@@ -1,15 +1,15 @@
 
 'use client';
 import { useState } from 'react';
-import { FaFacebook, FaTwitter, FaTiktok, FaInstagram, FaYoutube, FaLinkedinIn, FaPlus, FaMinus, FaTimes } from "react-icons/fa";
-import { FaUser, FaClipboard, FaBlog, FaStar, FaGraduationCap, FaCertificate } from 'react-icons/fa';
+import { FaUser, FaTiktok, FaInstagram, FaYoutube, FaChalkboardTeacher, FaNewspaper, FaStar, FaGraduationCap, FaCertificate } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+
 
 
 const tabs = [
   { id: 'about', label: 'نبذة عني', icon: <FaUser /> },
-  { id: 'services', label: 'خدماتي', icon: <FaClipboard /> },
-  { id: 'blog', label: 'مدونتي', icon: <FaBlog /> },
+  { id: 'services', label: 'خدماتي', icon: <FaChalkboardTeacher /> },
+  { id: 'blog', label: 'مدونتي', icon: <FaNewspaper  /> },
   { id: 'reviews', label: 'التقييمات', icon: <FaStar /> },
 
 ];
@@ -191,7 +191,7 @@ export default function AboutSection() {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`flex items-center gap-1 px-4 py-2 cursor-pointer rounded-t-lg text-sm font-medium transition-all 
+              className={`flex items-center gap-1 px-4 py-2 cursor-pointer rounded-t-lg text-sm font-medium transition-all hover:shadow 
               ${activeTab === tab.id
                   ? 'bg-[#0F4C81] text-white shadow-md'
                   : 'bg-white text-[#0A3156] hover:bg-gray-100'
@@ -298,17 +298,18 @@ export default function AboutSection() {
                             <p className="text-[#0F4C81] font-medium">تواصل معي عبر وسائل التواصل الاجتماعي</p>
                           </div>
                           <div className="flex gap-5 items-center pt-5">
-                            <div className="bg-white rounded-full cursor-pointer p-2" style={{ background: '#F0F9FF' }}>
-                              <FaXTwitter fill="#0F4C81" className="w-5 h-5 cursor-pointer" />
+                          <div className="rounded-full cursor-pointer p-2 bg-[#F0F9FF] hover:bg-[#0F4C81] transition-colors duration-300 group">
+                            <FaXTwitter className="w-5 h-5 transition-colors duration-300 fill-[#0F4C81] group-hover:fill-white" />
+                          </div>
+
+                            <div className="rounded-full cursor-pointer p-2 bg-[#F0F9FF] hover:bg-[#0F4C81] transition-colors duration-300 group">
+                              <FaTiktok className="w-5 h-5 transition-colors duration-300 fill-[#0F4C81] group-hover:fill-white" />
                             </div>
-                            <div className="bg-white rounded-full cursor-pointer p-2" style={{ background: '#F0F9FF' }}>
-                              <FaTiktok fill="#0F4C81" className="w-5 h-5 cursor-pointer" />
+                            <div className="rounded-full cursor-pointer p-2 bg-[#F0F9FF] hover:bg-[#0F4C81] transition-colors duration-300 group">
+                              <FaInstagram className="w-5 h-5 transition-colors duration-300 fill-[#0F4C81] group-hover:fill-white" />
                             </div>
-                            <div className="bg-white rounded-full cursor-pointer p-2" style={{ background: '#F0F9FF' }}>
-                              <FaInstagram fill="#0F4C81" className="w-5 h-5 cursor-pointer" />
-                            </div>
-                            <div className="bg-white rounded-full cursor-pointer p-2" style={{ background: '#F0F9FF' }}>
-                              <FaYoutube fill="#0F4C81" className="w-5 h-5" />
+                            <div className="rounded-full cursor-pointer p-2 bg-[#F0F9FF] hover:bg-[#0F4C81] transition-colors duration-300 group">
+                              <FaYoutube className="w-5 h-5 transition-colors duration-300 fill-[#0F4C81] group-hover:fill-white" />
                             </div>
 
 
@@ -369,7 +370,7 @@ export default function AboutSection() {
                           {service.price}
                           <img src="/watheeq/assets/img/servicerequest1.png" style={{ width: '15px' }} />
                         </span>
-                        <button className="bg-[#FBB040] hover:bg-yellow-500 text-white cursor-pointer text-sm font-medium px-5 py-2 rounded">
+                        <button className="bg-[#FBB040] hover:bg-yellow-500 text-white cursor-pointer text-sm font-medium px-5 py-2 rounded hover:bg-[#FDC06B]">
                           طلب الخدمة
                         </button>
 

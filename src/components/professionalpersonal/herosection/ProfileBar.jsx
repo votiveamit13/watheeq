@@ -3,7 +3,7 @@ import { FaStar } from "react-icons/fa";
 export default function ProfileBar() {
   return (
     <div className="relative flex items-center justify-center -mt-12 z-10">
-      <div className="bg-[#0A3156B2] w-[80%] text-white rounded-lg px-6 py-6 flex justify-between items-center shadow-md mr-33">
+      <div className="bg-[#0A3156B2] w-[80%] text-white rounded-lg px-6 py-6 flex hover:bg-[#0A3156E5] cursor-pointer justify-between items-center shadow-md mr-33">
         <div className="flex items-center gap-4">
           <div className="text-right">
             <h2 className="text-lg font-bold">محمد أحمد</h2>
