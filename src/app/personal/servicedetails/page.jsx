@@ -3,12 +3,10 @@ import Navbar from "@/components/professionalpersonal/Navbar";
 
 export default function ServiceDetails() {
   return (
-    <div className="bg-[#F0F9FF]">
+    <div className="bg-[#F0F9FF] pt-5">
       <div className="mr-40 ml-40">
-        <Navbar />
-      </div>
-      <div className="mr-40 ml-40">
-        <div className="bg-white p-5 mt-5 rounded-lg mb-30">
+        <div className="bg-white p-5 rounded-lg mb-5">
+          <Navbar />
           <div className="relative mt-5 flex flex-col items-center">
             <div className="relative inline-block w-full">
               <img
@@ -97,8 +95,8 @@ export default function ServiceDetails() {
           </div>
         </div>
       </div>
-            <div className="mr-40 ml-40">
-        <Footer/>
+      <div className="mr-40 ml-40 pb-5">
+        <Footer />
       </div>
     </div>
   );
