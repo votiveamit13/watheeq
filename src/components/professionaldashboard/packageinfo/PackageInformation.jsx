@@ -10,7 +10,7 @@ export default function PackageInfotmation({
   date,
 }) {
   const [renewDialog, setRenewDialog] = useState(false);
-
+  const [balanceDialog, setBalanceDialog] = useState(false);
   return (
     <div>
       <div className="flex justify-between">
@@ -66,12 +66,22 @@ export default function PackageInfotmation({
                     </tbody>
                 </table>
                 <div className="flex justify-center gap-5 w-full pr-10 pl-10">
-                    <button className="bg-[#13498B] text-white w-full py-2 px-7 rounded-lg cursor-pointer">تجديد</button>
-                    <button className="text-[#F24242] py-2 px-7 w-full rounded-lg border border-[#F2424280] cursor-pointer">إلغاء الاشتراك</button>
+                    <button className="bg-[#13498B] text-white w-full py-2 px-7 rounded-lg cursor-pointer" onClick={() => {setBalanceDialog(true), setRenewDialog(false)}}>تجديد</button>
+                    <button className="text-[#F24242] py-2 px-7 w-full rounded-lg border border-[#F2424280] cursor-pointer" onClick={() => setRenewDialog(false)}>إلغاء الاشتراك</button>
                 </div>
               </div>
               </div>
             </div>
+          )}
+          {balanceDialog && (
+            <div className="fixed inset-0 bg-[#0000007d] bg-opacity-30 flex justify-center items-center z-50">
+              <div className="bg-white p-6 rounded-lg w-full max-w-md text-center">
+                <h2 className="text-xl font-bold text-center text-[#13498B] mt-5 mb-7">
+                  تجديد الاشتراك
+                </h2>
+                <p className="mb-15">لا يوجد رصيد كافي </p>
+                </div>
+                </div>
           )}
         </div>
       </div>

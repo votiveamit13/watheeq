@@ -12,17 +12,17 @@ export default function Package() {
     <div>
       <div className="bg-white shadow rounded-lg mt-5 p-5">
         <h2 className="text-2xl mb-2">رسوم المنصة</h2>
-        <div className="flex item-center justify-between w-1/2">
+        <div className="flex items-center justify-between w-1/2 rtl">
           <div className="relative">
             <input
               type="text"
               placeholder="21"
-              className="w-[350px] pr-10 rounded-lg p-3 bg-white border border-[#13498b40]"
+              className="w-[350px] pr-3 rounded-lg p-3 bg-white border border-[#13498b40] text-right"
             />
             <img
               src="/watheeq/assets/img/business1.png"
               alt="watheeq"
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#13498B]"
+              className="absolute pr-10 top-1/2 transform -translate-y-1/2 text-[#13498B]"
             />
           </div>
           <div>
@@ -78,10 +78,10 @@ export default function Package() {
                       <input
                         type="text"
                         placeholder="45"
-                        className="rounded-md border border-gray-300 p-2 w-full pr-10 placeholder:text-gray-400 focus:outline-none text-[#9794AA] focus:ring-2 focus:ring-blue-500 "
+                        className="rounded-md border border-gray-300 p-2 w-full pr-3 placeholder:text-gray-400 focus:outline-none text-[#9794AA] focus:ring-2 focus:ring-blue-500 "
                       />
 
-                        <img src="/watheeq/assets/img/business1.png" alt="watheeq" className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400"/>
+                        <img src="/watheeq/assets/img/business1.png" alt="watheeq" className="absolute pr-10 top-1/2 transform -translate-y-1/2 text-gray-400"/>
 
                     </div>
                   </div>
