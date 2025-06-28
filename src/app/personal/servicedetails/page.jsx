@@ -1,3 +1,4 @@
+import Footer from "@/components/professionalpersonal/Footer";
 import Navbar from "@/components/professionalpersonal/Navbar";
 
 export default function ServiceDetails() {
@@ -8,7 +9,6 @@ export default function ServiceDetails() {
       </div>
       <div className="mr-40 ml-40">
         <div className="bg-white p-5 mt-5 rounded-lg mb-30">
-          <h2 className="text-2xl font-bold">طلب خدمة</h2>
           <div className="relative mt-5 flex flex-col items-center">
             <div className="relative inline-block w-full">
               <img
@@ -39,9 +39,9 @@ export default function ServiceDetails() {
           <div className="mt-5">
             <h3 className="text-2xl font-bold">تفاصيل الخدمة :</h3>
             <p className="mt-5 leading-[2] text-[#000000B2]">
-              هل تحتاج إلى عقد قانوني محكم يحمي حقوقك ويلبي احتياجاتك بدقة؟نقدّم
-              لك خدمة صياغة ومراجعة العقود من قبل مهنيين قانونيين ذوي خبرة،
-              لضمان وضوح الشروط، وتجنب الثغرات، وحماية مصالحك بالكامل.
+              هل تحتاج إلى عقد قانوني محكم يحمي حقوقك ويلبي احتياجاتك
+              بدقة؟ نقدّم لك خدمة صياغة ومراجعة العقود من قبل مهنيين قانونيين
+              ذوي خبرة، لضمان وضوح الشروط، وتجنب الثغرات، وحماية مصالحك بالكامل.
             </p>
             <span className="leading-[2] text-[#000000B2]">
               سواء كنت فردًا أو شركة، نساعدك على:
@@ -56,29 +56,49 @@ export default function ServiceDetails() {
             </ul>
           </div>
           <div className="mt-10">
-            <h3 className="text-2xl font-bold">معلومات المهني</h3>
-            <div className="flex items-center justify-start mt-5">
-              <div>
-                <img
-                  src="/watheeq/assets/img/servicerequest2.png"
-                  alt="watheeq"
-                />
-              </div>
-              <div className="flex flex-col text-[#000000B2] leading-[2.5] mr-5">
-                <span>اسم المهني </span>
-                <span>التخصص :</span>
-                <span>عدد الطلبات المنجزة:</span>
-                <span>التقييم العام:</span>
-              </div>
-              <div className="flex flex-col leading-[2.5]">
-                <span>أحمد ماضي</span>
-                <span>قانون العقود والاتفاقيات</span>
-                <span>27 طلب</span>
-                <span> (4.7 من 5)</span>
-              </div>
-            </div>
+            <h3 className="text-2xl font-bold">ما الذي نقدمه في هذه الخدمة</h3>
+            <ul className="mt-5 leading-[2] text-[#000000B2] list-disc mr-5">
+              <li>
+                صياغة عقود جديدة بجميع أنواعها (عمل، شراكة، إيجار، بيع وشراء...)
+              </li>
+              <li>مراجعة العقود القائمة وتقديم ملاحظات قانونية مفصلة</li>
+              <li>تعديل العقود وفقًا للوائح المعمول بها</li>
+              <li>توثيق العقود إذا لزم الأمر</li>
+            </ul>
           </div>
-         </div>
+
+          <div className="mt-10">
+            <h3 className="text-2xl font-bold">كيف يتم تقديم الخدمة؟</h3>
+            <ul className="mt-5 leading-[2] text-[#000000B2] list-decimal mr-5">
+              <li>تواصل معنا لتحديد نوع العقد</li>
+              <li>نراجع التفاصيل ونتواصل معك لفهم البنود المطلوبة</li>
+              <li>نقوم بصياغة أو مراجعة العقد خلال مدة متفق عليها</li>
+              <li>تحصل على نسخة بصيغة رقمية وجاهزة للطباعة</li>
+            </ul>
+          </div>
+
+          <div className="mt-10">
+            <h3 className="text-2xl mb-5 font-bold">
+              هل يشمل السعر الاستشارات؟
+            </h3>
+            <span className="leading-[2] text-[#000000B2]">
+              نعم، الاستشارة القانونية الأولية مشمولة في الخدمة.
+            </span>
+          </div>
+
+          <div className="mt-10 mb-20">
+            <h3 className="text-2xl mb-5 font-bold">
+              هل ترغب بصياغة عقد قانوني الآن؟
+            </h3>
+            <span className="leading-[2] text-[#000000B2]">
+              تواصل مع فريق "الدفاع الذكي" لتحصل على نسخة احترافية من عقدك في
+              وقت قياسي.
+            </span>
+          </div>
+        </div>
+      </div>
+            <div className="mr-40 ml-40">
+        <Footer/>
       </div>
     </div>
   );
