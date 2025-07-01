@@ -9,7 +9,7 @@ export default function ClientLayout({ children }) {
         <html lang="ar" dir="rtl">
             <body>
                 <section className="flex h-screen bg-gray-50">
-                    <div className={`${collapsed ? "w-20" : "w-64"} transition-all duration-300`}>
+                    <div className={`z-50 ${collapsed ? "w-20" : "w-64"} transition-all duration-300`}>
                         <Sidebar collapsed={collapsed} setCollapsed={setCollapsed} />
                     </div>
                     <div className="flex-1 flex flex-col p-5">

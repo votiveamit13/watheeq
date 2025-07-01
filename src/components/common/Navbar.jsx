@@ -24,8 +24,8 @@
     }, []);
   
     return (
-      <div className="flex justify-between items-center bg-white rounded-3xl px-6 py-3 shadow-sm w-full">
-        <div className="text-right">
+<div className="block w-1/2 md:w-full mx-auto ml-0 md:flex md:justify-between md:items-center bg-white rounded-3xl px-6 py-3 shadow-sm">
+<div className="text-right">
           <h3 className="text-[#003f7f] text-lg font-bold">{wish}</h3>
           <div className="flex items-center">
           <span className="ml-1">{location}</span>
@@ -74,7 +74,7 @@
               </div>
             </div>
           </div>
-
+          
           {isOpen && (
             <div className="absolute right-13 w-35 bg-[#E7EDF3] rounded-br-lg rounded-bl-lg shadow-lg text-right z-50">
               <Link href={profilelink}>
