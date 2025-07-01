@@ -33,10 +33,10 @@ export default function ProfessionalDashboard() {
         />
       </div>
       <div className="block md:flex gap-3 mt-5">
-      <div className="w-[42%] mx-auto ml-0 md:w-full md:mx-0 bg-white p-4 rounded-lg">
+      <div className="w-full mx-auto ml-0 md:w-full md:mx-0 bg-white p-4 rounded-lg">
       <BarChart title="زيارات  موقعك" data={chartData} />
         </div>
-        <div className="block w-[42%] mx-auto ml-0 md:flex md:w-full md:mx-0 bg-white p-4 rounded-lg">
+        <div className="block w-full mx-auto ml-0 md:flex md:w-full md:mx-0 bg-white p-4 rounded-lg">
         <LineChart
             title="الطلبات"
             data={[
@@ -56,7 +56,7 @@ export default function ProfessionalDashboard() {
         </div>
       </div>
       <div className="block md:flex mt-6 gap-3" style={{ marginBottom: "50px" }}>
-      <div className="w-[42%] mx-auto ml-0 md:flex-1 md:w-auto bg-white p-4 rounded-lg">
+      <div className="w-full mx-auto ml-0 md:flex-1 md:w-auto bg-white p-4 rounded-lg overflow-y-auto max-h-[300px] md:max-h-none">
       <StatsTable
             title="عنوان"
             rows={[
@@ -67,7 +67,7 @@ export default function ProfessionalDashboard() {
             ]}
           />
         </div>
-        <div className="w-[42%] mx-auto ml-0 md:flex-1 md:w-auto bg-white p-4 rounded-lg">
+        <div className="w-full mx-auto ml-0 md:flex-1 md:w-auto bg-white p-4 rounded-lg">
           <PieChart
             title="عنوان"
             segments={[

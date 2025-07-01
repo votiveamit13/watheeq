@@ -5,7 +5,7 @@ import NewMessages from "./NewMessages";
 
 export default function StatusBar({asname, asvalue, asimg, nmname, nmvalue, nmimg, atname, atvalue, atimg, iname, ivalue, iimg}) {
   return (
-<div className="block w-[42%] mx-auto ml-0 md:grid md:grid-cols-4 md:justify-between md:gap-10 md:w-full">
+<div className="block w-full mx-auto ml-0 md:grid md:grid-cols-4 md:justify-between md:gap-10 md:w-full">
 
 <div className="bg-white rounded-lg p-6 mb-[15px] md:mb-0">
 
