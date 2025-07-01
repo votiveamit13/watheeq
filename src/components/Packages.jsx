@@ -4,7 +4,7 @@ import { Switch } from "./ui/Switch";
 
 function WaveHeader({ type = "basic", plan = "monthly" }) {
   return (
-    <div className="relative overflow-hidden w-full sm:max-w-[537px] aspect-[537/261]">
+<div className="relative overflow-hidden w-full h-[28vh] sm:h-auto sm:max-w-[537px] aspect-none sm:aspect-[537/261]">
       <div className="absolute top-16 w-full text-center z-10">
         <h2 className="text-white text-4xl font-bold">
           {type === "basic" ? "الباقة المتكاملة" : "الباقة الأساسية"}
@@ -131,8 +131,8 @@ function BasicHeader() {
 function PricingCard({ type = "basic", plan = "monthly", onSubscribeClick, buttonName }) {
   return (
     <div
-      className="shadow-custom-blue rounded-2xl w-full p-[15px] sm:py-10 sm:px-0"
-      style={{ height: "100%" }}
+    className="shadow-custom-blue rounded-2xl w-full p-0 sm:py-10 sm:px-0"
+    style={{ height: "100%" }}
     >
       <WaveHeader type={type} plan={plan} />
       <p className="text-2xl mt-10 pr-8">
@@ -213,7 +213,7 @@ function PricingCard({ type = "basic", plan = "monthly", onSubscribeClick, butto
       <div className="flex justify-center">
         <button
         onClick={() => onSubscribeClick?.(type, plan)}
-          className={`mt-20 rounded-[15px] text-2xl w-44 h-14 border-2 cursor-pointer
+            className={`mt-10 rounded-[15px] text-2xl w-44 h-14 border-2 cursor-pointer
     ${
       type === "basic"
         ? "text-[#D53B98] border-[#D53B98]"
