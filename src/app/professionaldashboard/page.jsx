@@ -33,7 +33,7 @@ export default function ProfessionalDashboard() {
         />
       </div>
       <div className="block md:flex gap-3 mt-5">
-      <div className="w-full mx-auto ml-0 md:w-full md:mx-0 bg-white p-4 rounded-lg">
+      <div className="w-full mx-auto ml-0 md:w-full md:mx-0 lg:w-[60%] bg-white p-4 rounded-lg">
       <BarChart title="زيارات  موقعك" data={chartData} />
         </div>
         <div className="block w-full mx-auto ml-0 md:flex md:w-full md:mx-0 bg-white p-4 rounded-lg">
@@ -67,7 +67,7 @@ export default function ProfessionalDashboard() {
             ]}
           />
         </div>
-        <div className="w-full mx-auto ml-0 md:flex-1 md:w-auto bg-white p-4 rounded-lg">
+        <div className="w-full mx-auto ml-0 md:w-auto lg:w-[35%] bg-white p-4 rounded-lg">
           <PieChart
             title="عنوان"
             segments={[

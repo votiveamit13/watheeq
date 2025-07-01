@@ -120,7 +120,7 @@ export default function Conversations() {
 
   return (
     <div className="bg-white mt-5 rounded-lg">
-      <div className="flex justify-between mb-30">
+      <div className="block md:flex justify-between mb-30">
         <Inbox
           chats={chats}
           selectedChatIndex={selectedChatIndex}
