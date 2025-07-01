@@ -16,8 +16,11 @@ export default function ClientLayout({ children }) {
                         <Navbar wish={"أهلا بك"} location={"موقعك"} url={"watheeq.com/u/username"} username={"أحمد ماضي"} usertype={"محامي"} profileimage={"/watheeq/assets/img/avatar.png"} profilelink={"/professionaldashboard/profile"} />
                         {children}
                     </div>
+
                 </section>
             </body>
         </html>
     );
 }
+
+

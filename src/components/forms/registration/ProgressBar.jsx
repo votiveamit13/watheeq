@@ -6,7 +6,6 @@ export default function ProgressBar({ currentStep = 0 }) {
   ];
 
   const progress = ((currentStep - 1) / (steps.length - 1)) * 100;
-
   return (
 <div className="px-4 pt-2 pb-4 items-center justify-center" style={{width:'380px', margin:'auto', marginTop:'40px'}}>
 
@@ -53,8 +52,8 @@ export default function ProgressBar({ currentStep = 0 }) {
       </div>
 
 
-      <div className="flex justify-between mt-3 rtl:space-x-reverse" style={{width:'488px', marginRight:'-68px'}}>
-        {steps.map((step) => (
+      <div className="flex justify-between mt-3 rtl:space-x-reverse w-[368px] md:w-[488px] md:mr-[-68px] mr-0">
+      {steps.map((step) => (
           <span
             key={step.id}
             className={`text-[15px] ${currentStep >= step.id ? 'text-[#13498B] font-medium' : 'text-[#5A80AE]'}`}

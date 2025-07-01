@@ -8,8 +8,8 @@ export default function OccupationInfo({ onNext }) {
   return (
     <section className="max-w-md mx-auto p-6">
       <div className="mb-5">
-        <h2 className="text-2xl font-bold">معلومات المهنة</h2>
-        <p>قم بإدخال معلومات مهنتك لاستكمال حسابك في وثيق</p>
+        <h2 className="text-2xl font-bold text-center md:text-right">معلومات المهنة</h2>
+        <p className="text-center md:text-right">قم بإدخال معلومات مهنتك لاستكمال حسابك في وثيق</p>
       </div>
       <div className="w-full  space-y-6">
         <div className="flex justify-center gap-8">

@@ -3,8 +3,8 @@ import { FaEnvelope, FaLock } from "react-icons/fa";
 export default function Login() {
   return (
     <div className="min-h-screen flex flex-wrap font-sans text-right">
-      <div className="w-full md:w-1/2 bg-white flex flex-col justify-center items-center px-10 text-center">
-        <img
+<div className="w-full md:w-1/2 bg-white flex flex-col justify-center items-center text-center px-0 py-[35px] md:px-10">
+<img
           src="/watheeq/assets/img/logo.png"
           alt="logo"
           className="w-50 mb-4"
@@ -28,13 +28,13 @@ export default function Login() {
           ))}
         </div>
       </div>
-      <div className="w-full md:w-1/2 bg-[#F5F8FB] flex flex-col justify-center px-20">
-        <div className="max-w-md w-full mx-auto space-y-6">
+      <div className="w-full md:w-1/2 bg-[#F5F8FB] flex flex-col justify-center px-[25px] py-[28px] md:px-20">
+      <div className="max-w-md w-full mx-auto space-y-6">
           <div>
-            <h2 className="text-3xl font-bold text-[#0B2B51] mb-2">
+          <h2 className="text-3xl font-bold text-[#0B2B51] mb-2 text-center md:text-right">
               تسجيل الدخول
             </h2>
-            <p className="text-gray-600">
+            <p className="text-gray-600 text-center md:text-right">
               مرحبًا مرة أخرى! يرجى إدخال معلومات تسجيل الدخول الخاصة بك.
             </p>
           </div>

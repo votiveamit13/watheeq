@@ -77,7 +77,7 @@ export default function AddService({ onBack }) {
             className="w-1/2 border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
           ></textarea>
         </div>
-
+        
         {/* سعر الخدمة */}
         <div className="col-span-2">
           <label className="block mb-2 text-lg text-[#0B2B51]">
@@ -232,7 +232,7 @@ export default function AddService({ onBack }) {
                 </select>
               </div>
             </div>
-
+               
             <label className="block mb-1 text-lg text-[#0B2B51]">
               سعر الخدمة
             </label>

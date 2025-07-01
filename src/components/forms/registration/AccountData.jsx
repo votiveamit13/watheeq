@@ -44,10 +44,10 @@ export default function RegisterForm({ onNext }) {
   return (
     <section className="max-w-md mx-auto p-6">
       <div className="mb-5">
-        <h2 className="text-2xl font-bold hover:text-blue-600 cursor-pointer">
+        <h2 className="text-2xl font-bold hover:text-blue-600 text-center md:text-right cursor-pointer">
           بيانات الحساب
         </h2>
-        <p>قم بإدخال معلوماتك لإنشاء حساب في وثيق</p>
+        <p className="text-center md:text-right">قم بإدخال معلوماتك لإنشاء حساب في وثيق</p>
       </div>
 
       <div className="bg-[#F7FBFD] rounded-lg">

@@ -27,8 +27,8 @@ export default function AccountConfirmation({onNext}) {
   return (
     <section className="max-w-md mx-auto p-6">
       <div className="mb-5">
-        <h2 className="text-2xl font-bold">تأكيد الحساب</h2>
-        <p>أدخل كود التحقق المرسل الى البريد الالكتروني</p>
+        <h2 className="text-2xl font-bold text-center md:text-right">تأكيد الحساب</h2>
+        <p className="text-center md:text-right">أدخل كود التحقق المرسل الى البريد الالكتروني</p>
       </div>
       <div className="w-full  text-center space-y-6">
         <div className="flex justify-center gap-8">
