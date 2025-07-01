@@ -75,7 +75,6 @@ const LineChart = ({ data, labels, title }) => {
           );
         })}
 
-        {/* Area fill under curve */}
         <path
           d={`${getSmoothPath()} L ${points[points.length - 1].x},${
             height - padding
@@ -83,7 +82,6 @@ const LineChart = ({ data, labels, title }) => {
           fill="url(#fill-gradient)"
         />
 
-        {/* Line path */}
         <path
           d={getSmoothPath()}
           fill="none"
@@ -91,7 +89,7 @@ const LineChart = ({ data, labels, title }) => {
           strokeWidth="2"
         />
 
-        {/* Hover feedback */}
+
         {hoverIndex !== null && (
           <>
             <line
@@ -132,7 +130,6 @@ const LineChart = ({ data, labels, title }) => {
           </>
         )}
 
-        {/* Hover circles */}
         {points.map((p, i) => (
           <circle
             key={i}
@@ -146,7 +143,6 @@ const LineChart = ({ data, labels, title }) => {
         ))}
       </svg>
 
-      {/* Bottom axis labels */}
       <div className="flex text-xs text-gray-500 mt-2 mr-10 px-1" style={{justifyContent:'space-evenly', marginRight:'-0px'}}>
         {labels.map((l, i) => (
           <span key={i}>{l}</span>
