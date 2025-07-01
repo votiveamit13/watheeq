@@ -16,7 +16,7 @@ export default function ClientLayout({ children }) {
           >
                         <Sidebar collapsed={collapsed} setCollapsed={setCollapsed} />
                     </div>
-                    <div className="flex-1 flex flex-col p-5 overflow-x-hidden custom-scrollbar">
+                    <div className="flex-1 flex flex-col lg:p-5 p-2">
                         <Navbar wish={"أهلا بك"} location={"موقعك"} url={"watheeq.com/u/username"} username={"أحمد ماضي"} usertype={"محامي"} profileimage={"/watheeq/assets/img/avatar.png"} profilelink={"/professionaldashboard/profile"} />
                         {children}
                     </div>
