@@ -15,7 +15,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
   const [showSubmenu, setShowSubmenu] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
 
-    useEffect(() => {
+  useEffect(() => {
     const handleResize = () => {
       const mobile = window.innerWidth < 1024;
       setIsMobile(mobile);
@@ -71,6 +71,9 @@ export default function Sidebar({ collapsed, setCollapsed }) {
 
   const handleSubMenuClick = () => {
     setShowSubmenu(null);
+      if (isMobile) {
+    setCollapsed(true);
+  }
   };
 
   const submenus = {
@@ -189,10 +192,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
                       ? "bg-[#13498B] text-white"
                       : "hover:text-[#003f7f]"
                   }`}
-                  onClick={() => {
-  handleMenuClick(item.key, sub.link);
-  handleSubMenuClick();
-}}
+                  onClick={() => handleMenuClick(item.key)}
                 >
                   <img
                     src={`/watheeq/assets/img/sidebaricons/${item.icon}`}
@@ -244,7 +244,9 @@ export default function Sidebar({ collapsed, setCollapsed }) {
                 item.hasSub &&
                 submenus[item.key]?.length > 0 && (
                   <div
-                    className="absolute space-y-3 z-50"
+                    className={`absolute z-50 space-y-3 bg-white p-2 rounded-md shadow-lg ${
+                      isMobile ? "right-full mr-2 top-0" : "left-[-140px]"
+                    }`}
                     style={{ top: `${submenuTop}px`, left: "-60%" }}
                   >
                     {submenus[item.key].map((sub, index) => (
