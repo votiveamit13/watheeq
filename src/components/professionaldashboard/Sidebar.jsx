@@ -61,8 +61,10 @@ export default function Sidebar({ collapsed, setCollapsed }) {
       setShowSubmenu(null);
       return;
     }
+
     setActiveMenu(menu);
     setShowSubmenu(menu);
+
     const rect = itemRefs.current[menu]?.getBoundingClientRect();
     if (rect) {
       setSubmenuTop(rect.top);
@@ -71,9 +73,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
 
   const handleSubMenuClick = () => {
     setShowSubmenu(null);
-      if (isMobile) {
-    setCollapsed(true);
-  }
+    if (isMobile) setCollapsed(true);
   };
 
   const submenus = {
@@ -109,13 +109,17 @@ export default function Sidebar({ collapsed, setCollapsed }) {
   };
 
   return (
-    <div className="relative flex" style={{ height: "150vh" }}>
-      <div></div>
+    <div
+      className={`relative flex ${
+        isMobile ? "fixed top-0 right-0 h-full z-50" : ""
+      } transition-all duration-300`}
+    >
       <div
         className={`bg-white shadow-lg flex flex-col gap-3 p-4 transition-all duration-300 ${
           collapsed ? "w-20" : "w-64"
-        } ${isMobile ? "fixed top-0 right-0 h-full" : ""}`}
+        } h-full`}
       >
+        {/* Logo + Toggle */}
         <div className="flex justify-between items-center">
           <img
             src={`/watheeq/assets/img/${
@@ -124,7 +128,6 @@ export default function Sidebar({ collapsed, setCollapsed }) {
             alt="Toggle"
             className="w-10 h-10 cursor-pointer"
             onClick={toggleSidebar}
-            style={{ width: "39px", height: "40px", marginTop: "4px" }}
           />
           {!collapsed && (
             <img
@@ -135,8 +138,9 @@ export default function Sidebar({ collapsed, setCollapsed }) {
           )}
         </div>
 
+        {/* Navigation */}
         <nav
-          className={`space-y-4 text-[#005bac] text-xl pt-10 pl-2 ${
+          className={`space-y-4 text-[#005bac] text-xl pt-10 ${
             collapsed ? "text-center" : "text-right"
           }`}
         >
@@ -198,9 +202,9 @@ export default function Sidebar({ collapsed, setCollapsed }) {
                     src={`/watheeq/assets/img/sidebaricons/${item.icon}`}
                     className={`w-5 h-5 ${
                       collapsed ? "mx-auto" : "ml-4 mr-4"
-                    }       transition-all duration-300
-        ${activeMenu === item.key ? "invert brightness-0" : "filter"}
-      `}
+                    } transition-all duration-300 ${
+                      activeMenu === item.key ? "invert brightness-0" : "filter"
+                    }`}
                     alt={item.label}
                   />
                   {!collapsed && (
@@ -228,31 +232,32 @@ export default function Sidebar({ collapsed, setCollapsed }) {
                       src={`/watheeq/assets/img/sidebaricons/${item.icon}`}
                       className={`w-5 h-5 ${
                         collapsed ? "mx-auto" : "ml-4 mr-4"
-                      }       transition-all duration-300
-        ${activeMenu === item.key ? "invert brightness-0" : "filter"}
-      }`}
+                      } transition-all duration-300 ${
+                        activeMenu === item.key
+                          ? "invert brightness-0"
+                          : "filter"
+                      }`}
                       alt={item.label}
                     />
-                    {!collapsed && <span className="flex-1">{item.label}</span>}
+                    {!collapsed && (
+                      <span className="flex-1">{item.label}</span>
+                    )}
                   </div>
                 </Link>
               )}
 
-              {/* Collapsed Submenu */}
-              {collapsed &&
-                showSubmenu === item.key &&
-                item.hasSub &&
-                submenus[item.key]?.length > 0 && (
-                  <div
-                    className={`absolute z-50 space-y-3 bg-white p-2 rounded-md shadow-lg ${
-                      isMobile ? "right-full mr-2 top-0" : "left-[-140px]"
-                    }`}
-                    style={{ top: `${submenuTop}px`, left: "-60%" }}
-                  >
-                    {submenus[item.key].map((sub, index) => (
-                      <Link href={sub.link} key={index}>
+              {/* Submenus */}
+              {showSubmenu === item.key &&
+                submenus[item.key]?.map((sub, index) =>
+                  collapsed ? (
+                    <div
+                      className="absolute z-50 bg-white rounded shadow p-2 right-20 top-0"
+                      style={{ top: `${submenuTop}px` }}
+                      key={index}
+                    >
+                      <Link href={sub.link}>
                         <div
-                          className="w-10 h-10 bg-white shadow-md rounded-md flex items-center justify-center mb-2 cursor-pointer hover:bg-[#e6f0ff] transition"
+                          className="w-10 h-10 rounded-md flex items-center justify-center hover:bg-gray-100"
                           onClick={handleSubMenuClick}
                           title={sub.label}
                         >
@@ -263,22 +268,13 @@ export default function Sidebar({ collapsed, setCollapsed }) {
                           />
                         </div>
                       </Link>
-                    ))}
-                  </div>
-                )}
-
-              {/* Expanded Submenu */}
-              {!collapsed &&
-                showSubmenu === item.key &&
-                item.hasSub &&
-                submenus[item.key]?.length > 0 && (
-                  <div className="mr-5 mt-2 space-y-2 text-base text-[#005bac]">
-                    {submenus[item.key].map((sub, index) => (
-                      <Link href={sub.link} key={index}>
+                    </div>
+                  ) : (
+                    <div className="mr-5 mt-2 space-y-2" key={index}>
+                      <Link href={sub.link}>
                         <div
                           className="flex items-center gap-2 hover:text-[#003f7f] cursor-pointer px-2"
                           onClick={handleSubMenuClick}
-                          style={{ marginBottom: "10px", marginRight: "10px" }}
                         >
                           <img
                             src={`/watheeq/assets/img/sidebaricons/${sub.icon}`}
@@ -288,12 +284,13 @@ export default function Sidebar({ collapsed, setCollapsed }) {
                           <span>{sub.label}</span>
                         </div>
                       </Link>
-                    ))}
-                  </div>
+                    </div>
+                  )
                 )}
             </div>
           ))}
 
+          {/* Logout */}
           <div
             className="flex items-center gap-2 hover:text-[#003f7f] cursor-pointer px-2 py-2 rounded-md"
             onClick={() => setActiveMenu(null)}
