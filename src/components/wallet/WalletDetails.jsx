@@ -10,9 +10,9 @@ export default function WalletDetails({ wallet, available, pending }) {
 
   return (
     <div>
-      <h2 className="p-5 font-bold">المحفظة</h2>
-      <div className="flex px-5 gap-5">
-        <div className="w-1/2 shadow py-10 rounded-lg">
+      <h2 className="text-2xl p-5 font-bold">المحفظة</h2>
+      <div className="lg:flex block px-5 gap-5">
+        <div className="lg:w-1/2 w-full shadow py-10 rounded-lg">
           <p className="mr-10">المحفظة</p>
           <div className="flex items-center">
             <span className="ml-2  text-2xl font-bold mr-10">{wallet}</span>
@@ -23,8 +23,8 @@ export default function WalletDetails({ wallet, available, pending }) {
             />
           </div>
         </div>
-        <div className="w-1/2 shadow py-10 rounded-lg">
-          <div className="flex justify-between">
+        <div className="lg:w-1/2 w-full shadow py-10 rounded-lg">
+          <div className="lg:flex block justify-between">
             <div>
               <p className="mr-10">المتاح للسحب</p>
               <div className="flex items-center">
@@ -38,7 +38,7 @@ export default function WalletDetails({ wallet, available, pending }) {
                 />
               </div>
             </div>
-            <div className="ml-10">
+            <div className="ml-10 pr-10">
               <button
                 className="flex gap-3 bg-[#FFE0EB] rounded-lg py-3 px-5 cursor-pointer shadow"
                 onClick={() => setWalletDailog(true)}
@@ -47,7 +47,7 @@ export default function WalletDetails({ wallet, available, pending }) {
                 <img src="/watheeq/assets/img/wallet1.png" alt="watheeq" />
               </button>
               {walletDailog && (
-                <div className="fixed inset-0 bg-[#0000007d] bg-opacity-30 flex justify-center items-center z-50">
+                <div className="fixed inset-0 bg-[#0000007d] bg-opacity-30 flex justify-center items-center z-50 p-10">
                   <div className="bg-white p-6 rounded-lg w-full max-w-md">
                     <h2 className="text-xl font-bold text-center text-[#13498B] mb-4">
                       سحب مبلغ
@@ -66,7 +66,7 @@ export default function WalletDetails({ wallet, available, pending }) {
                         </div>
 
                         {showDropdown && (
-                          <div className="absolute left-0 w-1/2 mt-1 bg-white border rounded-md shadow z-10 text-right">
+                          <div className="absolute left-0 lg:w-1/2 w-full mt-1 bg-white border rounded-md shadow z-10 text-right">
                             {ibans.map((iban, index) => (
                               <div
                                 key={index}
@@ -147,7 +147,7 @@ export default function WalletDetails({ wallet, available, pending }) {
                 </div>
               )}
               {addNewIban && (
-                <div className="fixed inset-0 bg-black bg-opacity-30 flex justify-center items-center z-50">
+                <div className="fixed inset-0 bg-black bg-opacity-30 flex justify-center items-center z-50 p-10">
                   <div className="bg-white p-6 rounded-lg w-full max-w-md">
                     <h2 className="text-xl font-bold text-center text-[#13498B] mb-4">
                       إضافة الآيبان

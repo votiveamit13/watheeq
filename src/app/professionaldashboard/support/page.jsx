@@ -111,8 +111,8 @@ export default function TechnicalSupport() {
           )}
         </div>
       </div>
-      <div>
-        <table className="w-full mt-5 text-right mb-5 overflow-x-auto">
+      <div className="w-full overflow-x-auto">
+        <table className="w-full min-w-[800px] mt-5 text-right mb-5">
           <thead>
             <tr className="text-[#96A5B8] font-medium">
               <th className="py-2 px-3">#</th>

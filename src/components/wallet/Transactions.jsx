@@ -18,8 +18,8 @@ export default function Transations({ transactions }) {
   return (
     <div>
       <h2 className="p-5 font-bold">الفواتير</h2>
-      <div className="px-5">
-        <table className="w-full text-right text-sm">
+      <div className="px-5 w-full overflow-x-auto">
+        <table className="w-full min-w-[800px] text-right text-sm">
           <thead>
             <tr className="text-[#96A5B8] font-medium border-b">
               <th className="py-3">#</th>
