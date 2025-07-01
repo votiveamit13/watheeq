@@ -7,9 +7,9 @@ import { useState } from "react";
 export default function Publications() {
   const [showAddPost, setShowAddPost] = useState(false);
 
-   if(showAddPost){
-      return <AddPost onBack={() => setShowAddPost(false)} />;
-    }
+  if (showAddPost) {
+    return <AddPost onBack={() => setShowAddPost(false)} />;
+  }
 
   const publication1 = [
     {
@@ -109,15 +109,15 @@ export default function Publications() {
 
   return (
     <div className="bg-white mt-5 p-5 rounded-lg">
-      <div className="flex justify-between gap-5">
+      <div className="flex justify-between lg:gap-5 gap-2">
         <div>
           <h2 className="text-[#13498B] text-2xl font-bold">المنشورات</h2>
         </div>
         <div>
-<button
-  className="flex gap-2 items-center py-2 px-10 rounded-lg border border-[#13498B80] bg-[#F8FAFC] cursor-pointer w-full md:w-auto"
-  onClick={() => setShowAddPost(true)}
->
+          <button
+            className="flex gap-2 items-center py-2 px-10 rounded-lg border border-[#13498B80] bg-[#F8FAFC] cursor-pointer w-full md:w-auto"
+            onClick={() => setShowAddPost(true)}
+          >
             <FaPlus />
             إضافة
           </button>
@@ -132,12 +132,15 @@ export default function Publications() {
             <div
               key={index}
               className="relative rounded-lg flex flex-col items-center text-center w-full md:w-1/3 mb-[80px] md:mb-0"
-              >
+            >
               <div
                 className="w-full h-7 absolute rounded-t-lg"
                 style={{ backgroundColor: item.color }}
               >
-                <div dir="ltr" className="cursor-pointer absolute top-2 left-1 flex gap-1">
+                <div
+                  dir="ltr"
+                  className="cursor-pointer absolute top-2 left-1 flex gap-1"
+                >
                   <BsThreeDotsVertical fill="white" stroke="white" />
                 </div>
               </div>
@@ -168,9 +171,9 @@ export default function Publications() {
               </div>
 
               <button
-  className="cursor-pointer border border-[#13498B80] w-[150px] md:w-1/2 text-sm py-2 px-5 mt-1 rounded-lg"
-  style={{ position: 'absolute', bottom: '-40px' }}
->
+                className="cursor-pointer border border-[#13498B80] w-[150px] md:w-1/2 text-sm py-2 px-5 mt-1 rounded-lg"
+                style={{ position: "absolute", bottom: "-40px" }}
+              >
                 {item.button}
               </button>
             </div>
@@ -178,9 +181,11 @@ export default function Publications() {
         </div>
 
         <div dir="ltr" className="mt-20">
-        <button className="flex gap-2 items-center py-2 px-10 rounded-lg border border-[#13498B80] bg-[#F8FAFC] cursor-pointer w-full md:w-auto justify-center
-        ">
-        عرض المزيد
+          <button
+            className="flex gap-2 items-center py-2 px-10 rounded-lg border border-[#13498B80] bg-[#F8FAFC] cursor-pointer w-full md:w-auto justify-center
+        "
+          >
+            عرض المزيد
           </button>
         </div>
       </div>
@@ -193,12 +198,15 @@ export default function Publications() {
             <div
               key={index}
               className="relative rounded-lg flex flex-col items-center text-center w-full md:w-1/3 mb-[25px] md:mb-0"
-              >
+            >
               <div
                 className="w-full h-7 absolute rounded-t-lg"
                 style={{ backgroundColor: item.color }}
               >
-                <div dir="ltr" className="cursor-pointer absolute top-2 left-1 flex gap-1">
+                <div
+                  dir="ltr"
+                  className="cursor-pointer absolute top-2 left-1 flex gap-1"
+                >
                   <BsThreeDotsVertical fill="white" stroke="white" />
                 </div>
               </div>
@@ -229,14 +237,17 @@ export default function Publications() {
               </div>
 
               <button className="cursor-pointer border border-[#13498B80] w-[150px] md:w-1/2 text-sm py-2 px-5 rounded-lg">
-              {item.button}
+                {item.button}
               </button>
             </div>
           ))}
         </div>
 
         <div dir="ltr" className="mt-15">
-          <button className="flex gap-2 items-center mt-7 py-2 px-10 rounded-lg border border-[#13498B80] bg-[#13498B] text-[white] cursor-pointer w-full md:w-auto justify-center" style={{marginTop:'-20px'}}>
+          <button
+            className="flex gap-2 items-center mt-7 py-2 px-10 rounded-lg border border-[#13498B80] bg-[#13498B] text-[white] cursor-pointer w-full md:w-auto justify-center"
+            style={{ marginTop: "-20px" }}
+          >
             عرض المزيد
           </button>
         </div>
@@ -249,13 +260,16 @@ export default function Publications() {
           {publication3.map((item, index) => (
             <div
               key={index}
-                className="relative rounded-lg flex flex-col items-center text-center w-full md:w-1/3 mb-[30px] md:mb-0"
+              className="relative rounded-lg flex flex-col items-center text-center w-full md:w-1/3 mb-[30px] md:mb-0"
             >
               <div
                 className="w-full h-7 absolute rounded-t-lg"
                 style={{ backgroundColor: item.color }}
               >
-                <div dir="ltr" className="cursor-pointer absolute top-2 left-1 flex gap-1">
+                <div
+                  dir="ltr"
+                  className="cursor-pointer absolute top-2 left-1 flex gap-1"
+                >
                   <BsThreeDotsVertical fill="white" stroke="white" />
                 </div>
               </div>
@@ -286,14 +300,17 @@ export default function Publications() {
               </div>
 
               <button className="cursor-pointer border border-[#13498B80] w-[150px] md:w-1/2 text-sm py-2 px-5 rounded-lg">
-              {item.button}
+                {item.button}
               </button>
             </div>
           ))}
         </div>
 
         <div dir="ltr" className="mt-15">
-          <button className="flex gap-2 items-center mt-7 py-2 px-10 rounded-lg border border-[#13498B80] bg-[#13498B] text-[white] cursor-pointer w-full md:w-auto justify-center" style={{marginTop:'-35px'}}>
+          <button
+            className="flex gap-2 items-center mt-7 py-2 px-10 rounded-lg border border-[#13498B80] bg-[#13498B] text-[white] cursor-pointer w-full md:w-auto justify-center"
+            style={{ marginTop: "-35px" }}
+          >
             عرض المزيد
           </button>
         </div>

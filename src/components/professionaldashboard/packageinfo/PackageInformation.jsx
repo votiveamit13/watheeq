@@ -26,13 +26,13 @@ export default function PackageInfotmation({
             <LuRefreshCw />
           </button>
           {renewDialog && (
-            <div className="fixed inset-0 bg-[#0000007d] bg-opacity-30 flex justify-center items-center z-50">
+            <div className="fixed inset-0 bg-[#0000007d] bg-opacity-30 flex justify-center items-center z-50 p-10">
               <div className="bg-white p-6 rounded-lg w-full max-w-md">
                 <h2 className="text-xl font-bold text-center text-[#13498B] mb-4">
                   تجديد الاشتراك
                 </h2>
               <div>
-                <table className="text-[#0B2B51] text-xl mb-5">
+                <table className="text-[#0B2B51] lg:text-xl text-l mb-5">
                     <tbody>
                         <tr>
                             <td className="pl-30 pb-3">اسم الباقة</td>
@@ -66,15 +66,15 @@ export default function PackageInfotmation({
                     </tbody>
                 </table>
                 <div className="flex justify-center gap-5 w-full pr-10 pl-10">
-                    <button className="bg-[#13498B] text-white w-full py-2 px-7 rounded-lg cursor-pointer" onClick={() => {setBalanceDialog(true), setRenewDialog(false)}}>تجديد</button>
-                    <button className="text-[#F24242] py-2 px-7 w-full rounded-lg border border-[#F2424280] cursor-pointer" onClick={() => setRenewDialog(false)}>إلغاء الاشتراك</button>
+                    <button className="bg-[#13498B] text-white w-full lg:py-2 lg:px-7 py-0 px-4 rounded-lg cursor-pointer" onClick={() => {setBalanceDialog(true), setRenewDialog(false)}}>تجديد</button>
+                    <button className="text-[#F24242] lg:py-2 lg:px-7 py-0 px-4 w-full rounded-lg border border-[#F2424280] cursor-pointer" onClick={() => setRenewDialog(false)}>إلغاء الاشتراك</button>
                 </div>
               </div>
               </div>
             </div>
           )}
           {balanceDialog && (
-            <div className="fixed inset-0 bg-[#0000007d] bg-opacity-30 flex justify-center items-center z-50">
+            <div className="fixed inset-0 bg-[#0000007d] bg-opacity-30 flex justify-center items-center z-50 p-10">
               <div className="bg-white p-6 rounded-lg w-full max-w-md text-center">
                 <h2 className="text-xl font-bold text-center text-[#13498B] mt-5 mb-7">
                   تجديد الاشتراك

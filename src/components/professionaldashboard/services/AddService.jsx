@@ -8,8 +8,8 @@ export default function AddService({ onBack }) {
   const [showQuoteModal, setShowQuoteModal] = useState(false);
 
   return (
-    <div className="bg-white mt-5 rounded-lg p-5 relative">
-      <div className="flex justify-between items-center mb-6">
+    <div className="bg-white mt-5 rounded-lg p-5 relative mb-30">
+      <div className="lg:flex block justify-between items-center mb-6">
         <div
           className="flex items-center justify-between mb-6 text-right"
           dir="rtl"
@@ -30,7 +30,6 @@ export default function AddService({ onBack }) {
       </div>
 
       <form className="grid grid-cols-2 gap-6 text-right mb-5" dir="rtl">
-        {/* اسم الخدمة */}
         <div className="col-span-2">
           <label className="block mb-1 text-lg text-[#0B2B51]">
             اسم الخدمة
@@ -38,17 +37,16 @@ export default function AddService({ onBack }) {
           <input
             type="text"
             placeholder="الاسم"
-            className="w-1/2 border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+            className="lg:w-1/2 w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
           />
         </div>
 
-        {/* صورة توضيحية */}
-        <div className="flex justify-between w-full">
-          <div className="w-full">
+        <div className="col-span-2">
+          <div className="lg:w-1/2 w-full">
             <label className="w-full block mb-3 text-lg text-[#0B2B51]">
               صورة توضيحية
             </label>
-            <div className="flex gap-2 rtl:flex-row-reverse">
+            <div className="flex flex-col sm:flex-row gap-2 rtl:flex-row-reverse">
               <div className="w-[100px] h-[52px] border border-[#13498b40] rounded-lg flex items-center justify-center">
                 <PiUpload className="top-1/2 w-10 h-8" />
               </div>
@@ -66,7 +64,6 @@ export default function AddService({ onBack }) {
           </div>
         </div>
 
-        {/* وصف الخدمة */}
         <div className="col-span-2">
           <label className="block mb-1 text-lg text-[#0B2B51]">
             وصف الخدمة
@@ -74,16 +71,15 @@ export default function AddService({ onBack }) {
           <textarea
             rows="4"
             placeholder="الوصف"
-            className="w-1/2 border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+            className="lg:w-1/2 w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
           ></textarea>
         </div>
-        
-        {/* سعر الخدمة */}
+
         <div className="col-span-2">
           <label className="block mb-2 text-lg text-[#0B2B51]">
             سعر الخدمة
           </label>
-          <div className="flex items-center gap-6 flex-wrap">
+          <div className="flex items-center gap-6 flex-wrap leading-1">
             <label className="flex items-center gap-2">
               <input
                 type="radio"
@@ -119,7 +115,6 @@ export default function AddService({ onBack }) {
             </label>
           </div>
 
-          {/* سعر إدخال (hidden if quote) */}
           {pricingType === "fixed" && (
             <div className="mt-3 relative">
               <span className="absolute inset-y-0 right-8 flex items-center pr-3 text-gray-500">
@@ -128,16 +123,14 @@ export default function AddService({ onBack }) {
               <input
                 type="number"
                 defaultValue={120}
-                className="w-1/2 border rounded-lg px-4 p-3 text-[#9794AA] focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="lg:w-1/2 w-full border rounded-lg px-4 p-3 text-[#9794AA] focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
           )}
         </div>
 
-        {/* باقي الحقول تظهر فقط إذا لم يكن "عرض سعر" */}
         {pricingType !== "quote" && (
           <>
-            {/* مدة تقديم الخدمة */}
             <div className="col-span-2">
               <label className="block mb-2 text-sm text-[#0B2B51]">
                 مدة تقديم الخدمة
@@ -153,7 +146,7 @@ export default function AddService({ onBack }) {
                 </label>
               </div>
               <div className="mt-3">
-                <select className="w-1/2 border border-gray-300 rounded-lg p-3 focus:outline-none">
+                <select className="lg:w-1/2 w-full border border-gray-300 rounded-lg p-3 focus:outline-none">
                   <option>حدد الوقت</option>
                   <option value="1">1 يوم</option>
                   <option value="3">3 أيام</option>
@@ -162,7 +155,6 @@ export default function AddService({ onBack }) {
               </div>
             </div>
 
-            {/* الاجتماع فيديو */}
             <div className="col-span-2">
               <label className="block mb-2 text-sm text-[#0B2B51]">
                 الاجتماع (فيديو)
@@ -178,7 +170,7 @@ export default function AddService({ onBack }) {
                 </label>
               </div>
               <div className="mt-3">
-                <select className="w-1/2 border border-gray-300 rounded-lg p-3 focus:outline-none">
+                <select className="lg:w-1/2 w-full border border-gray-300 rounded-lg p-3 focus:outline-none">
                   <option>اختر مدة الاجتماع فيديو</option>
                   <option value="none">لا يوجد</option>
                   <option value="15">15 دقيقة</option>
@@ -191,7 +183,6 @@ export default function AddService({ onBack }) {
         )}
       </form>
 
-      {/* Modal */}
       {showQuoteModal && (
         <div className="fixed inset-0 z-50 bg-[#0000007d] bg-opacity-30 flex items-center justify-center">
           <div
@@ -232,7 +223,7 @@ export default function AddService({ onBack }) {
                 </select>
               </div>
             </div>
-               
+
             <label className="block mb-1 text-lg text-[#0B2B51]">
               سعر الخدمة
             </label>

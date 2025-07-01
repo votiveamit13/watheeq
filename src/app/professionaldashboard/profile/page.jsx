@@ -66,7 +66,7 @@ export default function Profile() {
   );
 
   return (
-    <div className="bg-white mt-5 p-5 rounded-lg">
+    <div className="bg-white mt-5 p-5 rounded-lg mb-30">
       <h2 className="text-2xl text-bold">الملف الشخصي</h2>
       <div className="lg:flex block justify-between mt-5">
         <div className="flex items-center">
@@ -99,7 +99,7 @@ export default function Profile() {
             <label className="block mb-3 text-l text-[#0B2B51]">
               اسمك بالكامل
             </label>
-            <div className="relative">
+            <div className="relative mb-[10px] lg:m-0">
               <input
                 type="text"
                 placeholder="أحمد جمال ماضي"
@@ -178,7 +178,7 @@ export default function Profile() {
                 <div className="relative w-[130px] h-[52px] border border-[#13498b40] rounded-lg flex items-center justify-center">
                   <PiUpload className="w-10 h-8" />
                 </div>
-                <div className="relative w-full">
+                <div className="relative w-full mb-[10px] lg:m-0">
                   <input
                     type="text"
                     placeholder={`رابط ملف ${label}`}

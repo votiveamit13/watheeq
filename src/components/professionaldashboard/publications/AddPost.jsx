@@ -26,10 +26,10 @@ export default function AddPost({ onBack }) {
   };
 
   return (
-    <div className="bg-white mt-5 rounded-lg p-5">
-      <div className="flex justify-between items-center mb-6">
+    <div className="bg-white mt-5 rounded-lg p-5 mb-30">
+      <div className="lg:flex block justify-between items-center mb-6">
         <div
-          className="flex items-center justify-between mb-6 text-right"
+          className="items-center justify-between mb-6 text-right"
           dir="rtl"
         >
           <button
@@ -55,7 +55,7 @@ export default function AddPost({ onBack }) {
           <button
             type="button"
             onClick={() => setDropdown1Open(!dropdown1Open)}
-            className="w-1/2 rounded-lg p-3 text-right flex items-center justify-between placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+            className="lg:w-1/2 w-full rounded-lg p-3 text-right flex items-center justify-between placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
             style={{ border: "1px solid #13498b40" }}
           >
             {selectedCategory}
@@ -74,7 +74,7 @@ export default function AddPost({ onBack }) {
             </svg>
           </button>
           {dropdown1Open && (
-            <div className="absolute z-10 mt-2 w-1/2 bg-gray-100 rounded-lg shadow p-2 text-sm text-blue-900 space-y-1">
+            <div className="absolute z-10 mt-2 lg:w-1/2 w-full bg-gray-100 rounded-lg shadow p-2 text-sm text-blue-900 space-y-1">
               <div
                 onClick={() => {
                   setSelectedCategory("تصنيف 1");
@@ -107,7 +107,7 @@ export default function AddPost({ onBack }) {
           <button
             type="button"
             onClick={() => setDropdown2Open(!dropdown2Open)}
-            className="w-1/2  rounded-lg p-3 text-right flex items-center justify-between placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+            className="lg:w-1/2 w-full  rounded-lg p-3 text-right flex items-center justify-between placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
             style={{ border: "1px solid #13498b40" }}
           >
             {selectedTemplate}
@@ -126,7 +126,7 @@ export default function AddPost({ onBack }) {
             </svg>
           </button>
           {dropdown2Open && (
-            <div className="absolute z-10 mt-2 w-1/2 bg-gray-100 rounded-lg shadow p-2 text-sm text-blue-900 space-y-1">
+            <div className="absolute z-10 mt-2 lg:w-1/2 w-full bg-gray-100 rounded-lg shadow p-2 text-sm text-blue-900 space-y-1">
               {["خبر", "عمل سابق", "مدونة"].map((item) => (
                 <div
                   key={item}
@@ -152,12 +152,12 @@ export default function AddPost({ onBack }) {
               <input
                 type="text"
                 placeholder="عنوان الخبر"
-                className="w-1/2 rounded-lg p-3 text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                className="lg:w-1/2 w-full rounded-lg p-3 text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
                 style={{ border: "1px solid #13498b40" }}
               />
             </div>
 
-            <div className="flex justify-between w-1/2">
+            <div className="flex justify-between lg:w-1/2 w-full">
               <div className="w-full">
                 <label className="w-full block mb-3 text-lg text-[#0B2B51]">
                   صورة الخبر
@@ -186,7 +186,7 @@ export default function AddPost({ onBack }) {
               <textarea
                 rows="4"
                 placeholder="محتوى الخبر"
-                className="w-1/2 border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                className="lg:w-1/2 w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
               ></textarea>
             </div>
           </>
@@ -201,7 +201,7 @@ export default function AddPost({ onBack }) {
               <input
                 type="text"
                 placeholder="الاسم"
-                className="w-1/2 rounded-lg p-3 text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                className="lg:w-1/2 w-full rounded-lg p-3 text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
                 style={{ border: "1px solid #13498b40" }}
               />
             </div>
@@ -213,13 +213,13 @@ export default function AddPost({ onBack }) {
               <input
                 type="text"
                 placeholder="وزارة الأعمال"
-                className="w-1/2 rounded-lg p-3 text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                className="lg:w-1/2 w-full rounded-lg p-3 text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
                 style={{ border: "1px solid #13498b40" }}
               />
             </div>
 
-            <div className="flex justify-between gap-8 w-1/2 mt-6">
-              <div className="flex flex-col text-right" dir="ltr">
+            <div className="lg:flex block justify-between gap-8 lg:w-1/2 w-full mt-6">
+              <div className="flex flex-col text-right lg:m-0 mb-5" dir="ltr">
                 <label className="mb-2 text-[#0B2B51] font-medium">
                   تاريخ بدء المشروع
                 </label>
@@ -227,7 +227,7 @@ export default function AddPost({ onBack }) {
                   type="text"
                   placeholder="1 / اذار / 2025"
                   readOnly
-                  className="w-[230px] rounded-md text-center border border-[#13498b40] text-gray-600 p-3 bg-white"
+                  className="lg:w-[230px] w-full rounded-md text-center placeholder:text-right border border-[#13498b40] text-gray-600 p-3 bg-white"
                 />
               </div>
 
@@ -239,12 +239,12 @@ export default function AddPost({ onBack }) {
                   type="text"
                   placeholder="1 / اذار / 2025"
                   readOnly
-                  className="w-[230px] rounded-md text-center border border-[#13498b40] text-gray-600 p-3 bg-white"
+                  className="lg:w-[230px] w-full rounded-md text-center placeholder:text-right border border-[#13498b40] text-gray-600 p-3 bg-white"
                 />
               </div>
             </div>
 
-            <div className="flex justify-between w-1/2">
+            <div className="flex justify-between lg:w-1/2 w-full">
               <div className="w-full">
                 <label className="w-full block mb-3 text-lg text-[#0B2B51]">
                   صورة توضيحية
@@ -273,7 +273,7 @@ export default function AddPost({ onBack }) {
               <textarea
                 rows="4"
                 placeholder="الوصف"
-                className="w-1/2 border border-gray-300 rounded-lg p-3 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="lg:w-1/2 w-full border border-gray-300 rounded-lg p-3 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
               ></textarea>
             </div>
 
@@ -282,7 +282,7 @@ export default function AddPost({ onBack }) {
                 المهارات المستخدمة
               </label>
 
-              <div className="flex flex-wrap gap-2 w-1/2">
+              <div className="flex flex-wrap gap-2 lg:w-1/2 w-full">
                 {skills.map((skill) => {
                   const isSelected = selectedSkills.includes(skill.id);
                   return (
@@ -317,12 +317,12 @@ export default function AddPost({ onBack }) {
               <input
                 type="text"
                 placeholder="الاسم"
-                className="w-1/2 rounded-lg p-3 text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                className="lg:w-1/2 w-full rounded-lg p-3 text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
                 style={{ border: "1px solid #13498b40" }}
               />
             </div>
 
-            <div className="flex justify-between w-1/2">
+            <div className="flex justify-between lg:w-1/2 w-full">
               <div className="w-full">
                 <label className="w-full block mb-3 text-lg text-[#0B2B51]">
                   صورة توضيحية
@@ -351,7 +351,7 @@ export default function AddPost({ onBack }) {
               <textarea
                 rows="4"
                 placeholder="الوصف"
-                className="w-1/2 border border-gray-300 rounded-lg p-3 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="lg:w-1/2 w-full border border-gray-300 rounded-lg p-3 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
               ></textarea>
             </div>
           </>

@@ -157,7 +157,7 @@ export default function Business() {
               onClick={() => setSelectedOrder(order)}
             />
             {selectedOrder && (
-              <div className="fixed inset-0 bg-[#0000001a] bg-opacity-30 flex justify-center items-center z-50">
+              <div className="fixed inset-0 bg-[#0000001a] bg-opacity-30 flex justify-center items-center z-50 p-10">
                 <div className="bg-white p-6 rounded-lg w-full max-w-md space-y-4">
                   <h2 className="text-xl font-bold text-center text-[#13498B]">
                     طلب خدمة
@@ -171,7 +171,7 @@ export default function Business() {
                       />
                       <span>{selectedOrder.client}</span>
                     </div>
-                    <button className="flex gap-1 items-center w-[130px] h-[40px] py-0 px-0 border justify-center bg-[#F8FAFC] rounded-lg cursor-pointer">
+                    <button className="flex gap-1 items-center lg:w-[130px] w-[110px] h-[40px] py-0 px-0 border justify-center bg-[#F8FAFC] rounded-lg cursor-pointer">
                       <FaPlus />
                       انشاء محادثة
                     </button>
