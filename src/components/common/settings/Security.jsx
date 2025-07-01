@@ -45,7 +45,7 @@ export default function Security() {
   return (
     <div>
       <span className="text-2xl font-bold">الأمان</span>
-      <div className="flex justify-between items-center bg-white shadow p-5 mt-5 pl-10 rounded-t border-b">
+      <div className="flex justify-between items-center bg-white shadow p-5 mt-5 pl-10 rounded-t">
         <div className="flex flex-col">
           <span>المصادقة الثنائية</span>
           <span
@@ -61,7 +61,7 @@ export default function Security() {
             className="cursor-pointer"
             style={{padding:'1px'}}/>
           {twoFactorDialog && (
-            <div className="fixed inset-0 bg-[#0000007d] bg-opacity-30 flex justify-center items-center z-50">
+            <div className="fixed inset-0 bg-[#0000007d] bg-opacity-30 flex justify-center items-center z-50 p-10">
               <div className="bg-white p-6 rounded-lg w-full max-w-md">
                 <div>
                   <h2 className="text-xl font-bold text-center text-[#13498B] mb-4">
@@ -162,7 +162,7 @@ export default function Security() {
             </div>
           )}
           {otpDialog && (
-            <div className="fixed inset-0 bg-[#0000007d] bg-opacity-30 flex justify-center items-center z-50">
+            <div className="fixed inset-0 bg-[#0000007d] bg-opacity-30 flex justify-center items-center z-50 p-10">
               <div className="bg-white p-6 rounded-lg w-full max-w-md">
                 <div>
                   <h2 className="text-xl font-bold text-center text-[#13498B] mb-6">
@@ -173,7 +173,7 @@ export default function Security() {
                   </p>
                 </div>
                 <div className="w-full  text-center space-y-6">
-                  <div className="flex justify-center gap-8">
+                  <div className="flex justify-center lg:gap-8 gap-2">
                     {otp.map((digit, index) => (
                       <input
                         key={index}

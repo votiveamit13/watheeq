@@ -17,7 +17,7 @@ export default function ChangeLanguage(){
               className="cursor-pointer"
             style={{padding:'1px'}}/>
             {languageDialog && (
-              <div className="fixed inset-0 bg-[#0000007d] bg-opacity-30 flex justify-center items-center z-50">
+              <div className="fixed inset-0 bg-[#0000007d] bg-opacity-30 flex justify-center items-center z-50 p-10">
                 <div className="bg-white p-6 rounded-lg w-full max-w-md">
                   <div>
                     <h2 className="text-xl font-bold text-center text-[#13498B] mb-4">
@@ -31,7 +31,7 @@ export default function ChangeLanguage(){
 
                     <div className="relative">
                       <select
-                        className="w-full border border-gray-300 rounded-md pl-3 pr-8 py-2 text-sm text-gray-400 focus:outline-none"
+                        className="w-full border border-gray-300 rounded-md pl-3 lg:pr-8 pr-3 py-2 text-sm text-gray-400 focus:outline-none"
                         defaultValue="arabic"
                       >
                         <option value="arabic">العربية</option>

@@ -60,9 +60,9 @@ export default function TechnicalSupport() {
   };
   return (
     <div className="bg-white mt-5 p-5 rounded-lg">
-      <div className="flex justify-between items-center">
+      <div className="lg:flex block justify-between items-center">
         <div>
-          <h2 className="text-2xl font-bold">الدعم الفني</h2>
+          <h2 className="text-2xl font-bold lg:mb-0 mb-5">الدعم الفني</h2>
         </div>
         <div>
           <button
@@ -73,8 +73,8 @@ export default function TechnicalSupport() {
             إنشاء تذكرة
           </button>
           {createTicketDialog && (
-            <div className="fixed inset-0 bg-black bg-opacity-30 flex justify-center items-center z-50">
-              <div className="bg-white p-6 rounded-lg w-1/2">
+            <div className="fixed inset-0 bg-[#0000007d] bg-opacity-30 flex justify-center items-center z-50 p-10">
+              <div className="bg-white p-6 rounded-lg lg:w-1/2 w-full">
                 <div className="flex justify-between">
                   <h2 className="text-xl font-bold text-center text-[#13498B] mb-4">
                     إنشاء تذكرة
@@ -87,7 +87,7 @@ export default function TechnicalSupport() {
                   </label>
                   <input
                     type="text"
-                    className="w-1/2 text-right bg-white border border-blue-200 rounded-lg p-3 file:hidden placeholder:text-gray-400 focus:outline-none text-[#9794AA] focus:ring-2 focus:ring-blue-500"
+                    className="lg:w-1/2 w-[60%] text-right bg-white border border-blue-200 rounded-lg p-3 file:hidden placeholder:text-gray-400 focus:outline-none text-[#9794AA] focus:ring-2 focus:ring-blue-500"
                     placeholder="عنوان مشكلة"
                     style={{ border: "1px solid #13498b40" }}
                   />
@@ -112,7 +112,7 @@ export default function TechnicalSupport() {
         </div>
       </div>
       <div>
-        <table className="w-full mt-5 text-right mb-5">
+        <table className="w-full mt-5 text-right mb-5 overflow-x-auto">
           <thead>
             <tr className="text-[#96A5B8] font-medium">
               <th className="py-2 px-3">#</th>
