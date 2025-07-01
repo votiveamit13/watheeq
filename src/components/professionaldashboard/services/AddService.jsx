@@ -11,7 +11,7 @@ export default function AddService({ onBack }) {
     <div className="bg-white mt-5 rounded-lg p-5 relative mb-30">
       <div className="lg:flex block justify-between items-center mb-6">
         <div
-          className="flex items-center justify-between mb-6 text-right"
+          className="flex items-center  mb-6 text-right"
           dir="rtl"
         >
           <button
