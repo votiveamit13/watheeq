@@ -38,8 +38,8 @@ const LineChart = ({ data, labels, title }) => {
   return (
     <div className="bg-white w-full text-right">
       <h3 className="text-[#0B2B51] font-semibold mb-2">{title}</h3>
-      <svg viewBox={`0 0 ${width} ${height}`} className="w-full h-52">
-        <defs>
+      <svg viewBox={`0 0 ${width} ${height}`} className="h-[100%] sm:h-52 w-full">
+      <defs>
           <linearGradient id="fill-gradient" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.3" />
             <stop offset="100%" stopColor="#3b82f6" stopOpacity="0" />

@@ -131,7 +131,7 @@ export default function ChatPanel({ selectedChat, messages, setMessages, showPri
             <FaPlus className="size-8" />
           </button>
           {showMenu && (
-            <div className="absolute bottom-full mb-2 left-0 -translate-x-1/2 bg-[#EDF2F6] p-3 rounded-xl shadow space-y-2 z-10 w-40 text-[#13498B] text-sm">
+            <div className="absolute bottom-full mb-2 left-[-50px] -translate-x-1/2 bg-[#EDF2F6] p-3 rounded-xl shadow space-y-2 z-10 w-40 text-[#13498B] text-sm">
               <div className="flex items-center gap-2 cursor-pointer">
                 <FaRegFileAlt />
                 <span>إرفاق ملف</span>
