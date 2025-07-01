@@ -117,7 +117,7 @@ export default function Business() {
       {paginatedData.map((order) => (
         <tr
           key={order.id}
-          className="border-b hover:bg-gray-50 transition duration-200 leading-[3.1]"
+          className="border-b hover:bg-gray-50 transition duration-200"
         >
           <td className="py-3 px-3">{order.id}</td>
           <td className="py-3 px-3">
@@ -130,9 +130,9 @@ export default function Business() {
               <span className="whitespace-nowrap">{order.client}</span>
             </div>
           </td>
-          <td className="py-3 px-3">{order.service}</td>
+          <td className="py-3 px-3 w-[180px]">{order.service}</td>
           <td className="py-3 px-3">
-            <div className="flex items-center gap-2 justify-end">
+            <div className="flex items-center gap-2 justify-center">
               <span>{order.price}</span>
               <img
                 src="/watheeq/assets/img/business1.png"
@@ -141,7 +141,7 @@ export default function Business() {
               />
             </div>
           </td>
-          <td className="py-3 px-3">{order.duration}</td>
+          <td className="py-3 px-3 text-center">{order.duration}</td>
           <td className="py-3 px-3">
             <span
               className={`text-xs min-w-[120px] text-center px-3 py-2 font-medium inline-block ${statusClass(order.status)}`}
@@ -150,7 +150,7 @@ export default function Business() {
               {order.status}
             </span>
           </td>
-          <td className="py-3 px-3 text-sm">{order.date}</td>
+          <td className="py-3 px-3 text-sm w-[120px]">{order.date}</td>
           <td className="py-3 px-3">
             <HiDotsVertical
               className="text-[#01104099] bg-[#464E991A] w-10 h-10 p-2 rounded-lg cursor-pointer"
