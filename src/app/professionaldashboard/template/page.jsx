@@ -179,7 +179,7 @@ export default function Template() {
               <label className="text-sm text-[#13498B] whitespace-nowrap">
                 السنة الدراسية
               </label>
-              <select className="border border-[#13498B] rounded lg:w-[196px] w-[150px] mr-[20px] px-4 py-1 text-sm w-1/2 text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
+              <select className="border border-[#13498B] cursor-pointer rounded lg:w-[196px] w-[150px] mr-[20px] px-4 py-1 text-sm w-1/2 text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
                 <option>1987</option>
               </select>
             </div>
