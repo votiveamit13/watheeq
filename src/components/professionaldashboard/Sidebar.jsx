@@ -4,13 +4,28 @@ import { useState, useRef, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { HiChevronLeft, HiChevronDown } from "react-icons/hi2";
 import { TbLogout } from "react-icons/tb";
+import { useRouter } from "next/navigation";
 
 export default function Sidebar({ collapsed, setCollapsed }) {
   const pathname = usePathname();
+  const router = useRouter();
   const [activeMenu, setActiveMenu] = useState("");
   const itemRefs = useRef({});
   const [submenuTop, setSubmenuTop] = useState(0);
   const [showSubmenu, setShowSubmenu] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+    const handleResize = () => {
+      const mobile = window.innerWidth < 1024;
+      setIsMobile(mobile);
+      setCollapsed(mobile);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [setCollapsed]);
 
   useEffect(() => {
     if (
@@ -36,7 +51,12 @@ export default function Sidebar({ collapsed, setCollapsed }) {
 
   const toggleSidebar = () => setCollapsed(!collapsed);
 
-  const handleMenuClick = (menu) => {
+  const handleMenuClick = (menu, link = null) => {
+    if (link) {
+      router.push(link);
+      if (isMobile) setCollapsed(true);
+    }
+
     if (activeMenu === menu && showSubmenu === menu) {
       setShowSubmenu(null);
       return;
@@ -91,7 +111,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
       <div
         className={`bg-white shadow-lg flex flex-col gap-3 p-4 transition-all duration-300 ${
           collapsed ? "w-20" : "w-64"
-        }`}
+        } ${isMobile ? "fixed top-0 right-0 h-full" : ""}`}
       >
         <div className="flex justify-between items-center">
           <img
@@ -169,7 +189,10 @@ export default function Sidebar({ collapsed, setCollapsed }) {
                       ? "bg-[#13498B] text-white"
                       : "hover:text-[#003f7f]"
                   }`}
-                  onClick={() => handleMenuClick(item.key)}
+                  onClick={() => {
+  handleMenuClick(item.key, sub.link);
+  handleSubMenuClick();
+}}
                 >
                   <img
                     src={`/watheeq/assets/img/sidebaricons/${item.icon}`}
@@ -199,7 +222,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
                         ? "bg-[#13498B] text-white"
                         : "hover:text-[#003f7f]"
                     }`}
-                    onClick={() => handleMenuClick(item.key)}
+                    onClick={() => handleMenuClick(item.key, item.link)}
                   >
                     <img
                       src={`/watheeq/assets/img/sidebaricons/${item.icon}`}
