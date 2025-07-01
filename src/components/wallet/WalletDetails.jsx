@@ -12,8 +12,8 @@ export default function WalletDetails({ wallet, available, pending }) {
     <div>
       <h2 className="text-2xl p-5 font-bold">المحفظة</h2>
       <div className="lg:flex block px-5 gap-5">
-        <div className="lg:w-1/2 w-full shadow py-10 rounded-lg">
-          <p className="mr-10">المحفظة</p>
+      <div className="lg:w-1/2 w-full shadow py-10 rounded-lg mb-[10px] lg:m-0">
+      <p className="mr-10">المحفظة</p>
           <div className="flex items-center">
             <span className="ml-2  text-2xl font-bold mr-10">{wallet}</span>
             <img
@@ -25,7 +25,7 @@ export default function WalletDetails({ wallet, available, pending }) {
         </div>
         <div className="lg:w-1/2 w-full shadow py-10 rounded-lg">
           <div className="lg:flex block justify-between">
-            <div>
+            <div className="mb-[10px] lg:m-0">
               <p className="mr-10">المتاح للسحب</p>
               <div className="flex items-center">
                 <span className="ml-2 text-2xl font-bold mr-10">

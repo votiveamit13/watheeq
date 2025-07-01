@@ -46,8 +46,8 @@ export default function Template() {
           </h3>
 
           <div className="flex flex-col gap-3 mt-5 md:w-auto">
-            <div className="flex items-center w-1/4 justify-between gap-4">
-              <label className="text-sm text-[#13498B] whitespace-nowrap">
+          <div className="w-[200px] lg:w-1/4 flex items-center justify-between gap-4">
+          <label className="text-sm text-[#13498B] whitespace-nowrap">
                 لون الخلفية
               </label>
               <select className="border border-[#13498B] rounded px-4 py-1 text-sm">
@@ -55,7 +55,7 @@ export default function Template() {
               </select>
             </div>
 
-            <div className="flex items-center w-1/4 justify-between gap-4">
+            <div className="flex items-center w-[200px] lg:w-1/4 justify-between gap-4">
               <label className="text-sm text-[#13498B] whitespace-nowrap">
                 لون الأزرار
               </label>
@@ -64,7 +64,7 @@ export default function Template() {
               </select>
             </div>
 
-            <div className="flex items-center w-1/4 justify-between gap-4">
+            <div className="flex items-center w-[200px] lg:w-1/4 justify-between gap-4">
               <label className="text-sm text-[#13498B] whitespace-nowrap">
                 لون النصوص
               </label>
@@ -92,7 +92,7 @@ export default function Template() {
             ].map((label, idx) => (
               <div
                 key={idx}
-                className="flex items-center w-1/4 justify-between"
+                className="flex items-center w-1/4 justify-between w-[200px] lg:w-1/4"
               >
 <span className="text-[#13498B] text-sm ml-[25px] md:ml-0">{label}</span>
 
@@ -179,7 +179,7 @@ export default function Template() {
               <label className="text-sm text-[#13498B] whitespace-nowrap">
                 السنة الدراسية
               </label>
-              <select className="border border-[#13498B] rounded w-[150px] mr-[20px] px-4 py-1 text-sm w-1/2 text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
+              <select className="border border-[#13498B] rounded lg:w-[196px] w-[150px] mr-[20px] px-4 py-1 text-sm w-1/2 text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
                 <option>1987</option>
               </select>
             </div>
