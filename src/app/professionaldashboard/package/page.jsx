@@ -42,13 +42,25 @@ export default function Package() {
           date={"12-04-2025"}
         />
       </div>
-      <div className="mx-auto bg-white p-5 rounded-lg mb-30">
+      <div className="mx-auto bg-white lg:p-5 p-0 rounded-lg mb-30">
         <div className="[&>section]:mx-0 [&>section]:sm:mx-0 mx-auto overflow-x-hidden">
-          <Packages
+        <Packages
             heading={null}
             subheading={"باقات وثيق"}
             onSubscribeClick={handleSubscribe}
           />
+          <style jsx global>{`
+            @media (max-width: 767px) {
+          
+                button {
+                  width: 100%;
+              }
+            .flex.items-center.justify-center {
+                margin-top: 25px;
+            }
+
+            }
+          `}</style>
         </div>
       </div>
       <SubscriptionDialog

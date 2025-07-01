@@ -6,62 +6,62 @@ import { useState } from "react";
 import Pagination from "@/components/pagination/Pagination";
 import AddService from "@/components/professionaldashboard/services/AddService";
 
-  const service = [
-    {
-      id: "01",
-      name: "عنوان",
-      price: 120,
-      duration: "10:00 ص",
-      video: "قيد",
-      meetingDuration: "15 دقيقة",
-      dateAdded: "29-شواال-1446هـ 10:00 م",
-    },
-    {
-      id: "02",
-      name: "عنوان",
-      price: 120,
-      duration: "10:00 ص",
-      video: "اختياري",
-      meetingDuration: "15 دقيقة",
-      dateAdded: "29-شواال-1446هـ 10:00 م",
-    },
-    {
-      id: "03",
-      name: "عنوان",
-      price: 120,
-      duration: "10:00 ص",
-      video: "قيد",
-      meetingDuration: "15 دقيقة",
-      dateAdded: "29-شواال-1446هـ 10:00 م",
-    },
-    {
-      id: "04",
-      name: "عنوان",
-      price: 120,
-      duration: "10:00 ص",
-      video: "قيد",
-      meetingDuration: "15 دقيقة",
-      dateAdded: "29-شواال-1446هـ 10:00 م",
-    },
-    {
-      id: "05",
-      name: "عنوان",
-      price: 120,
-      duration: "10:00 ص",
-      video: "قيد",
-      meetingDuration: "15 دقيقة",
-      dateAdded: "29-شواال-1446هـ 10:00 م",
-    },
-    {
-      id: "06",
-      name: "عنوان",
-      price: 120,
-      duration: "10:00 ص",
-      video: "قيد",
-      meetingDuration: "15 دقيقة",
-      dateAdded: "29-شواال-1446هـ 10:00 م",
-    },
-  ];
+const service = [
+  {
+    id: "01",
+    name: "عنوان",
+    price: 120,
+    duration: "10:00 ص",
+    video: "قيد",
+    meetingDuration: "15 دقيقة",
+    dateAdded: "29-شواال-1446هـ 10:00 م",
+  },
+  {
+    id: "02",
+    name: "عنوان",
+    price: 120,
+    duration: "10:00 ص",
+    video: "اختياري",
+    meetingDuration: "15 دقيقة",
+    dateAdded: "29-شواال-1446هـ 10:00 م",
+  },
+  {
+    id: "03",
+    name: "عنوان",
+    price: 120,
+    duration: "10:00 ص",
+    video: "قيد",
+    meetingDuration: "15 دقيقة",
+    dateAdded: "29-شواال-1446هـ 10:00 م",
+  },
+  {
+    id: "04",
+    name: "عنوان",
+    price: 120,
+    duration: "10:00 ص",
+    video: "قيد",
+    meetingDuration: "15 دقيقة",
+    dateAdded: "29-شواال-1446هـ 10:00 م",
+  },
+  {
+    id: "05",
+    name: "عنوان",
+    price: 120,
+    duration: "10:00 ص",
+    video: "قيد",
+    meetingDuration: "15 دقيقة",
+    dateAdded: "29-شواال-1446هـ 10:00 م",
+  },
+  {
+    id: "06",
+    name: "عنوان",
+    price: 120,
+    duration: "10:00 ص",
+    video: "قيد",
+    meetingDuration: "15 دقيقة",
+    dateAdded: "29-شواال-1446هـ 10:00 م",
+  },
+];
 
 export default function Services() {
   const [showAddService, setShowAddService] = useState(false);
@@ -79,7 +79,7 @@ export default function Services() {
       : "bg-[#FFB35C1A] text-[#FFB35C] border border-[#FFB35C]";
   };
 
-  if(showAddService){
+  if (showAddService) {
     return <AddService onBack={() => setShowAddService(false)} />;
   }
   return (
@@ -98,57 +98,66 @@ export default function Services() {
         </div>
       </div>
       <div className="px-5 mt-5">
-        <table className="w-full text-right text-sm">
-          <thead>
-            <tr className="text-[#96A5B8] font-medium border-b">
-              <th className="py-3">#</th>
-              <th className="py-3">اسم الخدمة</th>
-              <th className="py-3">سعر الخدمة</th>
-              <th className="py-3">مدة تقديم الخدمة</th>
-              <th className="py-3">الاجتماع(فيديو)</th>
-              <th className="py-3">مدة الاجتماع</th>
-              <th className="py-3">تاريخ الاضافة</th>
-              <th className="py-3">خيارات</th>
-            </tr>
-          </thead>
-          <tbody>
-            {paginatedData.map((s, index) => (
-              <tr
-                key={s.id}
-                className="border-b hover:bg-gray-50 transition duration-200"
-              >
-                <td className="py-5">{s.id}</td>
-                <td className="py-5">{s.name}</td>
-                <td className="py-5">
-                  <div className="flex gap-2 items-center">
-                  {s.price}
-                  <img src="/watheeq/assets/img/business1.png" alt="watheeq" />
-                  </div>
-                </td>
-                <td className="py-5">{s.duration}</td>
-                <td className="py-5">
-                  <button
-                    className={`py-2 min-w-[100px] inline-block px-6 rounded-lg cursor-pointer ${videoClass(
-                      s.video
-                    )}`}
-                  >
-                    {s.video}
-                  </button>
-                </td>
-                <td className="py-5">{s.meetingDuration}</td>
-                <td className="py-5">{s.dateAdded}</td>
-                <td className="py-5 flex gap-3">
-                  <div className="bg-[#464E991A] p-2 rounded-lg cursor-pointer">
-                    <LuPencil stroke="#464E99" size={25} />
-                  </div>
-                  <div className="bg-[#F242420D] p-2 rounded-lg cursor-pointer">
-                    <IoIosCloseCircleOutline fill="#F24242" size={25} />
-                  </div>
-                </td>
+        <div className="w-full overflow-x-auto">
+          <table className="w-full min-w-[800px] text-right text-sm">
+            <thead>
+              <tr className="text-[#96A5B8] font-medium border-b">
+                <th className="py-3">#</th>
+                <th className="py-3">اسم الخدمة</th>
+                <th className="py-3">سعر الخدمة</th>
+                <th className="py-3">مدة تقديم الخدمة</th>
+                <th className="py-3">الاجتماع(فيديو)</th>
+                <th className="py-3">مدة الاجتماع</th>
+                <th className="py-3">تاريخ الاضافة</th>
+                <th className="py-3">خيارات</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {paginatedData.map((s, index) => (
+                <tr
+                  key={s.id}
+                  className="border-b hover:bg-gray-50 transition duration-200"
+                >
+                  <td className="py-4 px-2">{s.id}</td>
+                  <td className="py-4 px-2">{s.name}</td>
+                  <td className="py-4 px-2">
+                    <div className="flex items-center gap-2">
+                      {s.price}
+                      <img
+                        src="/watheeq/assets/img/business1.png"
+                        alt="watheeq"
+                        className="w-4 h-4"
+                      />
+                    </div>
+                  </td>
+                  <td className="py-4 px-2">{s.duration}</td>
+                  <td className="py-4 px-2">
+                    <button
+                      className={`py-2 px-4 min-w-[100px] text-center rounded-lg cursor-pointer ${videoClass(
+                        s.video
+                      )}`}
+                    >
+                      {s.video}
+                    </button>
+                  </td>
+                  <td className="py-4 px-2">{s.meetingDuration}</td>
+                  <td className="py-4 px-2">{s.dateAdded}</td>
+                  <td className="py-4 px-2">
+                    <div className="flex gap-2">
+                      <div className="bg-[#464E991A] p-2 rounded-lg cursor-pointer">
+                        <LuPencil stroke="#464E99" size={20} />
+                      </div>
+                      <div className="bg-[#F242420D] p-2 rounded-lg cursor-pointer">
+                        <IoIosCloseCircleOutline fill="#F24242" size={20} />
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
       </div>
       <Pagination
         currentPage={currentPage}

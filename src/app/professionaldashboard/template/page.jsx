@@ -94,7 +94,7 @@ export default function Template() {
                 key={idx}
                 className="flex items-center w-1/4 justify-between"
               >
-                <span className="text-[#13498B] text-sm">{label}</span>
+<span className="text-[#13498B] text-sm ml-[25px] md:ml-0">{label}</span>
 
                 <label className="relative inline-block w-14 h-7">
                   <input
@@ -102,8 +102,8 @@ export default function Template() {
                     defaultChecked
                     className="sr-only peer"
                   />
-                  <div className="absolute inset-0 bg-gray-400 peer-checked:bg-green-500 rounded-full cursor-pointer transition duration-300"></div>
-                  <div className="absolute right-1 top-1 w-5 h-5 bg-white rounded-full text-[10px] font-bold flex items-center justify-center transition-all duration-300 peer-checked:translate-x-[-28px] z-10 after:content-['OFF'] peer-checked:after:content-['ON'] after:text-gray-500 peer-checked:after:text-green-600 after:block after:text-[10px]" />
+<div className="absolute inset-0 w-[56px] md:w-full bg-gray-400 peer-checked:bg-green-500 rounded-full cursor-pointer transition duration-300"></div>
+<div className="absolute right-1 top-1 w-5 h-5 bg-white rounded-full text-[10px] font-bold flex items-center justify-center transition-all duration-300 peer-checked:translate-x-[-28px] z-10 after:content-['OFF'] peer-checked:after:content-['ON'] after:text-gray-500 peer-checked:after:text-green-600 after:block after:text-[10px]" />
                 </label>
               </div>
             ))}
@@ -115,14 +115,14 @@ export default function Template() {
           <h3 className="text-2xl font-bold text-[#13498B] mb-4">
             الدومين الخاص بك
           </h3>
-          <div className="flex items-center justify-start gap-3">
+          <div className="block md:flex items-center justify-start gap-3">
             <input
               type="text"
               placeholder="watheeq.com/username"
               className="border border-gray-300 rounded px-4 py-1.5 text-sm w-[250px] text-left focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
             />
-            <button className="bg-[#13498B] text-white px-8 py-1.5 rounded text-sm cursor-pointer">
-              حفظ
+            <button className="bg-[#13498B] text-white px-8 py-1.5 rounded text-sm cursor-pointer my-[15px] mx-0 md:my-0">
+حفظ
             </button>
             <div className="w-6 h-6 rounded-full bg-[#A0AEC0] text-white flex items-center justify-center text-xs cursor-pointer">
               ?
@@ -160,8 +160,8 @@ export default function Template() {
               <input
                 type="text"
                 placeholder="اسم مكان الدراسة"
-                className="border border-[#13498B] rounded px-4 py-1 text-sm w-1/2 text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
-              />
+                className="border border-[#13498B] rounded px-4 py-1 text-sm w-[150px] md:w-1/2 mr-[20px] md:mr-0 text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                />
             </div>
 
             <div className="flex items-center justify-between w-1/3 ">
@@ -171,7 +171,7 @@ export default function Template() {
               <input
                 type="text"
                 placeholder="المؤهل الاكاديمي"
-                className="border border-[#13498B] rounded px-4 py-1 text-sm w-1/2 text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                className="border border-[#13498B] rounded px-4 py-1 text-sm w-[150px] md:w-1/2 mr-[20px] md:mr-0 text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
               />
             </div>
 
@@ -179,7 +179,7 @@ export default function Template() {
               <label className="text-sm text-[#13498B] whitespace-nowrap">
                 السنة الدراسية
               </label>
-              <select className="border border-[#13498B] rounded px-4 py-1 text-sm w-1/2 text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
+              <select className="border border-[#13498B] rounded w-[150px] mr-[20px] px-4 py-1 text-sm w-1/2 text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
                 <option>1987</option>
               </select>
             </div>
@@ -249,7 +249,7 @@ export default function Template() {
               <input
                 type="text"
                 placeholder="username/instagram.com"
-                className="border border-[#13498B] rounded px-4 py-1 text-sm w-1/2 text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                className="border border-[#13498B] rounded px-4 py-1 text-sm w-1/2 w-[150px] mr-[20px] text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
               />
             </div>
 
@@ -260,7 +260,7 @@ export default function Template() {
               <input
                 type="text"
                 placeholder="username/tiktok.com"
-                className="border border-[#13498B] rounded px-4 py-1 text-sm w-1/2 text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                className="border border-[#13498B] rounded px-4 py-1 text-sm w-1/2 w-[150px] mr-[20px] text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
               />
             </div>
 
@@ -271,7 +271,7 @@ export default function Template() {
               <input
                 type="text"
                 placeholder="username/twitter.com"
-                className="border border-[#13498B] rounded px-4 py-1 text-sm w-1/2 text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                className="border border-[#13498B] rounded px-4 py-1 text-sm w-1/2 w-[150px] mr-[20px] text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
               />
             </div>
 
@@ -282,7 +282,7 @@ export default function Template() {
               <input
                 type="text"
                 placeholder="username/youtube.com"
-                className="border border-[#13498B] rounded px-4 py-1 text-sm w-1/2 text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                className="border border-[#13498B] rounded px-4 py-1 text-sm w-1/2 w-[150px] mr-[20px] text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
               />
             </div>
 
@@ -293,7 +293,7 @@ export default function Template() {
               <input
                 type="text"
                 placeholder="username/snapchat.com"
-                className="border border-[#13498B] rounded px-4 py-1 text-sm w-1/2 text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                className="border border-[#13498B] rounded px-4 py-1 text-sm w-1/2 w-[150px] mr-[20px] text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
               />
             </div>
 
@@ -304,7 +304,7 @@ export default function Template() {
               <input
                 type="text"
 
-                className="border border-[#13498B] rounded px-4 py-1 text-sm w-1/2 text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                className="border border-[#13498B] rounded px-4 py-1 text-sm w-1/2 w-[150px] mr-[20px] text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
               />
             </div>
 
