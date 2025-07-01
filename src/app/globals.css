@@ -89,7 +89,6 @@
 }
 
 @layer utilities {
-  /* Scrollbar styles */
   .custom-scrollbar::-webkit-scrollbar {
     width: 0px;
   }
