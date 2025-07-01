@@ -153,33 +153,34 @@ export default function Template() {
           </h3>
 
           <div className="flex flex-col justify-between gap-3 w-full">
-            <div className="flex items-center justify-between w-1/3">
+            <div className="block sm:flex items-center justify-between w-1/3">
               <label className="text-sm text-[#13498B] whitespace-nowrap">
                 مكان الدراسة
               </label>
               <input
                 type="text"
                 placeholder="اسم مكان الدراسة"
-                className="border border-[#13498B] rounded px-4 py-1 text-sm w-[150px] md:w-1/2 mr-[20px] md:mr-0 text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                className="border border-[#13498B] rounded px-4 py-1 text-sm w-[150px] md:w-1/2 mr-0 md:mr-[20px] text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
                 />
             </div>
 
-            <div className="flex items-center justify-between w-1/3 ">
+            <div className="block sm:flex items-center justify-between w-1/3 ">
               <label className="text-sm text-[#13498B] whitespace-nowrap">
                 المؤهل الأكاديمي
               </label>
               <input
-                type="text"
-                placeholder="المؤهل الاكاديمي"
-                className="border border-[#13498B] rounded px-4 py-1 text-sm w-[150px] md:w-1/2 mr-[20px] md:mr-0 text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
-              />
+  type="text"
+  placeholder="المؤهل الاكاديمي"
+  className="border border-[#13498B] rounded px-4 py-1 text-sm w-[150px] md:w-1/2 mr-0 md:mr-[20px] text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+/>
+
             </div>
 
-            <div className="flex items-center justify-between w-1/3">
-              <label className="text-sm text-[#13498B] whitespace-nowrap">
+            <div className="block sm:flex items-center justify-between w-1/3">
+            <label className="text-sm text-[#13498B] whitespace-nowrap">
                 السنة الدراسية
               </label>
-              <select className="border border-[#13498B] cursor-pointer rounded lg:w-[196px] w-[150px] mr-[20px] px-4 py-1 text-sm w-1/2 text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
+              <select   className="border border-[#13498B] rounded px-4 py-1 text-sm w-[150px] md:w-1/2 mr-0 md:mr-[20px] text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
                 <option>1987</option>
               </select>
             </div>
@@ -242,70 +243,71 @@ export default function Template() {
           </h3>
 
           <div className="flex flex-col justify-between gap-3 w-full">
-            <div className="flex items-center justify-between w-1/3">
+            <div className="block sm:flex items-center justify-between w-1/3">
               <label className="text-sm text-[#13498B] whitespace-nowrap">
                 انستجرام
               </label>
               <input
                 type="text"
                 placeholder="username/instagram.com"
-                className="border border-[#13498B] rounded px-4 py-1 text-sm w-1/2 w-[150px] mr-[20px] text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
-              />
+                className="border border-[#13498B] rounded px-4 py-1 text-sm w-[150px] mr-0 sm:mr-[20px] text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                />
             </div>
 
-            <div className="flex items-center justify-between w-1/3 ">
+            <div className="block sm:flex items-center justify-between w-1/3 ">
               <label className="text-sm text-[#13498B] whitespace-nowrap">
                 تيك توك
               </label>
               <input
                 type="text"
                 placeholder="username/tiktok.com"
-                className="border border-[#13498B] rounded px-4 py-1 text-sm w-1/2 w-[150px] mr-[20px] text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
-              />
+                className="border border-[#13498B] rounded px-4 py-1 text-sm w-[150px] mr-0 sm:mr-[20px] text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                />
             </div>
 
-                      <div className="flex items-center justify-between w-1/3 ">
+                      <div className="block sm:flex items-center justify-between w-1/3 ">
               <label className="text-sm text-[#13498B] whitespace-nowrap">
                 X-تويتر
               </label>
               <input
                 type="text"
                 placeholder="username/twitter.com"
-                className="border border-[#13498B] rounded px-4 py-1 text-sm w-1/2 w-[150px] mr-[20px] text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
-              />
+                className="border border-[#13498B] rounded px-4 py-1 text-sm w-[150px] mr-0 sm:mr-[20px] text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                />
             </div>
 
-                        <div className="flex items-center justify-between w-1/3 ">
+                        <div className="block sm:flex items-center justify-between w-1/3 ">
               <label className="text-sm text-[#13498B] whitespace-nowrap">
                 يوتيوب
               </label>
               <input
                 type="text"
                 placeholder="username/youtube.com"
-                className="border border-[#13498B] rounded px-4 py-1 text-sm w-1/2 w-[150px] mr-[20px] text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
-              />
+                className="border border-[#13498B] rounded px-4 py-1 text-sm w-[150px] mr-0 sm:mr-[20px] text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                />
             </div>
 
-                        <div className="flex items-center justify-between w-1/3 ">
+                        <div className="block sm:flex items-center justify-between w-1/3 ">
               <label className="text-sm text-[#13498B] whitespace-nowrap">
                 سناب شات
               </label>
               <input
-                type="text"
-                placeholder="username/snapchat.com"
-                className="border border-[#13498B] rounded px-4 py-1 text-sm w-1/2 w-[150px] mr-[20px] text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
-              />
+  type="text"
+  placeholder="username/snapchat.com"
+  className="border border-[#13498B] rounded px-4 py-1 text-sm w-[150px] mr-0 sm:mr-[20px] text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+/>
+
             </div>
 
-                        <div className="flex items-center justify-between w-1/3 ">
+                        <div className="block sm:flex items-center justify-between w-1/3 ">
               <label className="text-sm text-[#13498B] whitespace-nowrap">
                 غير ذلك
               </label>
               <input
                 type="text"
 
-                className="border border-[#13498B] rounded px-4 py-1 text-sm w-1/2 w-[150px] mr-[20px] text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
-              />
+                className="border border-[#13498B] rounded px-4 py-1 text-sm w-[150px] mr-0 sm:mr-[20px] text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                />
             </div>
 
           </div>

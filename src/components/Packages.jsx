@@ -5,7 +5,7 @@ import { Switch } from "./ui/Switch";
 function WaveHeader({ type = "basic", plan = "monthly" }) {
   return (
 <div className="relative overflow-hidden w-full h-[28vh] sm:h-auto sm:max-w-[537px] aspect-none sm:aspect-[537/261]">
-      <div className="absolute top-16 w-full text-center z-10">
+<div className="absolute top-[25px] sm:top-16 w-full text-center z-10">
         <h2 className="text-white text-4xl font-bold">
           {type === "basic" ? "الباقة المتكاملة" : "الباقة الأساسية"}
         </h2>
@@ -70,13 +70,14 @@ function WaveHeader({ type = "basic", plan = "monthly" }) {
 
 function FullHeader() {
   return (
-    <svg
-      viewBox="0 0 537 261"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className="absolute inset-0 w-full h-full"
-      preserveAspectRatio="xMidYMid slice"
-    >
+<svg
+  viewBox="0 0 537 261"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  className="absolute inset-0 w-full h-[143px] sm:h-full"
+  preserveAspectRatio="xMidYMid slice"
+>
+
       <path
         d="M0 33.0758V175.978C17.5115 179.903 36.2441 190.769 57.1681 214.827C73.6019 233.685 92.8735 254.923 125.059 259.279C220.078 272.21 231.331 151.812 415.767 155.333C458.998 156.15 501.609 165.84 537 182.273V33.0758C537.001 28.8165 536.163 24.5988 534.534 20.6635C532.905 16.7282 530.517 13.1523 527.505 10.1402C524.494 7.12805 520.919 4.73863 516.984 3.10842C513.049 1.47822 508.832 0.63916 504.572 0.63916H32.3917C23.7967 0.651058 15.5579 4.07372 9.4845 10.1555C3.41119 16.2372 0 24.4808 0 33.0758Z"
         fill="url(#paint0_linear_33_2367)"
@@ -104,7 +105,7 @@ function BasicHeader() {
       viewBox="0 0 537 261"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="absolute inset-0 w-full h-full"
+      className="absolute inset-0 w-full h-[143px] sm:h-full"
       preserveAspectRatio="xMidYMid slice"
     >
       <path
@@ -213,8 +214,7 @@ function PricingCard({ type = "basic", plan = "monthly", onSubscribeClick, butto
       <div className="flex justify-center">
         <button
         onClick={() => onSubscribeClick?.(type, plan)}
-            className={`mt-10 rounded-[15px] text-2xl w-44 h-14 border-2 cursor-pointer
-    ${
+        className={`m-[15px] mt-10 rounded-[15px] text-2xl w-44 h-14 border-2 cursor-pointer        ${
       type === "basic"
         ? "text-[#D53B98] border-[#D53B98]"
         : "text-[#0A84FF] border-[#0A84FF]"
