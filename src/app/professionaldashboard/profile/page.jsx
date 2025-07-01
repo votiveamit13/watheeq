@@ -68,7 +68,7 @@ export default function Profile() {
   return (
     <div className="bg-white mt-5 p-5 rounded-lg">
       <h2 className="text-2xl text-bold">الملف الشخصي</h2>
-      <div className="flex justify-between mt-5">
+      <div className="lg:flex block justify-between mt-5">
         <div className="flex items-center">
           <div className="ml-5 relative w-fit">
             <BiPencil
@@ -78,7 +78,7 @@ export default function Profile() {
             <img
               src="/watheeq/assets/img/profile.png"
               alt="watheeq"
-              className="w-16 h-16 mt-3 object-cover rounded-full"
+              className="lg:w-16 lg:h-16 mt-3 object-cover rounded-full"
             />
           </div>
           <div>
@@ -86,7 +86,7 @@ export default function Profile() {
             <span className="text-[#000000]">ahmedmadi@gmail.com</span>
           </div>
         </div>
-        <div>
+        <div className="lg:mt-0 mt-5">
           <button className="bg-primary text-white font-bold py-3 px-10 rounded-md cursor-pointer">
             تعديل
           </button>
@@ -94,7 +94,7 @@ export default function Profile() {
       </div>
 
       <form className="space-y-6 mt-10">
-        <div className="flex justify-between w-full gap-8">
+        <div className="lg:flex block justify-between w-full gap-8">
           <div className="relative w-full">
             <label className="block mb-3 text-l text-[#0B2B51]">
               اسمك بالكامل
@@ -168,7 +168,7 @@ export default function Profile() {
           </div>
         </div>
 
-        <div className="flex justify-between w-full gap-8">
+        <div className="lg:flex block justify-between w-full gap-8">
           {["الرخصة المهنية", "الشهادة الأكاديمية"].map((label, i) => (
             <div className="relative w-full" key={i}>
               <label className="block mb-3 text-l text-[#0B2B51]">
@@ -191,8 +191,8 @@ export default function Profile() {
           ))}
         </div>
 
-        <div className="flex justify-between p-3">
-          <div className="mail-address" style={{width:'48%', display:'flex', justifyContent:'space-between'}}>
+        <div className="lg:flex block justify-between p-3 w-full">
+          <div className="mail-address lg:w-1/2 w-full lg:flex block justify-between">
             <label className="block mb-3 text-l text-[#0B2B51]">
               البريد الإلكتروني
             </label>
@@ -209,7 +209,7 @@ export default function Profile() {
           </div>
         </div>
 
-        <div className="relative w-1/2" ref={ibanRef}>
+        <div className="relative lg:w-1/2 w-full" ref={ibanRef}>
           <label className="block mb-3 text-l text-[#0B2B51]">
             الحساب البنكي
           </label>
@@ -247,7 +247,7 @@ export default function Profile() {
       </form>
 
       {showAddIbanDialog && (
-        <div className="fixed inset-0 bg-[#0000007d] flex justify-center items-center z-50">
+        <div className="fixed inset-0 bg-[#0000007d] flex justify-center items-center z-50 p-10">
           <div className="bg-white p-6 rounded-lg w-full max-w-md">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-xl font-bold text-[#13498B]">
