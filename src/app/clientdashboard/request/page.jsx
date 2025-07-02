@@ -129,7 +129,7 @@ export default function Request() {
               >
                 <td className="py-2 px-3">{request.id}</td>
                 <td className="py-2 px-3">
-                  <div className="flex items-center justify-end">
+                  <div className="flex items-center justify-start">
                     <img
                       src={request.image}
                       alt="client"
@@ -238,13 +238,12 @@ export default function Request() {
             ))}
           </tbody>
         </table>
-
-        <Pagination
+      </div>
+              <Pagination
           currentPage={currentPage}
           totalPages={Math.ceil(requests.length / pageSize)}
           onPageChange={setCurrentPage}
         />
-      </div>
     </div>
   );
 }

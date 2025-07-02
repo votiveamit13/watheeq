@@ -193,7 +193,7 @@ export default function PortfolioManagement() {
                     {reminder?.id === portfolio.id && (
                       <div
                         ref={reminderRef}
-                        className="absolute bg-[#ECEDF5] text-[#13498B] rounded-lg left-25"
+                        className="absolute bg-[#ECEDF5] text-[#13498B] rounded-lg lg:left-8 left-16"
                       >
                         <p
                           className="py-2 px-7 hover:bg-gray-100 cursor-pointer"
@@ -201,8 +201,14 @@ export default function PortfolioManagement() {
                         >
                           تعديل رصيد
                         </p>
-
-                        {showDialog && (
+                      </div>
+                    )}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+                                  {showDialog && (
                           <div className="fixed inset-0 flex items-center justify-center bg-[#0000007d] z-50">
                             <div className="bg-white w-[600px] rounded-xl p-8 relative">
                               <h2 className="text-2xl font-bold text-center text-[#13498B] mb-4">
@@ -253,13 +259,6 @@ export default function PortfolioManagement() {
                             </div>
                           </div>
                         )}
-                      </div>
-                    )}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
         </div>
         <Pagination
           currentPage={currentPage}
