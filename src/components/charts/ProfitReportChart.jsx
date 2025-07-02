@@ -139,7 +139,7 @@ const ProfitReportChart = ({ allData1, allData2 }) => {
     const data1 = allData1[selectedPeriod] || [];
   const data2 = allData2[selectedPeriod] || [];
   return (
-    <div className="bg-white rounded-lg w-full max-w-full rtl px-10">
+    <div className="bg-white rounded-lg w-full max-w-full rtl lg:px-10 px-0">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-2xl font-bold">تقرير الأرباح</h2>
         <button className="cursor-pointer bg-[#13498B] text-white text-sm px-5 py-2 rounded-lg flex items-center gap-1">

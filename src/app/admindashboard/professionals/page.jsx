@@ -118,75 +118,78 @@ export default function Professionals() {
         </button>
       </div>
       <div className="overflow-x-auto px-5">
-        <table className="w-full text-right ">
-          <thead>
-            <tr className="text-[#96A5B8] font-medium">
-              <th className="py-2 px-3">#</th>
-              <th className="py-2 px-3">اسم المهني</th>
-              <th className="py-2 px-3">البريد الالكتروني</th>
-              <th className="py-2 px-3">رقم الجوال</th>
-              <th className="py-2 px-3">تاريخ الانضمام</th>
-              <th className="py-2 px-3">عدد الخدمات</th>
-              <th className="py-2 px-3">الحالة</th>
-              <th className="py-2 px-3">خيارات</th>
-            </tr>
-          </thead>
-          <tbody>
-            {paginatedData.map((professional, index) => (
-              <tr
-                key={professional.id}
-                className="border-b hover:bg-gray-50 transition joiningdata-200 leading-[3.1]"
-              >
-                <td className="py-2 px-3">{professional.id}</td>
-                <td className="py-2 px-3">
-                  <div className="flex items-center justify-start">
-                    <img
-                      src={professional.image}
-                      alt="name"
-                      className="w-8 h-8 rounded-full ml-2"
-                    />
-                    <span className="text-nowrap">{professional.name}</span>
-                  </div>
-                </td>
-                <td className="py-2 px-3" style={{color:'#0B2B51', fontWeight:'400'}}>{professional.email}</td>
-                <td className="py-2 px-3" style={{color:'#6D8097'}}>{professional.number}</td>
-                <td className="py-2 px-3" style={{color:'#0B2B5166'}}>{professional.joiningdata}</td>
-                <td className="py-2 px-3 text-sm">{professional.services}</td>
-                <td className="py-2 px-3">
-                  <span
-                    className={`text-xs min-w-[120px] text-center px-3 py-2 font-medium inline-block ${statusClass(
-                      professional.status
-                    )}`}
-                    style={{ borderRadius: "10px" }}
+      <div className="overflow-x-auto w-full">
+  <table className="min-w-[600px] w-full text-right">
+    <thead>
+      <tr className="text-[#96A5B8] font-medium text-sm sm:text-base">
+        <th className="py-2 px-3">#</th>
+        <th className="py-2 px-3">اسم المهني</th>
+        <th className="py-2 px-3">البريد الالكتروني</th>
+        <th className="py-2 px-3">رقم الجوال</th>
+        <th className="py-2 px-3">تاريخ الانضمام</th>
+        <th className="py-2 px-3">عدد الخدمات</th>
+        <th className="py-2 px-3">الحالة</th>
+        <th className="py-2 px-3">خيارات</th>
+      </tr>
+    </thead>
+    <tbody>
+      {paginatedData.map((professional, index) => (
+        <tr
+          key={professional.id}
+          className="border-b hover:bg-gray-50 transition duration-200 leading-[3.1]"
+        >
+          <td className="py-2 px-3">{professional.id}</td>
+          <td className="py-2 px-3">
+            <div className="flex items-center justify-start">
+              <img
+                src={professional.image}
+                alt="name"
+                className="w-8 h-8 rounded-full ml-2"
+              />
+<span className="ml-[15px] sm:ml-0 whitespace-nowrap">{professional.name}</span>
+</div>
+          </td>
+          <td className="py-2 px-3 text-[#0B2B51] font-normal">{professional.email}</td>
+          <td className="py-2 px-3 text-[#6D8097]">{professional.number}</td>
+          <td className="py-2 px-3 text-[#0B2B5166]">{professional.joiningdata}</td>
+          <td className="py-2 px-3 text-sm">{professional.services}</td>
+          <td className="py-2 px-3">
+            <span
+              className={`text-xs min-w-[120px] text-center px-3 py-2 font-medium inline-block ${statusClass(
+                professional.status
+              )}`}
+              style={{ borderRadius: "10px" }}
+            >
+              {professional.status}
+            </span>
+          </td>
+          <td className="py-2 px-3 relative">
+            <HiDotsVertical
+              className="text-[#01104099] bg-[#464E991A] w-10 h-10 p-2 rounded-lg cursor-pointer"
+              onClick={() => setSelectedProfessional(professional)}
+            />
+            {selectedProfessional?.id === professional.id && (
+              <div className="absolute bg-[#ECEDF5] rounded-lg left-0 mt-2 z-50 shadow-md w-36 text-sm">
+                <ul className="divide-y divide-gray-200 text-right">
+                  <li
+                    className="py-2 px-4 hover:bg-gray-100 cursor-pointer"
+                    onClick={() => handleReviewClick(professional)}
                   >
-                    {professional.status}
-                  </span>
-                </td>
-                <td className="py-2 px-3">
-                  <HiDotsVertical
-                    className="text-[#01104099] bg-[#464E991A] w-10 h-10 p-2 rounded-lg cursor-pointer"
-                    onClick={() => setSelectedProfessional(professional)}
-                  />
-                  {selectedProfessional?.id === professional.id && (
-                    <div className="absolute bg-[#ECEDF5] rounded-lg left-25 z-50 shadow-md w-35 text-sm">
-                      <ul className="divide-y divide-gray-200 text-right">
-                        <li
-                          className="py-2 px-4 hover:bg-gray-100 cursor-pointer"
-                          onClick={() => handleReviewClick(professional)}
-                        >
-                          مراجعة البيانات
-                        </li>
-                        <li className="py-2 px-4 hover:bg-gray-100 cursor-pointer">
-                          تعطيل الحساب
-                        </li>
-                      </ul>
-                    </div>
-                  )}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+                    مراجعة البيانات
+                  </li>
+                  <li className="py-2 px-4 hover:bg-gray-100 cursor-pointer">
+                    تعطيل الحساب
+                  </li>
+                </ul>
+              </div>
+            )}
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
 
         <Pagination
           currentPage={currentPage}

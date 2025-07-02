@@ -76,16 +76,19 @@ export default function Subscriptions() {
 
   return (
     <div className="w-full bg-white mt-5 rounded-lg">
-      <div className="flex items-center justify-between p-5">
+      <div className="block md:flex items-center justify-between p-5">
         <h2 className="text-right text-2xl font-bold text-[#13498B]">
           اشتراكات المهنيين
         </h2>
-        <button className="cursor-pointer bg-[#13498B] text-white font-bold py-2 px-8" style={{borderRadius:'7px'}}>
+        <button
+  className="cursor-pointer bg-[#13498B] text-white font-bold py-2 px-8 mt-2 mb-2 sm:mt-0 sm:mb-0"
+  style={{ borderRadius: '7px' }}
+>
           تصدير PDF
         </button>
       </div>
-      <div className="mb-6 px-4 [&_div]:rounded-lg">
-        <div className="[&_button]:w-50 [&_button]:rounded-lg">
+      <div className="mb-6 px-4 [&_div]:rounded-lg [&_div]:w-full sm:[&_div]:w-auto">
+        <div className="[&_button]:w-50 [&_button]:rounded-lg lg:[&_button]:p-auto [&_button]:p-3 lg:[&_button]:text-[auto] [&_button]:text-[18px]">
           <Switch
             optionRight={"اشتراك تجريبي"}
             optionLeft={"اشتراك باقة "}
@@ -121,13 +124,13 @@ export default function Subscriptions() {
                           alt="name"
                           className="w-8 h-8 rounded-full ml-2"
                         />
-                        <span className="text-nowrap">
+                        <span className="ml-[25px] sm:ml-0 text-nowrap">
                           {trialsubscription.name}
                         </span>
                       </div>
                     </td>
-                    <td className="py-2 px-3" style={{color:'#0B2B5166'}}>
-                      {trialsubscription.subscriptiondate}
+                    <td className="py-2 px-3 leading-[1.6] sm:leading-normal text-[#0B2B5166]">
+                    {trialsubscription.subscriptiondate}
                     </td>
                     <td className="py-2 px-3 text-sm">
                       {trialsubscription.remainingtime}
@@ -183,12 +186,12 @@ export default function Subscriptions() {
                           alt="name"
                           className="w-8 h-8 rounded-full ml-2"
                         />
-                        <span className="text-nowrap">
+                        <span className="ml-[25px] sm:ml-0 text-nowrap">
                           {packagesubscription.name}
                         </span>
                       </div>
                     </td>
-                    <td className="py-2 px-3" style={{color:'#0b2b5166'}}>
+                    <td className="py-2 px-3 leading-[1.6] sm:leading-normal" style={{color:'#0b2b5166'}}>
                       {packagesubscription.subscriptiondate}
                     </td>
                     <td className="py-2 px-3">{packagesubscription.package}</td>

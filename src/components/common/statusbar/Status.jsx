@@ -11,13 +11,13 @@ export default function StatusBar({asname, asvalue, asimg, nmname, nmvalue, nmim
 
         <ActivateServices asname={asname} asvalue={asvalue} asimg={asimg} />
       </div>
-      <div className="bg-white rounded-lg p-6">
+      <div className="bg-white rounded-lg p-6 mb-[15px] md:mb-0">
         <NewMessages nmname={nmname} nmvalue={nmvalue} nmimg={nmimg}/>
       </div>
-      <div className="bg-white rounded-lg p-6">
+      <div className="bg-white rounded-lg p-6 mb-[15px] md:mb-0">
         <AppointmentsToday atname={atname} atvalue={atvalue} atimg={atimg}/>
       </div>
-      <div className="bg-white rounded-lg p-6">
+      <div className="bg-white rounded-lg p-6 mb-[15px] md:mb-0">
         <Invoices iname={iname} ivalue={ivalue} iimg={iimg} />
       </div>
     </div>

@@ -39,7 +39,7 @@ export default function ChatPanel({
   const grouped = groupMessagesByDate(messages);
 
   return (
-    <div className="flex-1 flex flex-col shadow">
+    <div className="flex-1 flex flex-col shadow mt-5 sm:mt-0">
       <div className="flex justify-between p-5 items-center shadow">
         <div className="flex items-center">
           <img
