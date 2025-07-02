@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Switch } from "@/components/ui/Switch";
 import { HiDotsVertical } from "react-icons/hi";
 
@@ -63,6 +63,20 @@ const packagesubscriptions = [
 export default function Subscriptions() {
   const [selectedOption, setSelectedOption] = useState("monthly");
   const [reminder, setReminder] = useState(null);
+ const reminderRef = useRef(null);
+
+   useEffect(() => {
+     const handleClickOutside = (event) => {
+       if (reminderRef.current && !reminderRef.current.contains(event.target)) {
+         setReminder(null);
+       }
+     };
+
+     document.addEventListener("mousedown", handleClickOutside);
+     return () => {
+       document.removeEventListener("mousedown", handleClickOutside);
+     };
+   }, []);
 
   const handleSwitchToggle = (value) => {
     setSelectedOption(value);
@@ -148,7 +162,7 @@ export default function Subscriptions() {
                     <td className="py-2 px-3">
                       <HiDotsVertical className="text-[#01104099] bg-[#464E991A] w-10 h-10 p-2 rounded-lg cursor-pointer" onClick={() => setReminder(trialsubscription)} />
                       {reminder?.id === trialsubscription.id && (
-                        <div className="absolute bg-[#ECEDF5] text-[#13498B] rounded-lg lg:left-8 left-20">
+                        <div ref={reminderRef} className="absolute bg-[#ECEDF5] text-[#13498B] rounded-lg lg:left-8 left-20">
                         <p className="py-0 px-6 hover:bg-gray-100 cursor-pointer">تذكير بالاشتراك</p>
                         </div>
                       )}

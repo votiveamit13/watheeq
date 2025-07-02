@@ -17,7 +17,7 @@ export default function Package() {
             <input
               type="text"
               placeholder="21"
-              className="lg:w-[350px] w-full pr-3 rounded-lg p-3 bg-white border border-[#13498b40] text-right lg:mb-0 mb-5"
+              className="rounded-md border border-gray-300 p-2 w-full pr-3 placeholder:text-gray-400 focus:outline-none text-[#9794AA] focus:ring-2 focus:ring-blue-500"
             />
             <img
               src="/watheeq/assets/img/business1.png"
@@ -27,7 +27,7 @@ export default function Package() {
           </div>
           <div>
             <button
-              className="cursor-pointer text-white bg-[#13498B] rounded py-3 px-10 font-semibold"
+              className="cursor-pointer text-white bg-[#13498B] rounded py-3 px-10 font-semibold lg:mt-0 mt-5"
             style={{borderRadius:'7px'}}>
               تعديل
             </button>
@@ -45,7 +45,7 @@ export default function Package() {
           />
           <style jsx global>{`
             @media (max-width: 767px) {
-          
+
                 button {
                   width: 100%;
               }
@@ -58,8 +58,8 @@ export default function Package() {
         </div>
 
         {showDialog && (
-          <div className="fixed inset-0 flex items-center justify-center bg-[#0000007d] z-50">
-            <div className="bg-white w-[600px] rounded-xl p-8 relative">
+          <div className="fixed inset-0 flex items-center justify-center bg-[#0000007d] z-50 p-10">
+            <div className="bg-white lg:w-[600px] w-full rounded-xl p-8 relative">
               <div className="flex justify-between">
                 <h2 className="text-xl font-bold text-center text-[#13498B] mb-4">
                   تعديل الباقة
