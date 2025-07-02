@@ -128,7 +128,7 @@ export default function ClientDashboard() {
 
 
         </div>
-        <div className="w-100 items-center p-4 bg-white rounded-lg">
+        <div className="lg:w-100 w-[100%] items-center p-4 bg-white rounded-lg">
           <PieChart
             title="أنواع الخدمات المطلوبة"
             segments={[
