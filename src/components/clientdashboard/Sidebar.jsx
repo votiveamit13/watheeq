@@ -3,7 +3,6 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { TbLogout } from "react-icons/tb";
-import { useRouter } from "next/navigation";
 
 export default function Sidebar({ collapsed, setCollapsed }) {
   const pathname = usePathname();
