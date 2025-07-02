@@ -2,15 +2,15 @@
   import Link from "next/link";
   import { useState, useRef, useEffect } from "react";
   import { HiChevronDown, HiOutlineUser } from "react-icons/hi2";
-  
+
   export default function Navbar({wish, location, url, username, usertype, profileimage, profilelink}) {
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef(null);
-  
+
     const toggleDropdown = () => {
       setIsOpen(!isOpen);
     };
-  
+
     useEffect(() => {
       const handleClickOutside = (event) => {
         if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -22,7 +22,7 @@
         document.removeEventListener("mousedown", handleClickOutside);
       };
     }, []);
-  
+
     return (
 <div className="block w-full md:w-full mx-auto ml-0 md:flex md:justify-between md:items-center bg-white rounded-3xl px-6 py-3 shadow-sm">
 <div className="text-right">
@@ -46,7 +46,7 @@
         </div>
 
         <div className="relative" ref={dropdownRef}>
-          <div className="flex items-center bg-white px-3 py-2 rounded-xl shadow-md gap-2 cursor-pointer">
+          <div className="flex items-center justify-between bg-white px-3 py-2 rounded-xl shadow-md gap-2 cursor-pointer">
             <div className="relative bg-[#FFFAF1] rounded-full">
               <img
                 src="/watheeq/assets/img/bell.png"
@@ -74,9 +74,9 @@
               </div>
             </div>
           </div>
-          
+
           {isOpen && (
-            <div className="absolute right-13 w-35 bg-[#E7EDF3] rounded-br-lg rounded-bl-lg shadow-lg text-right z-50">
+            <div className="absolute lg:right-13 right-35 w-35 bg-[#E7EDF3] rounded-br-lg rounded-bl-lg shadow-lg text-right z-50">
               <Link href={profilelink}>
                 <div className="block px-4 py-4 text-[#003f7f] hover:bg-[#f0f8ff] font-medium flex items-center justify-end gap-2">
                   <HiOutlineUser />
