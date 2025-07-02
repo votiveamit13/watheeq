@@ -92,11 +92,11 @@ export default function ClientDashboard() {
           iimg={"statusbar8.png"}
         />
       </div>
-      <div className="mt-5 flex gap-3">
-        <div className="w-100 bg-white p-4 rounded-lg">
+      <div className="block md:flex mt-5 gap-3">
+        <div className="w-full sm:w-1/2 lg:w-[35%] bg-white p-4 rounded-lg">
           <BarChart title="عدد الاشتراكات  خلال الشهور" data={chartData} />
         </div>
-        <div className="flex-1 bg-white p-4 rounded-lg">
+        <div className="flex-1 bg-white p-4 rounded-lg mt-[15px] sm:mt-0">
           <UserInteractionChart
             title="تفاعل المستخدمين خلال الشهور"
             labels={months}
@@ -106,8 +106,9 @@ export default function ClientDashboard() {
         </div>
       </div>
       <div className="mt-6 flex gap-3" style={{ marginBottom: "50px" }}>
-        <div className="flex-1 bg-white p-4 rounded-lg">
+        <div className="flex-1 bg-white p-4 rounded-lg w-full sm:w-1/2">
           <span className="font-bold">أحدث الاشتراكات المهنية</span>
+          <div class="w-full overflow-x-auto">
           <table className="w-full mt-5 text-right mb-5">
             <thead>
               <tr className="text-[#96A5B8] font-medium">
@@ -144,6 +145,7 @@ export default function ClientDashboard() {
               ))}
             </tbody>
           </table>
+          </div>
         </div>
         <div className="w-100 items-center p-4 bg-white rounded-lg">
           <DonutChart

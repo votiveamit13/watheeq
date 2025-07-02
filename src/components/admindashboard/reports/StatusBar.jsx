@@ -6,8 +6,8 @@ export default function StatusBar({
   clientsCount,
 }) {
   return (
-    <div className="bg-white flex flex-between items-center gap-10">
-      <div className="w-full bg-white shadow py-3 px-6 rounded-lg">
+    <div className="bg-white block md:flex flex-between items-center gap-10">
+<div className="mb-5 sm:mb-0 w-full bg-white shadow py-3 px-6 rounded-lg">
         <div>
           <p className="text-2xl font-bold mb-3">عدد المهنيين</p>
         </div>
@@ -21,7 +21,7 @@ export default function StatusBar({
           </span>
         </div>
       </div>
-      <div className="w-full bg-[#13498B] text-white  shadow py-3 px-6 rounded-lg">
+      <div className="w-full mb-5 sm:mb-0 bg-[#13498B] text-white  shadow py-3 px-6 rounded-lg">
         <div>
           <p className="text-2xl font-bold mb-3">أرباح هذا الشهر</p>
         </div>
@@ -42,7 +42,7 @@ export default function StatusBar({
           </span>
         </div>
       </div>
-      <div className="w-full bg-white shadow py-3 px-6 rounded-lg">
+      <div className="w-full mb-5 sm:mb-0 bg-white shadow py-3 px-6 rounded-lg">
         <div>
           <p className="text-2xl font-bold mb-3">عدد العملاء</p>
         </div>
