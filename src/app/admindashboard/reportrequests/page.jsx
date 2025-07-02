@@ -1,10 +1,10 @@
 "use client";
 import { HiDotsVertical } from "react-icons/hi";
 import Pagination from "@/components/pagination/Pagination";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { CgBrowser } from "react-icons/cg";
 
-const orders = [
+const requests = [
   {
     id: "01",
     date: "29-شواال-1446هـ 10:00 م",
@@ -38,17 +38,32 @@ const orders = [
 export default function Professionals() {
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 3;
-  const [selectedOrder, setSelectedOrder] = useState(null);
-
-  const paginatedData = orders.slice(
+  const [selectedRequest, setSelectedRequest] = useState(null);
+  const requestRef = useRef(null);
+  const paginatedData = requests.slice(
     (currentPage - 1) * pageSize,
     currentPage * pageSize
   );
 
+useEffect(() => {
+  const handleClickOutside = (event) => {
+    if (
+      requestRef.current &&
+      !requestRef.current.contains(event.target)
+    ) {
+      setSelectedRequest(null);
+    }
+  };
+
+  document.addEventListener("mousedown", handleClickOutside);
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, []);
 
 
   const handleReviewClick = (professional) => {
-    setSelectedOrder(professional);
+    setSelectedRequest(professional);
   };
 
 
@@ -74,38 +89,38 @@ export default function Professionals() {
             </tr>
           </thead>
           <tbody>
-            {paginatedData.map((order, index) => (
+            {paginatedData.map((request, index) => (
               <tr
-                key={order.id}
+                key={request.id}
                 className="border-b hover:bg-gray-50 transition joiningdata-200"
               >
-                <td className="py-2 px-3">{order.id}</td>
+                <td className="py-2 px-3">{request.id}</td>
                 <td className="py-2 px-3">
                   <div className="flex items-center justify-end w-[130px]" style={{color:'#0B2B5166'}}>
-                    {order.date}
+                    {request.date}
                   </div>
                 </td>
-                <td className="py-2 px-3" style={{color:'#0B2B51'}}>{order.name}</td>
-                <td className="py-2 px-3" style={{color:'#0B2B51'}}>{order.personName}</td>
+                <td className="py-2 px-3" style={{color:'#0B2B51'}}>{request.name}</td>
+                <td className="py-2 px-3" style={{color:'#0B2B51'}}>{request.personName}</td>
                 <td className="py-2 px-3 text-sm">
                     <CgBrowser
                     color="#0A84FF" size={30}
                     className="rounded-none cursor-pointer"
-                    onClick={() => setSelectedProfessional(order)}
+                    // onClick={() => setSelectedProfessional(request)}
                     />
                 </td>
-                                <td className="py-2 px-3 w-[200px]" style={{color:'#0B2B51CC'}}>{order.comment}</td>
+                                <td className="py-2 px-3 w-[200px]" style={{color:'#0B2B51CC'}}>{request.comment}</td>
                 <td className="py-2 px-3">
                   <HiDotsVertical
                     className="text-[#01104099] bg-[#464E991A] w-10 h-10 p-2 rounded-lg cursor-pointer"
-                    onClick={() => setSelectedOrder(order)}
+                    onClick={() => setSelectedRequest(request)}
                   />
-                  {selectedOrder?.id === order.id && (
-                    <div className="absolute bg-[#ECEDF5] rounded-lg left-18 z-50 shadow-md w-35 text-sm">
+                  {selectedRequest?.id === request.id && (
+                    <div ref={requestRef} className="absolute bg-[#ECEDF5] rounded-lg lg:left-22 left-11 z-50 shadow-md w-35 text-sm">
                       <ul className="divide-y divide-gray-200 text-right">
                         <li
                           className="py-2 px-4 hover:bg-gray-100 cursor-pointer"
-                          onClick={() => handleReviewClick(order)}
+                          onClick={() => handleReviewClick(request)}
                         >
                           إلغاء الطلب
                         </li>
@@ -121,12 +136,12 @@ export default function Professionals() {
           </tbody>
         </table>
 
+      </div>
         <Pagination
           currentPage={currentPage}
-          totalPages={Math.ceil(orders.length / pageSize)}
+          totalPages={Math.ceil(requests.length / pageSize)}
           onPageChange={setCurrentPage}
         />
-      </div>
     </div>
   );
 }
