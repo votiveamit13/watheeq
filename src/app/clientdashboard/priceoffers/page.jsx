@@ -56,6 +56,7 @@ export default function PriceOffers() {
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 4;
   const [selectedOffer, setSelectedOffer] = useState(null);
+  const [secondOffer, setSecondOffer] = useState(false);
 
   const paginatedData = offers.slice(
     (currentPage - 1) * pageSize,
@@ -110,7 +111,9 @@ export default function PriceOffers() {
                     <span className="text-nowrap">{offer.client}</span>
                   </div>
                 </td>
-                <td className="py-2 px-3 leading-[1.5] sm:leading-normal">{offer.service}</td>
+                <td className="py-2 px-3 leading-[1.5] sm:leading-normal">
+                  {offer.service}
+                </td>
                 <td className="py-2 px-3 flex items-center gap-2">
                   <span>{offer.price}</span>
                   <img
@@ -141,7 +144,7 @@ export default function PriceOffers() {
                       <div className="bg-white p-6 rounded-lg w-full max-w-md">
                         <div>
                           <h2 className="text-xl font-bold text-center text-[#13498B] mb-4">
-                             عرض سعر
+                            عرض سعر
                           </h2>
                         </div>
                         <div className="flex w-full justify-between">
@@ -159,7 +162,7 @@ export default function PriceOffers() {
                           <div>
                             <button className="flex gap-1 items-center px-8 border bg-[#F8FAFC] rounded-lg cursor-pointer">
                               <FaPlus />
-                               محادثة
+                              محادثة
                             </button>
                           </div>
                         </div>
@@ -179,34 +182,114 @@ export default function PriceOffers() {
                                 <td className="font-bold text-xl py-2">
                                   مدة تقديم الخدمة
                                 </td>
-                                <td className="px-5">
-                                  2 يوم
-                                </td>
+                                <td className="px-5">2 يوم</td>
                               </tr>
                               <tr>
                                 <td className="font-bold text-xl py-2">
                                   سعر الخدمة
                                 </td>
-                                <td className="px-5">
-                                  {selectedOffer.price}
-                                </td>
+                                <td className="px-5">{selectedOffer.price}</td>
                               </tr>
                             </tbody>
                           </table>
                           <div className="leading-[1.5]">
-                          <p className="mt-5 font-bold text-xl">
-                            تفاصيل الخدمة
-                          </p>
-                        <span>
-                            نقدّم خدمات صياغة ومراجعة العقود القانونية بدقة واحترافية تضمن وضوح الحقوق والالتزامات وتقلل من النزاعات المستقبلية.
-                          </span>
+                            <p className="mt-5 font-bold text-xl">
+                              تفاصيل الخدمة
+                            </p>
+                            <span>
+                              نقدّم خدمات صياغة ومراجعة العقود القانونية بدقة
+                              واحترافية تضمن وضوح الحقوق والالتزامات وتقلل من
+                              النزاعات المستقبلية.
+                            </span>
                           </div>
                           <div className="flex justify-center items-center gap-5 mt-8">
-                            <button className="cursor-pointer bg-[#13498B] text-white px-10 rounded-lg">قبول</button>
-                            <button className="cursor-pointer px-10 rounded-lg border border-[#13498B99]">رفض</button>
+                            <button
+                              className="cursor-pointer bg-[#13498B] text-white px-10 rounded-lg"
+                              onClick={() => setSecondOffer(true)}
+                            >
+                              قبول
+                            </button>
+                            <button
+                              className="cursor-pointer px-10 rounded-lg border border-[#13498B99]"
+                              onClick={() => setSelectedOffer(false)}
+                            >
+                              رفض
+                            </button>
                           </div>
                         </div>
-
+                      </div>
+                    </div>
+                  )}
+                  {secondOffer && (
+                    <div className="fixed inset-0 bg-[#00000026] flex justify-center items-center z-50">
+                      <div className="bg-white p-6 rounded-lg w-full max-w-md">
+                        <div>
+                          <h2 className="text-xl font-bold text-center text-[#13498B] mb-4">
+                            عرض سعر
+                          </h2>
+                        </div>
+                        <div className="flex w-full justify-between">
+                          <div className="flex items-center">
+                            <div>
+                              <img
+                                src="/watheeq/assets/img/avatar.png"
+                                alt="watheeq"
+                              />
+                            </div>
+                            <div className="mr-2">
+                              <span>{selectedOffer.client}</span>
+                            </div>
+                          </div>
+                          <div>
+                            <button className="flex gap-1 items-center px-8 border bg-[#F8FAFC] rounded-lg cursor-pointer">
+                              <FaPlus />
+                              محادثة
+                            </button>
+                          </div>
+                        </div>
+                        <hr className="mt-3" />
+                        <div className="mb-20">
+                          <table>
+                            <tbody>
+                              <tr>
+                                <td className="font-bold text-xl py-2">
+                                  الخدمة
+                                </td>
+                                <td className="px-5">
+                                  {selectedOffer.service}
+                                </td>
+                              </tr>
+                              <tr>
+                                <td className="font-bold text-xl py-2">
+                                  مدة تقديم الخدمة
+                                </td>
+                                <td className="px-5">2 يوم</td>
+                              </tr>
+                              <tr>
+                                <td className="font-bold text-xl py-2">
+                                  المدة المتبقية
+                                </td>
+                                <td className="px-5">1 يوم</td>
+                              </tr>
+                              <tr>
+                                <td className="font-bold text-xl py-2">
+                                  سعر الخدمة
+                                </td>
+                                <td className="px-5">{selectedOffer.price}</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <div className="leading-[1.5]">
+                            <p className="mt-5 font-bold text-xl">
+                              تفاصيل الخدمة
+                            </p>
+                            <span>
+                              نقدّم خدمات صياغة ومراجعة العقود القانونية بدقة
+                              واحترافية تضمن وضوح الحقوق والالتزامات وتقلل من
+                              النزاعات المستقبلية.
+                            </span>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   )}
