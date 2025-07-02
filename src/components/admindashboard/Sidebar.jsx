@@ -7,6 +7,19 @@ import { TbLogout } from "react-icons/tb";
 export default function Sidebar({ collapsed, setCollapsed }) {
   const pathname = usePathname();
   const [activeMenu, setActiveMenu] = useState("");
+  const [isMobile, setIsMobile] = useState(false);
+
+      useEffect(() => {
+        const handleResize = () => {
+          const mobile = window.innerWidth < 1024;
+          setIsMobile(mobile);
+          setCollapsed(mobile);
+        };
+
+        handleResize();
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+      }, [setCollapsed]);
 
   useEffect(() => {
     const sortedItems = [...menuItems].sort(
@@ -101,7 +114,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
       <div
         className={`bg-white shadow-lg flex flex-col gap-3 p-4 transition-all duration-300 ${
           collapsed ? "w-20" : "w-64"
-        }`}
+        } ${isMobile && !collapsed ? "fixed top-0 right-0 h-full z-50" : "relative z-20"}`}
       >
         <div className="flex justify-between items-center">
           <img
@@ -136,7 +149,10 @@ export default function Sidebar({ collapsed, setCollapsed }) {
                       ? "bg-[#13498B] text-white"
                       : "hover:text-[#003f7f]"
                   }`}
-                  onClick={() => setActiveMenu(item.key)}
+                  onClick={() => {
+      setActiveMenu(item.key);
+      if (isMobile) setCollapsed(true);
+    }}
                 >
                   <img
                     src={`/watheeq/assets/img/sidebaricons/${item.icon}`}
