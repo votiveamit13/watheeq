@@ -5,8 +5,8 @@ export default function Verification({professional, onSubmit}) {
   return (
     <div className="bg-white mt-5 p-5 rounded-lg mb-30">
       <h2 className="text-2xl font-bold">التحقق من هوية المهني</h2>
-      <div className="mt-5 shadow flex items-center justify-between py-5 px-3 rounded-lg">
-        <div className="flex gap-4 items-center">
+      <div className="mt-5 shadow lg:flex block items-center justify-between py-5 px-3 rounded-lg">
+        <div className="flex gap-4 items-center lg:mb-0 mb-5">
           <div>
             <img
               src="/watheeq/assets/img/user.jpg"
@@ -21,11 +21,11 @@ export default function Verification({professional, onSubmit}) {
           </div>
         </div>
         <div className="flex items-center gap-3">
-          <button className="cursor-pointer flex items-center gap-2 bg-[#13498B] text-white py-2 px-5" onClick={onSubmit} style={{borderRadius:'7px'}}>
+          <button className="cursor-pointer flex items-center gap-2 bg-[#13498B] text-white lg:py-2 lg:px-5 py-1 px-3" onClick={onSubmit} style={{borderRadius:'7px'}}>
             <MdVerifiedUser size={25} />
             قبول المستندات
           </button>
-          <button className="cursor-pointer flex items-center gap-2 border border-[#13498BCC] bg-[#F8FAFC] py-2 px-5 mr-4" style={{borderRadius:'7px'}}>
+          <button className="cursor-pointer flex items-center gap-2 border border-[#13498BCC] bg-[#F8FAFC] lg:py-2 lg:px-5 py-1 px-3 lg:mr-4 mr-0" style={{borderRadius:'7px'}}>
             <MdOutlineDownloadForOffline size={25} />
             تنزيل المستندات
           </button>
@@ -33,7 +33,7 @@ export default function Verification({professional, onSubmit}) {
       </div>
       <div className="shadow rounded-lg">
         <div className="mt-5 py-5 px-3">
-          <div className="flex items-center w-1/2 mb-4" style={{justifyContent:'space-around'}}>
+          <div className="lg:flex block items-center justify-between w-1/2 mb-4">
             <div className="text-[#0B2B51]">
               <p>اسم المهني</p>
             </div>
@@ -41,7 +41,7 @@ export default function Verification({professional, onSubmit}) {
               <p>أحمد جمال ماضي</p>
             </div>
           </div>
-          <div className="flex items-center justify-between w-1/2 mb-4">
+          <div className="lg:flex block items-center justify-between w-1/2 mb-4">
             <div className="text-[#0B2B51]">
               <p>المسمى الوظيفي</p>
             </div>
@@ -49,7 +49,7 @@ export default function Verification({professional, onSubmit}) {
               <p>محامي</p>
             </div>
           </div>
-          <div className="flex items-center justify-between w-1/2 mb-4">
+          <div className="lg:flex block items-center justify-between w-1/2 mb-4">
             <div className="text-[#0B2B51]">
               <p>البريد الالكتروني</p>
             </div>
@@ -57,7 +57,7 @@ export default function Verification({professional, onSubmit}) {
               <p>ahmedmadi@gmail.com</p>
             </div>
           </div>
-          <div className="flex items-center justify-between w-1/2 mb-4">
+          <div className="lg:flex block items-center justify-between w-1/2 mb-4">
             <div className="text-[#0B2B51]">
               <p>رقم الجوال</p>
             </div>
@@ -69,7 +69,7 @@ export default function Verification({professional, onSubmit}) {
 
         <div className="py-3 px-3">
           <h3 className="text-2xl font-bold mb-5">الشهادات والرخص</h3>
-          <div className="flex items-center justify-between w-1/2 mb-4">
+          <div className="lg:flex block items-center justify-between w-1/2 mb-4">
             <div className="text-[#0B2B51]">
               <p>الشهادة الأكاديمية</p>
             </div>
@@ -83,7 +83,7 @@ export default function Verification({professional, onSubmit}) {
               </div>
             </div>
           </div>
-          <div className="flex items-center justify-between w-1/2 mb-4">
+          <div className="lg:flex block items-center justify-between w-1/2 mb-4">
             <div className="text-[#0B2B51]">
               <p>الرخصة المهنية</p>
             </div>
