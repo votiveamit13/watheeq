@@ -8,7 +8,7 @@ export default function ClientLayout({ children }) {
     return (
         <html lang="ar" dir="rtl">
             <body className="overflow-x-hidden">
-                <section className="flex h-screen bg-gray-50 overflow-hidden">
+                <section className="flex h-screen bg-gray-50 overflow-auto custom-scrollbar">
                     <div
                         className={`z-50 ${collapsed ? "w-20" : "lg:w-64 w:100"
                             } transition-all duration-300`}
