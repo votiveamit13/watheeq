@@ -29,7 +29,7 @@ export default function Reports() {
         />
       </div>
       <div className="bg-white mt-5 p-5 rounded-lg">
-        <div className="flex justify-between items-center mb-4">
+        <div className="block md:flex justify-between items-center mb-4">
           <h3 className="text-2xl font-bold pr-8">أنماط الاستخدام على المنصة</h3>
           <button className="cursor-pointer bg-[#13498B] text-white text-sm px-5 py-2 ml-10 rounded-lg flex items-center gap-1">
             <svg

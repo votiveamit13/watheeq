@@ -12,12 +12,12 @@ export default function Package() {
     <div>
       <div className="bg-white shadow rounded-lg mt-5 p-5">
         <h2 className="text-2xl mb-2">رسوم المنصة</h2>
-        <div className="flex items-center justify-between w-1/2 rtl">
+        <div className="block lg:flex items-center justify-between lg:w-1/2 w-full rtl">
           <div className="relative">
             <input
               type="text"
               placeholder="21"
-              className="w-[350px] pr-3 rounded-lg p-3 bg-white border border-[#13498b40] text-right"
+              className="lg:w-[350px] w-full pr-3 rounded-lg p-3 bg-white border border-[#13498b40] text-right lg:mb-0 mb-5"
             />
             <img
               src="/watheeq/assets/img/business1.png"
@@ -35,7 +35,7 @@ export default function Package() {
         </div>
       </div>
 
-      <div className="mx-auto bg-white p-5 mt-5 shadow rounded-lg mb-30">
+      <div className="mx-auto bg-white lg:p-5 p-0 mt-5 shadow rounded-lg mb-30">
         <div className="[&>section]:mx-0 [&>section]:sm:mx-0 mx-auto overflow-x-hidden">
           <Packages
             heading={null}
@@ -43,6 +43,18 @@ export default function Package() {
             buttonName={"تعديل "}
             onSubscribeClick={() => setShowDialog(true)}
           />
+          <style jsx global>{`
+            @media (max-width: 767px) {
+          
+                button {
+                  width: 100%;
+              }
+            .flex.items-center.justify-center {
+                margin-top: 25px;
+            }
+
+            }
+          `}</style>
         </div>
 
         {showDialog && (

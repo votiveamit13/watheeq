@@ -74,7 +74,7 @@ function FullHeader() {
   viewBox="0 0 537 261"
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
-  className="absolute inset-0 w-full h-[143px] sm:h-full"
+  className="absolute inset-0 w-full h-[160px] sm:h-full"
   preserveAspectRatio="xMidYMid slice"
 >
 
@@ -105,7 +105,7 @@ function BasicHeader() {
       viewBox="0 0 537 261"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="absolute inset-0 w-full h-[143px] sm:h-full"
+      className="absolute inset-0 w-full h-[160px] sm:h-full"
       preserveAspectRatio="xMidYMid slice"
     >
       <path

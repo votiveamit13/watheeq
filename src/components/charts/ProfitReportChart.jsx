@@ -178,13 +178,17 @@ const ProfitReportChart = ({ allData1, allData2 }) => {
 
       <Chart data1={data1} data2={data2} />
 
-      <div className="flex justify-center gap-1 mt-4 text-gray-500">
-        {months.map((month, idx) => (
-          <span key={idx} className="text-center shrink-0" style={{width:'62px'}}>
-            {month}
-          </span>
-        ))}
-      </div>
+<div className="flex justify-center gap-5 mt-4 text-gray-500 overflow-x-auto sm:overflow-visible">
+  {months.map((month, idx) => (
+    <span
+      key={idx}
+      className="text-center shrink-0 min-w-[62px] sm:min-w-0"
+    >
+      {month}
+    </span>
+  ))}
+</div>
+
     </div>
   );
 };
