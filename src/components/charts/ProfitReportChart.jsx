@@ -62,7 +62,7 @@ const maxY = Math.max(...allValues) || 1;
     <div className="w-full relative">
       <svg
         viewBox={`45 0 ${width} ${height+30}`}
-        className="w-full h-56"
+        className="h-full sm:h-56 w-full"
         onMouseMove={handleHover}
         onMouseLeave={hideTooltip}
       >

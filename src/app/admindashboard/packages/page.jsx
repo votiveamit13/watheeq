@@ -46,9 +46,9 @@ export default function Package() {
           <style jsx global>{`
             @media (max-width: 767px) {
 
-                button {
-                  width: 100%;
-              }
+            .bg-\[\#F6F9FC\].rounded-full.shadow-custom-blue.p-1.flex.px-0.py-0.sm\:px-10.sm\:py-6 {
+                width: 95%;
+            }
             .flex.items-center.justify-center {
                 margin-top: 25px;
             }
