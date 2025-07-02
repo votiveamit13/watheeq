@@ -130,9 +130,9 @@ export default function Payments() {
 
   return (
     <div className="bg-white mt-5 p-5 rounded-lg">
-      <div className="flex items-center justify-between">
-        <h2 className="text-2xl font-bold">المدفوعات</h2>
-        <div className="mb-6 [&_div]:rounded-[16px] [&_div]:px-5 ">
+      <div className="lg:flex block items-center justify-between">
+        <h2 className="text-2xl font-bold lg:mb-0 mb-5">المدفوعات</h2>
+        <div className="mb-6 [&_div]:rounded-[16px] lg:[&_div]:px-5 [&_div]:px-0 ">
           <div className="[&_button]:w-40 [&_button]:text-[17px] font-bold [&_button]:px-2 [&_button]:py-3 [&_button]:rounded-[12px]">
             <Switch
               optionRight={"المهنيين"}
@@ -167,7 +167,7 @@ export default function Payments() {
                     <td className="py-5 px-3">{t.name}</td>
                     <td className="py-5 px-3">{t.professionalName}</td>
                     <td
-                      className={`flex gap-1 py-5 px-3 font-semibold ${getAmountColor(
+                      className={`flex items-center gap-1 py-5 px-3 font-semibold ${getAmountColor(
                         t.amount
                       )}`}
                     >
@@ -178,6 +178,7 @@ export default function Payments() {
                       <img
                         src="/watheeq/assets/img/business1.png"
                         alt="watheeq"
+                        className="w-[15px] h-[15px] mt-[4px]"
                       />
                     </td>
                     <td className="py-5 px-3 text-[#6B7280]">{t.history}</td>
@@ -220,7 +221,7 @@ export default function Payments() {
                     <td className="py-5 px-3">{t.name}</td>
                     <td className="py-5 px-3">{t.clientName}</td>
                     <td
-                      className={`flex gap-1 py-5 px-3 font-semibold ${getAmountColor(
+                      className={`flex items-center gap-1 py-5 px-3 font-semibold ${getAmountColor(
                         t.amount
                       )}`}
                     >
@@ -231,7 +232,8 @@ export default function Payments() {
                       <img
                         src="/watheeq/assets/img/business1.png"
                         alt="watheeq"
-                      style={{width:'15px',height:'15px',marginTop:'4px'}}/>
+                      className="w-[15px] h-[15px] mt-[4px]"
+                      />
                     </td>
                     <td className="py-5 px-3 text-[#6B7280]">{t.history}</td>
                     <td className="py-5 px-3">
