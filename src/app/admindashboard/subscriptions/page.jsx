@@ -148,8 +148,8 @@ export default function Subscriptions() {
                     <td className="py-2 px-3">
                       <HiDotsVertical className="text-[#01104099] bg-[#464E991A] w-10 h-10 p-2 rounded-lg cursor-pointer" onClick={() => setReminder(trialsubscription)} />
                       {reminder?.id === trialsubscription.id && (
-                        <div className="absolute bg-[#ECEDF5] text-[#13498B] rounded-lg left-4">
-                        <p className="py-1 px-3 hover:bg-gray-100 cursor-pointer">تذكير بالاشتراك</p>
+                        <div className="absolute bg-[#ECEDF5] text-[#13498B] rounded-lg lg:left-8 left-20">
+                        <p className="py-0 px-6 hover:bg-gray-100 cursor-pointer">تذكير بالاشتراك</p>
                         </div>
                       )}
                     </td>
@@ -211,8 +211,8 @@ export default function Subscriptions() {
                     <td className="py-2 px-3">
                       <HiDotsVertical className="text-[#01104099] bg-[#464E991A] w-10 h-10 p-2 rounded-lg cursor-pointer" onClick={() => setReminder(packagesubscription)} />
                       {reminder?.id === packagesubscription.id && (
-                        <div className="absolute bg-[#ECEDF5] text-[#13498B] rounded-lg left-2">
-                        <p className="py-1 px-3 hover:bg-gray-100 cursor-pointer">تذكير بالاشتراك</p>
+                        <div className="absolute bg-[#ECEDF5] text-[#13498B] rounded-lg lg:left-8 left-20">
+                        <p className="py-0 px-6 hover:bg-gray-100 cursor-pointer">تذكير بالاشتراك</p>
                         </div>
                       )}
                     </td>
