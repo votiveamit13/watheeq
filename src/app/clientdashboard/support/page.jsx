@@ -74,7 +74,7 @@ export default function TechnicalSupport() {
   
     {/* Modal stays same but add mobile responsiveness */}
     {createTicketDialog && (
-      <div className="fixed inset-0 bg-[#0000007d] flex justify-center items-center z-50 px-3">
+      <div className="fixed inset-0 bg-[#0000007d] flex justify-center p-10 items-center z-50">
         <div className="bg-white p-4 sm:p-6 rounded-lg w-full sm:w-1/2">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-lg sm:text-xl font-bold text-[#13498B]">إنشاء تذكرة</h2>

@@ -140,7 +140,7 @@ export default function PriceOffers() {
                     onClick={() => setSelectedOffer(offer)}
                   />
                   {selectedOffer && (
-                    <div className="fixed inset-0 bg-[#00000026] flex justify-center items-center z-50">
+                    <div className="fixed inset-0 bg-[#00000026] flex justify-center items-center z-50 p-10">
                       <div className="bg-white p-6 rounded-lg w-full max-w-md">
                         <div>
                           <h2 className="text-xl font-bold text-center text-[#13498B] mb-4">
@@ -221,7 +221,7 @@ export default function PriceOffers() {
                     </div>
                   )}
                   {secondOffer && (
-                    <div className="fixed inset-0 bg-[#00000026] flex justify-center items-center z-50">
+                    <div className="fixed inset-0 bg-[#00000026] flex justify-center items-center z-50 p-10">
                       <div className="bg-white p-6 rounded-lg w-full max-w-md">
                         <div>
                           <h2 className="text-xl font-bold text-center text-[#13498B] mb-4">

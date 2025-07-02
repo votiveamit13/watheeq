@@ -166,7 +166,7 @@ export default function Request() {
                     onClick={() => setSelectedRequest(request)}
                   />
                   {selectedRequest && (
-                    <div className="fixed inset-0 bg-[#0000001a] bg-opacity-30 flex justify-center items-center z-50">
+                    <div className="fixed inset-0 bg-[#0000001a] bg-opacity-30 flex p-10 justify-center items-center z-50">
                       <div className="bg-white p-6 rounded-lg w-full max-w-md">
                         <div>
                           <h2 className="text-xl text-center text-[#13498B] mb-4">
