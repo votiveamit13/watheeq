@@ -108,7 +108,7 @@ export default function PriceOffers() {
                       alt="client"
                       className="w-8 h-8 rounded-full ml-2"
                     />
-                    <span className="text-nowrap">{offer.client}</span>
+                    <span className="lg:ml-0 ml-5 text-nowrap">{offer.client}</span>
                   </div>
                 </td>
                 <td className="py-2 px-3 leading-[1.5] sm:leading-normal">
