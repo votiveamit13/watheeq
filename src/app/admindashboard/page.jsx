@@ -108,7 +108,7 @@ export default function ClientDashboard() {
       <div className="mt-6 block md:flex gap-3" style={{ marginBottom: "50px" }}>
         <div className="flex-1 bg-white p-4 rounded-lg w-full sm:w-1/2">
           <span className="font-bold">أحدث الاشتراكات المهنية</span>
-          <div class="w-full overflow-x-auto">
+          <div className="w-full overflow-x-auto">
           <table className="w-full mt-5 text-right mb-5">
             <thead>
               <tr className="text-[#96A5B8] font-medium">
