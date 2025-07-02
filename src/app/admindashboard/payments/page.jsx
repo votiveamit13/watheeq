@@ -167,7 +167,7 @@ export default function Payments() {
                     <td className="py-5 px-3">{t.name}</td>
                     <td className="py-5 px-3">{t.professionalName}</td>
                     <td
-                      className={`flex items-center gap-1 py-5 px-3 font-semibold ${getAmountColor(
+                      className={`h-[120px] ml-[15px] sm:h-auto sm:ml-0 flex items-center gap-1 py-5 px-3 font-semibold ${getAmountColor(
                         t.amount
                       )}`}
                     >
