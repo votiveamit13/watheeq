@@ -138,7 +138,7 @@ export default function Request() {
                     <span className="text-nowrap">{request.client}</span>
                   </div>
                 </td>
-                <td className="py-2 px-3">{request.service}</td>
+                <td className="py-2 px-3 leading-[1.5] sm:leading-normal">{request.service}</td>
                 <td className="py-2 px-3 flex items-center gap-2">
                   <span>{request.price}</span>
                   <img

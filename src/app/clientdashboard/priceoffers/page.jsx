@@ -110,7 +110,7 @@ export default function PriceOffers() {
                     <span className="text-nowrap">{offer.client}</span>
                   </div>
                 </td>
-                <td className="py-2 px-3">{offer.service}</td>
+                <td className="py-2 px-3 leading-[1.5] sm:leading-normal">{offer.service}</td>
                 <td className="py-2 px-3 flex items-center gap-2">
                   <span>{offer.price}</span>
                   <img

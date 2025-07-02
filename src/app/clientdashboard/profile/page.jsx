@@ -55,9 +55,9 @@ export default function Profile() {
   return (
     <div className="bg-white mt-5 p-5 rounded-lg">
       <h2 className="text-2xl text-bold">الملف الشخصي</h2>
-      <div className="flex justify-between mt-5">
-        <div className="flex items-center">
-          <div className="ml-5 relative w-fit">
+      <div className="block md:flex justify-between mt-5">
+      <div className="flex items-center mb-[10px] sm:mb-0">
+      <div className="ml-5 relative w-fit">
             <BiPencil
               fill="red"
               className="cursor-pointer absolute top-0 left-0 bg-[#F242421A] rounded-[5px] p-1 w-8 h-8"
@@ -82,7 +82,7 @@ export default function Profile() {
 
       <form className="space-y-6 mt-10 mb-50">
         <div className="flex flex-col justify-between w-full gap-8">
-          <div className="relative w-1/2">
+          <div className="relative lg:w-1/2 w-full">
             <label className="block mb-3 text-l text-[#0B2B51]">
               اسمك بالكامل
             </label>
@@ -96,7 +96,7 @@ export default function Profile() {
             </div>
           </div>
 
-          <div className="relative w-1/2">
+          <div className="relative lg:w-1/2 w-full">
             <label className="block mb-3 text-l text-[#0B2B51]">
               رقم الجوال
             </label>
@@ -160,7 +160,7 @@ export default function Profile() {
             </div>
           </div>
 
-                    <div className="relative w-1/2">
+                    <div className="relative lg:w-1/2 w-full">
             <label className="block mb-3 text-l text-[#0B2B51]">
               البريد الإلكتروني
             </label>

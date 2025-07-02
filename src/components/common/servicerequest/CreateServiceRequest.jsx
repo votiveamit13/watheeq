@@ -17,21 +17,22 @@ export default function CreateServiceRequest() {
       <h2 className="text-2xl font-bold">طلب خدمة</h2>
       <div className="relative mt-5 flex flex-col items-center">
         <div className="relative inline-block w-full">
-          <img
-            src="/watheeq/assets/img/servicerequest.png"
-            alt="watheeq"
-            className="w-full h-auto"
-          />
+        <img
+  src="/watheeq/assets/img/servicerequest.png"
+  alt="watheeq"
+  className="w-full h-[250px] object-cover object-right sm:h-auto rounded-lg"
+/>
+
 
           <div
             className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[] to-[#13498B]"
             style={{ borderRadius: "10px" }}
           ></div>
         </div>
-        <p className="absolute text-3xl text-white font-bold font-center mt-50">
+        <p className="absolute lg:text-3xl text-[16px] text-white font-bold font-center lg:mt-50 mt-[120px]">
           مهارات إعداد وصياغة العقود القانونية
         </p>
-        <div className="absolute flex items-center mt-65 bg-white py-2 px-5 rounded-lg gap-3 cursor-pointer">
+        <div className="absolute flex items-center lg:mt-65 mt-40 bg-white py-2 px-5 rounded-lg gap-3 cursor-pointer">
           <button className="text-2xl text-[#13498B] cursor-pointer">45</button>
           <img
             src="/watheeq/assets/img/servicerequest1.png"

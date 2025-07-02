@@ -66,12 +66,12 @@ export default function ClientDashboard() {
           iimg={"statusbar4.png"}
         />
       </div>
-      <div className="mt-5 flex gap-3">
-        <div className="w-100 bg-white p-4 rounded-lg">
-          <BarChart title="عدد الطلبات خلال الشهور" data={chartData} />
+      <div className="block md:flex mt-5 gap-3">
+      <div className="w-full sm:w-1/2 lg:w-[35%] bg-white p-4 rounded-lg">
+      <BarChart title="عدد الطلبات خلال الشهور" data={chartData} />
         </div>
-        <div className="flex-1 bg-white p-4 rounded-lg">
-          <LineChart
+        <div className="flex-1 bg-white p-4 rounded-lg mt-[15px] sm:mt-0">
+        <LineChart
             title="انجاز الطلبات"
             data={[
               240000, 200000, 205000, 200000, 187000, 180200, 190500, 196000,
@@ -90,9 +90,11 @@ export default function ClientDashboard() {
         </div>
       </div>
       <div className="mt-6 flex gap-3" style={{ marginBottom: "50px" }}>
-        <div className="flex-1 bg-white p-4 rounded-lg">
+        <div className="flex-1 bg-white p-4 rounded-lg w-full sm:w-1/2">
           <span className="font-bold">آخر الطلبات</span>
-          <table className="w-full mt-5 text-right mb-5">
+          
+          <div className="w-full overflow-x-auto">
+           <table className="w-full mt-5 text-right mb-5 min-w-[600px]">
             <thead>
               <tr className="text-[#96A5B8] font-medium">
                 <th className="py-2 px-3">#</th>
@@ -108,12 +110,23 @@ export default function ClientDashboard() {
                   <td className="py-2 px-3">{request.id}</td>
                   <td className="py-2 px-3">{request.serviceName}</td>
                   <td className="py-2 px-3">{request.professionalName}</td>
-                  <td className="py-2 px-3"><span className={`w-[130px] text-center inline-block ${getConditionClass(request.condition)}`}>{request.condition}</span></td>
-                  <td className="py-2 px-3"><button className="cursor-pointer bg-[#464E991A] border border-[#01104033] py-3 px-4 rounded-lg"><BsThreeDotsVertical fill="#13498B" size={20}/></button></td>
+                  <td className="py-2 px-3">
+                    <span className={`w-[130px] text-center inline-block ${getConditionClass(request.condition)}`}>
+                      {request.condition}
+                    </span>
+                  </td>
+                  <td className="py-2 px-3">
+                    <button className="cursor-pointer bg-[#464E991A] border border-[#01104033] py-3 px-4 rounded-lg">
+                      <BsThreeDotsVertical fill="#13498B" size={20} />
+                    </button>
+                  </td>
                 </tr>
               ))}
             </tbody>
-          </table>
+           </table>
+          </div>
+
+
         </div>
         <div className="w-100 items-center p-4 bg-white rounded-lg">
           <PieChart
