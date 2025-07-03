@@ -4,7 +4,7 @@ import Navbar from "@/components/professionalpersonal/Navbar";
 export default function ServiceDetails() {
   return (
     <div className="bg-[#F0F9FF] pt-5">
-      <div className="mr-40 ml-40">
+      <div className="lg:mr-40 mr-2 lg:ml-40 ml-2">
         <div className="bg-white p-5 rounded-lg mb-5">
           <Navbar />
           <div className="relative mt-5 flex flex-col items-center">
@@ -12,7 +12,7 @@ export default function ServiceDetails() {
               <img
                 src="/watheeq/assets/img/servicerequest.png"
                 alt="watheeq"
-                className="w-full h-auto"
+                className="w-full h-[250px] object-cover object-right sm:h-auto rounded-lg"
               />
 
               <div
@@ -20,11 +20,11 @@ export default function ServiceDetails() {
                 style={{ borderRadius: "10px" }}
               ></div>
             </div>
-            <p className="absolute text-3xl text-white font-bold font-center mt-50">
+            <p className="absolute lg:text-3xl text-[16px] text-white font-bold font-center lg:mt-50 mt-[120px]">
               مهارات إعداد وصياغة العقود القانونية
             </p>
-            <div className="absolute flex items-center mt-65 bg-white py-2 px-5 rounded-lg gap-3 cursor-pointer">
-              <button className="text-2xl text-[#13498B] cursor-pointer">
+            <div className="absolute flex items-center lg:mt-65 mt-40 bg-white py-2 px-5 rounded-lg gap-3 cursor-pointer">
+              <button className="text-2xl text-[#13498B] font-bold cursor-pointer">
                 45
               </button>
               <img
@@ -95,7 +95,7 @@ export default function ServiceDetails() {
           </div>
         </div>
       </div>
-      <div className="mr-40 ml-40 pb-5">
+      <div className="lg:mr-40 mr-2 lg:ml-40 ml-2">
         <Footer />
       </div>
     </div>

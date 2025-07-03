@@ -13,7 +13,7 @@ export default function Footer() {
             width={280}
           />
         </div>
-          <div className="flex gap-5 items-center">
+          <div className="flex lg:gap-5 gap-1 items-center">
             <div className="bg-white rounded-full cursor-pointer p-2">
               <FaYoutube fill="#0F4C81" className="w-5 h-5" />
             </div>

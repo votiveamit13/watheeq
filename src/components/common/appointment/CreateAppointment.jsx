@@ -19,18 +19,26 @@ export default function CreateServiceRequest() {
     <div className="bg-white p-5 mt-5 rounded-lg mb-30">
       <h2 className="text-2xl font-bold"> حجز موعد</h2>
       <div className="relative mt-5 flex flex-col items-center">
-
         <div className="relative inline-block w-full">
-  <img src="/watheeq/assets/img/appointment.png" alt="watheeq" className="w-full h-[250px] object-cover object-right sm:h-auto rounded-lg" />
+          <img
+            src="/watheeq/assets/img/appointment.png"
+            alt="watheeq"
+            className="w-full h-[250px] object-cover object-right sm:h-auto rounded-lg"
+          />
 
-  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[] to-[#13498B]" style={{borderRadius:'10px'}}></div>
-</div>
+          <div
+            className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[] to-[#13498B]"
+            style={{ borderRadius: "10px" }}
+          ></div>
+        </div>
 
         <p className="absolute lg:text-3xl text-[16px] text-white font-bold font-center lg:mt-50 mt-[120px]">
           خدمة حجز موعد مع المحامي
         </p>
         <div className="absolute flex items-center lg:mt-65 mt-40 bg-white py-2 px-5 rounded-lg gap-3 cursor-pointer">
-          <button className="text-2xl text-[#13498B] font-bold cursor-pointer">20</button>
+          <button className="text-2xl text-[#13498B] font-bold cursor-pointer">
+            20
+          </button>
           <img
             src="/watheeq/assets/img/servicerequest1.png"
             alt="watheeq"
@@ -108,46 +116,46 @@ export default function CreateServiceRequest() {
           <div className="w-full flex justify-between gap-2 mb-5">
             <div className="w-1/2">
               <div className="w-full">
-              <div>
-                <label className="w-full block mb-3 text-lg text-[#0B2B51]">
-                  التاريخ المفضل
-                </label>
-              </div>
-              <div className="flex gap-2 rtl:flex-row-reverse">
-                <div className="relative w-full">
-                  <input
-                    type="text"
-                    name="professionallicense"
-                    placeholder="يوم/شهر/سنة"
-                    className="w-full pr-10 rounded-lg p-3 text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
-                    style={{ border: "1px solid #13498b40" }}
-                  />
-                  <MdDateRange className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#13498B] w-6 size-10" />
+                <div>
+                  <label className="w-full block mb-3 text-lg text-[#0B2B51]">
+                    التاريخ المفضل
+                  </label>
+                </div>
+                <div className="flex gap-2 rtl:flex-row-reverse">
+                  <div className="relative w-full">
+                    <input
+                      type="text"
+                      name="professionallicense"
+                      placeholder="يوم/شهر/سنة"
+                      className="w-full pr-10 rounded-lg p-3 text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                      style={{ border: "1px solid #13498b40" }}
+                    />
+                    <MdDateRange className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#13498B] w-6 size-10" />
                   </div>
-              </div>
-            </div>
-            </div>
-            <div className="w-1/2">
-              <div className="w-full">
-              <div>
-                <label className="w-full block mb-3 text-lg text-[#0B2B51]">
-                  اليوم المفضل
-                </label>
-              </div>
-              <div className="flex gap-2 rtl:flex-row-reverse">
-                <div className="relative w-full">
-                  <input
-                    type="text"
-                    name="professionallicense"
-                    placeholder="اليوم المفضل"
-                    className="w-full pr-10 rounded-lg p-3 text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
-                    style={{ border: "1px solid #13498b40" }}
-                  />
-                  <BsCalendarDay className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#13498B] w-6 size-10" />
-                  <AiOutlineDown className="absolute left-3 top-1/2 transform -translate-y-1/2 border rounded-full cursor-pointer" />
                 </div>
               </div>
             </div>
+            <div className="w-1/2">
+              <div className="w-full">
+                <div>
+                  <label className="w-full block mb-3 text-lg text-[#0B2B51]">
+                    اليوم المفضل
+                  </label>
+                </div>
+                <div className="flex gap-2 rtl:flex-row-reverse">
+                  <div className="relative w-full">
+                    <input
+                      type="text"
+                      name="professionallicense"
+                      placeholder="اليوم المفضل"
+                      className="w-full pr-10 rounded-lg p-3 text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                      style={{ border: "1px solid #13498b40" }}
+                    />
+                    <BsCalendarDay className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#13498B] w-6 size-10" />
+                    <AiOutlineDown className="absolute left-3 top-1/2 transform -translate-y-1/2 border rounded-full cursor-pointer" />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div className="mb-5">
@@ -164,7 +172,8 @@ export default function CreateServiceRequest() {
           <button
             className="cursor-pointer bg-[#13498B] text-white rounded py-3 px-8"
             onClick={() => setSubmitDialog(true)}
-           style={{borderRadius:'6px'}}>
+            style={{ borderRadius: "6px"}}
+          >
             حجز موعد
           </button>
           {submitDialog && (
