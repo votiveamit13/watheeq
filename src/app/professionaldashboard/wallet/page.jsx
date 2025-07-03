@@ -33,7 +33,7 @@ export default function Wallet() {
       <div className="bg-white mt-5 rounded-lg">
         <WalletDetails wallet={"7,290"} available={200} pending={350} />
       </div>
-      <div className="bg-white mt-5 rounded-lg">
+      <div className="bg-white mt-5 rounded-lg mb-30">
         <Transations transactions={transactions} />
       </div>
     </>

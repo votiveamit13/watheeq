@@ -67,7 +67,7 @@ export default function PackageInfotmation({
                 </table>
                 <div className="flex justify-center gap-5 w-full pr-10 pl-10">
                     <button className="bg-[#13498B] text-white w-full lg:py-2 lg:px-7 py-0 px-4 rounded-lg cursor-pointer" onClick={() => {setBalanceDialog(true), setRenewDialog(false)}}>تجديد</button>
-                    <button className="text-[#F24242] lg:py-2 lg:px-7 py-0 px-4 w-full rounded-lg border border-[#F2424280] cursor-pointer" onClick={() => setRenewDialog(false)}>إلغاء الاشتراك</button>
+                    <button className="text-[#F24242] lg:py-2 lg:px-7 md:py-2 py-0 md:px-4 px-4 w-full rounded-lg border border-[#F2424280] cursor-pointer" onClick={() => setRenewDialog(false)}>إلغاء الاشتراك</button>
                 </div>
               </div>
               </div>

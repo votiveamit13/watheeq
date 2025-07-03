@@ -24,7 +24,7 @@ export default function WalletDetails({ wallet, available, pending }) {
           </div>
         </div>
         <div className="lg:w-1/2 w-full shadow py-10 rounded-lg">
-          <div className="lg:flex block justify-between">
+          <div className="lg:flex md:flex block justify-between">
             <div className="mb-[10px] lg:m-0">
               <p className="mr-10">المتاح للسحب</p>
               <div className="flex items-center">
@@ -147,7 +147,7 @@ export default function WalletDetails({ wallet, available, pending }) {
                 </div>
               )}
               {addNewIban && (
-                <div className="fixed inset-0 bg-black bg-opacity-30 flex justify-center items-center z-50 p-10">
+                <div className="fixed inset-0 bg-[#0000007d] bg-opacity-30 flex justify-center items-center z-50 p-10">
                   <div className="bg-white p-6 rounded-lg w-full max-w-md">
                     <h2 className="text-xl font-bold text-center text-[#13498B] mb-4">
                       إضافة الآيبان
