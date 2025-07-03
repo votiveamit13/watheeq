@@ -29,7 +29,6 @@ export default function StatusBar() {
             <FaBuilding fill="#0F4C81" size={28} />
           <span className="font-bold text-2xl pt-2" style={{color:'#1E293B'}}>عامًا من الخبرة</span>
           <span className="pt-3" style={{color:'#64748B'}}>المدينة</span>
-          
         </div>
       </div>
       <div className="w-full bg-[#F0F9FF] border border-[#BFDBFE] flex flex-start gap-5 items-center p-2 rounded-lg mt-5">

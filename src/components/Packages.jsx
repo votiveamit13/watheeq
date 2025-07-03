@@ -231,7 +231,7 @@ function Packages({ heading, subheading, onSubscribeClick, buttonName }) {
   const [plan, setPlan] = useState("monthly");
 
   return (
-    <section className="font-omnes mx-0 sm:mx-[100px]">
+    <section className="font-omnes mx-0 lg:mx-[100px] md:mx-[20px] sm:mx-[100px]">
       <div className="header flex flex-col gap-5">
         <h2 className="pr-[20px] sm:pr-0 text-right lg:text-6xl md:text-4xl text-4xl font-bold">
           {heading}
@@ -245,9 +245,9 @@ function Packages({ heading, subheading, onSubscribeClick, buttonName }) {
             <Switch optionRight={"شهري"} optionLeft={"سنوي"} onToggle={(value) => setPlan(value)} />
           </div>
         </div>
-
-        <div className="flex flex-col lg:flex-row justify-center mt-0 sm:mt-10 w-[93%] lg:w-[100%] gap-0 lg:p-0 p-2 sm:gap-[50px] lg:gap-[60px] mx-auto second-price">
-          <div className="w-full mx-auto lg:w-full mb-6 lg:mb-0 sm:p-[15px]">
+       
+        <div className="flex flex-col lg:flex-row justify-center mt-0 sm:mt-10 w-[93%] md:w-full md:mt-0 lg:w-[100%] gap-0 lg:p-0 p-2 md:gap-[0px] sm:gap-[50px] lg:gap-[60px] mx-auto second-price">
+        <div className="w-full mx-auto lg:w-full mb-6 lg:mb-0 sm:p-[15px]">
             <PricingCard type="full" plan={plan} onSubscribeClick={onSubscribeClick} buttonName={buttonName} />
           </div>
           <div className="w-full mx-auto lg:w-full mb-6 lg:mb-0 sm:p-[15px]">
