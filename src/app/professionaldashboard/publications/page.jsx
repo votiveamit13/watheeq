@@ -171,7 +171,7 @@ export default function Publications() {
               </div>
 
               <button
-                className="cursor-pointer border border-[#13498B80] w-[150px] md:w-1/2 text-sm py-2 px-5 mt-1 rounded-lg"
+                className="cursor-pointer border border-[#13498B80] w-[150px] lg:w-1/2 text-sm py-2 px-5 mt-1 rounded-lg"
                 style={{ position: "absolute", bottom: "-40px" }}
               >
                 {item.button}
@@ -236,7 +236,7 @@ export default function Publications() {
                 ))}
               </div>
 
-              <button className="cursor-pointer border border-[#13498B80] w-[150px] md:w-1/2 text-sm py-2 px-5 rounded-lg">
+              <button className="cursor-pointer border border-[#13498B80] w-[150px] lg:w-1/2 text-sm py-2 px-5 rounded-lg">
                 {item.button}
               </button>
             </div>
@@ -299,7 +299,7 @@ export default function Publications() {
                 ))}
               </div>
 
-              <button className="cursor-pointer border border-[#13498B80] w-[150px] md:w-1/2 text-sm py-2 px-5 rounded-lg">
+              <button className="cursor-pointer border border-[#13498B80] w-[150px] lg:w-1/2 text-sm py-2 px-5 rounded-lg">
                 {item.button}
               </button>
             </div>
