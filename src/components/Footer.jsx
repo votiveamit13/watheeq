@@ -11,7 +11,7 @@ function Footer() {
       style={{ backgroundImage: 'url(/watheeq/assets/img/third-section-img.png)', color: "white", paddingTop:'10px', backgroundSize:'cover', backgroundRepeat:'no-repeat' }}
     >
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-10 mb-10 pt-[150px] pb-[30px] lg:pr-[150px] pr-[22px] ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-10 mb-10 pt-[150px] pb-[30px] lg:pr-[150px] pr-[22px] md:pr-[22px] ">
       <div>
       <div className="gap-1 sm:gap-5 mt-16">
             <img

@@ -6,7 +6,7 @@ export default function PrivacyPolicy() {
   return (
     <section>
       <AOSInit/>
-        <nav className="container mx-auto px-[15px] sm:px-10">
+        <nav className="container mx-auto lg:px-10 px-5">
         <Navbar />
       </nav>
       <div className="container mx-auto">
