@@ -48,6 +48,7 @@ export default function PortfolioManagement() {
     (currentPage - 1) * pageSize,
     currentPage * pageSize
   );
+  const [reminderPosition, setReminderPosition] = useState({ top: 0, left: 0 });
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -113,7 +114,7 @@ export default function PortfolioManagement() {
       </div>
 
       <div className="bg-white mt-5 p-5 rounded-lg overflow-hidden sm:overflow-visible">
-      <h2 className="text-2xl font-bold">ادارة محافظ المهنيين</h2>
+        <h2 className="text-2xl font-bold">ادارة محافظ المهنيين</h2>
         <div className="overflow-x-auto px-5">
           <table className="w-[95%] text-right ">
             <thead>
@@ -186,79 +187,92 @@ export default function PortfolioManagement() {
                   </td>
 
                   <td className="py-2 px-3">
-                    <HiDotsVertical
-                      className="text-[#01104099] bg-[#464E991A] w-10 h-10 p-2 rounded-lg cursor-pointer"
-                      onClick={() => setReminder(portfolio)}
-                    />
-                    {reminder?.id === portfolio.id && (
-                      <div
-                        ref={reminderRef}
-                        className="absolute bg-[#ECEDF5] text-[#13498B] rounded-lg lg:left-8 left-16"
-                      >
-                        <p
-                          className="py-2 px-7 hover:bg-gray-100 cursor-pointer"
-                          onClick={() => setShowDialog(true)}
+                    <div className="relative inline-block">
+                      <HiDotsVertical
+                        className="text-[#01104099] bg-[#464E991A] w-10 h-10 p-2 rounded-lg cursor-pointer"
+                        onClick={(e) => {
+                          const rect = e.currentTarget.getBoundingClientRect();
+                          setReminder(portfolio);
+                          setReminderPosition({
+                            top: rect.bottom + 5,
+                            left: rect.left,
+                          });
+                        }}
+                      />
+                      {reminder && (
+                        <div
+                          ref={reminderRef}
+                          className="fixed bg-[#ECEDF5] text-[#13498B] rounded-lg z-50"
+                          style={{
+                            top: `${reminderPosition.top}px`,
+                            left: `${reminderPosition.left}px`,
+                          }}
                         >
-                          تعديل رصيد
-                        </p>
-                      </div>
-                    )}
+                          <p
+                            className="py-2 px-7 hover:bg-gray-100 cursor-pointer whitespace-nowrap"
+                            onClick={() => setShowDialog(true)}
+                          >
+                            تعديل رصيد
+                          </p>
+                        </div>
+                      )}
+                    </div>
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
-                                  {showDialog && (
-                          <div className="fixed inset-0 flex items-center justify-center bg-[#0000007d] z-50">
-                            <div className="bg-white w-[600px] rounded-xl p-8 relative">
-                              <h2 className="text-2xl font-bold text-center text-[#13498B] mb-4">
-                                إدارة المحفظة
-                              </h2>
-                              <label className="text-xl">عنوان الباقة</label>
-                              <div className="relative mt-3 mb-8">
-                                <input
-                                  type="text"
-                                  placeholder="120"
-                                  className="w-full pr-10 rounded-lg p-3 bg-white border border-[#13498b40]"
-                                />
-                                <img
-                                  src="/watheeq/assets/img/business1.png"
-                                  alt="watheeq"
-                                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#13498B]"
-                                />
-                              </div>
+          {showDialog && (
+            <div className="fixed inset-0 flex items-center justify-center bg-[#0000007d] z-50 p-10">
+              <div className="bg-white w-[600px] rounded-xl p-8 relative">
+                <h2 className="text-2xl font-bold text-center text-[#13498B] mb-4">
+                  إدارة المحفظة
+                </h2>
+                <label className="text-xl">عنوان الباقة</label>
+                <div className="relative mt-3 mb-8">
+                  <input
+                    type="text"
+                    placeholder="120"
+                    className="w-full pr-10 rounded-lg p-3 bg-white border border-[#13498b40]"
+                  />
+                  <img
+                    src="/watheeq/assets/img/business1.png"
+                    alt="watheeq"
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#13498B]"
+                  />
+                </div>
 
-                              <label className="text-xl">الرصيد المعلق</label>
-                              <div className="relative mt-3">
-                                <input
-                                  type="text"
-                                  placeholder="120"
-                                  className="w-full pr-10 rounded-lg p-3 bg-white border border-[#13498b40]"
-                                />
-                                <img
-                                  src="/watheeq/assets/img/business1.png"
-                                  alt="watheeq"
-                                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#13498B]"
-                                />
-                              </div>
+                <label className="text-xl">الرصيد المعلق</label>
+                <div className="relative mt-3">
+                  <input
+                    type="text"
+                    placeholder="120"
+                    className="w-full pr-10 rounded-lg p-3 bg-white border border-[#13498b40]"
+                  />
+                  <img
+                    src="/watheeq/assets/img/business1.png"
+                    alt="watheeq"
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#13498B]"
+                  />
+                </div>
 
-                              <div className="flex justify-center items-center gap-5 mt-15">
-                                <button
-                                  className="cursor-pointer w-[100px] bg-[#13498B] text-white py-2 px-6 rounded"
-                                  onClick={() => setShowDialog(false)}
-                                >
-                                  تعديل
-                                </button>
-                                <button
-                                  className="cursor-pointer w-[100px] py-2 px-6 rounded border border-[#13498B99]"
-                                  onClick={() => setShowDialog(false)}
-                                >
-                                  الغاء
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        )}
+                <div className="flex justify-center items-center gap-5 mt-15">
+                  <button
+                    className="cursor-pointer w-[100px] bg-[#13498B] text-white py-2 px-6 rounded"
+                    onClick={() => setShowDialog(false)}
+                  >
+                    تعديل
+                  </button>
+                  <button
+                    className="cursor-pointer w-[100px] py-2 px-6 rounded border border-[#13498B99]"
+                    onClick={() => setShowDialog(false)}
+                  >
+                    الغاء
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
         <Pagination
           currentPage={currentPage}
