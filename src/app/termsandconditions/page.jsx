@@ -10,7 +10,7 @@ const TermsAndConditions = () => {
 
       <div className="container mx-auto">
 
-      <nav className="container mx-auto px-[15px] sm:px-10">
+      <nav className="container mx-auto lg:px-10 px-5">
         <Navbar/>
       </nav>
       <main className="p-[30px] sm:p-[35px] sm:px-[85px]" data-aos="fade-up"

@@ -11,8 +11,8 @@ export default function WhoWeAre() {
       <div className="container mx-auto">
 
       <div className="bg-[#f8fafc] bg-[url('/watheeq/assets/img/hero_bg.png')] bg-cover">
-        <nav className="container mx-auto px-[15px] sm:px-10 p-1 px-20 text-center">
-          <Navbar className="" />
+        <nav className="container mx-auto lg:px-10 px-5 text-center">
+          <Navbar />
           <p
             className="text-3xl mt-15 mb-5 text-[#0a84ff]"
             data-aos="fade-up"
@@ -66,7 +66,7 @@ export default function WhoWeAre() {
         data-aos="fade-up"
         data-aos-delay="100"
       >
-        <div className="bg-white p-[20px] sm:p-20 block sm:flex gap-4 items-center m-0 sm:m-5 shadow-xl rounded-3xl mb-[30px]">
+        <div className="bg-white p-[20px] sm:p-20 block lg:flex mb:block gap-4 items-center m-0 sm:m-5 shadow-xl rounded-3xl mb-[30px]">
           <div className="justify-between flex-1">
             <h3 className="text-[35px] sm:text-5xl font-bold mb-5">حكايتنا</h3>
             <p className="text-3xl sm:text-1xl mb-5 text-[#13498b]">

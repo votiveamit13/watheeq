@@ -13,7 +13,6 @@ export default function Home() {
     <>
       <AOSInit />
       <main>
-
         <Hero />
         <div className="container mx-auto">
           <div data-aos="fade-up">

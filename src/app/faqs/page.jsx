@@ -71,7 +71,7 @@ export default function Faqs() {
       <AOSInit/>
 
       <div className="bg-[#f8fafc] bg-[url('/watheeq/assets/img/hero_bg.png')] bg-cover">
-        <nav className="container mx-auto px-[15px] sm:px-10 sm:px-10 sm:px-10 p-6 px-20 text-center ">
+        <nav className="container mx-auto lg:px-10 px-5 text-center ">
           <Navbar />
           <h2 className="text-[30px] md:text-5xl font-bold mt-25 mb-4" data-aos="fade-up"
             data-aos-delay="60">
@@ -84,18 +84,18 @@ export default function Faqs() {
         </nav>
       </div>
       <main className="p-0 md:p-6 md:px-20 pb-15 mb-10 space-y-6 bg-white rounded-2xl shadow-custom-blue w-[90%] mx-auto -mt-30">
-        <div className="flex flex-col md:flex-row gap-6 items-start" data-aos="fade-up"
+        <div className="lg:flex md:block block gap-6 items-start" data-aos="fade-up"
             data-aos-delay="80">
           {renderCard(faqData[0], 0)}
           {renderCard(faqData[1], 1)}
         </div>
 
-        <div className="flex flex-col md:flex-row gap-6 items-start" data-aos="fade-up"
+        <div className="flex gap-6 items-start" data-aos="fade-up"
             data-aos-delay="120">
           {renderCard(faqData[2], 2)}
         </div>
 
-        <div className="flex flex-col md:flex-row gap-6 items-start" data-aos="fade-up"
+        <div className="lg:flex md:block block gap-6 items-start" data-aos="fade-up"
             data-aos-delay="100">
           {renderCard(faqData[3], 3)}
           {renderCard(faqData[4], 4)}

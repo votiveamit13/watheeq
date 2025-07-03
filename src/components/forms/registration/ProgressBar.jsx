@@ -7,7 +7,7 @@ export default function ProgressBar({ currentStep = 0 }) {
 
   const progress = ((currentStep - 1) / (steps.length - 1)) * 100;
   return (
-<div className="px-4 pt-2 pb-4 items-center justify-center" style={{width:'380px', margin:'auto', marginTop:'40px'}}>
+<div className="px-4 pt-2 pb-4 lg:w-[380px] md:w-[300px] w-[380px] m-auto mt-[40px] items-center justify-center">
 
       <div className="relative h-4 flex items-center">
 
@@ -52,7 +52,7 @@ export default function ProgressBar({ currentStep = 0 }) {
       </div>
 
 
-      <div className="flex justify-between mt-3 rtl:space-x-reverse w-[368px] md:w-[488px] md:mr-[-68px] mr-0">
+      <div className="flex justify-between mt-3 rtl:space-x-reverse lg:w-[488px] md:w-[380px] w-[380px] md:mr-[-68px] mr-0">
       {steps.map((step) => (
           <span
             key={step.id}

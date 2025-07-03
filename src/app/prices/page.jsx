@@ -9,7 +9,7 @@ export default function Prices() {
     <section className="bg-[#f8fafc]">
       <AOSInit />
       <div className="container mx-auto">
-      <nav className="container mx-auto px-[15px] sm:px-10">
+      <nav className="container mx-auto lg:px-10 px-5">
         <Navbar />
       </nav>
       <main className="px-5 md:px-[50px]">
@@ -60,7 +60,7 @@ export default function Prices() {
             @media (max-width: 767px) {
               .period-switch {
                 margin-top: 20px;
-                margin-bottom: -30px;
+                margin-bottom: 30px;
               }
               .second-price {
                 padding-bottom: 20px;
