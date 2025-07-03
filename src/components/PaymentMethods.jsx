@@ -20,7 +20,7 @@ function PaymentMethods() {
 <section className="px-[10px] sm:px-[50px]">
     <AOSInit />
 <h2
-className="text-[30px] sm:text-[60px] font-bold mb-2 sm:mb-8 pr-[18px] sm:pr-0"
+className="lg:text-6xl md:text-4xl text-4xl font-bold mb-2 sm:mb-8 pr-[18px] sm:pr-0"
 style={{ paddingLeft: '30px' }}
 >
 

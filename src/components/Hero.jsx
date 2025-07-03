@@ -19,7 +19,7 @@ function Hero() {
     >
       <AOSInit />
 
-      <nav className="container mx-auto px-[15px] sm:px-10">
+      <nav className="container mx-auto lg:px-10 px-5">
         <Navbar />
       </nav>
       <div
@@ -27,13 +27,12 @@ function Hero() {
         data-aos="fade-up"
         data-aos-delay="100"
       >
-        {/* Text Section */}
 
-        <div className="pb-[180px] md:pb-0 py-10 md:py-30 flex-1 text-center md:text-start">
-          <h1 className="text-[25px] sm:text-[45px] font-semibold w-full sm:w-5/6 leading-[1.3]">
+        <div className="lg:pb-[180px] pb-[180px] md:pb-0 lg:py-30 py-10 md:py-10 flex-1 text-center md:text-start">
+          <h1 className="lg:text-[45px] md:text-[30px] text-[25px] font-semibold w-full sm:w-5/6 leading-[1.3]">
             كن جزءًا من منصة وثيق وقدّم خدماتك القانونية بثقة {/*Hero Header */}
           </h1>
-          <p className="text-lg md:text-[32px] mt-4 md:mt-9">
+          <p className="lg:text-[32px] md:text-[18px] text-[15px] lg:mt-9 mt-4">
             أنشئ صفحتك القانونية الموثوقة عبر منصة وثيق وابدأ باستقبال العملاء
             وطلبات الاستشارات خلال دقائق . {/* hero-subheader */}
           </p>
