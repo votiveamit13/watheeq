@@ -4,7 +4,7 @@ import Navbar from "@/components/professionalpersonal/Navbar";
 export default function Blog() {
   return (
     <div className="bg-[#F0F9FF] pt-5">
-      <div className="mr-40 ml-40">
+      <div className="lg:mr-40 mr-2 lg:ml-40 ml-2">
         <div className="bg-white p-5 rounded-lg mb-5">
           <Navbar />
           <h1 className="text-l mt-5 font-bold">
@@ -15,7 +15,7 @@ export default function Blog() {
               <img
                 src="/watheeq/assets/img/publication4.png"
                 alt="watheeq"
-                className="w-full h-auto"
+                className="w-full h-[250px] object-cover object-right sm:h-auto rounded-lg"
               />
             </div>
           </div>
@@ -29,7 +29,7 @@ export default function Blog() {
           </div>
         </div>
       </div>
-      <div className="mr-40 ml-40 pb-5">
+      <div className="lg:mr-40 mr-2 lg:ml-40 ml-2 pb-5">
         <Footer />
       </div>
     </div>
