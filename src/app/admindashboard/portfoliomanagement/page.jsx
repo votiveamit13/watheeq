@@ -112,8 +112,8 @@ export default function PortfolioManagement() {
         </div>
       </div>
 
-      <div className="bg-white mt-5 p-5 rounded-lg">
-        <h2 className="text-2xl font-bold">ادارة محافظ المهنيين</h2>
+      <div className="bg-white mt-5 p-5 rounded-lg overflow-hidden sm:overflow-visible">
+      <h2 className="text-2xl font-bold">ادارة محافظ المهنيين</h2>
         <div className="overflow-x-auto px-5">
           <table className="w-[95%] text-right ">
             <thead>

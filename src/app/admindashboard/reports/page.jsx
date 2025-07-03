@@ -11,27 +11,28 @@ export default function Reports() {
         />
       </div>
       <div className="bg-white mt-5 p-5 rounded-lg">
-        <ProfitReportChart
-          allData1={{
-            "ساعة 24": [10, 50, 40, 60, 80, 100],
-            "يوم 7": [60, 15, 48, 62, 94, 40],
-            "يوم 30": [10, 30, 20, 80, 40, 90],
-            "3 شهر": [10, 74, 20, 60, 80, 49],
-            "12 شهر": [48, 52, 62, 15, 89, 34],
-          }}
-          allData2={{
-            "ساعة 24": [5, 15, 35, 55, 75, 95],
-            "يوم 7": [78, 45, 36, 98, 45, 89],
-            "يوم 30": [12, 78, 42, 96, 35, 15],
-            "3 شهر": [56, 18, 49, 90, 45, 86],
-            "12 شهر": [49, 78, 52, 16, 89, 60],
-          }}
-        />
+      <ProfitReportChart
+  allData1={{
+    "24 ساعة": [10, 50, 40, 60, 80, 100],
+    "7 يوم": [60, 15, 48, 62, 94, 40],
+    "30 يوم": [10, 30, 20, 80, 40, 90],
+    "3 شهر": [10, 74, 20, 60, 80, 49],
+    "12 شهر": [48, 52, 62, 15, 89, 34, 50, 60, 70, 72, 78, 82]
+  }}
+  allData2={{
+    "24 ساعة": [5, 15, 35, 55, 75, 95],
+    "7 يوم": [78, 45, 36, 98, 45, 89],
+    "30 يوم": [12, 78, 42, 96, 35, 15],
+    "3 شهر": [56, 18, 49, 90, 45, 86],
+    "12 شهر": [49, 78, 52, 16, 89, 60, 68, 66, 74, 70, 71, 69]
+  }}
+/>
+
       </div>
       <div className="bg-white mt-5 p-5 rounded-lg">
         <div className="block md:flex justify-between items-center mb-4">
           <h3 className="text-2xl font-bold lg:pr-8 pr-0">أنماط الاستخدام على المنصة</h3>
-          <button className="cursor-pointer bg-[#13498B] text-white text-sm px-5 py-2 ml-10 rounded-lg flex items-center gap-1">
+          <button className="cursor-pointer bg-[#13498B] text-white text-sm px-5 py-2 ml-10 lg:mt-1 mt-2 rounded-lg flex items-center gap-1">
             <svg
               className="w-4 h-4"
               fill="none"

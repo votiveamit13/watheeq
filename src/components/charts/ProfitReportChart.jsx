@@ -1,193 +1,164 @@
 "use client";
-import React, { useState } from "react";
-
-const months = [
-  "صفر",
-  "محرم",
-  "ربيع أول",
-  "ربيع ثاني",
-  "جمادى أول",
-  "جمادى ثاني",
-  "رجب",
-  "شعبان",
-  "رمضان",
-  "شوال",
-  "ذو القعدة",
-  "ذو الحجة",
-];
-
-const periods = ["ساعة 24", "يوم 7", "يوم 30", "3 شهر", "12 شهر"];
-
-const Chart = ({ data1, data2 }) => {
-  const [tooltip, setTooltip] = useState({ show: false, x: 0, y: 0, value: 0 });
-
-  const allValues = [...data1, ...data2];
-const maxY = Math.max(...allValues) || 1;
-
-  const height = 200;
-  const width = 800;
-
-  const getPoints = (data) =>
-    data.map((val, idx) => {
-      const x = (idx / (data.length - 1)) * width;
-      const y = height - (val / maxY) * height;
-      return [x, y];
-    });
-
-  const drawLine = (points) =>
-    points
-      .map((p, i) => (i === 0 ? `M ${p[0]},${p[1]}` : `L ${p[0]},${p[1]}`))
-      .join(" ");
-
-  const points1 = getPoints(data1);
-  const points2 = getPoints(data2);
-
-  const handleHover = (e) => {
-    const rect = e.target.getBoundingClientRect();
-    const offsetX = e.clientX - rect.left;
-    const idx = Math.round((offsetX / width) * (data1.length - 1));
-    const x = (idx / (data1.length - 1)) * width;
-    const y = height - (data1[idx] / maxY) * height;
-    setTooltip({
-      show: true,
-      x,
-      y,
-      value: data1[idx],
-    });
-  };
-
-  const hideTooltip = () => setTooltip({ ...tooltip, show: false });
-
-  return (
-    <div className="w-full relative">
-      <svg
-        viewBox={`45 0 ${width} ${height+30}`}
-        className="h-full sm:h-56 w-full"
-        onMouseMove={handleHover}
-        onMouseLeave={hideTooltip}
-      >
-        {[0, 20, 40, 60, 80, 100].map((val) => (
-          <line
-            key={val}
-            x1="0"
-            y1={height - (val / maxY) * height}
-            x2={width}
-            y2={height - (val / maxY) * height}
-            stroke="#E5E7EB"
-            strokeWidth="1"
-          />
-        ))}
-
-        {[0, 20, 40, 60, 80, 100].map((val) => (
-          <text
-            key={val}
-            x="0"
-            y={height - (val / maxY) * height + 28}
-            className="text-[10px] fill-gray-400"
-            textAnchor="start"
-            dominantBaseline="middle"
-          >
-            {val}
-          </text>
-        ))}
-
-        <path
-          d={drawLine(points1)}
-          stroke="#1D4ED8"
-          fill="none"
-          strokeWidth="2"
-        />
-        <path
-          d={drawLine(points2)}
-          stroke="#F59E0B"
-          fill="none"
-          strokeWidth="2"
-        />
-
-        {tooltip.show && (
-          <circle
-            cx={tooltip.x}
-            cy={tooltip.y}
-            r="4"
-            fill="#1D4ED8"
-            stroke="white"
-            strokeWidth="2"
-          />
-        )}
-      </svg>
-
-      {tooltip.show && (
-        <div
-          className="absolute text-sm bg-white shadow-md border rounded px-2 py-1 text-gray-700"
-          style={{
-            right: `${width - tooltip.x}px`,
-            top: `${tooltip.y}px`,
-            transform: "translate(50%, -100%)",
-            whiteSpace: "nowrap",
-          }}
-        >
-          <div className="font-semibold text-xs text-gray-500">الربح</div>
-          Rp {tooltip.value != null ? tooltip.value.toLocaleString() : "0"}
-        </div>
-      )}
-    </div>
-  );
-};
+import { useState } from 'react';
 
 const ProfitReportChart = ({ allData1, allData2 }) => {
-  const [selectedPeriod, setSelectedPeriod] = useState("12 شهر");
-    const data1 = allData1[selectedPeriod] || [];
-  const data2 = allData2[selectedPeriod] || [];
+  const timeFrames = Object.keys(allData1);
+  const [selected, setSelected] = useState("12 شهر");
+
+  const data1 = allData1[selected];
+  const data2 = allData2[selected];
+
+  // Dynamically create X labels based on data length
+  const dynamicLabels = {
+    "12 شهر": [
+      "جمادي ثاني", "جمادي أول", "ذو الحجة", "ذو القعدة", "شوال", "رمضان",
+      "شعبان", "رجب", "ربيع ثاني", "ربيع أول", "محرم", "صفر"
+    ],
+    "3 شهر": ["جمادي ثاني", "جمادي أول", "ذو الحجة"],
+    "30 يوم": ["الأسبوع 1", "الأسبوع 2", "الأسبوع 3", "الأسبوع 4", "الأسبوع 5", "الأسبوع 6"],
+    "7 يوم": ["السبت", "الأحد", "الاثنين", "الثلاثاء", "الأربعاء", "الخميس"],
+    "24 ساعة": ["4ص", "8ص", "12م", "4م", "8م", "12ص"]
+  };
+
+  const xLabels = dynamicLabels[selected];
+  const maxValue = 100;
+  const height = 200;
+  const width = 700;
+  const stepX = width / (data1.length - 1);
+
+  const getPoints = (data) =>
+    data.map((val, i) => {
+      const x = i * stepX;
+      const y = height - (val / maxValue) * height;
+      return `${x},${y}`;
+    }).join(" ");
+
+  const gridLines = [0, 20, 40, 60, 80, 100];
+
+  const topPadding = 10;
+  const leftPadding = -10;
+
   return (
-    <div className="bg-white rounded-lg w-full max-w-full rtl lg:px-10 px-0">
-      <div className="flex justify-between items-center mb-4">
-        <h2 className="text-2xl font-bold">تقرير الأرباح</h2>
-        <button className="cursor-pointer bg-[#13498B] text-white text-sm px-5 py-2 rounded-lg flex items-center gap-1">
-          <svg
-            className="w-4 h-4"
+    <div className="font-[Cairo] bg-white p-5 rounded-xl shadow-md max-w-full" dir="rtl">
+      {/* Header */}
+      <div className="flex flex-col sm:flex-row justify-between items-center mb-9">
+        <h2 className="text-xl font-bold text-[#13498B]">تقرير الأرباح</h2>
+        <div className="block gap-2 justify-end mt-3 sm:mt-0 text-sm">
+          <div className="w-full flex justify-end mb-4">
+            <button className="bg-[#13498B] text-white cursor-pointer px-4 py-1 rounded-lg flex items-center gap-2">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                  d="M8 7V3m8 4V3m-9 4h10M5 21h14a2 2 0 002-2V7H3v12a2 2 0 002 2z" />
+              </svg>
+              عرض التقرير
+            </button>
+          </div>
+
+
+          {timeFrames.map((item) => (
+            <span
+              key={item}
+              onClick={() => setSelected(item)}
+              className={`cursor-pointer px-2 ${selected === item ? "border-b-2 border-[#13498B] lg:pl-1 pl-0 text-[#13498B]" : "text-gray-400 hover:text-[#13498B]"}`}
+            >
+              {item}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* Chart */}
+      <div className="overflow-x-auto">
+        <svg viewBox={`0 0 ${width + 60} ${height + 50}`} className="w-full lg:h-[260px] h-[80px]">
+          {/* Grid Lines with LEFT Y-Axis labels */}
+
+          {gridLines.map((g, i) => {
+            const y = topPadding + (1 - g / maxValue) * height;
+
+            return (
+              <g key={i}>
+                {/* Horizontal line starting after left padding */}
+                <line
+                  x1={leftPadding + 30} // 30 = space for Y label
+                  y1={y}
+                  x2={width + 30}       // right end
+                  y2={y}
+                  stroke="#E5E7EB"
+                  strokeWidth="1"
+                />
+
+                {/* Y-axis label */}
+                <text
+                  x={leftPadding + 20}  // 10 + 20 = position for text
+                  y={y + 4}
+                  fontSize="12"
+                  fill="#6B7280"
+                  textAnchor="end"
+                >
+                  {g}
+                </text>
+              </g>
+            );
+          })}
+
+          {/* Orange Line */}
+          <polyline
             fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M8 7V3m8 4V3m-9 4h10M5 21h14a2 2 0 002-2V7H3v12a2 2 0 002 2z"
-            />
-          </svg>
-          عرض التقرير
-        </button>
+            stroke="#F59E0B"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            points={data1.map((val, i) => {
+              const x = 40 + i * stepX;
+              const y = height - (val / maxValue) * height;
+              return `${x},${y}`;
+            }).join(" ")}
+          />
+
+          {/* Blue Line */}
+          <polyline
+            fill="none"
+            stroke="#2563EB"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            points={data2.map((val, i) => {
+              const x = 40 + i * stepX;
+              const y = height - (val / maxValue) * height;
+              return `${x},${y}`;
+            }).join(" ")}
+          />
+
+          {/* Dots */}
+          {data1.map((val, i) => {
+            const x = 40 + i * stepX;
+            const y = height - (val / maxValue) * height;
+            return <circle key={`o-${i}`} cx={x} cy={y} r="2" fill="#F59E0B" />;
+          })}
+          {data2.map((val, i) => {
+            const x = 40 + i * stepX;
+            const y = height - (val / maxValue) * height;
+            return <circle key={`b-${i}`} cx={x} cy={y} r="2" fill="#2563EB" />;
+          })}
+
+          {/* X-Axis Labels */}
+          {xLabels.map((label, i) => {
+            const x = 40 + i * stepX;
+            return (
+              <text
+                key={i}
+                x={x}
+                y={height + 30}
+                fontSize="12"
+                fill="#4B5563"
+                textAnchor="middle"
+              >
+                {label}
+              </text>
+            );
+          })}
+        </svg>
       </div>
-
-      <div className="flex gap-8 text-sm mb-2 text-gray-600 mb-3" dir="ltr">
-        {periods.map((period) => (
-          <button
-            key={period}
-            onClick={() => setSelectedPeriod(period)}
-            className={`cursor-pointer pb-1 ${
-              selectedPeriod === period
-                ? "text-blue-800 font-medium border-b-2 border-blue-800"
-                : "hover:text-blue-700"
-            }`}
-          >
-            {period}
-          </button>
-        ))}
-      </div>
-
-      <Chart data1={data1} data2={data2} />
-
-<div className="flex justify-center gap-5 mt-4 text-gray-500 overflow-x-auto sm:overflow-visible">
-  {months.map((month, idx) => (
-    <span
-      key={idx}
-      className="text-center shrink-0 min-w-[62px] sm:min-w-0"
-    >
-      {month}
-    </span>
-  ))}
-</div>
 
     </div>
   );
