@@ -1,6 +1,6 @@
 export default function StepDots({ activeIndex = 0 }) {
   return (
-    <div className="flex justify-center items-center gap-2 mt-4">
+    <div className="flex justify-center items-center gap-2 mt-4 mb-4">
       {[0, 1, 2, 3].map((index) => (
         <span
           key={index}

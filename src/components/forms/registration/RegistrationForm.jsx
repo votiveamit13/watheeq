@@ -30,8 +30,8 @@ export default function RegistrationForm() {
     }
   };
   return (
-<section className="flex items-center flex-wrap overflow-hidden">
-<div className="w-full md:w-1/2 justify-center px-[45px] bg-white mt-[-80px] h-[84vh] md:h-[120vh]">
+<section className="flex lg:items-center flex-wrap overflow-hidden">
+<div className="w-full md:w-1/2 justify-center px-[45px] bg-white mt-[-80px] h-[100%] md:h-[120vh]">
       {currentStep != 3 && (
           <img
           src="/watheeq/assets/img/logo.png"
