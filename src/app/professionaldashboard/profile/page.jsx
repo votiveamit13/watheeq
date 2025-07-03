@@ -68,7 +68,7 @@ export default function Profile() {
   return (
     <div className="bg-white mt-5 p-5 rounded-lg mb-30">
       <h2 className="text-2xl text-bold">الملف الشخصي</h2>
-      <div className="lg:flex block justify-between mt-5">
+      <div className="lg:flex md:flex block justify-between mt-5">
         <div className="flex items-center">
           <div className="ml-5 relative w-fit">
             <BiPencil
