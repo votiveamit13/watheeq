@@ -246,7 +246,7 @@ function Packages({ heading, subheading, onSubscribeClick, buttonName }) {
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row justify-center mt-0 sm:mt-10 w-full lg:w-[100%] gap-0 sm:gap-[50px] lg:gap-[60px] mx-auto second-price">
+        <div className="flex flex-col lg:flex-row justify-center mt-0 sm:mt-10 w-[93%] lg:w-[100%] gap-0 lg:p-0 p-2 sm:gap-[50px] lg:gap-[60px] mx-auto second-price">
           <div className="w-full mx-auto lg:w-full mb-6 lg:mb-0 sm:p-[15px]">
             <PricingCard type="full" plan={plan} onSubscribeClick={onSubscribeClick} buttonName={buttonName} />
           </div>

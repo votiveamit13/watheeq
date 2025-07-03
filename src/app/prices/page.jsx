@@ -65,6 +65,10 @@ export default function Prices() {
               .second-price {
                 padding-bottom: 20px;
               }
+                .aos-animate .second-price {
+                  padding: 0px;
+                  width:98%;
+              }
             }
           `}</style>
         </div>
