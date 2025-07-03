@@ -335,7 +335,7 @@ export default function AboutSection() {
             <>
 
 
-              <h2 className="text-[#0F4C81] font-bold text-[25px] pt-8 pb-5">الخدمات القانونية</h2>
+              <h2 className="text-[#0F4C81] font-bold text-[25px] lg:pt-8 pb-5 pt-4">الخدمات القانونية</h2>
 
 
               <div className="relative w-full bg-gray-200 rounded-full" style={{ background: '#2A6CA5', height: '2px' }}>
@@ -388,7 +388,7 @@ export default function AboutSection() {
           )}
           {activeTab === 'blog' && (
             <>
-              <div className="bg-white mt-5 p-5 rounded-lg">
+              <div className="bg-white lg:mt-5 mt-0 p-5 rounded-lg">
                 <div className="flex justify-between">
                   <div className='w-full'>
                     <div className="flex items-center justify-start gap-2 pb-5">
@@ -416,11 +416,11 @@ export default function AboutSection() {
                 {/* Publication1 */}
                 <div className="mt-4">
                   <h3 className="text-xl mb-3">تصنيف 1</h3>
-                  <div className="flex gap-5 w-full justify-center mt-4">
+                  <div className="block md:flex gap-5 w-full justify-center mt-4">
                     {publication1.map((item, index) => (
                       <div
                         key={index}
-                        className="relative rounded-lg flex flex-col items-center text-center w-1/3"
+                        className="relative rounded-lg flex flex-col items-center text-center lg:w-1/3 w-1/1"
                       >
                         <div
                           className="w-full h-7 absolute rounded-t-lg"
@@ -461,8 +461,10 @@ export default function AboutSection() {
                     ))}
                   </div>
 
-                  <div dir="ltr" className="mt-28">
-                    <button className="flex gap-2 items-center py-2 px-10 rounded-lg border border-[#13498B80] bg-[#13498B] text-white cursor-pointer">
+                  <div dir="ltr" className="lg:mt-28 mt-20 lg:mb-0 mb-8">
+                  <button className="flex gap-2 items-center py-2 px-10 rounded-lg border border-[#13498B80] bg-[#13498B] text-white cursor-pointer
+  justify-center mx-auto w-full
+  md:justify-start md:mx-0 md:w-auto">
                       عرض المزيد
                     </button>
                   </div>
@@ -476,11 +478,11 @@ export default function AboutSection() {
                     <h3 className="text-[#0F4C81] font-semibold text-lg">مقالات عني</h3>
                   </div>
 
-                  <div className="flex gap-5 w-full justify-center mt-4">
+                  <div className="block md:flex gap-5 w-full justify-center mt-4">
                     {publication2.map((item, index) => (
                       <div
                         key={index}
-                        className="relative rounded-lg flex flex-col items-center text-center w-1/3"
+                        className="relative rounded-lg flex flex-col items-center text-center lg:w-1/3 w-1/1 lg:mb-0 mb-8"
                       >
                         <div
                           className="w-full h-7 absolute rounded-t-lg"
@@ -522,15 +524,17 @@ export default function AboutSection() {
                     ))}
                   </div>
 
-                  <div dir="ltr" className="mt-25">
-                    <button className="flex gap-2 items-center mt-7 py-2 px-10 rounded-lg border border-[#13498B80] bg-[#13498B] text-[white] cursor-pointer" style={{ marginTop: '-20px' }}>
+                  <div dir="ltr" className="lg:mt-25 mt-18 lg:mb-0 mb-8">
+                    <button className="flex gap-2 items-center py-2 px-10 rounded-lg border border-[#13498B80] bg-[#13498B] text-white cursor-pointer
+  justify-center mx-auto w-full
+  md:justify-start md:mx-0 md:w-auto" style={{ marginTop: '-20px' }}>
                       عرض المزيد
                     </button>
                   </div>
                 </div>
 
                 {/* Publication3 */}
-                <div className="mt-0 mb-15">
+                <div className="mt-0 lg:mb-15 mb-4">
 
 
                   <div className="flex items-center justify-start pt-4 gap-2 pt-0">
@@ -539,11 +543,11 @@ export default function AboutSection() {
                   </div>
 
 
-                  <div className="flex gap-5 w-full justify-center mt-4">
+                  <div className="block md:flex gap-5 w-full justify-center mt-4">
                     {publication3.map((item, index) => (
                       <div
                         key={index}
-                        className="relative rounded-lg flex flex-col items-center text-center w-1/2"
+                        className="relative rounded-lg flex flex-col items-center text-center lg:w-1/2 w-1/1 lg:mb-0 mb-8"
                       >
                         <div
                           className="w-full h-7 absolute rounded-t-lg"
@@ -584,8 +588,10 @@ export default function AboutSection() {
                     ))}
                   </div>
 
-                  <div dir="ltr" className="mt-28">
-                    <button className="flex gap-2 items-center mt-7 py-2 px-10 rounded-lg border border-[#13498B80] bg-[#13498B] text-[white] cursor-pointer" style={{ marginTop: '-35px' }}>
+                  <div dir="ltr" className="lg:mt-28 mt-20">
+                    <button className="flex gap-2 items-center py-2 px-10 rounded-lg border border-[#13498B80] bg-[#13498B] text-white cursor-pointer
+  justify-center mx-auto w-full
+  md:justify-start md:mx-0 md:w-auto" style={{ marginTop: '-35px' }}>
                       عرض المزيد
                     </button>
                   </div>
