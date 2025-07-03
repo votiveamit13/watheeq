@@ -95,7 +95,7 @@ export default function ServiceDetails() {
           </div>
         </div>
       </div>
-      <div className="lg:mr-40 mr-2 lg:ml-40 ml-2">
+      <div className="lg:mr-40 mr-2 lg:ml-40 ml-2 pb-5">
         <Footer />
       </div>
     </div>

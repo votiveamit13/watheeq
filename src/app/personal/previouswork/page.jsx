@@ -4,7 +4,7 @@ import Navbar from "@/components/professionalpersonal/Navbar";
 export default function PreviousWork() {
   return (
     <div className="bg-[#F0F9FF] pt-5">
-      <div className="mr-40 ml-40">
+      <div className="lg:mr-40 mr-2 lg:ml-40 ml-2">
         <div className="bg-white p-5 rounded-lg mb-5">
           <Navbar />
           <div className="relative mt-5">
@@ -12,57 +12,65 @@ export default function PreviousWork() {
               الدمج بين التعليم الإلكتروني والتعليم القانوني{" "}
             </h1>
             <div className="flex flex-col justify-between md:flex-row bg-white mt-5 gap-4 text-right max-w-5xl mx-auto">
+              <div className="w-full md:w-[62%]">
+                <img
+                  src="/watheeq/assets/img/previouswork.png"
+                  alt="Project"
+                  className="w-full h-full object-cover rounded"
+                />
+              </div>
 
-      <div className="w-full md:w-[62%]">
-        <img
-          src="/watheeq/assets/img/previouswork.png"
-          alt="Project"
-          className="w-full h-full object-cover rounded"
-        />
-      </div>
+              <div className="w-full md:w-[35%] space-y-2 shadow rounded-lg p-2">
+                <h2 className="text-lg font-bold text-gray-700">
+                  معلومات المشروع
+                </h2>
+                <div className="text-sm text-gray-700 leading-[4]">
+                  <div className="flex justify-between">
+                    <span>جهة التنفيذ :</span>
+                    <span className="font-medium">الإبداع الحديثة</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>المجال :</span>
+                    <span className="font-medium">التعليم الالكتروني</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>تاريخ البدء :</span>
+                    <span className="font-medium">1-شوال-1446هـ</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>تاريخ الانتهاء :</span>
+                    <span className="font-medium">29-شوال-1446هـ</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>حالة المشروع :</span>
+                    <span className="font-medium">مكتمل</span>
+                  </div>
+                </div>
 
-      <div className="w-full md:w-[35%] space-y-2 shadow rounded-lg p-2">
-        <h2 className="text-lg font-bold text-gray-700">معلومات المشروع</h2>
-        <div className="text-sm text-gray-700 leading-[4]">
-          <div className="flex justify-between">
-            <span>جهة التنفيذ :</span>
-            <span className="font-medium">الإبداع الحديثة</span>
-          </div>
-          <div className="flex justify-between">
-            <span>المجال :</span>
-            <span className="font-medium">التعليم الالكتروني</span>
-          </div>
-          <div className="flex justify-between">
-            <span>تاريخ البدء :</span>
-            <span className="font-medium">1-شوال-1446هـ</span>
-          </div>
-          <div className="flex justify-between">
-            <span>تاريخ الانتهاء :</span>
-            <span className="font-medium">29-شوال-1446هـ</span>
-          </div>
-          <div className="flex justify-between">
-            <span>حالة المشروع :</span>
-            <span className="font-medium">مكتمل</span>
-          </div>
-        </div>
-
-        <div>
-          <h3 className="mt-4 font-semibold text-gray-700">المهارات المستخدمة:</h3>
-          <div className="flex flex-wrap gap-2 mt-2">
-            {["مهارة 1", "مهارة 2", "مهارة 3", "مهارة 4", "مهارة 5", "مهارة 6"].map((skill, index) => (
-              <span
-                key={index}
-                className="px-3 py-1 bg-green-100 text-green-700 text-sm rounded"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
-
-
-    </div>
+                <div>
+                  <h3 className="mt-4 font-semibold text-gray-700">
+                    المهارات المستخدمة:
+                  </h3>
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    {[
+                      "مهارة 1",
+                      "مهارة 2",
+                      "مهارة 3",
+                      "مهارة 4",
+                      "مهارة 5",
+                      "مهارة 6",
+                    ].map((skill, index) => (
+                      <span
+                        key={index}
+                        className="px-3 py-1 bg-green-100 text-green-700 text-sm rounded"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
             <div className="mt-10 mb-20">
               <h3 className="text-2xl mb-5 font-bold">الوصف:</h3>
               <p className="leading-[2] text-[#000000B2] mb-5">
@@ -96,7 +104,7 @@ export default function PreviousWork() {
           </div>
         </div>
       </div>
-      <div className="mr-40 ml-40 pb-5">
+      <div className="lg:mr-40 mr-2 lg:ml-40 ml-2 pb-5">
         <Footer />
       </div>
     </div>
