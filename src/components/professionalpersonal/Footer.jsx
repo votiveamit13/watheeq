@@ -14,17 +14,17 @@ export default function Footer() {
           />
         </div>
           <div className="flex lg:gap-5 gap-1 items-center">
-            <div className="bg-white rounded-full cursor-pointer p-2">
-              <FaYoutube fill="#0F4C81" className="w-5 h-5" />
+            <div className="rounded-full cursor-pointer p-2 bg-[#F0F9FF] hover:bg-[#0F4C81] transition-colors duration-300 group">
+              <FaYoutube className="w-5 h-5 transition-colors duration-300 fill-[#0F4C81] group-hover:fill-white" />
             </div>
-            <div className="bg-white rounded-full cursor-pointer p-2">
-              <FaInstagram fill="#0F4C81" className="w-5 h-5 cursor-pointer" />
+            <div className="rounded-full cursor-pointer p-2 bg-[#F0F9FF] hover:bg-[#0F4C81] transition-colors duration-300 group">
+              <FaInstagram className="w-5 h-5 transition-colors duration-300 fill-[#0F4C81] group-hover:fill-white" />
             </div>
-            <div className="bg-white rounded-full cursor-pointer p-2">
-              <FaTiktok fill="#0F4C81" className="w-5 h-5 cursor-pointer" />
+            <div className="rounded-full cursor-pointer p-2 bg-[#F0F9FF] hover:bg-[#0F4C81] transition-colors duration-300 group">
+              <FaTiktok className="w-5 h-5 transition-colors duration-300 fill-[#0F4C81] group-hover:fill-white" />
             </div>
-            <div className="bg-white rounded-full cursor-pointer p-2">
-              <FaXTwitter fill="#0F4C81" className="w-5 h-5 cursor-pointer" />
+            <div className="rounded-full cursor-pointer p-2 bg-[#F0F9FF] hover:bg-[#0F4C81] transition-colors duration-300 group">
+              <FaXTwitter className="w-5 h-5 transition-colors duration-300 fill-[#0F4C81] group-hover:fill-white" />
             </div>
           </div>
       </div>
