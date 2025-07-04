@@ -32,10 +32,10 @@ export default function CreateServiceRequest() {
           ></div>
         </div>
 
-        <p className="absolute lg:text-3xl text-[16px] text-white font-bold font-center lg:mt-50 mt-[120px]">
+        <p className="absolute lg:text-3xl text-[16px] text-white font-bold font-center lg:mt-50 md:mt-[110px] mt-[120px]">
           خدمة حجز موعد مع المحامي
         </p>
-        <div className="absolute flex items-center lg:mt-65 mt-40 bg-white py-2 px-5 rounded-lg gap-3 cursor-pointer">
+        <div className="absolute flex items-center lg:mt-65 md:mt-37 mt-40 bg-white py-2 px-5 rounded-lg gap-3 cursor-pointer">
           <button className="text-2xl text-[#13498B] font-bold cursor-pointer">
             20
           </button>
