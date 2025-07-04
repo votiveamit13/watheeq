@@ -146,12 +146,12 @@ export default function Professionals() {
                 alt="name"
                 className="w-8 h-8 rounded-full ml-2"
               />
-<span className="ml-[15px] sm:ml-0 whitespace-nowrap">{professional.name}</span>
+<span className="ml-[15px] sm:ml-0 whitespace-nowrap md:ml-5">{professional.name}</span>
 </div>
           </td>
           <td className="py-2 px-3 text-[#0B2B51] font-normal">{professional.email}</td>
           <td className="py-2 px-3 text-[#6D8097]">{professional.number}</td>
-          <td className="py-2 px-3 text-[#0B2B5166]">{professional.joiningdata}</td>
+          <td className="py-2 px-3 text-[#0B2B5166] md:leading-[1.5]">{professional.joiningdata}</td>
           <td className="py-2 px-3 text-sm">{professional.services}</td>
           <td className="py-2 px-3">
             <span

@@ -138,7 +138,7 @@ export default function Subscriptions() {
                           alt="name"
                           className="w-8 h-8 rounded-full ml-2"
                         />
-                        <span className="ml-[25px] sm:ml-0 text-nowrap">
+                        <span className="ml-[25px] sm:ml-0 text-nowrap md:ml-5">
                           {trialsubscription.name}
                         </span>
                       </div>
@@ -200,7 +200,7 @@ export default function Subscriptions() {
                           alt="name"
                           className="w-8 h-8 rounded-full ml-2"
                         />
-                        <span className="ml-[25px] sm:ml-0 text-nowrap">
+                        <span className="ml-[25px] sm:ml-0 text-nowrap md:ml-5">
                           {packagesubscription.name}
                         </span>
                       </div>

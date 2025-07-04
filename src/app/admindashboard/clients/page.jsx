@@ -95,7 +95,7 @@ export default function Professionals() {
             {paginatedData.map((professional, index) => (
               <tr
                 key={professional.id}
-                className="border-b hover:bg-gray-50 transition registrationdate-200 leading-[3.1]"
+                className="border-b hover:bg-gray-50 transition registrationdate-200 leading-[3.1] md:leading-[1.5]"
               >
                 <td className="py-2 px-3" >{professional.id}</td>
                 <td className="py-2 px-3">
@@ -105,7 +105,7 @@ export default function Professionals() {
                       alt="name"
                       className="w-8 h-8 rounded-full ml-2"
                     />
-                    <span className="ml-[15px] sm:ml-0 text-nowrap">{professional.name}</span>
+                    <span className="ml-[15px] sm:ml-0 text-nowrap md:ml-5">{professional.name}</span>
                   </div>
                 </td>
                 <td className="py-2 px-3" style={{color:'#0b2b51'}}>{professional.email}</td>

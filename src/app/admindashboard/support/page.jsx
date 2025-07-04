@@ -120,7 +120,7 @@ export default function Support() {
 
   return (
     <div className="bg-white mt-5 rounded-lg">
-      <div className="block md:flex justify-between mb-30">
+      <div className="block md:flex justify-between mb-30 lg:gap-0 md:gap-2">
         <Inbox
           chats={chats}
           chatHeading="الدعم الفني"

@@ -132,7 +132,7 @@ function BasicHeader() {
 function PricingCard({ type = "basic", plan = "monthly", onSubscribeClick, buttonName }) {
   return (
     <div
-    className="shadow-custom-blue rounded-2xl w-full p-0 sm:py-10 sm:px-0"
+    className="shadow-custom-blue rounded-2xl w-full p-0 sm:py-10 sm:px-0 md:w-[84%] md:m-auto"
     style={{ height: "100%" }}
     >
       <WaveHeader type={type} plan={plan} />
@@ -237,7 +237,7 @@ function Packages({ heading, subheading, onSubscribeClick, buttonName }) {
           {heading}
         </h2>
         <div className="block lg:flex text-center justify-between items-center">
-          <p className="pr-[20px] text-right sm:pr-0 text-[20px] sm:text-3xl lg:mb-0 md:mb-0 mb-5">
+          <p className="pr-[20px] text-right sm:pr-0 text-[20px] sm:text-3xl lg:mb-0 md:mb-0 mb-5 md:mr-5">
             {subheading}
           </p>
 
