@@ -18,7 +18,7 @@ export default function Template() {
     if (!selectedSkills.includes(skill)) {
       setSelectedSkills([...selectedSkills, skill]);
     }
-    setShowDropdown(false); // hide dropdown after selection
+    setShowDropdown(false);
   };
 
   const removeSkill = (skillToRemove) => {

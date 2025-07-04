@@ -107,7 +107,7 @@ export default function AddPost({ onBack }) {
           <button
             type="button"
             onClick={() => setDropdown2Open(!dropdown2Open)}
-            className="lg:w-1/2 w-full  rounded-lg p-3 text-right flex items-center justify-between placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+            className="cursor-pointer lg:w-1/2 w-full  rounded-lg p-3 text-right flex items-center justify-between placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
             style={{ border: "1px solid #13498b40" }}
           >
             {selectedTemplate}

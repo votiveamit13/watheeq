@@ -301,10 +301,7 @@ export default function AboutSection() {
                         ))}
                       </div>
 
-                      <div
-                        dir="rtl"
-                        className="w-full mx-auto space-y-6"
-                      >
+                      <div dir="rtl" className="w-full mx-auto space-y-6">
                         <div>
                           <div className="flex items-center justify-start gap-2 mb-8">
                             <div className="w-1 h-4 bg-orange-400 rounded-sm"></div>

@@ -7,7 +7,6 @@ import { ChevronLeft } from "lucide-react";
 export default function Package() {
   const [showDialog, setShowDialog] = useState(false);
 
-
   return (
     <div>
       <div className="bg-white shadow rounded-lg mt-5 p-5">
@@ -28,7 +27,8 @@ export default function Package() {
           <div>
             <button
               className="cursor-pointer text-white bg-[#13498B] rounded py-3 px-10 font-semibold lg:mt-0 mt-5"
-            style={{borderRadius:'7px'}}>
+              style={{ borderRadius: "7px" }}
+            >
               تعديل
             </button>
           </div>
@@ -45,14 +45,12 @@ export default function Package() {
           />
           <style jsx global>{`
             @media (max-width: 767px) {
-
-            .bg-\[\#F6F9FC\].rounded-full.shadow-custom-blue.p-1.flex.px-0.py-0.sm\:px-10.sm\:py-6 {
+              .bg-\[\#F6F9FC\].rounded-full.shadow-custom-blue.p-1.flex.px-0.py-0.sm\:px-10.sm\:py-6 {
                 width: 95%;
-            }
-            .flex.items-center.justify-center {
+              }
+              .flex.items-center.justify-center {
                 margin-top: 25px;
-            }
-
+              }
             }
           `}</style>
         </div>
@@ -64,8 +62,11 @@ export default function Package() {
                 <h2 className="text-xl font-bold text-center text-[#13498B] mb-4">
                   تعديل الباقة
                 </h2>
-                <button className="cursor-pointer" onClick={() => setShowDialog(false)}>
-                    <ChevronLeft />
+                <button
+                  className="cursor-pointer"
+                  onClick={() => setShowDialog(false)}
+                >
+                  <ChevronLeft />
                 </button>
               </div>
 
@@ -93,8 +94,11 @@ export default function Package() {
                         className="rounded-md border border-gray-300 p-2 w-full pr-3 placeholder:text-gray-400 focus:outline-none text-[#9794AA] focus:ring-2 focus:ring-blue-500 "
                       />
 
-                        <img src="/watheeq/assets/img/business1.png" alt="watheeq" className="absolute pr-10 top-1/2 transform -translate-y-1/2 text-gray-400"/>
-
+                      <img
+                        src="/watheeq/assets/img/business1.png"
+                        alt="watheeq"
+                        className="absolute pr-10 top-1/2 transform -translate-y-1/2 text-gray-400"
+                      />
                     </div>
                   </div>
                 </div>

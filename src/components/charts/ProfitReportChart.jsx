@@ -101,26 +101,24 @@ const ProfitReportChart = ({ allData1, allData2 }) => {
           viewBox={`0 0 ${width + 60} ${height + 50}`}
           className="w-full lg:h-[260px] h-[80px]"
         >
-          {/* Grid Lines with LEFT Y-Axis labels */}
 
           {gridLines.map((g, i) => {
             const y = topPadding + (1 - g / maxValue) * height;
 
             return (
               <g key={i}>
-                {/* Horizontal line starting after left padding */}
                 <line
-                  x1={leftPadding + 30} // 30 = space for Y label
+                  x1={leftPadding + 30}
                   y1={y}
-                  x2={width + 30} // right end
+                  x2={width + 30}
                   y2={y}
                   stroke="#E5E7EB"
                   strokeWidth="1"
                 />
 
-                {/* Y-axis label */}
+
                 <text
-                  x={leftPadding + 20} // 10 + 20 = position for text
+                  x={leftPadding + 20}
                   y={y + 4}
                   fontSize="12"
                   fill="#6B7280"
@@ -132,7 +130,7 @@ const ProfitReportChart = ({ allData1, allData2 }) => {
             );
           })}
 
-          {/* Orange Line */}
+
           <polyline
             fill="none"
             stroke="#F59E0B"
@@ -148,7 +146,7 @@ const ProfitReportChart = ({ allData1, allData2 }) => {
               .join(" ")}
           />
 
-          {/* Blue Line */}
+
           <polyline
             fill="none"
             stroke="#2563EB"
@@ -164,7 +162,7 @@ const ProfitReportChart = ({ allData1, allData2 }) => {
               .join(" ")}
           />
 
-          {/* Dots */}
+
           {data1.map((val, i) => {
             const x = 40 + i * stepX;
             const y = height - (val / maxValue) * height;
@@ -176,7 +174,7 @@ const ProfitReportChart = ({ allData1, allData2 }) => {
             return <circle key={`b-${i}`} cx={x} cy={y} r="2" fill="#2563EB" />;
           })}
 
-          {/* X-Axis Labels */}
+
           {xLabels.map((label, i) => {
             const x = 40 + i * stepX;
             return (

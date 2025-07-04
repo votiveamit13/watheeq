@@ -1,6 +1,6 @@
 const PieChart = ({ title = "العنوان", segments = [
-  { value: 65, color: "#59A7FF" }, // blue
-  { value: 35, color: "#2CDDC7" }, // cyan
+  { value: 65, color: "#59A7FF" },
+  { value: 35, color: "#2CDDC7" },
 ] }) => {
   const total = segments.reduce((sum, s) => sum + s.value, 0);
   let cumulativePercent = 0;

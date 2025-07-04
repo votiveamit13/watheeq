@@ -16,7 +16,7 @@ const StatsTable = ({ rows = [], title }) => (
   <div
     className="h-2 rounded-full w-full relative overflow-hidden"
     style={{
-      backgroundColor: `${row.color}20`, // 12.5% opacity (20 in hex)
+      backgroundColor: `${row.color}20`,
     }}
   >
     <div
@@ -35,7 +35,7 @@ const StatsTable = ({ rows = [], title }) => (
     style={{
       border: `1px solid ${row.color}`,
       color: row.color,
-      backgroundColor: `${row.color}20`, // Light version with ~12% opacity (hex: 20)
+      backgroundColor: `${row.color}20`,
     }}
   >
     {row.percent}%

@@ -27,8 +27,8 @@ export default function Home() {
           </div>
           <div className="py-5 sm:py-10" data-aos="fade-up" data-aos-delay="100">
 
-        <div className="[&>section]:mx-5 [&>section]:lg:mx-0 [&>section]:md:mx-8 mx-auto overflow-x-hidden">
-            <Packages heading={"الأسعار"} subheading={"اختر الباقة التي تناسبك لتبدأ رحلتك في  المنصة"} />
+            <div className="[&>section]:mx-5 [&>section]:lg:mx-0 [&>section]:md:mx-8 mx-auto overflow-x-hidden">
+              <Packages heading={"الأسعار"} subheading={"اختر الباقة التي تناسبك لتبدأ رحلتك في  المنصة"} />
             </div>
           </div>
           <div className="py-2" data-aos="fade-up" data-aos-delay="100">
