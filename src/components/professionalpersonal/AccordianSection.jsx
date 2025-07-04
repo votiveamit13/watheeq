@@ -214,7 +214,7 @@ export default function AboutSection() {
         </div>
 
         <div
-          className="rounded-b-lg bg-white p-4 text-right"
+          className="rounded-b-lg bg-white p-4 text-right hover:shadow"
           style={{ borderRight: "solid 5px #FBB040", borderRadius: "5px" }}
         >
           {activeTab === "about" && (
@@ -272,8 +272,7 @@ export default function AboutSection() {
                         {qualifications.map((item, index) => (
                           <div
                             key={index}
-                            className="bg-gray-50 p-4 rounded-md flex items-center justify-between"
-                            style={{ border: "solid 1px #E5E7EB" }}
+                            className="bg-[#F8FAFC] border border-[#E5E7EB] p-4 rounded-md flex items-center justify-between hover:bg-white hover:border-[#FDC06B]"
                           >
                             <div
                               className="text-[#0F4C81] text-xl"
@@ -304,7 +303,7 @@ export default function AboutSection() {
 
                       <div
                         dir="rtl"
-                        className="w-full max-w-5xl mx-auto space-y-6"
+                        className="w-full mx-auto space-y-6"
                       >
                         <div>
                           <div className="flex items-center justify-start gap-2 mb-8">
@@ -317,12 +316,7 @@ export default function AboutSection() {
                             {skills.map((skill, index) => (
                               <span
                                 key={index}
-                                className="bg-blue-50 text-blue-700 border border-blue-200 text-sm px-3 py-1 rounded-full"
-                                style={{
-                                  border: "solid 1px #BFDBFE",
-                                  background: "#F0F9FF",
-                                  color: "#0F4C81",
-                                }}
+                                className="bg-[#F0F9FF] text-[#0F4C81] border border-[#BFDBFE] text-sm px-3 py-1 rounded-full hover:bg-[#FDC06B] hover:border-[#BFDBFE] cursor-pointer"
                               >
                                 {skill}
                               </span>
@@ -686,7 +680,7 @@ export default function AboutSection() {
               </div>
 
               <div className="space-y-4 bg-gray-50 p-4">
-                <div className="bg-[#F8FAFC] p-6 rounded-md shadow-sm space-y-4">
+                <div className="bg-[#F8FAFC] p-6 rounded-md border hover:shadow space-y-4">
                   <div className="flex justify-normal gap-18 items-center">
                     <div className="flex items-center gap-2">
                       <img
@@ -724,7 +718,7 @@ export default function AboutSection() {
                   </p>
                 </div>
 
-                <div className="bg-[#F8FAFC] p-6 rounded-md shadow-sm space-y-4">
+                <div className="bg-[#F8FAFC] p-6 rounded-md border hover:shadow space-y-4">
                   <div className="flex justify-normal gap-18 items-center">
                     <div className="flex items-center gap-2">
                       <img
@@ -762,7 +756,7 @@ export default function AboutSection() {
                 </div>
 
                 <div
-                  className="bg-[#F8FAFC] p-6 rounded-md shadow-sm space-y-4"
+                  className="bg-[#F8FAFC] p-6 rounded-md border hover:shadow space-y-4"
                   style={{ fontSize: "15px" }}
                 >
                   <div className="flex justify-normal gap-18 items-center">
@@ -800,7 +794,7 @@ export default function AboutSection() {
                 </div>
 
                 <div
-                  className="bg-[#F8FAFC] p-6 rounded-md shadow-sm space-y-4"
+                  className="bg-[#F8FAFC] p-6 rounded-md border hover:shadow space-y-4"
                   style={{ fontSize: "15px" }}
                 >
                   <div className="flex justify-normal gap-18 items-center">
