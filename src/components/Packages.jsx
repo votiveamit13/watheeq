@@ -4,7 +4,7 @@ import { Switch } from "./ui/Switch";
 
 function WaveHeader({ type = "basic", plan = "monthly" }) {
   return (
-<div className="relative overflow-hidden w-full h-[28vh] sm:h-auto sm:max-w-[537px] aspect-none sm:aspect-[537/261]">
+<div className="relative overflow-hidden w-full h-[28vh] sm:h-auto sm:max-w-[637px] aspect-none sm:aspect-[537/261]">
 <div className="absolute top-[25px] sm:top-16 w-full text-center z-10">
         <h2 className="text-white text-4xl font-bold">
           {type === "basic" ? "الباقة المتكاملة" : "الباقة الأساسية"}
@@ -214,7 +214,7 @@ function PricingCard({ type = "basic", plan = "monthly", onSubscribeClick, butto
       <div className="flex justify-center">
         <button
         onClick={() => onSubscribeClick?.(type, plan)}
-        className={`m-[15px] mt-10 rounded-[15px] text-2xl w-44 h-14 border-2 cursor-pointer        ${
+        className={`m-[15px] mt-25 rounded-[15px] text-2xl w-44 h-14 border-2 cursor-pointer        ${
       type === "basic"
         ? "text-[#D53B98] border-[#D53B98]"
         : "text-[#0A84FF] border-[#0A84FF]"
@@ -245,7 +245,7 @@ function Packages({ heading, subheading, onSubscribeClick, buttonName }) {
             <Switch optionRight={"شهري"} optionLeft={"سنوي"} onToggle={(value) => setPlan(value)} />
           </div>
         </div>
-       
+
         <div className="flex flex-col lg:flex-row justify-center mt-0 sm:mt-10 w-[93%] md:w-full md:mt-0 lg:w-[100%] gap-0 lg:p-0 p-2 md:gap-[0px] sm:gap-[50px] lg:gap-[60px] mx-auto second-price">
         <div className="w-full mx-auto lg:w-full mb-6 lg:mb-0 sm:p-[15px]">
             <PricingCard type="full" plan={plan} onSubscribeClick={onSubscribeClick} buttonName={buttonName} />
