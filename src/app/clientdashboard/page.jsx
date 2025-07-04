@@ -43,7 +43,7 @@ export default function ClientDashboard() {
       case "مستلمة":
         return "bg-[#AC39D40D] text-[#AC39D4] border border-[#AC39D4] py-2 px-4 rounded-lg";
       case "ملغية":
-        return "bg-[#F2424226] text-[#F24242] border border-[#F2424280] py-2 px-4 rounded-lg";
+        return "bg-[#F2424226] text-[#F24242] border border-[#F24242] py-2 px-4 rounded-lg";
       default:
         return "bg-gray-200 text-gray-800";
     }
@@ -92,7 +92,7 @@ export default function ClientDashboard() {
       <div className="mt-6 block md:flex gap-3" style={{ marginBottom: "50px" }}>
         <div className="flex-1 bg-white p-4 rounded-lg w-full sm:w-1/2">
           <span className="font-bold">آخر الطلبات</span>
-          
+
           <div className="w-full overflow-x-auto">
            <table className="w-full mt-5 text-right mb-5 min-w-[600px]">
             <thead>

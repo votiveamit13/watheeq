@@ -12,7 +12,7 @@ const managers = [
   {
     id: "01",
     name: "محمد عبد العزيز",
-    image: "/watheeq/assets/img/avatar.png",
+    image: "/watheeq/assets/img/manager1.png",
     mail: "ahmedmadi@gmail.com",
     number: "+94711000000",
     title: "مالك",
@@ -20,7 +20,7 @@ const managers = [
   {
     id: "02",
     name: "منير العلمي",
-    image: "/watheeq/assets/img/avatar.png",
+    image: "/watheeq/assets/img/manager2.png",
     mail: "monirAlmi@gmail.com",
     number: "+99471050000",
     title: "ادمن",
@@ -28,7 +28,7 @@ const managers = [
   {
     id: "03",
     name: "سارة عريفي",
-    image: "/watheeq/assets/img/avatar.png",
+    image: "/watheeq/assets/img/manager3.png",
     mail: "sararefi@gmail.com",
     number: "+94711000000",
     title: "ادمن",
@@ -36,7 +36,7 @@ const managers = [
   {
     id: "04",
     name: "محمد عبد العزيز",
-    image: "/watheeq/assets/img/avatar.png",
+    image: "/watheeq/assets/img/manager1.png",
     mail: "ahmedmadi@gmail.com",
     number: "+94711000000",
     title: "ادمن",
@@ -44,7 +44,7 @@ const managers = [
   {
     id: "05",
     name: "محمد عبد العزيز",
-    image: "/watheeq/assets/img/avatar.png",
+    image: "/watheeq/assets/img/manager1.png",
     mail: "ahmedmadi@gmail.com",
     number: "+94711000000",
     title: "ادمن",
