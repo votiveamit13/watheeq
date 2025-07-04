@@ -13,7 +13,7 @@ export default function Package() {
       <div className="bg-white shadow rounded-lg mt-5 p-5">
         <h2 className="text-2xl mb-2">رسوم المنصة</h2>
         <div className="block lg:flex items-center justify-between lg:w-1/2 w-full rtl">
-          <div className="relative">
+          <div className="relative lg:w-[400px] md:w-full w-full">
             <input
               type="text"
               placeholder="21"

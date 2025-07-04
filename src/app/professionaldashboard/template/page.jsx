@@ -252,7 +252,7 @@ export default function Template() {
               <input
                 type="text"
                 placeholder="username/instagram.com"
-                className="border border-[#13498B] rounded px-4 py-1 text-sm w-[150px] mr-0 sm:mr-[20px] text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                className="border border-[#13498B] rounded px-4 py-1 text-sm md:w-1/2 w-[150px] mr-0 sm:mr-[20px] text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
               />
             </div>
 
@@ -263,7 +263,7 @@ export default function Template() {
               <input
                 type="text"
                 placeholder="username/tiktok.com"
-                className="border border-[#13498B] rounded px-4 py-1 text-sm w-[150px] mr-0 sm:mr-[20px] text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                className="border border-[#13498B] rounded px-4 py-1 text-sm md:w-1/2 w-[150px] mr-0 sm:mr-[20px] text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
               />
             </div>
 
@@ -274,7 +274,7 @@ export default function Template() {
               <input
                 type="text"
                 placeholder="username/twitter.com"
-                className="border border-[#13498B] rounded px-4 py-1 text-sm w-[150px] mr-0 sm:mr-[20px] text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                className="border border-[#13498B] rounded px-4 py-1 text-sm md:w-1/2 w-[150px] mr-0 sm:mr-[20px] text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
               />
             </div>
 
@@ -285,7 +285,7 @@ export default function Template() {
               <input
                 type="text"
                 placeholder="username/youtube.com"
-                className="border border-[#13498B] rounded px-4 py-1 text-sm w-[150px] mr-0 sm:mr-[20px] text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                className="border border-[#13498B] rounded px-4 py-1 text-sm md:w-1/2 w-[150px] mr-0 sm:mr-[20px] text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
               />
             </div>
 
@@ -296,7 +296,7 @@ export default function Template() {
               <input
                 type="text"
                 placeholder="username/snapchat.com"
-                className="border border-[#13498B] rounded px-4 py-1 text-sm w-[150px] mr-0 sm:mr-[20px] text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                className="border border-[#13498B] rounded px-4 py-1 text-sm md:w-1/2 w-[150px] mr-0 sm:mr-[20px] text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
               />
             </div>
 
@@ -306,7 +306,7 @@ export default function Template() {
               </label>
               <input
                 type="text"
-                className="border border-[#13498B] rounded px-4 py-1 text-sm w-[150px] mr-0 sm:mr-[20px] text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                className="border border-[#13498B] rounded px-4 py-1 text-sm md:w-1/2 w-[150px] mr-0 sm:mr-[20px] text-right focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
               />
             </div>
           </div>

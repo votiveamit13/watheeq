@@ -85,7 +85,7 @@ export default function Subscriptions() {
   const statusClass = (status) => {
     return status === "نشط"
       ? "bg-[#e8f9f1] text-[#33cc8c] border border-[#219F94]"
-      : "bg-[#F242421A] text-[#F24242]";
+      : "bg-[#F242421A] text-[#F24242] border border-[#F24242]";
   };
 
   return (
@@ -128,7 +128,7 @@ export default function Subscriptions() {
                 {trialsubscriptions.map((trialsubscription, index) => (
                   <tr
                     key={trialsubscription.id}
-                    className="border-b hover:bg-gray-50 transition joiningdata-200 leading-[3.1]"
+                    className="border-b hover:bg-gray-50 transition joiningdata-200"
                   >
                     <td className="py-2 px-3">{trialsubscription.id}</td>
                     <td className="py-2 px-3">
@@ -163,7 +163,7 @@ export default function Subscriptions() {
                       <HiDotsVertical className="text-[#01104099] bg-[#464E991A] w-10 h-10 p-2 rounded-lg cursor-pointer" onClick={() => setReminder(trialsubscription)} />
                       {reminder?.id === trialsubscription.id && (
                         <div ref={reminderRef} className="absolute bg-[#ECEDF5] text-[#13498B] rounded-lg lg:left-8 left-20">
-                        <p className="py-0 px-6 hover:bg-gray-100 cursor-pointer">تذكير بالاشتراك</p>
+                        <p className="py-2 px-6 hover:bg-gray-100 cursor-pointer">تذكير بالاشتراك</p>
                         </div>
                       )}
                     </td>
@@ -190,7 +190,7 @@ export default function Subscriptions() {
                 {packagesubscriptions.map((packagesubscription, index) => (
                   <tr
                     key={packagesubscription.id}
-                    className="border-b hover:bg-gray-50 transition joiningdata-200 leading-[3.1]"
+                    className="border-b hover:bg-gray-50 transition joiningdata-200 "
                   >
                     <td className="py-2 px-3">{packagesubscription.id}</td>
                     <td className="py-2 px-3">
@@ -205,7 +205,7 @@ export default function Subscriptions() {
                         </span>
                       </div>
                     </td>
-                    <td className="py-2 px-3 leading-[1.6] sm:leading-normal" style={{color:'#0b2b5166'}}>
+                    <td className="py-2 px-3" style={{color:'#0b2b5166'}}>
                       {packagesubscription.subscriptiondate}
                     </td>
                     <td className="py-2 px-3">{packagesubscription.package}</td>
@@ -225,8 +225,8 @@ export default function Subscriptions() {
                     <td className="py-2 px-3">
                       <HiDotsVertical className="text-[#01104099] bg-[#464E991A] w-10 h-10 p-2 rounded-lg cursor-pointer" onClick={() => setReminder(packagesubscription)} />
                       {reminder?.id === packagesubscription.id && (
-                        <div className="absolute bg-[#ECEDF5] text-[#13498B] rounded-lg lg:left-8 left-20">
-                        <p className="py-0 px-6 hover:bg-gray-100 cursor-pointer">تذكير بالاشتراك</p>
+                        <div ref={reminderRef} className="absolute bg-[#ECEDF5] text-[#13498B] rounded-lg lg:left-8 left-20">
+                        <p className="py-2 px-6 hover:bg-gray-100 cursor-pointer">تذكير بالاشتراك</p>
                         </div>
                       )}
                     </td>

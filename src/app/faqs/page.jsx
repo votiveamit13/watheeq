@@ -90,7 +90,7 @@ export default function Faqs() {
           {renderCard(faqData[1], 1)}
         </div>
 
-        <div className="flex gap-6 items-start" data-aos="fade-up"
+        <div className="lg:flex md:block items-start" data-aos="fade-up"
             data-aos-delay="120">
           {renderCard(faqData[2], 2)}
         </div>

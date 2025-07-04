@@ -148,9 +148,6 @@ export default function AddService({ onBack }) {
               <div className="mt-3">
                 <select className="lg:w-1/2 w-full border border-gray-300 rounded-lg p-3 focus:outline-none">
                   <option>حدد الوقت</option>
-                  <option value="1">1 يوم</option>
-                  <option value="3">3 أيام</option>
-                  <option value="7">أسبوع</option>
                 </select>
               </div>
             </div>
@@ -172,10 +169,6 @@ export default function AddService({ onBack }) {
               <div className="mt-3">
                 <select className="lg:w-1/2 w-full border border-gray-300 rounded-lg p-3 focus:outline-none">
                   <option>اختر مدة الاجتماع فيديو</option>
-                  <option value="none">لا يوجد</option>
-                  <option value="15">15 دقيقة</option>
-                  <option value="30">30 دقيقة</option>
-                  <option value="60">ساعة</option>
                 </select>
               </div>
             </div>

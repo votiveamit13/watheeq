@@ -156,11 +156,10 @@ export default function ChatPanel({ onBack }) {
             </div>
           </div>
 
-          {/*Chat Panel */}
+
           <div className="flex-1 p-5 space-y-5 overflow-y-auto">
             {Object.keys(grouped).map((date) => (
               <div key={date}>
-                {/* Date separator */}
                 <div className="text-center text-[#9794AA] text-xs mb-5">
                   {date}
                 </div>
@@ -173,7 +172,6 @@ export default function ChatPanel({ onBack }) {
                       msg.direction === "in" ? "items-end" : "items-start"
                     } space-y-1`}
                   >
-                    {/* Message bubble */}
                     <div
                       className={`px-4 py-2 shadow mb-5 text-sm w-fit max-w-xs break-words
             ${
@@ -200,7 +198,6 @@ export default function ChatPanel({ onBack }) {
                       )}
                     </div>
 
-                    {/* Time shown on click */}
                     {msg.showTime && (
                       <div className="text-xs text-gray-400 mt-1">
                         {msg.time}
@@ -212,7 +209,6 @@ export default function ChatPanel({ onBack }) {
             ))}
           </div>
 
-          {/* Input */}
           <div className="bg-white p-4 flex items-center border-t mt-auto relative">
             <div className="relative ml-2">
               <button
@@ -222,7 +218,7 @@ export default function ChatPanel({ onBack }) {
                 <FaPlus className="size-8" />
               </button>
               {showMenu && (
-                <div className="absolute bottom-full mb-2 left-0 -translate-x-1/2 bg-[#EDF2F6] p-3 rounded-xl shadow space-y-2 z-10 w-40 text-[#13498B] text-sm">
+                <div className="absolute bottom-full mb-2 left-0 -translate-x-1/2 bg-[#EDF2F6] right-[-90px] p-3 rounded-xl shadow space-y-2 z-10 w-40 text-[#13498B] text-sm">
                   <div className="flex items-center gap-2 cursor-pointer">
                     <FaRegFileAlt /> <span>إرفاق ملف</span>
                   </div>

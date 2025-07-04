@@ -7,10 +7,7 @@ import { HiMail } from "react-icons/hi";
 export default function WhoWeAre() {
   return (
     <section>
-      <AOSInit />
-      <div className="container mx-auto">
-
-      <div className="bg-[#f8fafc] bg-[url('/watheeq/assets/img/hero_bg.png')] bg-cover">
+      <AOSInit />      <div className="bg-[#f8fafc] bg-[url('/watheeq/assets/img/hero_bg.png')] bg-cover">
         <nav className="container mx-auto lg:px-10 px-5 text-center">
           <Navbar />
           <p
@@ -41,7 +38,7 @@ export default function WhoWeAre() {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <div className="bg-white p-3 pt-5 pb-6 pl-5 pr-5 rounded-lg shadow-md w-100 max-w-md">
+            <div className="bg-white p-3 pt-5 pb-6 pl-5 pr-5 rounded-lg shadow-md lg:w-100 max-w-md w-full">
               <div className="flex items-center justify-between gap-4">
                 <div className="flex items-center gap-2 flex-1 border border-blue-300 rounded-lg px-3 py-2">
                   <HiMail className="text-[#0A84FF] w-6 h-6" />
@@ -61,6 +58,9 @@ export default function WhoWeAre() {
           </div>
         </nav>
       </div>
+      <div className="container mx-auto">
+
+
       <main
         className="p-[20px] sm:p-6 sm:px-10"
         data-aos="fade-up"
