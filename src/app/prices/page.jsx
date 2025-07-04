@@ -36,6 +36,7 @@ export default function Prices() {
             استكشف مميزات باقتنا واختر أفضل باقة تناسبك
           </p>
         </div>
+
         <div
           className="relative w-full shadow-xl mb-10 rounded-3xl p-0 px-0 lg:p-0 lg:px-0 sm:p-5 sm:px-10 mt-10 md:mt-0"
           style={{
@@ -46,6 +47,7 @@ export default function Prices() {
           }} data-aos="fade-up"
             data-aos-delay="150"
         >
+            <div className="[&>section]:mx-5 [&>section]:lg:mx-0 [&>section]:md:mx-8 mx-auto overflow-x-hidden">
           <Packages heading={null} subheading={null} />
           <style jsx global>{`
             .period-switch {
@@ -71,6 +73,7 @@ export default function Prices() {
               }
             }
           `}</style>
+          </div>
         </div>
       </main>
       </div>

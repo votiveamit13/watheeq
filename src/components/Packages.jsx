@@ -11,7 +11,7 @@ function WaveHeader({ type = "basic", plan = "monthly" }) {
         </h2>
       </div>
 
-      <div className="absolute bottom-0 right-4 z-10 pr-8">
+      <div className="absolute bottom-0 right-4 z-10 pr-4">
         <div className="flex items-center gap-2 text-end text-lg font-semibold">
           <div
             className="flex items-center gap-1 text-2xl font-semibold capitalize"
