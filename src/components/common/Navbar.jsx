@@ -32,8 +32,8 @@ export default function Navbar({
   }, []);
 
   return (
-    <div className="flex flex-col md:flex-row w-full mx-auto ml-0 justify-between items-center bg-white rounded-3xl px-6 py-3 shadow-sm">
-      <div className="text-right order-2 md:order-1 lg:w-auto md:w-auto w-full lg:mt-0 md:mt-0 mt-5">
+    <div className="flex flex-col lg:flex-row w-full mx-auto ml-0 justify-between items-center bg-white rounded-3xl px-6 py-3 shadow-sm">
+      <div className="text-right order-2 lg:order-1 lg:w-auto md:w-full w-full lg:mt-0 md:mt-5 mt-5">
         <h3 className="text-[#003f7f] text-lg font-bold">{wish}</h3>
         <div className="flex items-center">
           <span className="ml-1">{location}</span>
@@ -55,7 +55,7 @@ export default function Navbar({
         </div>
       </div>
 
-      <div className="relative order-1 md:order-2 lg:w-auto md:w-auto w-full" ref={dropdownRef}>
+      <div className="relative order-1 lg:order-2 lg:w-auto md:w-full w-full" ref={dropdownRef}>
         <div className="flex items-center justify-between bg-white px-3 py-2 rounded-xl shadow-md gap-2 cursor-pointer">
           <div className="relative bg-[#FFFAF1] rounded-full">
             <img
@@ -86,7 +86,7 @@ export default function Navbar({
         </div>
 
         {isOpen && (
-          <div className="absolute lg:right-13 md:right-18 right-35 w-35 bg-[#E7EDF3] rounded-br-lg rounded-bl-lg shadow-lg text-right z-50">
+          <div className="absolute lg:right-13 md:right-120 right-23 w-35 bg-[#E7EDF3] rounded-br-lg rounded-bl-lg shadow-lg text-right z-50">
             <Link href={profilelink}>
               <div className="block px-4 py-4 text-[#003f7f] hover:bg-[#f0f8ff] font-medium flex items-center justify-end gap-2">
                 <HiOutlineUser />

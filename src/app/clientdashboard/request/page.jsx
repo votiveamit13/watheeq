@@ -108,136 +108,72 @@ export default function Request() {
         طلباتي
       </h2>
       <div className="overflow-x-auto px-5">
-        <table className="w-full text-right ">
-          <thead>
-            <tr className="text-[#96A5B8] font-medium">
-              <th className="py-2 px-3">#</th>
-              <th className="py-2 px-3">اسم المهني</th>
-              <th className="py-2 px-3">اسم الخدمة</th>
-              <th className="py-2 px-3">سعر الخدمة</th>
-              <th className="py-2 px-3">مدة تقديم الخدمة</th>
-              <th className="py-2 px-3">حالة الطلب</th>
-              <th className="py-2 px-3">تاريخ الطلب</th>
-              <th className="py-2 px-3">خيارات</th>
-            </tr>
-          </thead>
-          <tbody>
-            {paginatedData.map((request, index) => (
-              <tr
-                key={request.id}
-                className="border-b hover:bg-gray-50 transition duration-200 leading-[3.1]"
-              >
-                <td className="py-2 px-3">{request.id}</td>
-                <td className="py-2 px-3">
-                  <div className="flex items-center justify-start">
-                    <img
-                      src={request.image}
-                      alt="client"
-                      className="w-8 h-8 rounded-full ml-2"
-                    />
-                    <span className="text-nowrap">{request.client}</span>
-                  </div>
-                </td>
-                <td className="py-2 px-3 leading-[1.5] sm:leading-normal">{request.service}</td>
-                <td className="lg:h-auto h-[120px] py-2 px-3 flex items-center gap-2">
-                  <span>{request.price}</span>
-                  <img
-                    src="/watheeq/assets/img/business1.png"
-                    alt="price-icon"
-                    className="w-4 h-4"
-                  />
-                </td>
-                <td className="py-2 px-3">{request.duration}</td>
-                <td className="py-2 px-3">
-                  <span
-                    className={`text-xs min-w-[120px] text-center px-3 py-2 font-medium inline-block ${statusClass(
-                      request.status
-                    )}`}
-                    style={{ borderRadius: "10px" }}
-                  >
-                    {request.status}
-                  </span>
-                </td>
+      <div className="w-full overflow-x-auto">
+  <table className="w-full text-right min-w-[800px]">
+    <thead>
+      <tr className="text-[#96A5B8] font-medium text-sm sm:text-base">
+        <th className="py-2 px-3">#</th>
+        <th className="py-2 px-3">اسم المهني</th>
+        <th className="py-2 px-3">اسم الخدمة</th>
+        <th className="py-2 px-3 ">سعر الخدمة</th>
+        <th className="py-2 px-3 ">مدة تقديم الخدمة</th>
+        <th className="py-2 px-3 ">حالة الطلب</th>
+        <th className="py-2 px-3 ">تاريخ الطلب</th>
+        <th className="py-2 px-3 ">خيارات</th>
+      </tr>
+    </thead>
+    <tbody>
+      {paginatedData.map((request, index) => (
+        <tr
+          key={request.id}
+          className="border-b hover:bg-gray-50 transition duration-200 leading-[3.1]"
+        >
+          <td className="py-2 px-3 whitespace-nowrap">{request.id}</td>
+          <td className="py-2 px-3">
+            <div className="flex items-center justify-start min-w-[100px]">
+              <img
+                src={request.image}
+                alt="client"
+                className="w-8 h-8 rounded-full ml-2 flex-shrink-0"
+              />
+              <span className="truncate text-nowrap max-w-[120px] block">{request.client}</span>
+            </div>
+          </td>
+          <td className="py-2 px-3 leading-[1.5] sm:leading-normal whitespace-nowrap">
+            {request.service}
+          </td>
+          <td className="py-2 px-3 flex items-center gap-2 whitespace-nowrap">
+            <span>{request.price}</span>
+            <img
+              src="/watheeq/assets/img/business1.png"
+              alt="price-icon"
+              className="w-4 h-4"
+            />
+          </td>
+          <td className="py-2 px-3 whitespace-nowrap">{request.duration}</td>
+          <td className="py-2 px-3">
+            <span
+              className={`text-xs min-w-[120px] text-center px-3 py-2 font-medium inline-block ${statusClass(
+                request.status
+              )}`}
+              style={{ borderRadius: "10px" }}
+            >
+              {request.status}
+            </span>
+          </td>
+          <td className="py-2 px-3 text-sm whitespace-nowrap">{request.date}</td>
+          <td className="py-2 px-3">
+            <HiDotsVertical
+              className="text-[#01104099] bg-[#464E991A] w-10 h-10 p-2 rounded-lg cursor-pointer"
+              onClick={() => setSelectedRequest(request)}
+            />
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
 
-                <td className="py-2 px-3 text-sm">{request.date}</td>
-                <td className="py-2 px-3">
-                  <HiDotsVertical
-                    className="text-[#01104099] bg-[#464E991A] w-10 h-10 p-2 rounded-lg cursor-pointer"
-                    onClick={() => setSelectedRequest(request)}
-                  />
-                  {selectedRequest && (
-                    <div className="fixed inset-0 bg-[#0000001a] bg-opacity-30 flex p-10 justify-center items-center z-50">
-                      <div className="bg-white p-6 rounded-lg w-full max-w-md">
-                        <div>
-                          <h2 className="text-xl text-center text-[#13498B] mb-4">
-                             عرض سعر
-                          </h2>
-                        </div>
-                        <div className="flex w-full justify-between">
-                          <div className="flex items-center">
-                            <div>
-                              <img
-                                src="/watheeq/assets/img/avatar.png"
-                                alt="watheeq"
-                              />
-                            </div>
-                            <div className="mr-2">
-                              <span>{selectedRequest.client}</span>
-                            </div>
-                          </div>
-                          <div>
-                            <button className="flex gap-4 items-center py-2 px-4 w-[115px] h-[40px] justify-center border bg-[#F8FAFC] rounded-lg cursor-pointer" style={{borderColor:'#13498B'}}>
-                              <FaPlus />
-                               محادثة
-                            </button>
-                          </div>
-                        </div>
-                        <hr className="mt-3" />
-                        <div>
-                          <table>
-                            <tbody>
-                              <tr>
-                                <td className="text-xl py-2">
-                                  الخدمة
-                                </td>
-                                <td className="px-5">
-                                  {selectedRequest.service}
-                                </td>
-                              </tr>
-                              <tr>
-                                <td className="text-xl py-2">
-                                  مدة تقديم الخدمة
-                                </td>
-                                <td className="px-5">
-                                  {selectedRequest.duration}
-                                </td>
-                              </tr>
-                              <tr>
-                                <td className="text-xl py-2">
-                                  سعر الخدمة
-                                </td>
-                                <td className="px-5">
-                                  {selectedRequest.price}
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                          <p className="mt-5 text-xl">
-                            تفاصيل الخدمة
-                          </p>
-                          <span>
-                            نقدّم خدمات إعداد البحوث لموظفي القطاعات الحكومية
-                          </span>
-                        </div>
-
-                      </div>
-                    </div>
-                  )}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
       </div>
               <Pagination
           currentPage={currentPage}
