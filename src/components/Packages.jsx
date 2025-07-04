@@ -4,7 +4,7 @@ import { Switch } from "./ui/Switch";
 
 function WaveHeader({ type = "basic", plan = "monthly" }) {
   return (
-<div className="relative overflow-hidden w-full h-[28vh] sm:h-auto sm:max-w-[637px] aspect-none sm:aspect-[537/261]">
+<div className="relative overflow-hidden w-full h-[28vh] sm:h-auto sm:max-w-[537px] aspect-none sm:aspect-[537/261]">
 <div className="absolute top-[25px] sm:top-16 w-full text-center z-10">
         <h2 className="text-white text-4xl font-bold">
           {type === "basic" ? "الباقة المتكاملة" : "الباقة الأساسية"}
