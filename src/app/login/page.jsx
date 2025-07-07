@@ -1,6 +1,9 @@
-import { FaEnvelope, FaLock } from "react-icons/fa";
+"use client";
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import { useState } from "react";
 
 export default function Login() {
+  const [showPassword, setShowPassword] = useState(false);
   return (
     <div className="min-h-screen flex flex-wrap font-sans text-right">
 <div className="w-full md:w-1/2 bg-white flex flex-col justify-center items-center text-center px-0 py-[35px] md:px-10">
@@ -50,16 +53,22 @@ export default function Login() {
 
           <div className="relative">
             <input
-              type="password"
+              type={showPassword ? "text" : "password"}
+              name="password"
               placeholder="كلمة مرور"
               className="w-full border bg-white border-blue-200 rounded-lg p-3 pr-10 text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-            <span className="absolute inset-y-0 left-3 flex items-center text-gray-400 cursor-pointer">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-              </svg>
-            </span>
+            {showPassword ? (
+              <AiOutlineEyeInvisible
+                onClick={() => setShowPassword(false)}
+                className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 cursor-pointer"
+              />
+            ) : (
+              <AiOutlineEye
+                onClick={() => setShowPassword(true)}
+                className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 cursor-pointer"
+              />
+            )}
             <img src="/watheeq/assets/img/accountdata4.png" className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
           </div>
 
