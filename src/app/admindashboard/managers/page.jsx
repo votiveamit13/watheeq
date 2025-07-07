@@ -247,7 +247,7 @@ export default function Managers() {
 
                   <div className="relative w-full">
                     <label className="block mb-3 text-l text-[#0B2B51]">
-                      البريد الإلكتروني
+                      كلمة مرور
                     </label>
                     <div className="relative">
                       <input

@@ -88,9 +88,8 @@ export default function RegisterForm({ onNext }) {
             />
           </div>
 
-          {/* Country Code + Phone */}
+
           <div className="flex gap-2 rtl:flex-row-reverse">
-            {/* Country Selector */}
             <div className="relative w-[130px] h-[52px]">
               <button
                 type="button"
