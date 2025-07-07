@@ -4,7 +4,7 @@ import { PiUpload } from "react-icons/pi";
 import { TbFileCertificate } from "react-icons/tb";
 import { MdDateRange } from "react-icons/md";
 import { BsCalendarDay } from "react-icons/bs";
-import { AiOutlineDown } from "react-icons/ai";
+import { IoIosArrowDropdown } from "react-icons/io";
 
 export default function CreateServiceRequest() {
   const [submitDialog, setSubmitDialog] = useState(false);
@@ -152,7 +152,7 @@ export default function CreateServiceRequest() {
                       style={{ border: "1px solid #13498b40" }}
                     />
                     <BsCalendarDay className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#13498B] w-6 size-10" />
-                    <AiOutlineDown className="absolute left-3 top-1/2 transform -translate-y-1/2 border rounded-full cursor-pointer" />
+                    <IoIosArrowDropdown size={25} className="absolute left-3 top-1/2 transform -translate-y-1/2 cursor-pointer" />
                   </div>
                 </div>
               </div>
@@ -172,7 +172,7 @@ export default function CreateServiceRequest() {
           <button
             className="cursor-pointer bg-[#13498B] text-white rounded py-3 px-8"
             onClick={() => setSubmitDialog(true)}
-            style={{ borderRadius: "6px"}}
+            style={{ borderRadius: "6px" }}
           >
             حجز موعد
           </button>
