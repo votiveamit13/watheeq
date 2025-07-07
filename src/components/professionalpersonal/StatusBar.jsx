@@ -17,17 +17,17 @@ export default function StatusBar() {
         </div>
         <div className="flex flex-col items-center justify-between border cursor-pointer rounded-lg hover:border-[#FDC06B] lg:w-[25%] w-[100%] lg:mb-0 mb-5" style={{padding:'15px 0px'}}>
           <FaListCheck fill="#0F4C81" size={28} />
-          <span className="font-bold text-2xl text-black pt-2">15</span>
-          <span className="pt-3" style={{color:'#64748B'}}>عامًا من الخبرة</span>
+          <span className="font-bold text-2xl text-black pt-2">570</span>
+          <span className="pt-3" style={{color:'#64748B'}}>الخدمات المقدمة</span>
         </div>
         <div className="flex flex-col items-center justify-between border cursor-pointer rounded-lg hover:border-[#FDC06B] lg:w-[25%] w-[100%] lg:mb-0 mb-5" style={{padding:'15px 0px'}}>
           <FaUsers fill="#0F4C81" size={28} />
-          <span className="font-bold text-2xl text-black pt-2">15</span>
-          <span className="pt-3" style={{color:'#64748B'}}>عامًا من الخبرة</span>
+          <span className="font-bold text-2xl text-black pt-2">10,000</span>
+          <span className="pt-3" style={{color:'#64748B'}}>زائر للملف الشخصي</span>
         </div>
         <div className="flex flex-col items-center justify-between border cursor-pointer rounded-lg hover:border-[#FDC06B] lg:w-[25%] w-[100%] lg:mb-0 mb-5" style={{padding:'15px 0px'}}>
             <FaBuilding fill="#0F4C81" size={28} />
-          <span className="font-bold text-2xl pt-2" style={{color:'#1E293B'}}>عامًا من الخبرة</span>
+          <span className="font-bold text-2xl pt-2" style={{color:'#1E293B'}}>مكة المكرمة</span>
           <span className="pt-3" style={{color:'#64748B'}}>المدينة</span>
         </div>
       </div>
