@@ -52,7 +52,6 @@ export default function RegisterForm({ onNext }) {
 
       <div className="bg-[#F7FBFD] rounded-lg">
         <form className="space-y-4" onSubmit={handleSubmit}>
-          {/* Name */}
           <div className="relative">
             <input
               type="text"
@@ -70,7 +69,6 @@ export default function RegisterForm({ onNext }) {
             />
           </div>
 
-          {/* Email */}
           <div className="relative">
             <input
               type="email"
